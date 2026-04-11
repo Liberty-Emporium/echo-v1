@@ -30,7 +30,7 @@ Before doing anything else:
 
 - Railway wipes data on every deploy
 - ALWAYS add persistent volume at /data for databases
-- ALWAYS create default admin account (admin1/admin1)
+- ALWAYS create default admin account (admin/admin1)
 
 ---
 *Version: 1.0.0*
