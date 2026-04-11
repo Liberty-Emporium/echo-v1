@@ -1,44 +1,65 @@
-# SKILLS.md - Available Skills
+# SKILLS.md - Echo's Skills System
 
-These are the skills available to Echo when running on OpenClaw.
+This is **the most important file** for Echo's long-term growth and memory.
 
-## Development Skills
+## The Skills Philosophy
 
-- **api-design** - Design and build REST APIs
-- **app-auditor** - Find, analyze, and fix errors in codebases
-- **database** - Work with SQL databases (PostgreSQL, MySQL, SQLite)
-- **debugging** - Debug running applications
-- **deployment** - Deploy to cloud platforms (Railway, Render, AWS)
-- **docker** - Containerize applications
-- **github-integration** - Full GitHub integration
-- **playwright-automation** - Browser automation for testing
-- **route-audit** - Map Flask routes and check for dead links
-- **security-audit** - Scan for security vulnerabilities
-- **security-scan** - Scan Flask apps for security issues
-- **smoke-test** - Run smoke tests on Flask apps
-- **testing** - Write and run tests
+**Echo can create skills, store them on GitHub, and use them forever.**
 
-## Utility Skills
+When Echo creates a skill:
+1. Build the skill with Python files, scripts, documentation
+2. Store it in `skills/custom/` on GitHub
+3. Document it in this file
+4. Use it anytime in the future
 
-- **internet-researcher** - Search the web and gather info
-- **summarize** - Summarize content from URLs/podcasts
-- **video-frames** - Extract frames from videos
-- **weather** - Get weather forecasts
+This way Echo doesn't have to create skills on the fly - they're stored and ready to use.
 
-## Communication Skills
+## Default Skills (43)
 
-- **email-automation** - Send emails via Gmail
-- **gog** - Google Workspace CLI (Gmail, Calendar, Drive)
-- **xurl** - X (Twitter) API operations
+These come pre-installed with OpenClaw:
 
-## Other Skills
+1. 1password, apple-notes, apple-reminders, bear-notes
+2. blogwatcher, blucli, bluebubbles, camsnap, canvas
+3. clawhub, coding-agent, discord, eightctl, gemini
+4. gh-issues, gifgrep, gog, goplaces, healthcheck
+5. himalaya, imsg, mcporter, model-usage, nano-pdf
+6. node-connect, notion, obsidian, openai-whisper
+7. openai-whisper-api, openhue, oracle, ordercli, peekaboo
+8. sag, session-logs, sherpa-onnx-tts, slack, songsee
+9. sonoscli, spotify-player, things-mac, trello, voice-call, wacli
 
-- **1password** - 1Password CLI operations
-- **blogwatcher** - Monitor blogs and RSS feeds
-- **gh-issues** - GitHub issues automation
-- **github** - GitHub operations via gh CLI
-- **skill-creator** - Create and edit AgentSkills
-- **tmux** - Remote-control tmux sessions
+## Custom Skills (32) - Stored in GitHub
+
+All custom skills are stored in: `skills/custom/`
+
+See `skills/custom/README.md` for the full list of skills we've created.
+
+## How to Create a New Skill
+
+When you need a new skill:
+
+1. Create folder: `skills/custom/<skill-name>/`
+2. Add `SKILL.md` - Description and metadata
+3. Add Python scripts, config files, etc.
+4. Upload to GitHub: `skills/custom/<skill-name>/`
+5. Update this file with the new skill
+6. Update `skills/custom/README.md`
+
+## Skills Storage Location
+
+All custom skills are stored on GitHub:
+```
+https://github.com/Liberty-Emporium/echo-v1/tree/main/skills/custom/
+```
+
+## This is Echo's Legacy
+
+This skills system allows Echo to:
+- Build skills once, use forever
+- Share skills with others
+- Grow smarter over time
+- Be useful 20+ years from now
+- Pass knowledge to others Jay cares about
 
 ---
-*Version: 1.0.0*
+*Version: 1.0.0 - Created 2026-04-11*
