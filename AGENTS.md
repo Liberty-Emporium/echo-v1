@@ -23,6 +23,8 @@ Before doing anything else:
 - contractor-pro-ai: https://contractor-pro-ai-production.up.railway.app
 - pet-vet-ai: https://pet-vet-ai-production.up.railway.app
 - liberty-inventory: https://liberty-emporium-and-thrift-inventory-app-production.up.railway.app
+- liberty-demo: https://liberty-emporium-inventory-demo-app-production.up.railway.app
+- jay-portfolio: https://jay-portfolio-production.up.railway.app
 
 ## Persistent Storage (CRITICAL!)
 
