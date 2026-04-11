@@ -1,35 +1,51 @@
 # Skills Folder
 
-This folder would contain the actual skill files for Echo.
+Skills are located in `/usr/local/lib/node_modules/openclaw/skills/` on the running system.
 
-## How Skills Work
+## Skill Structure
 
-Skills are in `/usr/local/lib/node_modules/openclaw/skills/` on the running system.
+Skills can be either:
 
-Each skill has:
-- `SKILL.md` - Description and metadata
-- Optional scripts/ - Helper scripts
-
-## Key Skills We Use
-
-### For This Project
-- **github** - GitHub operations (we use gh CLI)
-- **deployment** - Railway deployment
-- **internet-researcher** - Web research
-- **debugging** - Debug apps
-
-## Skill Structure Example
-
-```yaml
----
-name: skill-name
-description: What it does
-metadata:
-  openclaw:
-    emoji: 🎯
-    requires:
-      bins: [command]
+### 1. Single .skill File
 ```
+skills/
+  api-design.skill   # YAML file with description
+```
+
+### 2. Folder with SKILL.md
+```
+skills/
+  github/
+    SKILL.md         # Description and metadata
+```
+
+## Key Skills for This Project
+
+| Skill | Type | Description |
+|-------|------|-------------|
+| github | folder | GitHub operations |
+| deployment | .skill | Deploy to cloud |
+| internet-researcher | .skill | Web search |
+| debugging | .skill | Debug apps |
+| weather | .skill | Get weather |
+| xurl | folder | Twitter/X operations |
+
+## All Available Skills (81 total)
+
+- 1password, api-design, apple-notes, app-auditor
+- bear-notes, blogwatcher, blucli, bluebubbles
+- camsnap, canvas, clawhub, coding-agent
+- discord, eightctl, gemini, gh-issues
+- gifgrep, github, gog, goplaces
+- healthcheck, himalaya, imsg, mcporter
+- model-usage, nano-pdf, node-connect, notion
+- obsidian, openai-whisper, openai-whisper-api
+- openhue, oracle, ordercli, peekaboo
+- sag, session-logs, sherpa-onnx-tts
+- skill-creator, slack, songsee, sonoscli
+- spotify-player, summarize, things-mac, tmux
+- trello, video-frames, voice-call, wacli
+- weather, xurl
 
 ---
 *Version: 1.0.0*
