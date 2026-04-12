@@ -43,5 +43,13 @@
 - Username: admin
 - Password: admin1
 
+## KiloClaw / OpenClaw Config Notes
+
+- **Telegram bot:** @Jays_Echo_bot (token configured, paired 2026-04-12)
+- **Active model:** `openrouter/qwen/qwen3-next-80b-a3b-instruct:free`
+  - `qwen/qwen3.6-plus:free` was deprecated on OpenRouter — do NOT use it
+  - Replacement: `qwen/qwen3-next-80b-a3b-instruct:free` (80B, better)
+- **Hosting:** KiloClaw on Fly.io
+
 ---
-*Version: 1.0.0 - Created 2026-04-11*
+*Version: 1.1.0 - Updated 2026-04-12*
