@@ -50,9 +50,11 @@ Jay has said this multiple times. Do not forget it. Do not break it.
    - GitHub: github.com/Liberty-Emporium/pet-vet-ai
    - Auth: custom homebrew, NOT multi-tenant yet
    
-5. **Andy - Dropship Shipping** - Dropshipping business
+5. **Andy - Dropship Shipping** - Dropshipping SaaS platform
    - GitHub: github.com/Liberty-Emporium/Dropship-Shipping
-   - Auth: custom homebrew, NOT multi-tenant yet
+   - Multi-tenant: YES (upgraded 2026-04-13)
+   - Has: landing, wizard/trial signup, overseer panel, per-tenant data, OpenRouter + model selector, OpenClaw bot, floating chat panel, AI CEO
+   - Pricing: $49/mo · Commit: 3e4955c
    
 6. **Jay Portfolio** - Portfolio site
    - GitHub: github.com/Liberty-Emporium/jay-portfolio
