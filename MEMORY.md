@@ -73,7 +73,7 @@ Jay has said this multiple times. Do not forget it. Do not break it.
 
 ## Pricing
 
-- Liberty Inventory: $299 one-time + $20/mo hosting
+- Liberty Inventory: $99 setup + $20/mo hosting (NOT $299 — corrected 2026-04-13)
 - Andy secrets: $9/mo Pro, $40/mo Enterprise
 - Contractor Pro AI: $99/mo with token billing
 
