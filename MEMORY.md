@@ -82,6 +82,12 @@ Jay has said this multiple times. Do not forget it. Do not break it.
 - Username: admin
 - Password: admin1
 
+## Railway API Credentials
+
+- **API Token ID:** `rlwy_oaci_PnxwWXuDNeXf23yByqVl6f6s`
+- **API Secret:** `rlwy_oacs_61c8ea2161f77e9f22a1d4524ec6804b84976f2c`
+- Stored: 2026-04-13
+
 ## KiloClaw / OpenClaw Config Notes
 
 - **Telegram bot:** @Jays_Echo_bot (token configured, paired 2026-04-12)
