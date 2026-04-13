@@ -64,6 +64,11 @@ Jay has said this multiple times. Do not forget it. Do not break it.
 - **Goal:** Extract a `saas_core.py` blueprint from Liberty Inventory that any new app can drop in, adding: team/multi-user per tenant, Stripe Checkout + webhooks, subscription enforcement, plan limits, billing portal
 - **Status as of 2026-04-13:** Blueprint planning stage; Liberty Inventory branding upgraded first
 
+## Liberty Inventory — Recent Changes (2026-04-13)
+- Rich storefront branding: gallery/slideshow, business hours, social links, font picker, announcement banner, hero slogan
+- Replaced Qwen with OpenRouter everywhere (model selector in settings gear)
+- OpenClaw bot integration: per-store gateway config, floating chat panel, /api/bot/chat proxy with store context, per-tenant support
+
 ## Pricing
 
 - Liberty Inventory: $299 one-time + $20/mo hosting
