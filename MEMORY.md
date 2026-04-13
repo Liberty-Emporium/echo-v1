@@ -1,5 +1,15 @@
 # MEMORY.md - Long-term Memory
 
+## Jay's Rules — Non-Negotiable
+
+### 🚨 RULE #1 — NO SUB-AGENTS. EVER.
+Do ALL work directly. No spawning, no delegating, no sub-agents of any kind.
+REASON: Sub-agents multiply API calls and cause rate limit problems.
+Jay has said this multiple times. Do not forget it. Do not break it.
+
+- Always test before saying it's done
+- Always push to GitHub when the work is code
+
 ## Rules for Building Apps
 
 ### ALWAYS Test URLs Before Deploying
@@ -16,21 +26,34 @@
 
 1. **Contractor Pro AI** - SaaS for contractors, $99/mo with token billing
    - GitHub: github.com/Liberty-Emporium/Contractor-Pro-AI
+   - Auth: custom homebrew, NOT multi-tenant yet
    
 2. **Andy - Keep Your Secrets** - API key management with categories
    - GitHub: github.com/Liberty-Emporium/ai-api-tracker
+   - Auth: custom homebrew, NOT multi-tenant yet
    
-3. **Liberty Inventory** - Thrift store management
+3. **Liberty Inventory** - Thrift store management / SaaS platform
    - GitHub: github.com/Liberty-Emporium/Liberty-Emporium-Inventory-App
+   - Multi-tenant: YES — most sophisticated app, has overseer panel, client provisioning, trial signup, impersonation, Stripe keys, branding
+   - Last updated 2026-04-13: Added rich storefront branding (gallery/slideshow, business hours, social links, font picker, announcement banner, hero slogan) — commit ccf94cd
    
 4. **Pet Vet AI** - Pet health diagnosis
    - GitHub: github.com/Liberty-Emporium/pet-vet-ai
+   - Auth: custom homebrew, NOT multi-tenant yet
    
 5. **Andy - Dropship Shipping** - Dropshipping business
    - GitHub: github.com/Liberty-Emporium/Dropship-Shipping
+   - Auth: custom homebrew, NOT multi-tenant yet
    
 6. **Jay Portfolio** - Portfolio site
    - GitHub: github.com/Liberty-Emporium/jay-portfolio
+
+## Multi-Tenant SaaS Blueprint Status
+
+- **auth_core.py** — `/root/.openclaw/workspace/multi-tenant-auth/` — drop-in auth with teams, invites, roles, super admin
+- **Liberty Inventory** is the gold standard for multi-tenant architecture — overseer panel, per-slug isolated data dirs, trial provisioning, impersonation, Stripe keys, client branding
+- **Goal:** Extract a `saas_core.py` blueprint from Liberty Inventory that any new app can drop in, adding: team/multi-user per tenant, Stripe Checkout + webhooks, subscription enforcement, plan limits, billing portal
+- **Status as of 2026-04-13:** Blueprint planning stage; Liberty Inventory branding upgraded first
 
 ## Pricing
 
@@ -52,4 +75,4 @@
 - **Hosting:** KiloClaw on Fly.io
 
 ---
-*Version: 1.1.0 - Updated 2026-04-12*
+*Version: 1.2.0 - Updated 2026-04-13*
