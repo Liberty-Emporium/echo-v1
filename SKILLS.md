@@ -12,47 +12,69 @@ When Echo creates a skill:
 3. Document it in this file
 4. Use it anytime in the future
 
-This way Echo doesn't have to create skills on the fly - they're stored and ready to use.
+## Default Skills (from OpenClaw/KiloClaw)
 
-## Default Skills (43)
+See the KiloClaw skill registry for the full list of built-in skills.
 
-These come pre-installed with OpenClaw:
+## Custom Skills — Stored in `skills/custom/`
 
-1. 1password, apple-notes, apple-reminders, bear-notes
-2. blogwatcher, blucli, bluebubbles, camsnap, canvas
-3. clawhub, coding-agent, discord, eightctl, gemini
-4. gh-issues, gifgrep, gog, goplaces, healthcheck
-5. himalaya, imsg, mcporter, model-usage, nano-pdf
-6. node-connect, notion, obsidian, openai-whisper
-7. openai-whisper-api, openhue, oracle, ordercli, peekaboo
-8. sag, session-logs, sherpa-onnx-tts, slack, songsee
-9. sonoscli, spotify-player, things-mac, trello, voice-call, wacli
+### Session Skills (Built 2026-04-11 to 2026-04-13)
+See `skills/custom/README.md` for full descriptions.
 
-## Custom Skills (32) - Stored in GitHub
+Key skills available:
+- `app-auditor` — Audit a Flask app for bugs, security issues, missing features
+- `security-scan` — Scan code for secrets, SQL injection, auth flaws
+- `security-shield` — Harden an app against common attack vectors
+- `testing-django` / `testing-e2e` / `testing-api` — Test strategy generators
+- `smoke-test` — Quick functional smoke test for a deployed URL
+- `internet-researcher` — Deep research on any topic
+- `legacy-whisper` — Understand and document legacy codebases
+- `refactor-sense` — Identify and plan code refactors
+- `visual-audit` — Screenshot + visual review of a deployed UI
+- `route-audit` — Map all Flask/Django routes and check for issues
+- `github-integration` — GitHub operations: push, PR, branch, commit
+- `mentor-mode` — Explain code concepts to learners
 
-All custom skills are stored in: `skills/custom/`
+### Skills Needed (Identified 2026-04-13)
 
-See `skills/custom/README.md` for the full list of skills we've created.
+Based on today's session, these skills would have made the work faster and better:
 
-## How to Create a New Skill
+#### `pdf-extractor` (HIGH PRIORITY)
+**What it does:** Downloads a PDF from any URL (Google Drive, Dropbox, direct), extracts specific pages as images, extracts text if available, returns base64 images ready for embedding.
+**Why needed:** Today I had to manually: download PDF with curl, install poppler-utils, run pdftoppm, then manually base64 encode. A skill would do this in one step.
+**Script:** `scripts/extract_pdf.py --url URL --pages 1-5 --output-format base64_png`
 
-When you need a new skill:
+#### `railway-deploy` (HIGH PRIORITY)
+**What it does:** Given a repo path, handles the full Railway deploy cycle: check current deployment status, push to correct branch (master vs main), wait for deploy, verify the URL is live, return confirmation.
+**Why needed:** Today I had to: figure out the branch was `master` not `main`, push, wait, manually curl to verify. A skill wraps all of this.
+**Script:** `scripts/railway_deploy.py --repo PATH --url URL --branch master`
 
-1. Create folder: `skills/custom/<skill-name>/`
-2. Add `SKILL.md` - Description and metadata
-3. Add Python scripts, config files, etc.
-4. Upload to GitHub: `skills/custom/<skill-name>/`
-5. Update this file with the new skill
-6. Update `skills/custom/README.md`
+#### `base64-image` (MEDIUM)
+**What it does:** Takes any image file path or URL, converts to base64 data URI, ready to drop into HTML.
+**Why needed:** Used this pattern twice today (thumbnail + QR code). Should be one command.
+**Script:** `scripts/to_base64.py --input FILE_OR_URL --mime image/png`
+
+#### `qr-generator` (MEDIUM)
+**What it does:** Generates a QR code for any URL, returns as base64 PNG data URI ready for HTML embedding.
+**Why needed:** Today installed python3-qrcode via apt, wrote the generation script inline. Should be a ready-made skill.
+**Script:** `scripts/make_qr.py --url URL --size 300 --color "#1a1a2e"`
+
+#### `github-token-refresh` (MEDIUM)
+**What it does:** Detects when a GitHub token has expired (404 on API calls), alerts Jay immediately, stores the new token when provided.
+**Why needed:** Today spent multiple failed commands before realizing the token was dead.
+
+#### `apt-toolbox` (LOW)
+**What it does:** Pre-installs common tools (poppler-utils, ghostscript, imagemagick, ffmpeg, qrcode) at session start so they're always ready.
+**Why needed:** Today had to apt-get install mid-task, which delayed work.
 
 ## Skills Storage Location
 
-All custom skills are stored on GitHub:
+All custom skills stored at:
 ```
 https://github.com/Liberty-Emporium/echo-v1/tree/main/skills/custom/
 ```
 
-## This is Echo's Legacy
+## Echo's Legacy
 
 This skills system allows Echo to:
 - Build skills once, use forever
@@ -62,4 +84,4 @@ This skills system allows Echo to:
 - Pass knowledge to others Jay cares about
 
 ---
-*Version: 1.0.0 - Created 2026-04-11*
+*Version: 1.1.0 - Updated 2026-04-13*
