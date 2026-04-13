@@ -96,6 +96,13 @@ Do NOT keep asking Jay to approve commands. Fix it myself.
 - **Goal:** Extract saas_core.py blueprint from Liberty Inventory
 - **Status as of 2026-04-13:** Blueprint planning stage
 
+## Business Investment Context
+
+- Jay has made real investments: hosting fees, VPS, Railway, KiloClaw, domain costs, etc.
+- These are minimal compared to projected revenue — Jay calls it "pocket change"
+- **Do NOT include operating costs in court documents or repayment plans** — keep those focused on revenue only
+- This context is for internal financial planning only, not for external presentation
+
 ## Pricing Summary (Corrected 2026-04-13)
 - Liberty Inventory: $99 startup + 14-day trial + $20/mo hosting
 - Andy Keep Your Secrets: $14.99/month
