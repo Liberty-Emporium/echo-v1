@@ -96,6 +96,15 @@ Do NOT keep asking Jay to approve commands. Fix it myself.
 - **Goal:** Extract saas_core.py blueprint from Liberty Inventory
 - **Status as of 2026-04-13:** Blueprint planning stage
 
+## TODO — Fly.io Migration (When Court Case is Done)
+
+- Migrate all 7 apps from Railway to Fly.io
+- Benefits: static files persist (no more base64 hacks), cheaper ($2-6/mo per app vs Railway flat rate), pay-per-second billing
+- Strategy: migrate jay-portfolio first as a test, then roll out to all apps
+- Fly.io already hosts KiloClaw — proven platform
+- Need: `flyctl` CLI + `fly.toml` per app — Echo will write all config files when ready
+- **DO NOT start this until Jay's court matter is resolved**
+
 ## Business Investment Context
 
 - Jay has made real investments: hosting fees, VPS, Railway, KiloClaw, domain costs, etc.
