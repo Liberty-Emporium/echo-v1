@@ -82,11 +82,14 @@ Jay has said this multiple times. Do not forget it. Do not break it.
 - Username: admin
 - Password: admin1
 
+## GitHub Credentials
+
+- Token stored in: `/root/.secrets/github_token` (local only, never pushed)
+- Remote URL pattern: `https://<token>@github.com/Liberty-Emporium/<repo>.git`
+
 ## Railway API Credentials
 
-- **API Token ID:** `rlwy_oaci_PnxwWXuDNeXf23yByqVl6f6s`
-- **API Secret:** `rlwy_oacs_61c8ea2161f77e9f22a1d4524ec6804b84976f2c`
-- Stored: 2026-04-13
+- Credentials stored in: `/root/.secrets/railway_creds` (local only, never pushed)
 
 ## KiloClaw / OpenClaw Config Notes
 
