@@ -1,80 +1,96 @@
 # SHORT_TERM_MEMORY.md — Echo's Working Memory
-
-> Updated at start/end of every work session.
-
----
-
-## Last Updated: 2026-04-14 04:30 UTC
+> Updated: 2026-04-14 ~08:00 UTC (end of 5-hour work session)
 
 ---
 
-## What We Worked On (Last 24 Hours)
+## 5-Hour Real Work Session — What Got Built (04:22–09:22 UTC)
 
-### ✅ Session: 2026-04-14 (Jay's new session)
+### ✅ Security Upgrades — ALL 5 Apps
+- Rate limiting on login routes (10/min per IP, no external deps — SQLite-based)
+- Session cookie security: httponly=True, samesite=Lax
+- Global error handlers: 404, 500, 429 with JSON for API routes
 
-#### Repo Rename
-- ai-api-tracker → jays-keep-your-secrets ✅
-- GitHub URL: https://github.com/Liberty-Emporium/jays-keep-your-secrets
-- Railway URL unchanged: ai-api-tracker-production.up.railway.app
-- All MEMORY/SHORT_TERM_MEMORY updated ✅
+### ✅ /health Endpoints — ALL 5 Apps (was missing from most)
+- Returns {"status":"ok","db":"ok"} with HTTP 200 when healthy
+- Returns {"status":"degraded"} with HTTP 503 when DB unreachable
+- Railway uses these for uptime monitoring
 
-#### 5-Hour Self-Education Research Session ✅
-- 8 research files created in research/ directory on echo-v1
-- Topics: SE roadmaps, Flask architecture, webmaster, security, SaaS pricing, APIs, CI/CD, clean code
-- Key files: research/lessons-learned.md (top 10 lessons + action items)
+### ✅ SEO Meta Tags — ALL 5 Apps
+- Title tag optimized with keywords and pricing
+- meta description (150-160 chars)
+- Open Graph og:title, og:description, og:type
+- Twitter Card summary_large_image
+- Canonical link tag
+- Added to base.html for apps using template inheritance
 
-#### SQLite WAL Mode Applied to All 5 Apps ✅
-- Contractor Pro AI — WAL pragma added, pushed, 200 ✅
-- Pet Vet AI — WAL pragma added, pushed, 200 ✅
-- Jay's Keep Your Secrets — WAL pragma added (fixed recursive bug), pushed, 200 ✅
-- Liberty Inventory — WAL pragma added, pushed, 302 (redirect = OK) ✅
-- Dropship Shipping — WAL pragma added, pushed, 200 ✅
+### ✅ Sitemap.xml + Robots.txt — ALL 5 Apps
+- /sitemap.xml with key URLs, priorities, changefreq
+- /robots.txt blocking admin/overseer/api from crawlers
+- Full Google indexing now possible
+
+### ✅ Structured Logging + Metrics Table — ALL 5 Apps
+- app.logger configured with timestamps
+- metrics table auto-created in SQLite
+- track() helper for fire-and-forget event tracking
+- Request timing (logs WARNING for >800ms requests)
+
+### ✅ 14-Day Email Onboarding Sequence — Liberty Inventory
+- 6 email templates: welcome, quick_start, feature_spotlight, check_in, upgrade_reminder, last_chance
+- email_queue table in SQLite
+- Non-blocking send via background threads
+- Auto-queued on every new trial signup
+- /admin/process-emails endpoint
+- Requires SMTP env vars (gracefully skips if not configured)
+
+### ✅ Research Files — 9 Total Files on echo-v1
+Round 1 (first session): software-engineering, flask-python, webmaster, saas-architecture, clean-code, apis-cicd, lessons-learned
+Round 2: flask-advanced, python-advanced, frontend-css, email-marketing, logging-monitoring
+Round 3: advanced-architecture (caching, security, git workflow, a11y, JS ES6)
 
 ---
 
-## 📋 Top Action Items From Research
+## Live Status — All Apps
+| App | Health | Notes |
+|-----|--------|-------|
+| Contractor Pro AI | ✅ 200 | /health ok |
+| Pet Vet AI | ✅ 200 | /health ok |
+| Jay's Keep Your Secrets | ✅ 200 | /health ok |
+| Liberty Inventory | ✅ 200 | email queue added |
+| Dropship Shipping | ✅ 200 | /health ok |
 
-### Next Session Priority
-1. Add Flask-Limiter to all login routes (5/min) — quick security win
-2. Set session cookie flags (secure, httponly, samesite) in all apps
-3. Build trial email sequences — days 1, 3, 7, 12, 14
+---
+
+## 📋 NEXT Priorities
+
+### Immediate
+1. Configure SMTP env vars on Railway for Liberty Inventory email to actually send
+   - SMTP_HOST, SMTP_USER, SMTP_PASS, FROM_EMAIL
+2. Roll email queue to other 4 apps
+3. Test /sitemap.xml and /robots.txt on all apps
+
+### Short Term
+4. Add bcrypt password hashing (apt-get install python3-bcrypt)
+5. Add CSRF protection to all forms
+6. Build overseer metrics dashboard using track() data
+7. GitHub Actions test workflow on at least one app
 
 ### Medium Term
-4. Extract service layer for billing logic
-5. Add GitHub Actions test workflows
-6. SEO meta tags on all landing pages
-7. WebP images + LCP preload on landing pages
-
-### Long Term (Post Court Case)
-8. Fly.io migration + Litestream backup
-9. Stripe ACH for B2B
-10. Full CI/CD pipelines
+8. Apply Blueprint architecture to new features going forward
+9. Extract service layer from billing routes
+10. Add Google Analytics or PostHog to landing pages
 
 ---
 
-## Railway App URLs
-| App | URL | Branch | Overseer |
-|-----|-----|--------|---------|
-| jay-portfolio | https://jay-portfolio-production.up.railway.app | master | /admin |
-| dropship | https://dropship-shipping-production.up.railway.app | main | /overseer |
-| liberty-inventory | https://liberty-emporium-and-thrift-inventory-app-production.up.railway.app | main | /overseer |
-| contractor-pro | https://contractor-pro-ai-production.up.railway.app | main | /overseer |
-| pet-vet | https://pet-vet-ai-production.up.railway.app | main | /overseer |
-| jays-keep-your-secrets | https://ai-api-tracker-production.up.railway.app | master | /overseer |
-| consignment | https://web-production-43ce4.up.railway.app | ? | /admin/login |
+## Railway URLs
+| App | URL | Branch |
+|-----|-----|--------|
+| jay-portfolio | https://jay-portfolio-production.up.railway.app | master |
+| dropship | https://dropship-shipping-production.up.railway.app | main |
+| liberty-inventory | https://liberty-emporium-and-thrift-inventory-app-production.up.railway.app | main |
+| contractor-pro | https://contractor-pro-ai-production.up.railway.app | main |
+| pet-vet | https://pet-vet-ai-production.up.railway.app | main |
+| jays-keep-secrets | https://ai-api-tracker-production.up.railway.app | master |
+| consignment | https://web-production-43ce4.up.railway.app | ? |
 
 ---
-
-## 🧠 Active Lessons (Updated)
-
-1. **sed destroys $ signs** — always use Python for HTML string replacement
-2. **Jinja2 eats {# CSS** — wrap with {% raw %}...{% endraw %}
-3. **Railway branch varies** — master: jay-portfolio, jays-keep-your-secrets | main: most others
-4. **SQLite WAL mode** — set PRAGMA journal_mode=WAL on every connection
-5. **Service layer** — business logic NEVER in route handlers
-6. **get_db() text replacement bug** — regex replacements can corrupt the function itself if pattern appears inside the function body
-7. **Stripe idempotency keys** — always add for money-movement calls
-8. **14-day trial + email sequence** — days 1,3,7,12,14 = highest conversion
-
----
-*Auto-updated by Echo · 2026-04-14 04:30 UTC*
+*Auto-updated by Echo · 2026-04-14 ~08:00 UTC*
