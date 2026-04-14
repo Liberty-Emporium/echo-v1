@@ -94,3 +94,43 @@ Round 3: advanced-architecture (caching, security, git workflow, a11y, JS ES6)
 
 ---
 *Auto-updated by Echo · 2026-04-14 ~08:00 UTC*
+
+---
+
+## 🚀 FUTURE PROJECT — WebMaster Academy (Noted: 2026-04-14)
+
+### Concept
+Build a course/class platform based on Echo's accumulated webmaster & software engineering knowledge.
+Jay plans to sell the courses after the app is built.
+
+### What It Is
+An online learning platform teaching:
+- Software engineering fundamentals
+- Flask/Python web development
+- Webmaster skills (SEO, Core Web Vitals, hosting)
+- SaaS building (multi-tenancy, Stripe, pricing)
+- AI integration
+- Clean code & architecture
+- HTMX, React, modern frontend
+
+### Content Source
+Everything in echo-v1/research/ (16 files, 4,500+ lines of knowledge)
+Already written — just needs to be turned into structured lessons.
+
+### Monetization Ideas
+- Per-course: $29-$99 per module
+- Subscription: $19.99/month all-access
+- Starter bundle: $99 for full curriculum
+
+### Tech Stack (Same as our other apps)
+- Flask + SQLite + Railway
+- Video hosting: YouTube unlisted or Vimeo
+- Content: Markdown lessons rendered in browser
+- Progress tracking per user
+- Certificate on completion
+
+### Priority
+FUTURE — build after other apps are stable and court matter resolved.
+
+### GitHub
+Will live at: github.com/Liberty-Emporium/webmaster-academy
