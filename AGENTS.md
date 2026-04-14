@@ -62,7 +62,7 @@ Before doing anything else:
 
 ## Persistent Storage (CRITICAL!)
 - Railway wipes data on every deploy
-- ALWAYS add persistent volume at /data for databases
+- ALWAYS add persistent volume at /data for SQLite databases
 - ALWAYS create default admin account (admin/admin1)
 
 ---
