@@ -63,6 +63,15 @@ POST to `/start-trial`
 - `leads` list
 - `active_count`, `suspended_count`, `mrr`, `monthly_price`
 
+**templates/account.html** — account settings with two forms:
+- Change password: `current_password`, `new_password`, `action=change_password`
+- Change username: `current_password`, `new_username`, `action=change_username`
+- Both POST to `/account`
+
+**templates/forgot_password.html** — email input, POST to `/forgot-password`
+
+**templates/reset_password.html** — receives `token` + `email` context, `password` field POST to `/reset-password/<token>`
+
 ## Data Structure
 
 ```
@@ -101,6 +110,9 @@ core.admin_required             # decorator
 | GET | `/logout` | Clear session |
 | GET | `/wizard` | Trial signup form |
 | POST | `/start-trial` | Create new tenant |
+| GET/POST | `/account` | Change username + password |
+| GET/POST | `/forgot-password` | Request password reset by email |
+| GET/POST | `/reset-password/<token>` | Set new password via token |
 | GET | `/overseer` | Admin panel |
 | POST | `/overseer/client/create` | Create client manually |
 | POST | `/overseer/client/<slug>/impersonate` | Manage as client |
