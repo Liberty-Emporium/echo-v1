@@ -1,0 +1,62 @@
+{% extends "settings/base_settings.html" %}
+{% block title %}Team — Settings{% endblock %}
+{% block settings_content %}
+<h2 style="font-size:1.4rem;margin-bottom:20px">👥 Team Members</h2>
+
+<div class="card" style="margin-bottom:16px;padding:0;overflow:hidden">
+  <table>
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Joined</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for m in members %}
+      <tr>
+        <td>
+          {{ m['email'] }}
+          {% if m['id'] == user['id'] %}
+            <span class="badge badge-green" style="margin-left:6px">You</span>
+          {% endif %}
+        </td>
+        <td><span class="badge badge-gray">{{ m['role'] }}</span></td>
+        <td style="color:var(--text-muted);font-size:0.85rem">{{ m['created_at'][:10] }}</td>
+        <td>
+          {% if m['id'] != user['id'] and m['role'] != 'owner' %}
+          <form method="POST" action="{{ url_for('settings.remove_member') }}"
+                onsubmit="return confirm('Remove this team member?')">
+            <input type="hidden" name="member_id" value="{{ m['id'] }}">
+            <button type="submit" class="btn btn-red btn-sm">Remove</button>
+          </form>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% if user['plan'] in ('pro','teams') %}
+<div class="card">
+  <h3 style="font-size:1rem;margin-bottom:4px">Invite Team Member</h3>
+  <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:16px">
+    {{ members|length }} / {{ plan['team_seats'] }} seats used
+  </p>
+  {% if members|length < plan['team_seats'] %}
+  <p style="color:var(--text-muted);font-size:0.9rem">Team invites coming soon. Contact support to add members manually.</p>
+  {% else %}
+  <p style="color:var(--yellow);font-size:0.9rem">⚠️ You've used all {{ plan['team_seats'] }} seats. Upgrade to add more.</p>
+  {% endif %}
+</div>
+{% else %}
+<div class="card" style="text-align:center;padding:32px">
+  <div style="font-size:2rem;margin-bottom:8px">👥</div>
+  <h3 style="margin-bottom:8px">Team Members on Pro & Teams Plans</h3>
+  <p style="color:var(--text-muted);margin-bottom:16px;font-size:0.9rem">Upgrade to invite team members and share your listing catalog.</p>
+  <a href="{{ url_for('settings.billing') }}" class="btn btn-green">View Plans →</a>
+</div>
+{% endif %}
+{% endblock %}
