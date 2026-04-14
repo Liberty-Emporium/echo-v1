@@ -33,14 +33,14 @@
 #### Multi-Tenant Conversions — ALL 3 DONE ✅
 - ✅ Contractor Pro AI — overseer, trial wizard, per-client data, login, landing ($99/mo)
 - ✅ Pet Vet AI — overseer, admin panel, user mgmt, MRR tracking ($9.99/mo)
-- ✅ Andy Keep Your Secrets — overseer, user mgmt, MRR tracking, DB→/data fix ($14.99/mo)
+- ✅ Jay's Keep Your Secrets — overseer, user mgmt, MRR tracking, DB→/data fix ($14.99/mo)
 
 #### Admin Login URLs (Jay's Overseer Panels)
 | App | Admin URL | Login |
 |-----|-----------|-------|
 | Contractor Pro AI | /overseer | admin/admin1 |
 | Pet Vet AI | /admin/login → /overseer | admin/admin1 |
-| Andy Keep Your Secrets | /overseer/login → /overseer | admin/admin1 |
+| Jay's Keep Your Secrets | /overseer/login → /overseer | admin/admin1 |
 | Liberty Inventory | (already has overseer) | admin/admin1 |
 | Dropship Shipping | (already has overseer) | admin/admin1 |
 | Consignment Solutions | /admin/login | admin/admin1 |
@@ -87,7 +87,7 @@
 1. **sed destroys $ signs** — always use Python for HTML string replacement
 2. **Jinja2 eats {# CSS** — wrap with {% raw %}...{% endraw %}, grep -rn "{#" templates/ before push
 3. **Local test before push** — DATA_DIR=/tmp/test python3 -c "import app; test routes"
-4. **Railway branch varies** — master: jay-portfolio, ai-api-tracker | main: most others
+4. **Railway branch varies** — master: jay-portfolio, jays-keep-your-secrets | main: most others
 5. **Railway deploys: 35-40s** — always wait before curl verify
 6. **apt not pip** — python3-flask, python3-qrcode via apt-get
 7. **DB path** — always use /data with fallback to ./data (not __file__ dir)
@@ -103,7 +103,7 @@
 | liberty-inventory | https://liberty-emporium-and-thrift-inventory-app-production.up.railway.app | ? | /overseer |
 | contractor-pro | https://contractor-pro-ai-production.up.railway.app | main | /overseer |
 | pet-vet | https://pet-vet-ai-production.up.railway.app | main | /overseer |
-| andy-secrets | https://ai-api-tracker-production.up.railway.app | master | /overseer |
+| andy-secrets | https://jays-keep-your-secrets-production.up.railway.app | master | /overseer |
 | consignment | https://web-production-43ce4.up.railway.app | ? | /admin/login |
 
 ---
