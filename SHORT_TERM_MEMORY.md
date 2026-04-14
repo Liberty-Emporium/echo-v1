@@ -1,97 +1,54 @@
 # SHORT_TERM_MEMORY.md — Echo's Working Memory
 
 > Updated at start/end of every work session.
-> End of session: lessons → memory/YYYY-MM-DD.md. This file resets with next plan.
 
 ---
 
-## Last Updated: 2026-04-14 02:05 UTC
+## Last Updated: 2026-04-14 04:30 UTC
 
 ---
 
 ## What We Worked On (Last 24 Hours)
 
-### ✅ ALL COMPLETED
+### ✅ Session: 2026-04-14 (Jay's new session)
 
-#### Echo Identity & Bootstrap
-- Synced echo-v1 repo, stored all credentials in /root/.secrets/
-- Full automation (exec.ask=off)
+#### Repo Rename
+- ai-api-tracker → jays-keep-your-secrets ✅
+- GitHub URL: https://github.com/Liberty-Emporium/jays-keep-your-secrets
+- Railway URL unchanged: ai-api-tracker-production.up.railway.app
+- All MEMORY/SHORT_TERM_MEMORY updated ✅
 
-#### Jay's Court Statement — jay-portfolio (branch: master)
-- Balance: $11,264.11 | Legal name: Ronald J. Alexander Jr. (courts only)
-- Medical thumbnail (base64), view-only PDF modal, 100-word summary
-- Print flyers /flyer | QR codes | 4-phase repayment plan (18mo)
-- Portfolio showcase section
+#### 5-Hour Self-Education Research Session ✅
+- 8 research files created in research/ directory on echo-v1
+- Topics: SE roadmaps, Flask architecture, webmaster, security, SaaS pricing, APIs, CI/CD, clean code
+- Key files: research/lessons-learned.md (top 10 lessons + action items)
 
-#### Bug Fixes
-- Dropship: Jinja2 {# CSS, missing login.html, duplicate signup, pricing $49→$299
-- Contractor Pro: missing pricing.html
-
-#### Smoke Tester: 18/18 ✅
-- scripts/smoke_test.py — run: python3 /root/.openclaw/workspace/scripts/smoke_test.py
-
-#### Multi-Tenant Conversions — ALL 3 DONE ✅
-- ✅ Contractor Pro AI — overseer, trial wizard, per-client data, login, landing ($99/mo)
-- ✅ Pet Vet AI — overseer, admin panel, user mgmt, MRR tracking ($9.99/mo)
-- ✅ Jay's Keep Your Secrets — overseer, user mgmt, MRR tracking, DB→/data fix ($14.99/mo)
-
-#### Admin Login URLs (Jay's Overseer Panels)
-| App | Admin URL | Login |
-|-----|-----------|-------|
-| Contractor Pro AI | /overseer | admin/admin1 |
-| Pet Vet AI | /admin/login → /overseer | admin/admin1 |
-| Jay's Keep Your Secrets | /overseer/login → /overseer | admin/admin1 |
-| Liberty Inventory | (already has overseer) | admin/admin1 |
-| Dropship Shipping | (already has overseer) | admin/admin1 |
-| Consignment Solutions | /admin/login | admin/admin1 |
-
-#### Skills Built
-- pdf-extractor, railway-deploy, qr-generator, base64-image
-- jinja2-safe-css, flask-local-test, multi-tenant-upgrade
-- SHORT_TERM_MEMORY system
+#### SQLite WAL Mode Applied to All 5 Apps ✅
+- Contractor Pro AI — WAL pragma added, pushed, 200 ✅
+- Pet Vet AI — WAL pragma added, pushed, 200 ✅
+- Jay's Keep Your Secrets — WAL pragma added (fixed recursive bug), pushed, 200 ✅
+- Liberty Inventory — WAL pragma added, pushed, 302 (redirect = OK) ✅
+- Dropship Shipping — WAL pragma added, pushed, 200 ✅
 
 ---
 
-## 📋 NEXT 10 HOURS — Work Plan
+## 📋 Top Action Items From Research
 
-### Priority 1: saas_core.py Blueprint — ✅ DONE
-- [ ] Extract reusable multi-tenant core into workspace/saas_core/saas_core.py
-- [ ] Document: drop into any Flask app in 5 minutes
-- [ ] Push to echo-v1 as skill: skills/custom/saas-core/
+### Next Session Priority
+1. Add Flask-Limiter to all login routes (5/min) — quick security win
+2. Set session cookie flags (secure, httponly, samesite) in all apps
+3. Build trial email sequences — days 1, 3, 7, 12, 14
 
-### Priority 2: Expand Smoke Tester (30 min)
-- [ ] Add /wizard to Contractor Pro, Dropship checks
-- [ ] Add /overseer/login checks for all apps
-- [ ] Add pricing content checks (no old prices like $49/mo)
+### Medium Term
+4. Extract service layer for billing logic
+5. Add GitHub Actions test workflows
+6. SEO meta tags on all landing pages
+7. WebP images + LCP preload on landing pages
 
-### Priority 3: Add /data Volumes to All Railway Apps
-- Contractor Pro AI needs volume configured in Railway dashboard
-- Andy needs volume (just fixed DB path, but volume needs manual Railway setup)
-- Pet Vet AI needs volume
-- Remind Jay to add volumes in Railway dashboard for each app
-
-### Priority 4: Marketing Material
-- Court case: wait on outcome
-- Could build landing pages with proper SEO for each product
-- Jay mentioned wanting to start marketing when apps are complete
-
-### Priority 5: Consignment Solutions — Review
-- Hasn't been fully audited yet
-- Run full smoke test on its routes
-- Check for multi-tenant issues
-
----
-
-## 🧠 Active Lessons
-
-1. **sed destroys $ signs** — always use Python for HTML string replacement
-2. **Jinja2 eats {# CSS** — wrap with {% raw %}...{% endraw %}, grep -rn "{#" templates/ before push
-3. **Local test before push** — DATA_DIR=/tmp/test python3 -c "import app; test routes"
-4. **Railway branch varies** — master: jay-portfolio, jays-keep-your-secrets | main: most others
-5. **Railway deploys: 35-40s** — always wait before curl verify
-6. **apt not pip** — python3-flask, python3-qrcode via apt-get
-7. **DB path** — always use /data with fallback to ./data (not __file__ dir)
-8. **Base64 embed images** — never /static/uploads on Railway
+### Long Term (Post Court Case)
+8. Fly.io migration + Litestream backup
+9. Stripe ACH for B2B
+10. Full CI/CD pipelines
 
 ---
 
@@ -100,49 +57,24 @@
 |-----|-----|--------|---------|
 | jay-portfolio | https://jay-portfolio-production.up.railway.app | master | /admin |
 | dropship | https://dropship-shipping-production.up.railway.app | main | /overseer |
-| liberty-inventory | https://liberty-emporium-and-thrift-inventory-app-production.up.railway.app | ? | /overseer |
+| liberty-inventory | https://liberty-emporium-and-thrift-inventory-app-production.up.railway.app | main | /overseer |
 | contractor-pro | https://contractor-pro-ai-production.up.railway.app | main | /overseer |
 | pet-vet | https://pet-vet-ai-production.up.railway.app | main | /overseer |
-| andy-secrets | https://jays-keep-your-secrets-production.up.railway.app | master | /overseer |
+| jays-keep-your-secrets | https://ai-api-tracker-production.up.railway.app | master | /overseer |
 | consignment | https://web-production-43ce4.up.railway.app | ? | /admin/login |
 
 ---
-*Auto-updated by Echo · 2026-04-14 02:05 UTC*
+
+## 🧠 Active Lessons (Updated)
+
+1. **sed destroys $ signs** — always use Python for HTML string replacement
+2. **Jinja2 eats {# CSS** — wrap with {% raw %}...{% endraw %}
+3. **Railway branch varies** — master: jay-portfolio, jays-keep-your-secrets | main: most others
+4. **SQLite WAL mode** — set PRAGMA journal_mode=WAL on every connection
+5. **Service layer** — business logic NEVER in route handlers
+6. **get_db() text replacement bug** — regex replacements can corrupt the function itself if pattern appears inside the function body
+7. **Stripe idempotency keys** — always add for money-movement calls
+8. **14-day trial + email sequence** — days 1,3,7,12,14 = highest conversion
 
 ---
-
-## Liberty Inventory — AI CEO Upgrade (2026-04-14)
-
-### What Was Built
-1. **AI panel on EVERY page** including login, signup, wizard, landing (public — no login required)
-2. **Context-aware welcome messages** — different greeting on login vs dashboard vs settings
-3. **Page context sent to AI** — AI knows what page the user is on, gives relevant help
-4. **Per-tenant AI memory** (`ai_memory.json` per customer):
-   - Tracks: boss name, business goals, preferences, decisions, lessons learned, conversation count
-   - AI reads memory on every call → gets smarter about each business over time
-   - Auto-extracts lessons from AI replies and saves them
-5. **Telegram integration**:
-   - `/api/bot/telegram` endpoint — AI can send messages to tenant's Telegram
-   - Settings page has bot token + chat ID fields
-   - Per-tenant config stored in client config.json
-6. **Login page AI**: Knows they're not logged in, gives demo credentials, walks them through
-
-### Memory File Structure
-```
-/data/customers/<slug>/ai_memory.json
-{
-  "boss_name": "",
-  "business_goals": [],
-  "preferences": [],
-  "decisions": [],
-  "lessons_learned": [],
-  "conversation_count": 0,
-  "created_at": "",
-  "last_updated": ""
-}
-```
-
-### How Telegram Works for Tenants
-1. Tenant goes to Settings → adds their Telegram Bot Token + Chat ID
-2. AI can call /api/bot/telegram to send them a message
-3. AI will proactively suggest sending updates as it learns the boss's preferences
+*Auto-updated by Echo · 2026-04-14 04:30 UTC*
