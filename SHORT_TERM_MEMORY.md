@@ -108,3 +108,41 @@
 
 ---
 *Auto-updated by Echo · 2026-04-14 02:05 UTC*
+
+---
+
+## Liberty Inventory — AI CEO Upgrade (2026-04-14)
+
+### What Was Built
+1. **AI panel on EVERY page** including login, signup, wizard, landing (public — no login required)
+2. **Context-aware welcome messages** — different greeting on login vs dashboard vs settings
+3. **Page context sent to AI** — AI knows what page the user is on, gives relevant help
+4. **Per-tenant AI memory** (`ai_memory.json` per customer):
+   - Tracks: boss name, business goals, preferences, decisions, lessons learned, conversation count
+   - AI reads memory on every call → gets smarter about each business over time
+   - Auto-extracts lessons from AI replies and saves them
+5. **Telegram integration**:
+   - `/api/bot/telegram` endpoint — AI can send messages to tenant's Telegram
+   - Settings page has bot token + chat ID fields
+   - Per-tenant config stored in client config.json
+6. **Login page AI**: Knows they're not logged in, gives demo credentials, walks them through
+
+### Memory File Structure
+```
+/data/customers/<slug>/ai_memory.json
+{
+  "boss_name": "",
+  "business_goals": [],
+  "preferences": [],
+  "decisions": [],
+  "lessons_learned": [],
+  "conversation_count": 0,
+  "created_at": "",
+  "last_updated": ""
+}
+```
+
+### How Telegram Works for Tenants
+1. Tenant goes to Settings → adds their Telegram Bot Token + Chat ID
+2. AI can call /api/bot/telegram to send them a message
+3. AI will proactively suggest sending updates as it learns the boss's preferences
