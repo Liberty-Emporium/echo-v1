@@ -37,8 +37,8 @@
 
 #### Multi-Tenant Conversions
 - ✅ Contractor Pro AI — DONE (trial wizard, overseer, per-client isolation, login, landing)
-- 🔴 Pet Vet AI — IN PROGRESS
-- ⬜ Andy Keep Your Secrets — TODO
+- ✅ Pet Vet AI — DONE (overseer, admin panel, user mgmt, MRR tracking)
+- 🔴 Andy Keep Your Secrets — IN PROGRESS
 
 #### Skills Built
 - pdf-extractor, railway-deploy, qr-generator, base64-image
