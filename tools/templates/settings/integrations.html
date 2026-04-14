@@ -1,0 +1,60 @@
+{% extends "settings/base_settings.html" %}
+{% block title %}API Keys — Settings{% endblock %}
+{% block settings_content %}
+<h2 style="font-size:1.4rem;margin-bottom:8px">🔑 API Keys</h2>
+<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:20px">
+  Add your own API keys — your keys are encrypted and stored securely. Each key is used only for your account.<br>
+  <strong style="color:var(--text)">Don't have a key?</strong> Leave it blank and we'll use our shared key (rate limits apply).
+</p>
+
+<form method="POST" action="{{ url_for('settings.save_integrations') }}">
+  {% for integ in integrations %}
+  <div class="card" style="margin-bottom:12px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px">
+      <div style="flex:1">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+          <strong style="font-size:0.95rem">{{ integ['label'] }}</strong>
+          {% if integ['has_key'] %}
+            <span class="badge badge-green">✓ Your key active</span>
+          {% else %}
+            <span class="badge badge-gray">Using shared key</span>
+          {% endif %}
+        </div>
+        <p style="color:var(--text-muted);font-size:0.82rem;margin-bottom:10px">{{ integ['help'] }}</p>
+        <div style="display:flex;gap:8px;align-items:center">
+          <input type="password" name="key_{{ integ['service'] }}"
+                 placeholder="{% if integ['has_key'] %}{{ integ['masked'] }}{% else %}{{ integ['placeholder'] }}{% endif %}"
+                 style="flex:1;font-family:monospace;font-size:0.85rem"
+                 autocomplete="new-password">
+          {% if integ['has_key'] %}
+          <button type="button" onclick="clearKey('{{ integ['service'] }}')" class="btn btn-red btn-sm">Remove</button>
+          <input type="hidden" name="key_{{ integ['service'] }}_clear" id="clear_{{ integ['service'] }}" value="">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  <button type="submit" class="btn btn-green" style="margin-top:8px">Save API Keys</button>
+</form>
+
+<div class="card" style="margin-top:20px;background:rgba(0,200,81,0.05);border-color:rgba(0,200,81,0.2)">
+  <h3 style="font-size:0.9rem;margin-bottom:8px;color:var(--green)">🔒 How We Protect Your Keys</h3>
+  <ul style="color:var(--text-muted);font-size:0.85rem;padding-left:16px;line-height:2">
+    <li>Keys are encrypted before being stored — never saved in plain text</li>
+    <li>Keys are never shown in full — only masked (sk-••••••3f4a)</li>
+    <li>Keys are only decrypted when making an API call, never logged</li>
+    <li>Only your account can access your keys</li>
+  </ul>
+</div>
+
+<script>
+function clearKey(service) {
+  if (!confirm('Remove your ' + service + ' key? You\'ll fall back to the shared key.')) return;
+  const input = document.querySelector(`input[name="key_${service}"]`);
+  if (input) input.value = 'CLEAR';
+  document.querySelector('form').submit();
+}
+</script>
+{% endblock %}
