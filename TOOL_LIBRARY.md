@@ -1,4 +1,4 @@
-# Feature Library — Echo & Jay's Building Blocks
+# Tool Library — Echo & Jay's Building Blocks
 > Every reusable feature we've built. Use these names when talking to each other.
 > "Add the **AI Chat Widget** and **Image Analyzer** to this app" = I know exactly what to build.
 
