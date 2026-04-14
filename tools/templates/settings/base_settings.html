@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container page">
+  <div class="grid-settings" style="display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:start">
+
+    <!-- Sidebar -->
+    <div class="card" style="padding:8px">
+      <div style="padding:12px 12px 8px;font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted)">Settings</div>
+      {% set nav = [
+        ('settings.settings_index', 'profile',      '👤', 'Profile'),
+        ('settings.integrations',   'integrations', '🔑', 'API Keys'),
+        ('settings.team',           'team',         '👥', 'Team'),
+        ('settings.billing',        'billing',      '💳', 'Billing & Plan'),
+        ('settings.branding',       'branding',     '🎨', 'Branding'),
+      ] %}
+      {% for endpoint, key, icon, label in nav %}
+      <a href="{{ url_for(endpoint) }}"
+         style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;color:{% if active==key %}var(--green){% else %}var(--text-muted){% endif %};background:{% if active==key %}rgba(0,200,81,0.08){% else %}transparent{% endif %};font-size:0.9rem;text-decoration:none;transition:all 0.15s"
+         onmouseover="if('{{active}}'!='{{key}}')this.style.background='var(--dark3)'"
+         onmouseout="if('{{active}}'!='{{key}}')this.style.background='transparent'">
+        <span>{{ icon }}</span>{{ label }}
+      </a>
+      {% endfor %}
+      <div style="border-top:1px solid var(--border);margin:8px 0"></div>
+      <a href="{{ url_for('field_builder') }}"
+         style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;color:var(--text-muted);font-size:0.9rem;text-decoration:none"
+         onmouseover="this.style.background='var(--dark3)'"
+         onmouseout="this.style.background='transparent'">
+        <span>🔧</span>Custom Fields
+      </a>
+    </div>
+
+    <!-- Content -->
+    <div>
+      {% block settings_content %}{% endblock %}
+    </div>
+  </div>
+</div>
+{% endblock %}

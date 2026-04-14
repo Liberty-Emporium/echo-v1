@@ -1,0 +1,50 @@
+{% extends "settings/base_settings.html" %}
+{% block title %}Billing — Settings{% endblock %}
+{% block settings_content %}
+<h2 style="font-size:1.4rem;margin-bottom:20px">💳 Billing & Plan</h2>
+
+<!-- Current Plan -->
+<div class="card" style="margin-bottom:16px;border-color:var(--green)">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+    <div>
+      <div style="font-size:0.8rem;color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:1px">Current Plan</div>
+      <div style="font-size:1.5rem;font-weight:800;margin:4px 0">{{ plan['name'] }}</div>
+      {% if user['plan'] == 'trial' %}
+      <div style="color:var(--yellow);font-size:0.9rem">⏰ Trial ends {{ user['trial_ends_at'] }}</div>
+      {% else %}
+      <div style="color:var(--text-muted);font-size:0.9rem">${{ "%.2f"|format(plan['price']) }}/month</div>
+      {% endif %}
+    </div>
+    <div style="text-align:right">
+      <div style="font-size:0.8rem;color:var(--text-muted)">Usage this period</div>
+      <div style="font-size:1.1rem;font-weight:700">{{ listing_count }} / {% if plan['listings'] == 9999 %}∞{% else %}{{ plan['listings'] }}{% endif %} listings</div>
+      <div style="font-size:1.1rem;font-weight:700">{{ user['ai_credits_used'] }} / {% if plan['ai_credits'] == 9999 %}∞{% else %}{{ plan['ai_credits'] }}{% endif %} AI credits</div>
+    </div>
+  </div>
+</div>
+
+<!-- Plan Comparison -->
+<h3 style="font-size:1rem;margin-bottom:12px">Available Plans</h3>
+<div class="grid-3" style="margin-bottom:16px">
+  {% for plan_key, p in plans.items() %}
+  {% if plan_key != 'trial' %}
+  <div class="card {% if user['plan'] == plan_key %}" style="border-color:var(--green){% endif %}">
+    <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;color:{% if user['plan']==plan_key %}var(--green){% else %}var(--text-muted){% endif %};margin-bottom:6px">
+      {% if user['plan'] == plan_key %}✓ Current{% else %}{{ p['name'] }}{% endif %}
+    </div>
+    <div style="font-size:1.6rem;font-weight:900;color:var(--green)">${{ "%.2f"|format(p['price']) }}<span style="font-size:0.8rem;color:var(--text-muted);font-weight:400">/mo</span></div>
+    <ul style="list-style:none;font-size:0.85rem;color:var(--text-muted);line-height:2;margin:12px 0">
+      <li>✓ {% if p['listings']==9999 %}Unlimited{% else %}{{ p['listings'] }}{% endif %} listings</li>
+      <li>✓ {% if p['ai_credits']==9999 %}Unlimited{% else %}{{ p['ai_credits'] }}{% endif %} AI credits</li>
+      <li>✓ {{ p['team_seats'] }} team seat{% if p['team_seats']>1 %}s{% endif %}</li>
+    </ul>
+    {% if user['plan'] != plan_key %}
+    <a href="mailto:support@listiteverywhere.com?subject=Upgrade to {{ p['name'] }}" class="btn btn-outline btn-full btn-sm">Upgrade</a>
+    {% endif %}
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+
+<p style="color:var(--text-muted);font-size:0.85rem">To upgrade or cancel, email <a href="mailto:support@listiteverywhere.com">support@listiteverywhere.com</a></p>
+{% endblock %}
