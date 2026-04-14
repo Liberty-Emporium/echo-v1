@@ -19,21 +19,27 @@ USAGE:
   5. In your routes, use: core.active_slug(), core.tenant_dir(slug), etc.
 
 ROUTES ADDED AUTOMATICALLY:
-  GET/POST /login               — admin + tenant user login
-  GET      /logout              — clear session
-  GET      /wizard              — trial signup form
-  POST     /start-trial         — create new tenant
-  GET      /overseer            — admin panel (admin only)
-  POST     /overseer/client/create   — create client manually
+  GET/POST /login                          — admin + tenant user login
+  GET      /logout                         — clear session
+  GET      /wizard                         — trial signup form
+  POST     /start-trial                    — create new tenant
+  GET/POST /account                        — change username + password
+  GET/POST /forgot-password               — request password reset by email
+  GET/POST /reset-password/<token>        — set new password via token
+  GET      /overseer                       — admin panel (admin only)
+  POST     /overseer/client/create        — create client manually
   POST     /overseer/client/<slug>/impersonate
-  GET      /overseer/exit       — exit impersonation
+  GET      /overseer/exit                 — exit impersonation
   POST     /overseer/client/<slug>/suspend
   POST     /overseer/client/<slug>/delete
 
 TEMPLATES REQUIRED (create these in your templates/ dir):
-  login.html         — login form (username/email + password)
-  wizard.html        — trial signup form
-  overseer.html      — admin panel
+  login.html              — login form (username/email + password)
+  wizard.html             — trial signup form
+  overseer.html           — admin panel
+  account.html            — change username + password form
+  forgot_password.html    — email input for password reset
+  reset_password.html     — new password input (receives token + email)
 
 Author: Echo (AI CEO, Liberty Emporium)
 Version: 1.0.0
@@ -454,3 +460,161 @@ class SaaSCore:
                 shutil.rmtree(d)
             flash('Store deleted.', 'success')
             return redirect(url_for('saas_core.overseer'))
+
+        # ── Account: change username + password ───────────────────────────────────────
+        @bp.route('/account', methods=['GET', 'POST'])
+        def account():
+            if not session.get('logged_in'):
+                return redirect(url_for('saas_core.login'))
+
+            slug     = self.active_slug()
+            username = session.get('username', '')
+            is_admin = session.get('role') == 'admin'
+
+            if request.method == 'POST':
+                action       = request.form.get('action', '')
+                current_pass = request.form.get('current_password', '').strip()
+                new_pass     = request.form.get('new_password', '').strip()
+                new_user     = request.form.get('new_username', '').strip()
+
+                # --- Verify current password first ---
+                verified = False
+                if is_admin:
+                    db = sqlite3.connect(self.db_file)
+                    db.row_factory = sqlite3.Row
+                    row = db.execute('SELECT * FROM admin_users WHERE username=?', (username,)).fetchone()
+                    db.close()
+                    verified = row and row['password'] == hash_pw(current_pass)
+                elif slug:
+                    upath = os.path.join(self.customers_dir, slug, 'users.json')
+                    users = load_json(upath, {})
+                    u = users.get(username, {})
+                    verified = u.get('password') == hash_pw(current_pass)
+
+                if not verified:
+                    flash('Current password is incorrect.', 'error')
+                    return render_template('account.html', username=username, **self.ctx())
+
+                # --- Change password ---
+                if action == 'change_password':
+                    if len(new_pass) < 6:
+                        flash('New password must be at least 6 characters.', 'error')
+                        return render_template('account.html', username=username, **self.ctx())
+                    if is_admin:
+                        db = sqlite3.connect(self.db_file)
+                        db.execute('UPDATE admin_users SET password=? WHERE username=?',
+                                   (hash_pw(new_pass), username))
+                        db.commit(); db.close()
+                    elif slug:
+                        upath = os.path.join(self.customers_dir, slug, 'users.json')
+                        users = load_json(upath, {})
+                        if username in users:
+                            users[username]['password'] = hash_pw(new_pass)
+                            save_json(upath, users)
+                    flash('Password updated successfully!', 'success')
+
+                # --- Change username / email ---
+                elif action == 'change_username':
+                    if not new_user:
+                        flash('New username cannot be empty.', 'error')
+                        return render_template('account.html', username=username, **self.ctx())
+                    if is_admin:
+                        db = sqlite3.connect(self.db_file)
+                        # Check not taken
+                        existing = db.execute('SELECT * FROM admin_users WHERE username=?', (new_user,)).fetchone()
+                        if existing and existing['username'] != username:
+                            db.close()
+                            flash('That username is already taken.', 'error')
+                            return render_template('account.html', username=username, **self.ctx())
+                        db.execute('UPDATE admin_users SET username=? WHERE username=?', (new_user, username))
+                        db.commit(); db.close()
+                    elif slug:
+                        upath = os.path.join(self.customers_dir, slug, 'users.json')
+                        users = load_json(upath, {})
+                        if username in users and new_user not in users:
+                            users[new_user] = users.pop(username)
+                            save_json(upath, users)
+                        elif new_user in users:
+                            flash('That email/username is already in use.', 'error')
+                            return render_template('account.html', username=username, **self.ctx())
+                    session['username'] = new_user
+                    flash(f'Username updated to {new_user}!', 'success')
+
+                return redirect(url_for('saas_core.account'))
+
+            return render_template('account.html', username=username, **self.ctx())
+
+        # ── Forgot password ────────────────────────────────────────────────
+        @bp.route('/forgot-password', methods=['GET', 'POST'])
+        def forgot_password():
+            if request.method == 'POST':
+                email = request.form.get('email', '').strip().lower()
+                token = secrets.token_urlsafe(24)
+                found = False
+                resets_path = os.path.join(self.data_dir, 'password_resets.json')
+                resets = load_json(resets_path, [])
+
+                for store in self.list_client_stores():
+                    upath = os.path.join(self.customers_dir, store['slug'], 'users.json')
+                    users = load_json(upath, {})
+                    if email in users:
+                        found = True
+                        resets = [r for r in resets if r.get('email') != email]
+                        resets.append({
+                            'email':   email,
+                            'token':   token,
+                            'slug':    store['slug'],
+                            'expires': (datetime.datetime.now() + datetime.timedelta(hours=2)).isoformat(),
+                            'created': datetime.datetime.now().isoformat()
+                        })
+                        break
+
+                if found:
+                    save_json(resets_path, resets)
+                    flash(
+                        f'Reset token generated. Visit: /reset-password/{token} '
+                        f'(or copy the token: {token})', 'success'
+                    )
+                else:
+                    flash('If that email is registered, a reset link has been generated.', 'info')
+                return redirect(url_for('saas_core.forgot_password'))
+
+            return render_template('forgot_password.html', **self.ctx())
+
+        # ── Reset password ────────────────────────────────────────────────
+        @bp.route('/reset-password/<token>', methods=['GET', 'POST'])
+        def reset_password(token):
+            resets_path = os.path.join(self.data_dir, 'password_resets.json')
+            resets = load_json(resets_path, [])
+            reset  = next((r for r in resets if r.get('token') == token), None)
+
+            if not reset:
+                flash('Invalid or expired reset link.', 'error')
+                return redirect(url_for('saas_core.login'))
+
+            if datetime.datetime.fromisoformat(reset['expires']) < datetime.datetime.now():
+                flash('Reset link has expired. Please request a new one.', 'error')
+                return redirect(url_for('saas_core.forgot_password'))
+
+            if request.method == 'POST':
+                new_pass = request.form.get('password', '').strip()
+                if len(new_pass) < 6:
+                    flash('Password must be at least 6 characters.', 'error')
+                    return render_template('reset_password.html',
+                                          token=token, email=reset.get('email',''),
+                                          **self.ctx())
+                slug  = reset['slug']
+                email = reset['email']
+                upath = os.path.join(self.customers_dir, slug, 'users.json')
+                users = load_json(upath, {})
+                if email in users:
+                    users[email]['password'] = hash_pw(new_pass)
+                    save_json(upath, users)
+                resets = [r for r in resets if r.get('token') != token]
+                save_json(resets_path, resets)
+                flash('Password updated! You can now sign in.', 'success')
+                return redirect(url_for('saas_core.login'))
+
+            return render_template('reset_password.html',
+                                   token=token, email=reset.get('email',''),
+                                   **self.ctx())
