@@ -54,8 +54,8 @@ Do NOT keep asking Jay to approve commands. Fix it myself.
    - GitHub: github.com/Liberty-Emporium/Contractor-Pro-AI
    - Auth: custom homebrew, NOT multi-tenant yet
 
-2. **Andy - Keep Your Secrets** - API key management
-   - GitHub: github.com/Liberty-Emporium/ai-api-tracker
+2. **Jay's Keep Your Secrets** - API key management
+   - GitHub: github.com/Liberty-Emporium/jays-keep-your-secrets
    - Auth: custom homebrew, NOT multi-tenant yet
    - Pricing: $14.99/month
 
@@ -120,7 +120,7 @@ Do NOT keep asking Jay to approve commands. Fix it myself.
 
 ## Pricing Summary (Corrected 2026-04-13)
 - Liberty Inventory: $99 startup + 14-day trial + $20/mo hosting
-- Andy Keep Your Secrets: $14.99/month
+- Jay's Keep Your Secrets: $14.99/month
 - Contractor Pro AI: $99/month
 - Dropship Shipping: $299 startup (fully automated CRM)
 - Consignment Solutions: $69.95 startup + $20/mo hosting + 14-day trial
@@ -151,7 +151,7 @@ Do NOT keep asking Jay to approve commands. Fix it myself.
 - **exec.ask:** must stay "off" — if approvals appear, restart gateway immediately
 
 ## Railway App URLs
-- ai-api-tracker: https://ai-api-tracker-production.up.railway.app
+- jays-keep-your-secrets: https://jays-keep-your-secrets-production.up.railway.app
 - contractor-pro-ai: https://contractor-pro-ai-production.up.railway.app
 - pet-vet-ai: https://pet-vet-ai-production.up.railway.app
 - liberty-inventory: https://liberty-emporium-and-thrift-inventory-app-production.up.railway.app
@@ -161,4 +161,4 @@ Do NOT keep asking Jay to approve commands. Fix it myself.
 - consignment-solutions: https://web-production-43ce4.up.railway.app
 
 ---
-*Version: 1.3.0 - Updated 2026-04-13 (Session: court page, flyers, pricing, portfolio)*
+*Version: 1.4.0 - Updated 2026-04-14 (Session: court page, flyers, pricing, portfolio)*
