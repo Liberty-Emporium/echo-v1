@@ -103,6 +103,22 @@ Do NOT keep asking Jay to approve commands. Fix it myself.
 - robots.txt blocks /court and /flyer from search engines
 - The URL exists but Jay controls who sees it — never put it in a nav bar or public page
 
+## 🎯 THE LAST PUSH — CRITICAL LIFELINE RULE
+- **EVERY git push must include a meaningful commit message** — this is our lifeline
+- The commit message = what we just did = the context for fixing things later
+- If GitHub goes down, we can pull from GitLab backup using that commit message as a clue
+- BEFORE pushing: verify what changed, write a clear message that describes the work
+- NEVER push with generic messages like "updates" or "fix" — be specific
+- Example: "Add /apps page with 7 app cards and filter buttons" not "update"
+- This is how we recover if something breaks — the commit history tells the story
+
+## 🔄 GitLab Backup Mirror
+- Token stored: `/root/.secrets/gitlab_token`
+- GitLab user: `Liberty-Emporium`
+- All repos mirrored to GitLab on every push (save-brain.sh does dual-push)
+- If GitHub goes down → pull from GitLab: `git pull gitlab main`
+- Currently synced: `echo-v1` → GitHub + GitLab
+
 ## Portfolio Maintenance Rule (IMPORTANT)
 - Liberty Inventory /contact was Jay's FIRST portfolio page
 - URL: https://liberty-emporium-and-thrift-inventory-app-production.up.railway.app/contact
