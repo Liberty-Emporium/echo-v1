@@ -308,6 +308,53 @@ class SaaSCore:
             'impersonating': bool(session.get('impersonating_slug')),
         }
 
+    # ── Email ─────────────────────────────────────────────────────────────────
+
+    def _get_smtp_config(self):
+        """Load SMTP settings from env vars.
+        Set in Railway: SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASSWORD, SMTP_FROM
+        """
+        return {
+            'host':     os.environ.get('SMTP_HOST', ''),
+            'port':     int(os.environ.get('SMTP_PORT', 587)),
+            'user':     os.environ.get('SMTP_USER', ''),
+            'password': os.environ.get('SMTP_PASSWORD', ''),
+            'from':     os.environ.get('SMTP_FROM', os.environ.get('SMTP_USER', 'noreply@example.com')),
+        }
+
+    def _send_email(self, to, subject, body):
+        """Send a plain-text email.
+        - SMTP configured: sends the email.
+        - SMTP not configured: logs to console only.
+        NEVER show the reset token/link on screen -- that is a security vulnerability.
+        Returns (True, '') or (False, error_msg).
+        """
+        cfg = self._get_smtp_config()
+        if not cfg['host'] or not cfg['user'] or not cfg['password']:
+            print(f'[EMAIL-NOOP] To: {to} | Subject: {subject}', flush=True)
+            print(f'[EMAIL-NOOP] Body:\n{body}', flush=True)
+            return False, 'SMTP not configured (set SMTP_HOST, SMTP_USER, SMTP_PASSWORD in Railway)'
+        try:
+            import smtplib
+            from email.mime.text import MIMEText
+            msg = MIMEText(body, 'plain', 'utf-8')
+            msg['Subject'] = subject
+            msg['From']    = cfg['from']
+            msg['To']      = to
+            if cfg['port'] == 465:
+                with smtplib.SMTP_SSL(cfg['host'], 465, timeout=15) as s:
+                    s.login(cfg['user'], cfg['password'])
+                    s.sendmail(cfg['from'], [to], msg.as_string())
+            else:
+                with smtplib.SMTP(cfg['host'], cfg['port'], timeout=15) as s:
+                    s.ehlo(); s.starttls()
+                    s.login(cfg['user'], cfg['password'])
+                    s.sendmail(cfg['from'], [to], msg.as_string())
+            return True, ''
+        except Exception as e:
+            print(f'[EMAIL-ERROR] {e}', flush=True)
+            return False, str(e)
+
     # ── Route Registration ────────────────────────────────────────────────────
 
     def _register_routes(self):
@@ -642,12 +689,21 @@ class SaaSCore:
 
                 if found:
                     save_json(resets_path, resets)
-                    flash(
-                        f'Reset token generated. Visit: /reset-password/{token} '
-                        f'(or copy the token: {token})', 'success'
+                    reset_url = request.host_url.rstrip('/') + f'/reset-password/{token}'
+                    self._send_email(
+                        to=email,
+                        subject=f'Reset Your {self.app_name} Password',
+                        body=(
+                            f"Hi,\n\n"
+                            f"A password reset was requested for your {self.app_name} account.\n\n"
+                            f"Click this link to set a new password (valid for 2 hours):\n"
+                            f"{reset_url}\n\n"
+                            f"If you didn't request this, you can safely ignore this email.\n\n"
+                            f"\u2014 {self.app_name} Support"
+                        )
                     )
-                else:
-                    flash('If that email is registered, a reset link has been generated.', 'info')
+                # Always show same message — never reveal if email exists or leak token to screen
+                flash('If that email is registered, a reset link has been sent.', 'info')
                 return redirect(url_for('saas_core.forgot_password'))
 
             return render_template('forgot_password.html', **self.ctx())
