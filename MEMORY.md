@@ -96,6 +96,16 @@ Do NOT keep asking Jay to approve commands. Fix it myself.
 - Medical PDF: Google Drive ID: 1dwDhk0ViT47QXHYhHdBJpKV1xUcSFv5s (Ronald Alexander, DOB 12/15/1970, Dr. Lewis Rogatnick)
 - Thumbnail: embedded as base64 in court.html (NOT a file reference)
 
+## Tool Library
+- File: `TOOL_LIBRARY.md` in workspace + echo-v1 GitHub
+- 31 named building blocks — use these names when talking to Jay
+- Jay calls it the **Tool Library** (not Feature Library)
+- Example usage: "Add the **AI Chat Widget** and **Image Analyzer** to this app"
+- Update TOOL_LIBRARY.md whenever we build something new
+- Online at: https://jay-portfolio-production.up.railway.app/tools
+- ⚠️ PRIVATE — just between Echo and Jay. Do NOT share, advertise, or link publicly.
+- Not indexed by search engines (robots.txt blocks /tools)
+
 ## Multi-Tenant SaaS Blueprint Status
 - **auth_core.py** — `/root/.openclaw/workspace/multi-tenant-auth/` — drop-in auth
 - **Liberty Inventory** is the gold standard for multi-tenant architecture
