@@ -96,6 +96,13 @@ Do NOT keep asking Jay to approve commands. Fix it myself.
 - Medical PDF: Google Drive ID: 1dwDhk0ViT47QXHYhHdBJpKV1xUcSFv5s (Ronald Alexander, DOB 12/15/1970, Dr. Lewis Rogatnick)
 - Thumbnail: embedded as base64 in court.html (NOT a file reference)
 
+## 🚨 PRIVACY RULE — Medical & Legal = PRIVATE
+- /court, /court/qr, /flyer — ALL PRIVATE. Never link publicly.
+- Anything medical or legal related to Jay = PRIVATE. No public nav links, no sharing, no mentioning in public pages.
+- If in doubt: Medical + Law = Court = Private. Always.
+- robots.txt blocks /court and /flyer from search engines
+- The URL exists but Jay controls who sees it — never put it in a nav bar or public page
+
 ## Portfolio Maintenance Rule (IMPORTANT)
 - Liberty Inventory /contact was Jay's FIRST portfolio page
 - URL: https://liberty-emporium-and-thrift-inventory-app-production.up.railway.app/contact
