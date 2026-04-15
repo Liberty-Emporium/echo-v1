@@ -96,6 +96,17 @@ Do NOT keep asking Jay to approve commands. Fix it myself.
 - Medical PDF: Google Drive ID: 1dwDhk0ViT47QXHYhHdBJpKV1xUcSFv5s (Ronald Alexander, DOB 12/15/1970, Dr. Lewis Rogatnick)
 - Thumbnail: embedded as base64 in court.html (NOT a file reference)
 
+## Portfolio Maintenance Rule (IMPORTANT)
+- Liberty Inventory /contact was Jay's FIRST portfolio page
+- URL: https://liberty-emporium-and-thrift-inventory-app-production.up.railway.app/contact
+- ALWAYS keep this page current — update whenever:
+  - A new app launches (update Live Apps count)
+  - A new skill/tech is used (update skill chips)
+  - Deploy platform changes (was PythonAnywhere → now Railway)
+- Jay Portfolio is the MAIN portfolio: https://jay-portfolio-production.up.railway.app
+- Consider building a dedicated developer portfolio page that lists ALL 7 apps when Jay is ready
+- Check both portfolios when building new apps and add them
+
 ## Tool Library
 - File: `TOOL_LIBRARY.md` in workspace + echo-v1 GitHub
 - 31 named building blocks — use these names when talking to Jay
