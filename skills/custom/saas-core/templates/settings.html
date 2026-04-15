@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Settings — {{ app_name }}{% endblock %}
+{% block content %}
+<div class="container page">
+  <div style="margin-bottom:24px">
+    <h1 style="font-size:1.5rem">⚙️ Settings</h1>
+    <p style="color:var(--text-muted);font-size:0.9rem">Manage your API keys and preferences.</p>
+  </div>
+
+  <form method="POST">
+    <!-- ── AI / OpenRouter ─────────────────────────────────────────────── -->
+    <div class="card" style="margin-bottom:20px">
+      <h2 style="font-size:1rem;margin-bottom:16px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px">AI Configuration</h2>
+
+      <div class="form-group">
+        <label>OpenRouter API Key</label>
+        <input type="password" name="openrouter_key"
+               placeholder="sk-or-..."
+               value="{{ config.get('openrouter_key', '') }}"
+               autocomplete="off">
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-top:5px">
+          Get your key at <a href="https://openrouter.ai/keys" target="_blank">openrouter.ai/keys</a>
+        </p>
+      </div>
+
+      <div class="form-group">
+        <label>AI Model</label>
+        <select name="openrouter_model">
+          {% set current_model = config.get('openrouter_model', 'google/gemini-flash-1.5') %}
+          <optgroup label="Fast &amp; Free">
+            <option value="google/gemini-flash-1.5"        {% if current_model == 'google/gemini-flash-1.5' %}selected{% endif %}>Gemini Flash 1.5</option>
+            <option value="meta-llama/llama-4-scout:free"  {% if current_model == 'meta-llama/llama-4-scout:free' %}selected{% endif %}>Llama 4 Scout (free)</option>
+            <option value="qwen/qwen3-30b-a3b:free"        {% if current_model == 'qwen/qwen3-30b-a3b:free' %}selected{% endif %}>Qwen 3 30B (free)</option>
+            <option value="mistralai/mistral-7b-instruct:free" {% if current_model == 'mistralai/mistral-7b-instruct:free' %}selected{% endif %}>Mistral 7B (free)</option>
+          </optgroup>
+          <optgroup label="Powerful">
+            <option value="openai/gpt-4o"                  {% if current_model == 'openai/gpt-4o' %}selected{% endif %}>GPT-4o</option>
+            <option value="openai/gpt-4o-mini"             {% if current_model == 'openai/gpt-4o-mini' %}selected{% endif %}>GPT-4o Mini</option>
+            <option value="anthropic/claude-3.5-sonnet"    {% if current_model == 'anthropic/claude-3.5-sonnet' %}selected{% endif %}>Claude 3.5 Sonnet</option>
+            <option value="google/gemini-pro-1.5"          {% if current_model == 'google/gemini-pro-1.5' %}selected{% endif %}>Gemini Pro 1.5</option>
+            <option value="x-ai/grok-3"                    {% if current_model == 'x-ai/grok-3' %}selected{% endif %}>Grok 3</option>
+            <option value="deepseek/deepseek-r1"           {% if current_model == 'deepseek/deepseek-r1' %}selected{% endif %}>DeepSeek R1</option>
+          </optgroup>
+        </select>
+      </div>
+    </div>
+
+    <!-- ── Extra settings blocks go here ──────────────────────────────── -->
+    {% block extra_settings %}{% endblock %}
+
+    <button type="submit" class="btn btn-primary">Save Settings</button>
+    <a href="javascript:history.back()" class="btn btn-outline" style="margin-left:8px">Cancel</a>
+  </form>
+</div>
+{% endblock %}
