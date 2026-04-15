@@ -27,14 +27,49 @@ Drop-in multi-tenant SaaS blueprint for Flask apps. Distilled from Liberty Inven
 /root/.openclaw/workspace/saas_core/example_app.py
 ```
 
+## 🚨 HARD RULES — NEVER BREAK THESE
+
+### SECRET_KEY — Sessions Must Survive Restarts
+**NEVER do this:**
+```python
+app.secret_key = os.environ.get('SECRET_KEY', secrets.token_hex(32))  # ❌ BROKEN
+app.secret_key = 'hardcoded-string'  # ❌ INSECURE
+```
+A random fallback key means every Railway restart wipes all user sessions. The nav breaks, users get logged out, and it's invisible in testing.
+
+**ALWAYS do this:**
+```python
+from saas_core import SaaSCore, get_secret_key
+app.secret_key = get_secret_key()  # ✅ checks env var, then persists to /data
+```
+`get_secret_key()` checks `SECRET_KEY` env var first. If not set, it writes a stable key to `/data/secret_key` and reuses it forever. Sessions survive restarts.
+
+**Also tell Jay:** Add `SECRET_KEY=<random-string>` to Railway env vars as the proper production fix.
+
+### /data — All State Lives Here
+- DB files → `/data/appname.db`
+- Uploads → `/data/uploads/`
+- Secret key → `/data/secret_key` (auto-managed by get_secret_key)
+- **Never** write state to the app directory — Railway wipes it on deploy
+
+### Default Admin Account
+- Always create: `admin` / `admin1` on first boot
+- Jay needs it to log in on fresh deploys
+
+### Push to GitHub After Every Change
+- Meaningful commit messages only (no "fix" or "updates")
+- Always push to GitLab backup after GitHub push
+
+---
+
 ## Quickstart
 
 ```python
 from flask import Flask
-from saas_core import SaaSCore
+from saas_core import SaaSCore, get_secret_key
 
 app = Flask(__name__)
-app.secret_key = 'your-secret'
+app.secret_key = get_secret_key()  # stable across Railway restarts
 
 core = SaaSCore(
     app,
