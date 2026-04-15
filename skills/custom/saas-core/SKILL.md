@@ -46,6 +46,21 @@ app.secret_key = get_secret_key()  # ✅ checks env var, then persists to /data
 
 **Also tell Jay:** Add `SECRET_KEY=<random-string>` to Railway env vars as the proper production fix.
 
+### ⚙️ Settings Gear — ALWAYS in the Nav
+Every app **must** have a gear icon in the nav bar linking to `/settings`.
+Users need access to their API keys and preferences from anywhere in the app.
+
+**In base.html (or any nav template) — before Logout:**
+```html
+<a href="{{ url_for('settings') }}" title="Settings" 
+   style="padding:6px 8px;font-size:1.1rem;line-height:1" 
+   aria-label="Settings">&#9881;</a>
+```
+- Use `&#9881;` (⚙) — works without icon libraries
+- Place it just before Logout
+- Muted color, hover effect matches other nav links
+- The settings page must include at minimum: OpenRouter API key field
+
 ### /data — All State Lives Here
 - DB files → `/data/appname.db`
 - Uploads → `/data/uploads/`
