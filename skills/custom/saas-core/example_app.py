@@ -6,10 +6,13 @@ Shows exactly how to drop saas_core into a new Flask app in under 5 minutes.
 from flask import Flask, render_template, session, redirect, url_for, request, flash
 import os
 import json
-from saas_core import SaaSCore, load_json, save_json
+from saas_core import SaaSCore, get_secret_key, load_json, save_json
 
 app = Flask(__name__)
-app.secret_key = os.environ.get('SECRET_KEY', 'example-secret-2026')
+# get_secret_key() checks SECRET_KEY env var first, then persists a stable
+# key to /data/secret_key so sessions survive Railway restarts.
+# NEVER use secrets.token_hex() as a default — it breaks sessions on every restart.
+app.secret_key = get_secret_key()
 
 # ── 1. Initialize SaaSCore ────────────────────────────────────────────────────
 core = SaaSCore(
