@@ -90,6 +90,27 @@ If approvals start appearing: fix it myself immediately.
 - NEVER push with generic messages like "updates" or "fix"
 - Example: "Add /apps page with 7 app cards and filter buttons"
 
+## GitLab Strategy — Alexander AI Digital
+
+### Free Features Worth Using
+1. **Auto Pull Mirror** — sync GitHub → GitLab every 30 min automatically (set once, runs forever)
+2. **CI/CD Pipelines** — auto-deploy to Railway on every push, no more manual Redeploy clicks
+3. **GitLab Pages** — free static hosting for landing pages (no Railway needed)
+4. **Container Registry** — free Docker image storage
+5. **Full REST + GraphQL API** — can power new products
+
+### New Product Ideas from GitLab
+- **GitLab-powered client portal** — clients edit store content via web UI, backed by GitLab
+- **Static site builder SaaS** — use GitLab Pages as backend hosting
+
+### Status ✅ DONE
+- Auto-mirror set up for all 9 repos — syncs from GitHub every 30 min automatically
+- GitLab token (api scope): saved to /root/.secrets/gitlab_token
+- GitLab user: Liberty-Emporium (id=37330782)
+
+### TODO
+- Add CI/CD pipelines to auto-deploy to Railway on push (no more manual redeploys)
+
 ## 🔄 GitLab Backup Mirror
 - All repos mirrored to GitLab on every push (save-brain.sh does dual-push)
 - If GitHub goes down → pull from GitLab: `git pull gitlab main`
