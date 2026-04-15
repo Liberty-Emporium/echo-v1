@@ -357,6 +357,32 @@ class SaaSCore:
             session.clear()
             return redirect(url_for('saas_core.login'))
 
+        # ── Settings ──────────────────────────────────────────────────────────
+        @bp.route('/settings', methods=['GET', 'POST'])
+        def settings():
+            """Tenant/admin settings page — API keys and app config."""
+            if not session.get('logged_in'):
+                return redirect(url_for('saas_core.login'))
+            cfg_path = os.path.join(self.data_dir, 'app_config.json')
+            config   = load_json(cfg_path, {})
+            if request.method == 'POST':
+                for key in request.form:
+                    val = request.form.get(key, '').strip()
+                    if val:
+                        config[key] = val
+                save_json(cfg_path, config)
+                flash('Settings saved!', 'success')
+                return redirect(url_for('saas_core.settings'))
+            return render_template('settings.html', config=config, **self.ctx())
+
+        def get_config(key, default=''):
+            """Read a value from app_config.json (use in your app routes)."""
+            cfg_path = os.path.join(self.data_dir, 'app_config.json')
+            return load_json(cfg_path, {}).get(key, default)
+
+        # Expose get_config as a method on the instance
+        self.get_config = get_config
+
         # ── Trial Wizard ──────────────────────────────────────────────────────
         @bp.route('/wizard')
         def wizard():
