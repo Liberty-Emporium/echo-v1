@@ -82,6 +82,43 @@ def setup_data_dir(preferred='/data'):
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# SECRET KEY — STABLE ACROSS RESTARTS
+# ─────────────────────────────────────────────────────────────────────────────
+
+def get_secret_key(data_dir=None):
+    """
+    Returns a stable Flask SECRET_KEY that survives Railway restarts.
+
+    Priority:
+      1. SECRET_KEY env var (set this in Railway for production)
+      2. Persisted key in /data/secret_key (auto-created on first boot)
+      3. Random fallback (last resort — sessions won't survive restarts)
+
+    NEVER use secrets.token_hex() as a default — it generates a new key
+    on every restart, which invalidates all user sessions and breaks the nav.
+    """
+    env_key = os.environ.get('SECRET_KEY')
+    if env_key:
+        return env_key
+    base = data_dir or os.environ.get('DATA_DIR', '/data')
+    key_file = os.path.join(base, 'secret_key')
+    try:
+        os.makedirs(base, exist_ok=True)
+        if os.path.exists(key_file):
+            with open(key_file) as f:
+                key = f.read().strip()
+                if key:
+                    return key
+        key = secrets.token_hex(32)
+        with open(key_file, 'w') as f:
+            f.write(key)
+        return key
+    except Exception:
+        # Can't write to disk — return random key as last resort
+        return secrets.token_hex(32)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # JSON HELPERS
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -142,6 +179,11 @@ class SaaSCore:
         self.customers_dir  = os.path.join(self.data_dir, 'customers')
         os.makedirs(self.customers_dir, exist_ok=True)
 
+        # Secret key — set on app if not already set
+        # This ensures sessions survive Railway restarts automatically
+        if app is not None and not app.secret_key:
+            app.secret_key = get_secret_key(self.data_dir)
+
         # Admin credentials
         self.admin_user = admin_user or os.environ.get('ADMIN_USER', 'admin')
         self.admin_pass = admin_pass or os.environ.get('ADMIN_PASSWORD', 'admin1')
@@ -159,6 +201,9 @@ class SaaSCore:
 
     def init_app(self, app):
         """Register with a Flask app (supports app factory pattern)."""
+        # Ensure stable secret key before registering (fixes Railway restart session wipe)
+        if not app.secret_key:
+            app.secret_key = get_secret_key(self.data_dir)
         app.register_blueprint(self.blueprint)
         app.extensions = getattr(app, 'extensions', {})
         app.extensions['saas_core'] = self
