@@ -2,7 +2,7 @@
 # ============================================================
 # save-brain.sh — Echo Session End Script
 # Run at end of session to push all brain updates back to
-# GitHub (echo-v1) so next session starts fresh.
+# GitHub AND GitLab so next session starts fresh.
 # ============================================================
 
 set -e
@@ -11,20 +11,36 @@ WORKSPACE="/root/.openclaw/workspace"
 ECHO_REPO="$WORKSPACE/echo-v1"
 SECRETS="/root/.secrets"
 GITHUB_TOKEN_FILE="$SECRETS/github_token"
+GITLAB_TOKEN_FILE="$SECRETS/gitlab_token"
 
 echo "💾 Echo Brain Save — $(date -u '+%Y-%m-%d %H:%M UTC')"
 echo "=================================================="
 
-# ── 1. Token ──────────────────────────────────────────────
+# ── 1. Tokens ──────────────────────────────────────────────
 if [ ! -f "$GITHUB_TOKEN_FILE" ]; then
   echo "❌ No GitHub token — cannot push"
   exit 1
 fi
 TOKEN=$(cat "$GITHUB_TOKEN_FILE")
 
-# ── 2. Set remote ─────────────────────────────────────────
+GITLAB_TOKEN=""
+if [ -f "$GITLAB_TOKEN_FILE" ]; then
+  GITLAB_TOKEN=$(cat "$GITLAB_TOKEN_FILE")
+fi
+
+# ── 2. Set remotes ─────────────────────────────────────────
 cd "$ECHO_REPO"
 git remote set-url origin "https://$TOKEN@github.com/Liberty-Emporium/echo-v1.git"
+
+# GitLab setup
+if [ -n "$GITLAB_TOKEN" ]; then
+  GITLAB_USER=$(curl -s --header "PRIVATE-TOKEN: $GITLAB_TOKEN" "https://gitlab.com/api/v4/user" | python3 -c "import sys,json; print(json.load(sys.stdin).get('username',''))" || echo "")
+  if [ -n "$GITLAB_USER" ]; then
+    if ! git remote get-url gitlab 2>/dev/null; then
+      git remote add gitlab "https://oauth2:$GITLAB_TOKEN@gitlab.com/$GITLAB_USER/echo-v1.git"
+    fi
+  fi
+fi
 
 # ── 3. Copy workspace brain files back to repo ────────────
 echo "📤 Copying updated brain files to repo..."
@@ -78,8 +94,16 @@ if [ "$CHANGED" -eq 0 ]; then
 else
   TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M UTC')
   git commit -m "🧠 Brain save — $TIMESTAMP ($CHANGED files updated)"
+  
+  echo "🚀 Pushing to GitHub..."
   git push origin main
-  echo "✅ Pushed $CHANGED files to echo-v1"
+  echo "✅ Pushed to GitHub"
+  
+  if git remote get-url gitlab &>/dev/null; then
+    echo "🚀 Pushing to GitLab..."
+    git push gitlab main 2>&1 || echo "⚠️ GitLab push failed (continuing)"
+    echo "✅ Pushed to GitLab"
+  fi
 fi
 
 echo ""
