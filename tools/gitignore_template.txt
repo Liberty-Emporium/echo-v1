@@ -1,4 +1,4 @@
-# Alexander AI Digital — Standard .gitignore
+# Alexander AI Integrated Solutions — Standard .gitignore
 # Copy this to every repo as .gitignore
 
 # ── Secrets (NEVER commit these) ──────────────────────────
