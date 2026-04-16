@@ -120,9 +120,25 @@
       "updated": "2026-04-16T13:22:17.080281+00:00",
       "stale": false,
       "notes": ""
+    },
+    {
+      "id": "mem_0009",
+      "type": "fact",
+      "content": "KYS API is live at https://ai-api-tracker-production.up.railway.app \u2014 API token stored at /root/.secrets/kys_api_token",
+      "tags": [
+        "kys",
+        "infrastructure",
+        "api"
+      ],
+      "source": "manual",
+      "confidence": "high",
+      "created": "2026-04-16T13:56:55.744327+00:00",
+      "updated": "2026-04-16T13:56:55.744357+00:00",
+      "stale": false,
+      "notes": ""
     }
   ],
   "reflections": [],
   "version": "1.0",
-  "last_updated": "2026-04-16T13:22:17.080316+00:00"
+  "last_updated": "2026-04-16T13:56:55.744391+00:00"
 }
