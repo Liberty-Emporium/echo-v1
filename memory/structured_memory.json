@@ -136,9 +136,25 @@
       "updated": "2026-04-16T13:56:55.744357+00:00",
       "stale": false,
       "notes": ""
+    },
+    {
+      "id": "mem_0010",
+      "type": "fact",
+      "content": "Railway API token stored at /root/.secrets/railway_token \u2014 Jay Alexander account, workspace: liberty-emporium's Projects",
+      "tags": [
+        "railway",
+        "infrastructure",
+        "credentials"
+      ],
+      "source": "manual",
+      "confidence": "high",
+      "created": "2026-04-16T14:11:34.571199+00:00",
+      "updated": "2026-04-16T14:11:34.571231+00:00",
+      "stale": false,
+      "notes": ""
     }
   ],
   "reflections": [],
   "version": "1.0",
-  "last_updated": "2026-04-16T13:56:55.744391+00:00"
+  "last_updated": "2026-04-16T14:11:34.571266+00:00"
 }
