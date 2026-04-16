@@ -12,6 +12,8 @@ ECHO_REPO="$WORKSPACE/echo-v1"
 SECRETS="/root/.secrets"
 GITHUB_TOKEN_FILE="$SECRETS/github_token"
 GITLAB_TOKEN_FILE="$SECRETS/gitlab_token"
+KYS_TOKEN_FILE="$SECRETS/kys_api_token"   # Keep Your Secrets API token
+BRAIN_CRYPT="$ECHO_REPO/scripts/brain-crypt.sh"
 
 echo "💾 Echo Brain Save — $(date -u '+%Y-%m-%d %H:%M UTC')"
 echo "=================================================="
@@ -80,7 +82,26 @@ if [ -d "$WORKSPACE/scripts" ]; then
   echo "  ✅ scripts/ synced"
 fi
 
-# ── 8. Git commit + push ──────────────────────────────────
+# ── 8. Encrypt brain files before push ───────────────────
+if [ -f "$KYS_TOKEN_FILE" ] && [ -f "$BRAIN_CRYPT" ]; then
+  echo ""
+  echo "🔐 Fetching brain encryption key from Keep Your Secrets..."
+  KYS_TOKEN=$(cat "$KYS_TOKEN_FILE")
+  BRAIN_PASS=$(bash "$BRAIN_CRYPT" fetch-key "$KYS_TOKEN" 2>&1) || {
+    echo "⚠️  Could not fetch brain key — pushing WITHOUT encryption"
+    echo "   Run: brain-crypt.sh set-key <token> <passphrase> to enable encryption"
+    BRAIN_PASS=""
+  }
+  if [ -n "$BRAIN_PASS" ] && [[ ! "$BRAIN_PASS" == *"❌"* ]]; then
+    bash "$BRAIN_CRYPT" encrypt "$BRAIN_PASS"
+    unset BRAIN_PASS  # clear from memory immediately
+    echo "✅ Brain encrypted for push"
+  fi
+else
+  echo "ℹ️  No KYS token found — pushing plaintext (set up encryption: see brain-crypt.sh)"
+fi
+
+# ── 9. Git commit + push ──────────────────────────────────
 echo ""
 echo "📦 Committing and pushing..."
 git config user.email "echo@liberty-emporium.ai"
