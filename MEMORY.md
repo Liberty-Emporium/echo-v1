@@ -33,11 +33,11 @@
 | GitLab | Backup mirror — auto-syncs every 30 min |
 
 ### Credentials
-- GitHub PAT (Liberty-Emporium): REDACTED_ROTATE_THIS_TOKEN — **rotate after use**
-- GitLab PAT (backup): REDACTED_ROTATE_THIS_TOKEN — **rotate after use**
+- GitHub PAT: stored at `/root/.secrets/github_token` — DO NOT put token value in MEMORY.md (GitHub scans for it)
+- GitLab PAT: stored at `/root/.secrets/gitlab_token`
 - GitLab user: Liberty-Emporium (id=37330782)
-- GitLab token path: `/root/.secrets/gitlab_token`
 - Railway project ID: 42d6a945-f329-4680-bdfc-fb6ee81ded7d
+- KYS API token: stored at `/root/.secrets/kys_api_token`
 
 ## echo-v1 Repo
 - GitHub: https://github.com/Liberty-Emporium/echo-v1
