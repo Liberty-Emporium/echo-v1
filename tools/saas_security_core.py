@@ -1,5 +1,5 @@
 """
-saas_security_core.py — Alexander AI Digital
+saas_security_core.py — Alexander AI Integrated Solutions
 =============================================
 Drop this into any SaaS app and import it.
 Provides: password hashing, CSRF, session security,
@@ -11,7 +11,7 @@ Usage:
     app = Flask(__name__)
     init_security(app)
 
-Author: KiloClaw / Alexander AI Digital
+Author: KiloClaw / Alexander AI Integrated Solutions
 Last updated: 2026-04-16
 """
 
@@ -505,7 +505,7 @@ def require_api_token(db_getter):
 # QUICK REFERENCE CHEATSHEET (print this in README)
 # ════════════════════════════════════════════════════════════
 """
-SECURITY QUICK REFERENCE — Alexander AI Digital
+SECURITY QUICK REFERENCE — Alexander AI Integrated Solutions
 
 Passwords:
     hash = hash_password(password)        # bcrypt or Argon2id + pepper
