@@ -38,6 +38,9 @@
 - GitLab PAT: stored at `/root/.secrets/gitlab_token` ✅
 - GitLab user: Liberty-Emporium (id=37330782)
 - Railway project ID: 42d6a945-f329-4680-bdfc-fb6ee81ded7d
+- Railway API token: stored at `/root/.secrets/railway_token` ✅
+- Railway workspace ID: 57932cce-5b27-4acf-b82d-c92c0ca45d6e (liberty-emporium's Projects)
+- Railway GraphQL API: https://backboard.railway.app/graphql/v2
 - KYS API token: stored at `/root/.secrets/kys_api_token`
 
 ## echo-v1 Repo (Brain)
