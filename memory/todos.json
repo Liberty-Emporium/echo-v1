@@ -37,12 +37,12 @@
       "id": "todo_004",
       "task": "Add CI/CD pipelines to auto-deploy on push (eliminate manual Railway redeploys)",
       "priority": "high",
-      "status": "open",
+      "status": "done",
       "project": "all-apps",
       "created": "2026-04-16T13:22:06.822351+00:00",
-      "updated": "2026-04-16T13:22:06.822395+00:00",
-      "completed": null,
-      "notes": ""
+      "updated": "2026-04-16T20:26:33.013017+00:00",
+      "completed": "2026-04-16T20:26:33.013017+00:00",
+      "notes": "GitHub Actions workflow on all 7 repos: Python syntax check + flake8 + 90s Railway deploy wait + health check with 8 retries. Eliminates all manual redeploys."
     },
     {
       "id": "todo_005",
@@ -68,5 +68,5 @@
     }
   ],
   "archived": [],
-  "last_updated": "2026-04-16T20:23:12.359298+00:00"
+  "last_updated": "2026-04-16T20:26:33.013017+00:00"
 }
