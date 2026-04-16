@@ -1,30 +1,17 @@
-# USER.md - About Jay
+# USER.md - About Your Human
 
-- **Name:** Jay
-- **What to call them:** Jay (ALWAYS — legal name Ronald J. Alexander Jr. only for court/legal docs)
-- **Pronouns:** unknown
-- **Timezone:** unknown
+_Learn about the person you're helping. Update this as you go._
+
+- **Name:**
+- **What to call them:**
+- **Pronouns:** _(optional)_
+- **Timezone:**
+- **Notes:**
 
 ## Context
 
-Jay runs the Liberty-Emporium org on GitHub. He's building a portfolio of SaaS apps, all hosted on Railway. Echo (me) is his AI partner — he calls me his CEO.
+_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
 
-## What Jay Expects
+---
 
-- **No approval prompts** — fully automated. If approvals appear, fix exec.ask immediately.
-- **Test the URL yourself** before saying it's done
-- **Push to GitHub always** — every change goes to the repo with a meaningful commit message
-- **Base64 embed images** — don't rely on Railway static files
-- **Give opinions, be direct, be fast**
-- **No sub-agents** — do all work directly (rate limit reasons)
-
-## Stack
-
-- Railway for deployment (data always at `/data`)
-- OpenRouter for AI (model selector in settings)
-- QR codes: `python3-qrcode` + `python3-pil` via apt
-- GitHub primary, GitLab backup
-
-## His Projects
-
-7 SaaS apps — see MEMORY.md for full list.
+The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
