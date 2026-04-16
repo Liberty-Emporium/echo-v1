@@ -1,4 +1,4 @@
-# 🔐 Security Checklist — Alexander AI Digital
+# 🔐 Security Checklist — Alexander AI Integrated Solutions
 *Run through this before every deploy. No shortcuts.*
 
 ---
@@ -112,4 +112,4 @@ DEMO_MODE=false
 
 ---
 
-*Last updated: 2026-04-16 | Owner: KiloClaw / Alexander AI Digital*
+*Last updated: 2026-04-16 | Owner: KiloClaw / Alexander AI Integrated Solutions*

@@ -1,5 +1,5 @@
 #!/bin/bash
-# status.sh — Full Alexander AI Digital portfolio status
+# status.sh — Full Alexander AI Integrated Solutions portfolio status
 # Shows: all app health, recent commits, open issues, GitLab sync status
 
 GH_TOKEN=$(cat /root/.secrets/github_token 2>/dev/null)
@@ -7,7 +7,7 @@ GL_TOKEN=$(cat /root/.secrets/gitlab_token 2>/dev/null)
 
 echo ""
 echo "╔══════════════════════════════════════════════════╗"
-echo "║   Alexander AI Digital — Portfolio Status        ║"
+echo "║   Alexander AI Integrated Solutions — Portfolio Status        ║"
 echo "║   $(date -u '+%Y-%m-%d %H:%M UTC')                    ║"
 echo "╚══════════════════════════════════════════════════╝"
 
