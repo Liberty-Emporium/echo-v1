@@ -4,34 +4,34 @@
       "id": "todo_001",
       "task": "Verify security headers on Consignment Solutions after next deploy",
       "priority": "medium",
-      "status": "open",
+      "status": "done",
       "project": "consignment-solutions",
       "created": "2026-04-16T13:22:06.623983+00:00",
-      "updated": "2026-04-16T13:22:06.624188+00:00",
-      "completed": null,
-      "notes": ""
+      "updated": "2026-04-16T20:23:12.359298+00:00",
+      "completed": "2026-04-16T20:23:12.359298+00:00",
+      "notes": "Consignment Solutions security headers verified \u2014 all 6 headers present, added Permissions-Policy"
     },
     {
       "id": "todo_002",
       "task": "Fix /health endpoint to return JSON not plain text",
       "priority": "medium",
-      "status": "open",
+      "status": "done",
       "project": "jays-keep-your-secrets",
       "created": "2026-04-16T13:22:06.684136+00:00",
-      "updated": "2026-04-16T13:22:06.684185+00:00",
-      "completed": null,
-      "notes": ""
+      "updated": "2026-04-16T20:23:12.359298+00:00",
+      "completed": "2026-04-16T20:23:12.359298+00:00",
+      "notes": "Keep Your Secrets /health now returns {status, db} JSON with real DB check"
     },
     {
       "id": "todo_003",
       "task": "Add og:image (preview.png) to all 7 apps for social sharing",
       "priority": "low",
-      "status": "open",
+      "status": "done",
       "project": "all-apps",
       "created": "2026-04-16T13:22:06.757711+00:00",
-      "updated": "2026-04-16T13:22:06.757752+00:00",
-      "completed": null,
-      "notes": ""
+      "updated": "2026-04-16T20:23:12.359298+00:00",
+      "completed": "2026-04-16T20:23:12.359298+00:00",
+      "notes": "og:image preview.png added to all 7 apps \u2014 1200x630 social preview images"
     },
     {
       "id": "todo_004",
@@ -68,5 +68,5 @@
     }
   ],
   "archived": [],
-  "last_updated": "2026-04-16T20:16:18.211363+00:00"
+  "last_updated": "2026-04-16T20:23:12.359298+00:00"
 }
