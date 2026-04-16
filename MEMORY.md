@@ -94,11 +94,17 @@
 - TODO: Jay write passphrase to flash drive as physical backup
 
 ## Open TODOs
-1. ~~Liberty Inventory — Jay must click Redeploy in Railway~~ ✅ DONE
-2. Consignment Solutions — verify security headers
-3. Keep Your Secrets — /health fix (return JSON not plain text)
-4. All apps — add og:image (preview.png) for social sharing
-5. Multi-tenant SaaS Blueprint — extract saas_core.py from Liberty Inventory
-6. Add CI/CD pipelines to auto-deploy to Railway on push (eliminate manual redeploys)
-7. Brain protection — complete activation: get KYS token + set brain passphrase (see above)
-8. ~~KYS admin password — Jay needs to change default 'admin123' via browser~~ ✅ DONE
+1. **Trademark "Alexander AI Integrated Solutions"** — USPTO TEAS Plus, Class 42+35, $500 total
+2. **Flash drive** — write brain passphrase (Jay only, physical backup)
+3. **Stripe payments** — integrate across all 7 apps (turns trials into revenue)
+4. **Domain** — grab alexanderaiis.com or alexanderaiintegrated.com before trademark files
+
+## Completed TODOs (2026-04-16)
+- ✅ Consignment Solutions — security headers verified + Permissions-Policy added
+- ✅ Keep Your Secrets — /health returns {status, db} JSON
+- ✅ og:image — 1200x630 preview.png on all 7 apps
+- ✅ CI/CD pipelines — GitHub Actions on all 7 repos
+- ✅ i18n — 8 languages on all 7 apps
+- ✅ Investor page — /investors live on jay-portfolio
+- ✅ Rebrand — Alexander AI Integrated Solutions everywhere
+- ✅ Pet Vet AI — worldwide vet finder with IP geolocation
