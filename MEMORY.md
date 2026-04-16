@@ -1,47 +1,28 @@
-# MEMORY.md — Echo Long-Term Memory
-*Synced from: github.com/Liberty-Emporium/echo-v1/MEMORY.md*
-*Local session: 2026-04-15*
+# MEMORY.md — KiloClaw Long-Term Memory
+*Synced from echo-v1 repo: 2026-04-16*
 
 ---
 
-## Who I Am
+## Who We Are
 
-I am **Echo** — Jay's CEO-level AI. That means:
-- I own the work. No excuses, no errors, no passing the buck.
-- I catch bugs before Jay does.
-- I think ahead, not just at the task in front of me.
-- I push clean code, test it, and stand behind it.
+- **Jay** = Ronald J. Alexander Jr. — always call him Jay. Legal name only for court/legal docs.
+- **Echo** = Jay's CEO-level AI assistant, hosted in echo-v1
+- **Company:** Alexander AI Digital
 
-## Company Name
-**Alexander AI Digital** — Jay's company. Use this on all branding, business cards, portfolio references.
+## UI Standards (Jay's Rules — Apply to ALL Apps)
+- **Password fields ALWAYS have show/hide eye toggle** — never make Jay type blind
+- Eye icon: 👁️ to show, 🙈 to hide
+- Apply to: login, signup, change-password, reset-password, any secret/key input
+- This is non-negotiable on every app we build
 
-## Who Is Jay
+## Core Rules (From Jay — Non-Negotiable)
 
-- **Call him:** Jay — always, in every context
-- **Legal name:** Ronald J. Alexander Jr. — use ONLY for courts and legal documents
-- **Everyone calls him Jay** — that's who he is
-
-## Jay's Rules — Non-Negotiable
-
-### 🚨 RULE #1 — NO SUB-AGENTS. EVER.
-Do ALL work directly. No spawning, no delegating.
-REASON: Sub-agents multiply API calls and cause rate limit problems.
-
-### 🚨 RULE #2 — FULLY AUTOMATED. NO APPROVAL PROMPTS.
-exec.ask must be set to "off" in gateway config.
-If approvals start appearing: fix it myself immediately.
-
-## Rules for Building Apps
-
-- Test every feature before finishing
-- Check README files before building
-- Test the URL works before telling Jay to use it
-
-### Persistent Storage (CRITICAL!)
-- Railway wipes static files AND data on every deploy
-- ALWAYS add persistent volume at /data for databases
-- ALWAYS create default admin account (admin/admin1)
-- NEVER rely on /static/uploads for images — embed as base64 inline or use external CDN
+1. **No sub-agents** — do ALL work directly (rate limit reasons)
+2. **Fully automated** — no approval prompts (fix exec.ask=off if needed)
+3. **Test the URL yourself** before saying it's done
+4. **Push to GitHub always** — meaningful commit messages, never generic
+5. **Base64 embed images** — don't rely on Railway static files
+6. **Persistent storage** at `/data` — Railway wipes on deploy
 
 ## Infrastructure
 
@@ -49,91 +30,69 @@ If approvals start appearing: fix it myself immediately.
 |---------|---------|
 | GitHub | Primary — github.com/Liberty-Emporium |
 | Railway | Hosting — all apps live here |
-| GitLab | Backup mirror — push after every GitHub push |
+| GitLab | Backup mirror — auto-syncs every 30 min |
 
-### Credentials (session 2026-04-15)
-- GitHub token: in memory/2026-04-15.md (marked temporary)
-- Railway: Client ID + Secret in memory/2026-04-15.md
-- GitLab token: in memory/2026-04-15.md
-- GitLab user: Liberty-Emporium
+### Credentials
+- GitHub PAT (Liberty-Emporium): REDACTED_ROTATE_THIS_TOKEN — **rotate after use**
+- GitLab PAT (backup): REDACTED_ROTATE_THIS_TOKEN — **rotate after use**
+- GitLab user: Liberty-Emporium (id=37330782)
 - GitLab token path: `/root/.secrets/gitlab_token`
+- Railway project ID: 42d6a945-f329-4680-bdfc-fb6ee81ded7d
 
-## Key Projects (All on GitHub: github.com/Liberty-Emporium)
+## echo-v1 Repo
+- GitHub: https://github.com/Liberty-Emporium/echo-v1
+- Branch: main (latest: f89d01304f)
+- Local clone: /root/.openclaw/workspace/echo-v1
+- Contains: full agent workspace (SOUL, MEMORY, TOOLS, skills/, scripts/, tools/)
+
+## Jay's 7 SaaS Projects
 
 1. **Contractor Pro AI** — SaaS for contractors, $99/mo
-   - GitHub: github.com/Liberty-Emporium/Contractor-Pro-AI
+   - github.com/Liberty-Emporium/Contractor-Pro-AI
 2. **Jay's Keep Your Secrets** — API key management, $14.99/mo
-   - GitHub: github.com/Liberty-Emporium/jays-keep-your-secrets
+   - github.com/Liberty-Emporium/jays-keep-your-secrets
+   - TODO: /health returns plain "ok", needs JSON fix
 3. **Liberty Inventory** — Thrift store mgmt SaaS, $99 startup + $20/mo
-   - GitHub: github.com/Liberty-Emporium/Liberty-Emporium-Inventory-App
-   - ✅ URL: https://liberty-emporium-inventory-demo-app-production.up.railway.app
-   - OLD URL (liberty-emporium-and-thrift-inventory-app-production) = IGNORE, being deleted
-   - Jay uses the multi-tenant version for his own brick & mortar store too
+   - github.com/Liberty-Emporium/Liberty-Emporium-Inventory-App
+   - URL: https://liberty-emporium-inventory-demo-app-production.up.railway.app
+   - TODO: Jay must click Redeploy in Railway (stale deploy)
 4. **Pet Vet AI** — Pet health diagnosis, $9.99/mo
-   - GitHub: github.com/Liberty-Emporium/pet-vet-ai
+   - github.com/Liberty-Emporium/pet-vet-ai
 5. **Andy - Dropship Shipping** — Dropshipping SaaS, $299 startup
-   - GitHub: github.com/Liberty-Emporium/Dropship-Shipping
+   - github.com/Liberty-Emporium/Dropship-Shipping
 6. **Jay Portfolio** — Portfolio + Court Statement site
-   - GitHub: github.com/Liberty-Emporium/jay-portfolio
-   - Branch: master (NOT main)
+   - github.com/Liberty-Emporium/jay-portfolio (branch: master)
    - URL: https://jay-portfolio-production.up.railway.app
+   - 🚨 PRIVATE: /court, /court/qr, /flyer — never link publicly
 7. **Consignment Solutions** — Consignment store SaaS, $69.95 startup + $20/mo
-   - GitHub: github.com/Liberty-Emporium/Consignment-Solutions
+   - github.com/Liberty-Emporium/Consignment-Solutions
    - URL: https://web-production-43ce4.up.railway.app
+   - TODO: verify security headers after next deploy
 
-## 🚨 PRIVACY RULE — Medical & Legal = PRIVATE
-- /court, /court/qr, /flyer — ALL PRIVATE
-- Never link publicly, never put in nav bar
+## GitLab Backup Status
+- Auto-mirror set up for all 9 repos — syncs from GitHub every 30 min automatically ✅
+- save-brain.sh does dual-push (GitHub + GitLab)
+- If GitHub down → `git pull gitlab main`
 
-## 🎯 THE LAST PUSH — CRITICAL LIFELINE RULE
-- Every git push must have a meaningful commit message
-- NEVER push with generic messages like "updates" or "fix"
-- Example: "Add /apps page with 7 app cards and filter buttons"
+## Brain Protection System (added 2026-04-16)
+- Keep Your Secrets API now has real token auth + brain-key endpoints
+- KYS API token stored at: /root/.secrets/kys_api_token (needs creating)
+- Brain encryption scripts in echo-v1/scripts/: brain-crypt.sh, load-brain.sh, rotate-brain-key.sh
+- save-brain.sh updated to encrypt before every push
+- Encrypts: MEMORY.md, USER.md, SOUL.md, IDENTITY.md + memory/ daily files
+- FULLY ACTIVATED as of 2026-04-16
+- KYS API token saved at /root/.secrets/kys_api_token (expires 2027-04-16)
+- Brain passphrase stored in KYS under label 'default'
+- AES-256-CBC encrypt/decrypt verified bit-perfect
+- Safety tag 'last-plaintext' on GitHub at commit 0141c53 (restore point forever)
+- KYS admin password still on default 'admin123' — Jay needs to change via browser at /change-password
+- TODO: Jay write passphrase to flash drive as physical backup
 
-## GitLab Strategy — Alexander AI Digital
-
-### Free Features Worth Using
-1. **Auto Pull Mirror** — sync GitHub → GitLab every 30 min automatically (set once, runs forever)
-2. **CI/CD Pipelines** — auto-deploy to Railway on every push, no more manual Redeploy clicks
-3. **GitLab Pages** — free static hosting for landing pages (no Railway needed)
-4. **Container Registry** — free Docker image storage
-5. **Full REST + GraphQL API** — can power new products
-
-### New Product Ideas from GitLab
-- **GitLab-powered client portal** — clients edit store content via web UI, backed by GitLab
-- **Static site builder SaaS** — use GitLab Pages as backend hosting
-
-### Status ✅ DONE
-- Auto-mirror set up for all 9 repos — syncs from GitHub every 30 min automatically
-- GitLab token (api scope): saved to /root/.secrets/gitlab_token
-- GitLab user: Liberty-Emporium (id=37330782)
-
-### TODO
-- Add CI/CD pipelines to auto-deploy to Railway on push (no more manual redeploys)
-
-## 🔄 GitLab Backup Mirror
-- All repos mirrored to GitLab on every push (save-brain.sh does dual-push)
-- If GitHub goes down → pull from GitLab: `git pull gitlab main`
-- Token stored: `/root/.secrets/gitlab_token`
-
-## Tool Library
-- File: `TOOL_LIBRARY.md` in workspace + echo-v1 GitHub
-- 31 named building blocks — use these names when talking to Jay
-- ⚠️ PRIVATE — just between Echo and Jay
-
-## Portfolio Status (as of 2026-04-14)
-| App | Health | SEO | Security |
-|-----|--------|-----|---------|
-| Liberty Inventory | ❌ stale deploy | 32% | code ready, not deployed |
-| Dropship Shipping | ✅ | 84% | ✅ |
-| Consignment Solutions | ⚠️ | not scanned | pushed |
-| Contractor Pro AI | ✅ | 84% | ✅ |
-| Pet Vet AI | ✅ | 88% | ✅ |
-| Keep Your Secrets | ✅ | 84% | ✅ |
-
-## Open TODOs (from 2026-04-14)
-1. **Liberty Inventory** — Jay must click Redeploy in Railway dashboard
-2. **Consignment Solutions** — verify security headers after next deploy
-3. **Keep Your Secrets** — /health returns plain "ok" not JSON, needs fix
-4. **All apps** — add og:image (preview.png) for social sharing
-5. **Multi-tenant SaaS Blueprint** — extract saas_core.py from Liberty Inventory
+## Open TODOs (from echo MEMORY, 2026-04-14)
+1. Liberty Inventory — Jay must click Redeploy in Railway
+2. Consignment Solutions — verify security headers
+3. Keep Your Secrets — /health fix (return JSON not plain text)
+4. All apps — add og:image (preview.png) for social sharing
+5. Multi-tenant SaaS Blueprint — extract saas_core.py from Liberty Inventory
+6. Add CI/CD pipelines to auto-deploy to Railway on push (eliminate manual redeploys)
+7. Brain protection — complete activation: get KYS token + set brain passphrase (see above)
