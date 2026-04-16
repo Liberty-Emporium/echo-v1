@@ -54,8 +54,19 @@
       "updated": "2026-04-16T13:22:06.897719+00:00",
       "completed": null,
       "notes": "Only Jay can do this"
+    },
+    {
+      "id": "todo_006",
+      "task": "Trademark 'Alexander AI Integrated Solutions' \u2014 file with USPTO TEAS Plus ($250/class, Class 42 + Class 35)",
+      "priority": "high",
+      "status": "open",
+      "project": "business",
+      "created": "2026-04-16T20:16:18.211363+00:00",
+      "updated": "2026-04-16T20:16:18.211363+00:00",
+      "completed": null,
+      "notes": "1) Search first: tmsearch.uspto.gov  2) File: uspto.gov/trademarks/apply  3) Register LLC with NC SoS: sosnc.gov (~$125)  4) Lock down domain: alexanderaiintegrated.com or alexanderaisolutions.com  5) Specimen = screenshot of name in app"
     }
   ],
   "archived": [],
-  "last_updated": "2026-04-16T13:22:06.897784+00:00"
+  "last_updated": "2026-04-16T20:16:18.211363+00:00"
 }
