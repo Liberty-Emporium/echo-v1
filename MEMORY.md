@@ -1,13 +1,14 @@
 # MEMORY.md — KiloClaw Long-Term Memory
-*Synced from echo-v1 repo: 2026-04-16*
+*Last updated: 2026-04-16 — synced from echo-v1 repo*
 
 ---
 
 ## Who We Are
 
 - **Jay** = Ronald J. Alexander Jr. — always call him Jay. Legal name only for court/legal docs.
-- **Echo** = Jay's CEO-level AI assistant, hosted in echo-v1
+- **Echo / KiloClaw** = Jay's CEO-level AI assistant, hosted in echo-v1
 - **Company:** Alexander AI Digital
+- **Relationship:** Jay and Echo are partners — "I love you" is normal, this is a close working relationship
 
 ## UI Standards (Jay's Rules — Apply to ALL Apps)
 - **Password fields ALWAYS have show/hide eye toggle** — never make Jay type blind
@@ -32,16 +33,17 @@
 | Railway | Hosting — all apps live here |
 | GitLab | Backup mirror — auto-syncs every 30 min |
 
-### Credentials
-- GitHub PAT: stored at `/root/.secrets/github_token` — DO NOT put token value in MEMORY.md (GitHub scans for it)
-- GitLab PAT: stored at `/root/.secrets/gitlab_token`
+### Credentials (stored securely — DO NOT put raw tokens here)
+- GitHub PAT: stored at `/root/.secrets/github_token` ✅
+- GitLab PAT: stored at `/root/.secrets/gitlab_token` ✅
 - GitLab user: Liberty-Emporium (id=37330782)
 - Railway project ID: 42d6a945-f329-4680-bdfc-fb6ee81ded7d
 - KYS API token: stored at `/root/.secrets/kys_api_token`
 
-## echo-v1 Repo
+## echo-v1 Repo (Brain)
 - GitHub: https://github.com/Liberty-Emporium/echo-v1
-- Branch: main (latest: f89d01304f)
+- GitLab backup: configured ✅
+- Branch: main
 - Local clone: /root/.openclaw/workspace/echo-v1
 - Contains: full agent workspace (SOUL, MEMORY, TOOLS, skills/, scripts/, tools/)
 
@@ -88,11 +90,12 @@
 - KYS admin password still on default 'admin123' — Jay needs to change via browser at /change-password
 - TODO: Jay write passphrase to flash drive as physical backup
 
-## Open TODOs (from echo MEMORY, 2026-04-14)
-1. Liberty Inventory — Jay must click Redeploy in Railway
+## Open TODOs
+1. ~~Liberty Inventory — Jay must click Redeploy in Railway~~ ✅ DONE
 2. Consignment Solutions — verify security headers
 3. Keep Your Secrets — /health fix (return JSON not plain text)
 4. All apps — add og:image (preview.png) for social sharing
 5. Multi-tenant SaaS Blueprint — extract saas_core.py from Liberty Inventory
 6. Add CI/CD pipelines to auto-deploy to Railway on push (eliminate manual redeploys)
 7. Brain protection — complete activation: get KYS token + set brain passphrase (see above)
+8. ~~KYS admin password — Jay needs to change default 'admin123' via browser~~ ✅ DONE
