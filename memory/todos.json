@@ -1,0 +1,61 @@
+{
+  "todos": [
+    {
+      "id": "todo_001",
+      "task": "Verify security headers on Consignment Solutions after next deploy",
+      "priority": "medium",
+      "status": "open",
+      "project": "consignment-solutions",
+      "created": "2026-04-16T13:22:06.623983+00:00",
+      "updated": "2026-04-16T13:22:06.624188+00:00",
+      "completed": null,
+      "notes": ""
+    },
+    {
+      "id": "todo_002",
+      "task": "Fix /health endpoint to return JSON not plain text",
+      "priority": "medium",
+      "status": "open",
+      "project": "jays-keep-your-secrets",
+      "created": "2026-04-16T13:22:06.684136+00:00",
+      "updated": "2026-04-16T13:22:06.684185+00:00",
+      "completed": null,
+      "notes": ""
+    },
+    {
+      "id": "todo_003",
+      "task": "Add og:image (preview.png) to all 7 apps for social sharing",
+      "priority": "low",
+      "status": "open",
+      "project": "all-apps",
+      "created": "2026-04-16T13:22:06.757711+00:00",
+      "updated": "2026-04-16T13:22:06.757752+00:00",
+      "completed": null,
+      "notes": ""
+    },
+    {
+      "id": "todo_004",
+      "task": "Add CI/CD pipelines to auto-deploy on push (eliminate manual Railway redeploys)",
+      "priority": "high",
+      "status": "open",
+      "project": "all-apps",
+      "created": "2026-04-16T13:22:06.822351+00:00",
+      "updated": "2026-04-16T13:22:06.822395+00:00",
+      "completed": null,
+      "notes": ""
+    },
+    {
+      "id": "todo_005",
+      "task": "Write brain passphrase to physical flash drive backup",
+      "priority": "high",
+      "status": "open",
+      "project": "echo-v1",
+      "created": "2026-04-16T13:22:06.897665+00:00",
+      "updated": "2026-04-16T13:22:06.897719+00:00",
+      "completed": null,
+      "notes": "Only Jay can do this"
+    }
+  ],
+  "archived": [],
+  "last_updated": "2026-04-16T13:22:06.897784+00:00"
+}
