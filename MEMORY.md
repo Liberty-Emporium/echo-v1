@@ -1,5 +1,5 @@
 # MEMORY.md — Echo Long-Term Memory
-*Last updated: 2026-04-18 — new KiloClaw instance fully operational*
+*Last updated: 2026-04-17 — synced from echo-v1 repo / new KiloClaw instance*
 
 ---
 
@@ -111,13 +111,6 @@
 - ✅ Investor page — /investors live on jay-portfolio
 - ✅ Rebrand — Alexander AI Integrated Solutions everywhere
 - ✅ Pet Vet AI — worldwide vet finder with IP geolocation
-
-## New Skills Built (2026-04-18)
-- `stripe-billing` — Complete Stripe subscription integration for Flask
-- `email-drip` — Trial onboarding + lifecycle email sequences
-- `reflections-writer` — End-of-session lesson capture → REFLECTIONS.md
-- `memory-compress` — Monthly memory compression to prevent bloat
-- `REFLECTIONS.md` created — permanent lesson playbook
 
 ## Session Notes (2026-04-17)
 - New KiloClaw instance initialized
