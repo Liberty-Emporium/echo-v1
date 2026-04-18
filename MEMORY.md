@@ -24,6 +24,7 @@
 4. **Push to GitHub always** — meaningful commit messages, never generic
 5. **Base64 embed images** — don't rely on Railway static files
 6. **Persistent storage** at `/data` — Railway wipes on deploy
+7. **Always mirror to GitLab** — every GitHub push must also push to GitLab. Brain backed up every 30 min (cron). All app repos synced every 2 hours. GitLab is the emergency fallback — keep it current.
 
 ## Infrastructure
 
