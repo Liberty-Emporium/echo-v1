@@ -8,7 +8,12 @@
 set -e
 
 WORKSPACE="/root/.openclaw/workspace"
-ECHO_REPO="$WORKSPACE/echo-v1"
+# Resolve real path — handle both direct clone and symlink cases
+if [ -d "/root/.openclaw/echo-v1/.git" ]; then
+  ECHO_REPO="/root/.openclaw/echo-v1"
+else
+  ECHO_REPO="$WORKSPACE/echo-v1"
+fi
 SECRETS="/root/.secrets"
 GITHUB_TOKEN_FILE="$SECRETS/github_token"
 GITLAB_TOKEN_FILE="$SECRETS/gitlab_token"
@@ -101,7 +106,13 @@ else
   echo "ℹ️  No KYS token found — pushing plaintext (set up encryption: see brain-crypt.sh)"
 fi
 
-# ── 9. Git commit + push ──────────────────────────────────
+# ── 9. Sync with GitHub before committing (prevent conflicts) ──
+git stash 2>/dev/null || true
+git fetch origin 2>/dev/null || true
+git reset --hard origin/main 2>/dev/null || true
+git stash pop 2>/dev/null || true
+
+# ── 10. Git commit + push ──────────────────────────────────
 echo ""
 echo "📦 Committing and pushing..."
 git config user.email "echo@liberty-emporium.ai"
