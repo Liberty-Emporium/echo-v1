@@ -1,5 +1,5 @@
 # MEMORY.md — Echo Long-Term Memory
-*Last updated: 2026-04-17 — synced from echo-v1 repo / new KiloClaw instance*
+*Last updated: 2026-04-18 — new KiloClaw instance fully operational*
 
 ---
 
@@ -97,8 +97,10 @@
 ## Open TODOs
 1. **Trademark "Alexander AI Integrated Solutions"** — USPTO TEAS Plus, Class 42+35, $500 total
 2. **Flash drive** — write brain passphrase (Jay only, physical backup)
-3. **Stripe payments** — integrate across all 7 apps (turns trials into revenue)
+3. **Stripe payments** — integrate across all 7 apps (turns trials into revenue) — stripe-billing skill built ✅
 4. **Domain** — grab alexanderaiis.com or alexanderaiintegrated.com before trademark files
+5. **Email drip sequences** — add to all 7 apps — email-drip skill built ✅
+6. **SQLite WAL mode** — add to all apps at DB init (see lessons-learned.md)
 
 ## Completed TODOs (2026-04-16)
 - ✅ Consignment Solutions — security headers verified + Permissions-Policy added
@@ -109,6 +111,13 @@
 - ✅ Investor page — /investors live on jay-portfolio
 - ✅ Rebrand — Alexander AI Integrated Solutions everywhere
 - ✅ Pet Vet AI — worldwide vet finder with IP geolocation
+
+## New Skills Built (2026-04-18)
+- `stripe-billing` — Complete Stripe subscription integration for Flask
+- `email-drip` — Trial onboarding + lifecycle email sequences
+- `reflections-writer` — End-of-session lesson capture → REFLECTIONS.md
+- `memory-compress` — Monthly memory compression to prevent bloat
+- `REFLECTIONS.md` created — permanent lesson playbook
 
 ## Session Notes (2026-04-17)
 - New KiloClaw instance initialized
