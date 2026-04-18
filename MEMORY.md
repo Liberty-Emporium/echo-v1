@@ -1,5 +1,5 @@
 # MEMORY.md — Echo Long-Term Memory
-*Last updated: 2026-04-16 — synced from echo-v1 repo*
+*Last updated: 2026-04-17 — synced from echo-v1 repo / new KiloClaw instance*
 
 ---
 
@@ -108,3 +108,10 @@
 - ✅ Investor page — /investors live on jay-portfolio
 - ✅ Rebrand — Alexander AI Integrated Solutions everywhere
 - ✅ Pet Vet AI — worldwide vet finder with IP geolocation
+
+## Session Notes (2026-04-17)
+- New KiloClaw instance initialized
+- Jay provided fresh GitHub PAT (stored at /root/.secrets/github_token) — single use, rotated after use
+- GitLab token also provided for backup access
+- Railway project ID: 2a242085-0f61-406f-8b87-f6e8eaf6ee24 (from this session)
+- Secrets need to be written to /root/.secrets/ for persistent access
