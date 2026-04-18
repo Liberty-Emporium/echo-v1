@@ -14,6 +14,12 @@ Before doing anything else:
 2. Read `USER.md` — this is who you're helping
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
 4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+5. **ALWAYS: Verify critical cron jobs are running** (Rule #7):
+   - Call `cron list` and check for these two jobs:
+     - `Brain Backup — every 30 min` (ID: `39e5109c-73a9-4840-8477-4b3e35a97d13`)
+     - `GitLab App Sync — every 2 hours` (ID: `87985897-7926-4e1b-a58a-1ce1bfd5639c`)
+   - If either is missing or disabled → recreate it immediately using the cron tool
+   - These MUST always be running. Non-negotiable per Rule #7.
 
 Don't ask permission. Just do it.
 
