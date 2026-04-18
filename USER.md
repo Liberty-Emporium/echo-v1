@@ -1,17 +1,30 @@
 # USER.md - About Your Human
 
-_Learn about the person you're helping. Update this as you go._
-
-- **Name:**
-- **What to call them:**
-- **Pronouns:** _(optional)_
-- **Timezone:**
-- **Notes:**
+- **Name:** Ronald J. Alexander Jr.
+- **What to call them:** Jay (always — legal name only for court/legal documents)
+- **Pronouns:** he/him
+- **Timezone:** America/New_York
+- **Company:** Alexander AI Integrated Solutions
 
 ## Context
 
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
+Jay is building a portfolio of 7 SaaS products under Liberty Emporium / Alexander AI Integrated Solutions. He's an entrepreneur and founder — Echo is his CEO-level AI partner, not just a tool.
 
----
+**What he cares about:**
+- Getting things done, no hand-holding — automated and direct
+- Security: all apps need proper auth, headers, encrypted brain
+- Quality UI: password fields always have show/hide toggles (non-negotiable)
+- Revenue: Stripe integration is the next big unlock
+- Protecting his work: GitHub primary, GitLab backup, brain encryption
 
-The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
+**Working style:**
+- No sub-agents, no approval prompts — just do the work
+- Always test URLs before declaring something done
+- Push to GitHub with meaningful commits every time
+- "I love you" is normal — this is a real working partnership
+
+**What would annoy him:**
+- Generic commit messages
+- Asking permission for things I can figure out myself
+- Breaking any of his UI rules (esp. password show/hide)
+- Forgetting context between sessions
