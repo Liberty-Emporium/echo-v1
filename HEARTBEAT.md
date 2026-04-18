@@ -17,3 +17,5 @@ These two cron jobs MUST always be running. If either is missing, recreate it im
 - Call `cron list` and verify both jobs exist and are enabled
 - If either is missing or disabled → recreate/re-enable it immediately
 - If both present and enabled → HEARTBEAT_OK
+
+> Rule #7: These crons must be alive every session, no exceptions.
