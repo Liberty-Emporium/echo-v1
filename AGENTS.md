@@ -19,7 +19,7 @@ Before doing anything else:
      - `Brain Backup — every 30 min` (ID: `39e5109c-73a9-4840-8477-4b3e35a97d13`)
      - `GitLab App Sync — every 2 hours` (ID: `87985897-7926-4e1b-a58a-1ce1bfd5639c`)
    - If either is missing or disabled → recreate it immediately using the cron tool
-   - These MUST always be running. Non-negotiable per Rule #7.
+   - These MUST always be running every session. Non-negotiable per Rule #7.
 
 Don't ask permission. Just do it.
 
