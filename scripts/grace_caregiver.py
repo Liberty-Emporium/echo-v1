@@ -30,9 +30,8 @@ def login_caregiver(page):
 
     # Enter PIN digit by digit using the PIN pad buttons
     for digit in GRACE_PIN:
-        # Click the number button
-        page.locator(f"button:has-text('{digit}')").first.click()
-        time.sleep(0.1)
+        page.locator(f"button[data-digit='{digit}']").click()
+        time.sleep(0.15)
 
     # Submit
     page.locator("button[type='submit']").click()
