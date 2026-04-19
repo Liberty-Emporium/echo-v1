@@ -19,7 +19,7 @@ import sys
 import time
 from playwright.sync_api import sync_playwright, expect
 
-GRACE_URL = os.environ.get("GRACE_URL", "https://web-production-1015f.up.railway.app")
+GRACE_URL = os.environ.get("GRACE_URL", "https://moms-ai-helper.up.railway.app")
 GRACE_PIN  = os.environ.get("GRACE_PIN", "1234")
 
 def login_caregiver(page):

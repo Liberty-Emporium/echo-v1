@@ -78,7 +78,7 @@ python3 grace_caregiver.py screenshot
 ```
 
 ### Env vars needed:
-- GRACE_URL: https://web-production-1015f.up.railway.app
+- GRACE_URL: https://moms-ai-helper.up.railway.app
 - GRACE_PIN: your caregiver PIN (default: 1234)
 
 ## Best Practices

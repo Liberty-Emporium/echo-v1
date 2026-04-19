@@ -18,7 +18,7 @@ APPS = {
     "dropship-shipping":"https://dropship-shipping-production.up.railway.app",
     "jay-portfolio":    "https://jay-portfolio-production.up.railway.app",
     "consignment":      "https://web-production-43ce4.up.railway.app",
-    "grace":            "https://web-production-1015f.up.railway.app",
+    "grace":            "https://moms-ai-helper.up.railway.app",
 }
 
 TEST_EMAIL    = "echo-test-auto@liberty-emporium.ai"
