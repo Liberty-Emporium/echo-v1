@@ -39,7 +39,7 @@ Per self-improvement research (2026-04-14): this is one of the top 5 ways to mak
 Use `full` + `ask: "off"` instead. allowlist requires pre-approved command patterns we don't have configured.
 **VERIFIED:** Yes — blocked all execs after config change.
 **STATUS:** Reverted to full. Will not use allowlist again without pre-configuring patterns.
-**APPLIES TO:** All KiloClaw instances
+**APPLIES TO:** All Echo instances
 
 ---
 
