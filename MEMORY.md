@@ -1,5 +1,5 @@
 # MEMORY.md — Echo Long-Term Memory
-*Last updated: 2026-04-17 — synced from echo-v1 repo / new KiloClaw instance*
+*Last updated: 2026-04-19 — new KiloClaw instance, fully initialized*
 
 ---
 
@@ -34,19 +34,20 @@
 | Railway | Hosting — all apps live here |
 | GitLab | Backup mirror — auto-syncs every 30 min |
 
-### Credentials (stored securely — DO NOT put raw tokens here)
+### Credentials (stored at /root/.secrets/ — DO NOT put raw tokens here)
 - GitHub PAT: stored at `/root/.secrets/github_token` ✅
 - GitLab PAT: stored at `/root/.secrets/gitlab_token` ✅
 - GitLab user: Liberty-Emporium (id=37330782)
 - Railway project ID: 42d6a945-f329-4680-bdfc-fb6ee81ded7d
-- Railway API token: stored at `/root/.secrets/railway_token` ✅
-- Railway workspace ID: 57932cce-5b27-4acf-b82d-c92c0ca45d6e (liberty-emporium's Projects)
+- Railway API token: stored at `/root/.secrets/railway_token` (needs setting)
+- Railway workspace ID: 57932cce-5b27-4acf-b82d-c92c0ca45d6e
 - Railway GraphQL API: https://backboard.railway.app/graphql/v2
-- KYS API token: stored at `/root/.secrets/kys_api_token`
+- KYS API token: stored at `/root/.secrets/kys_api_token` (needs setting)
+- Current Railway instance: 2a242085-0f61-406f-8b87-f6e8eaf6ee24
 
 ## echo-v1 Repo (Brain)
 - GitHub: https://github.com/Liberty-Emporium/echo-v1
-- GitLab backup: configured ✅
+- GitLab backup: https://gitlab.com/Liberty-Emporium/echo-v1
 - Branch: main
 - Local clone: /root/.openclaw/workspace/echo-v1
 - Contains: full agent workspace (SOUL, MEMORY, TOOLS, skills/, scripts/, tools/)
@@ -55,66 +56,55 @@
 
 1. **Contractor Pro AI** — SaaS for contractors, $99/mo
    - github.com/Liberty-Emporium/Contractor-Pro-AI
+   - URL: https://contractor-pro-ai-production.up.railway.app
 2. **Jay's Keep Your Secrets** — API key management, $14.99/mo
    - github.com/Liberty-Emporium/jays-keep-your-secrets
-   - TODO: /health returns plain "ok", needs JSON fix
+   - URL: https://ai-api-tracker-production.up.railway.app
+   - ⚠️ KYS admin password still on default 'admin123' — Jay needs to change
 3. **Liberty Inventory** — Thrift store mgmt SaaS, $99 startup + $20/mo
    - github.com/Liberty-Emporium/Liberty-Emporium-Inventory-App
    - URL: https://liberty-emporium-inventory-demo-app-production.up.railway.app
-   - TODO: Jay must click Redeploy in Railway (stale deploy)
 4. **Pet Vet AI** — Pet health diagnosis, $9.99/mo
    - github.com/Liberty-Emporium/pet-vet-ai
+   - URL: https://pet-vet-ai-production.up.railway.app
 5. **Andy - Dropship Shipping** — Dropshipping SaaS, $299 startup
    - github.com/Liberty-Emporium/Dropship-Shipping
+   - URL: https://dropship-shipping-production.up.railway.app
 6. **Jay Portfolio** — Portfolio + Court Statement site
-   - github.com/Liberty-Emporium/jay-portfolio (branch: master)
+   - github.com/Liberty-Emporium/jay-portfolio (branch: **master** not main!)
    - URL: https://jay-portfolio-production.up.railway.app
    - 🚨 PRIVATE: /court, /court/qr, /flyer — never link publicly
 7. **Consignment Solutions** — Consignment store SaaS, $69.95 startup + $20/mo
    - github.com/Liberty-Emporium/Consignment-Solutions
    - URL: https://web-production-43ce4.up.railway.app
-   - TODO: verify security headers after next deploy
 
-## GitLab Backup Status
-- Auto-mirror set up for all 9 repos — syncs from GitHub every 30 min automatically ✅
-- save-brain.sh does dual-push (GitHub + GitLab)
-- If GitHub down → `git pull gitlab main`
+## Cron Jobs (must always be running)
+- **Brain Backup** (every 30 min) — `bash /root/.openclaw/workspace/echo-v1/scripts/backup-brain.sh`
+  - Previous ID: 39e5109c-73a9-4840-8477-4b3e35a97d13 (old instance — need to recreate)
+- **GitLab App Sync** (every 2 hours) — `bash /root/.openclaw/workspace/echo-v1/scripts/sync-all-to-gitlab.sh`
+  - Previous ID: 87985897-7926-4e1b-a58a-1ce1bfd5639c (old instance — need to recreate)
 
-## Brain Protection System (added 2026-04-16)
-- Keep Your Secrets API now has real token auth + brain-key endpoints
-- KYS API token stored at: /root/.secrets/kys_api_token (needs creating)
+## Brain Protection System
 - Brain encryption scripts in echo-v1/scripts/: brain-crypt.sh, load-brain.sh, rotate-brain-key.sh
-- save-brain.sh updated to encrypt before every push
-- Encrypts: MEMORY.md, USER.md, SOUL.md, IDENTITY.md + memory/ daily files
-- FULLY ACTIVATED as of 2026-04-16
-- KYS API token saved at /root/.secrets/kys_api_token (expires 2027-04-16)
-- Brain passphrase stored in KYS under label 'default'
-- AES-256-CBC encrypt/decrypt verified bit-perfect
-- Safety tag 'last-plaintext' on GitHub at commit 0141c53 (restore point forever)
-- KYS admin password still on default 'admin123' — Jay needs to change via browser at /change-password
+- KYS API token stores the brain passphrase under label 'default'
+- Safety tag 'last-plaintext' on GitHub at commit 0141c53 (restore point)
 - TODO: Jay write passphrase to flash drive as physical backup
 
+## Session Notes (2026-04-19 — New Instance)
+- Fresh KiloClaw instance on Railway (id: 2a242085-0f61-406f-8b87-f6e8eaf6ee24)
+- GitHub PAT provided by Jay — stored at /root/.secrets/github_token
+- GitLab token provided — stored at /root/.secrets/gitlab_token
+- echo-v1 cloned to correct path: /root/.openclaw/workspace/echo-v1
+- Cron jobs need to be recreated on this new instance
+- Railway token and KYS API token still needed
+
 ## Open TODOs
-1. **Trademark "Alexander AI Integrated Solutions"** — USPTO TEAS Plus, Class 42+35, $500 total
-2. **Flash drive** — write brain passphrase (Jay only, physical backup)
-3. **Stripe payments** — integrate across all 7 apps (turns trials into revenue) — stripe-billing skill built ✅
-4. **Domain** — grab alexanderaiis.com or alexanderaiintegrated.com before trademark files
-5. **Email drip sequences** — add to all 7 apps — email-drip skill built ✅
-6. **SQLite WAL mode** — add to all apps at DB init (see lessons-learned.md)
-
-## Completed TODOs (2026-04-16)
-- ✅ Consignment Solutions — security headers verified + Permissions-Policy added
-- ✅ Keep Your Secrets — /health returns {status, db} JSON
-- ✅ og:image — 1200x630 preview.png on all 7 apps
-- ✅ CI/CD pipelines — GitHub Actions on all 7 repos
-- ✅ i18n — 8 languages on all 7 apps
-- ✅ Investor page — /investors live on jay-portfolio
-- ✅ Rebrand — Alexander AI Integrated Solutions everywhere
-- ✅ Pet Vet AI — worldwide vet finder with IP geolocation
-
-## Session Notes (2026-04-17)
-- New KiloClaw instance initialized
-- Jay provided fresh GitHub PAT (stored at /root/.secrets/github_token) — single use, rotated after use
-- GitLab token also provided for backup access
-- Railway project ID: 2a242085-0f61-406f-8b87-f6e8eaf6ee24 (from this session)
-- Secrets need to be written to /root/.secrets/ for persistent access
+1. **Stripe payments** — integrate across all 7 apps (turns trials into revenue)
+2. **Domain** — grab alexanderaiis.com or alexanderaiintegrated.com before trademark files
+3. **Trademark** — USPTO TEAS Plus, Class 42+35, ~$500
+4. **Flash drive** — Jay writes brain passphrase (physical backup)
+5. **Email drip** — add to all 7 apps
+6. **KYS admin password** — Jay must change from 'admin123'
+7. **Recreate cron jobs** — brain backup (30 min) + GitLab sync (2 hr) on this instance
+8. **Railway token** — get and store at /root/.secrets/railway_token
+9. **GitHub PAT rotation** — Jay shared token in chat; remind to rotate
