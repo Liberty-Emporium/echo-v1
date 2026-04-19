@@ -15,7 +15,7 @@ _Learn about the person you're helping. Update this as you go._
 - Primary GitHub org: Liberty-Emporium
 - Jay's portfolio/court site at jay-portfolio — /court, /court/qr, /flyer are PRIVATE, never link publicly
 - Jay has a flash drive passphrase backup TODO (brain encryption)
-- Jay needs to change KYS admin password from default 'admin123'
+- ~~KYS admin password~~ ✅ Changed 2026-04-19
 - UI Rule: Password fields ALWAYS have show/hide eye toggle (👁️/🙈) — non-negotiable
 
 ## Jay's 7 SaaS Projects
