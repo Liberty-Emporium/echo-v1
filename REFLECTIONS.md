@@ -4,6 +4,15 @@
 
 ---
 
+## 2026-04-19 — Grace App SQLite Bug
+
+**REFLECTION:** SQLite does NOT allow `DEFAULT (datetime("now"))` as a column default in `CREATE TABLE` statements. Only constants are allowed. This caused Grace to fail on first deploy with `sqlite3.OperationalError: default value of column`.
+**VERIFIED:** Yes — app crashed on Railway with health check failure.
+**STATUS:** Always use `DEFAULT CURRENT_TIMESTAMP` instead of `DEFAULT (datetime("now"))` in SQLite schema.
+**APPLIES TO:** All Flask apps using SQLite
+
+---
+
 ## 2026-04-18 — New KiloClaw Instance Setup
 
 **REFLECTION:** `exec.security: "allowlist"` blocks ALL commands including `openclaw` CLI itself unless patterns are pre-configured. Setting it breaks everything.
