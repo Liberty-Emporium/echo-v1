@@ -122,6 +122,25 @@
 - ✅ Caregiver PIN-protected setup mode
 - ✅ DEPLOYED: https://web-production-1015f.up.railway.app/
 
+## Product Vision — Grace (IMPORTANT - 2026-04-19)
+- Grace v1 = prototype for Jay's mom to test for 1-2 days
+- Grace v2 = commercial SaaS product to sell to the public
+- Target market: 55M Americans 65+, families of elderly
+- Jay's philosophy: build apps that solve REAL WORLD PROBLEMS
+- Mom's feedback will shape the commercial product
+- Grace 2.0 needs: multi-family, caregiver invites, push notifications, Stripe billing, App Store presence
+- Pricing idea: ~$9.99/mo per family or $99/yr
+- Future: partner with senior care facilities, home health agencies, white-label
+- THIS IS THE TEMPLATE: test with real user → learn → build commercial version
+- Apply same approach to all future apps: solve real problems, test with real people first
+
+## Jay's Core Philosophy (2026-04-19)
+"This is not about what you can do for my mom — this is about building apps that solve real world problems."
+- Build for real users, not demos
+- Test with real people before scaling
+- Every app = a real problem solved
+- Mom testing Grace = the right way to build
+
 ## Playwright Automation Priorities (Jay loves this tool - 2026-04-19)
 1. ✅ CI/CD testing — live on all 9 apps
 2. 🔜 Visual health monitoring — daily screenshots of all apps
