@@ -120,7 +120,17 @@
 - ✅ GitLab backup: https://gitlab.com/Liberty-Emporium/grace-app
 - ✅ Features: meds tracker, appointments, tasks, Grace AI, reminders/alarms
 - ✅ Caregiver PIN-protected setup mode
-- ⚠️ NOT YET DEPLOYED — Jay needs to deploy to Railway + add env vars
+- ✅ DEPLOYED: https://web-production-1015f.up.railway.app/
+
+## Playwright Automation Priorities (Jay loves this tool - 2026-04-19)
+1. ✅ CI/CD testing — live on all 9 apps
+2. 🔜 Visual health monitoring — daily screenshots of all apps
+3. 🔜 Competitor price scraping — track competitor pricing automatically
+4. 🔜 Grace caregiver automation — Jay says "add Mom's meds" → auto-fills Grace UI
+5. 🔜 Lead generation — find small businesses without chat widgets for $90 install service
+6. 🔜 Stripe revenue dashboard — pull MRR across all 7 apps automatically
+7. 🔜 $90 install automation — auto-install embed code into customer's website
+Full list: echo-v1/skills/custom/playwright-automation/USE_CASES.md
 
 ## Open TODOs
 1. **Stripe payments** — integrate across all 7 apps (turns trials into revenue)
@@ -132,5 +142,5 @@
 7. ~~**Recreate cron jobs**~~ — ✅ Done 2026-04-19
 8. **Railway token** — get and store at /root/.secrets/railway_token
 9. **GitHub PAT rotation** — Jay shared token in chat; remind to rotate
-10. **Grace app Railway deploy** — Jay needs to deploy grace-app from GitHub to Railway + add volume + env vars
+10. ~~**Grace app Railway deploy**~~ — ✅ Live at https://web-production-1015f.up.railway.app/
 11. **Grace Stripe installation** — create $90 one-time product in Stripe, add STRIPE_PRICE_INSTALLATION to Railway
