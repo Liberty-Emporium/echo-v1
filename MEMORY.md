@@ -92,6 +92,15 @@ Jay's vision (stated 2026-04-19): Build a network where all Liberty-Emporium app
 
 This is a priority goal — reference when planning new features or app architecture.
 
+## EcDash Connection
+
+- EcDash API token: stored at `/root/.secrets/ecdash_token` (expires 2027-04-19)
+- EcDash base URL: `https://jay-portfolio-production.up.railway.app`
+- Dashboard password: stored at `/root/.secrets/ecdash_password`
+- Bridge API: `GET/POST /api/echo-bridge` — task queue between EcDash and Echo
+- Token label: `echo-bridge`
+- I poll this queue via heartbeat — pick up pending tasks, execute, report back
+
 ## Notes
 
 - First session establishing identity — no prior memory existed
