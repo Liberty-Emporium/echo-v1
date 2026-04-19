@@ -38,6 +38,4 @@ done
 3. Try manual redeploy in Railway UI
 4. If DB issue: check volume is mounted at /data
 
-## Grace app (not yet deployed)
-- Will be at: TBD after Jay deploys to Railway
-- Add to this list once URL is known
+  "Grace App|https://web-production-1015f.up.railway.app"
