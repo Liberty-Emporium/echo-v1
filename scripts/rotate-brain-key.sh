@@ -2,7 +2,7 @@
 # ============================================================
 # rotate-brain-key.sh — Weekly Brain Key Rotation
 #
-# Jay runs this (or tells KiloClaw to run it) when rotating
+# Jay runs this (or tells Echo to run it) when rotating
 # the brain encryption password. It:
 #   1. Verifies old key works
 #   2. Updates the key in Keep Your Secrets
