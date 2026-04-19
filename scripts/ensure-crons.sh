@@ -2,7 +2,7 @@
 # ensure-crons.sh
 # Verifies the two critical cron jobs exist via the OpenClaw API.
 # Call this from session startup or heartbeat checks.
-# The cron jobs are managed by KiloClaw and persist across restarts,
+# The cron jobs are managed by Echo and persist across restarts,
 # but this script serves as documentation of what must exist.
 
 echo "Critical cron jobs that must always be running:"
