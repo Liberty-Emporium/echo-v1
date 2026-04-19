@@ -78,11 +78,11 @@
    - github.com/Liberty-Emporium/Consignment-Solutions
    - URL: https://web-production-43ce4.up.railway.app
 
-## Cron Jobs (must always be running)
-- **Brain Backup** (every 30 min) — `bash /root/.openclaw/workspace/echo-v1/scripts/backup-brain.sh`
-  - Previous ID: 39e5109c-73a9-4840-8477-4b3e35a97d13 (old instance — need to recreate)
-- **GitLab App Sync** (every 2 hours) — `bash /root/.openclaw/workspace/echo-v1/scripts/sync-all-to-gitlab.sh`
-  - Previous ID: 87985897-7926-4e1b-a58a-1ce1bfd5639c (old instance — need to recreate)
+## Cron Jobs (active on this instance)
+- **Brain Backup** (every 30 min) — ID: `e68e2bee-ff45-4d41-8340-a466a0bd7ccb`
+  - Task: `bash /root/.openclaw/workspace/echo-v1/scripts/backup-brain.sh`
+- **GitLab App Sync** (every 2 hours) — ID: `cd70c996-e544-4e0f-abb5-754a2db59b09`
+  - Task: `bash /root/.openclaw/workspace/echo-v1/scripts/sync-all-to-gitlab.sh`
 
 ## Brain Protection System
 - Brain encryption scripts in echo-v1/scripts/: brain-crypt.sh, load-brain.sh, rotate-brain-key.sh
@@ -104,7 +104,7 @@
 3. **Trademark** — USPTO TEAS Plus, Class 42+35, ~$500
 4. **Flash drive** — Jay writes brain passphrase (physical backup)
 5. **Email drip** — add to all 7 apps
-6. **KYS admin password** — Jay must change from 'admin123'
-7. **Recreate cron jobs** — brain backup (30 min) + GitLab sync (2 hr) on this instance
+6. ~~**KYS admin password**~~ — ✅ Changed 2026-04-19
+7. **Recreate cron jobs** — ✅ Done 2026-04-19
 8. **Railway token** — get and store at /root/.secrets/railway_token
 9. **GitHub PAT rotation** — Jay shared token in chat; remind to rotate
