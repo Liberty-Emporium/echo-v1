@@ -69,6 +69,29 @@ Repos under Liberty-Emporium org:
 - **Session end:** Run `save-brain.sh` to push brain back to GitHub + GitLab
 - Brain encryption via Keep Your Secrets (KYS) app — token at `/root/.secrets/kys_api_token`
 
+## 🎯 BIG GOAL: Inter-App Communication Network
+
+Jay's vision (stated 2026-04-19): Build a network where all Liberty-Emporium apps can communicate and do things for each other.
+
+**The hub:** Keep Your Secrets (KYS) at https://ai-api-tracker-production.up.railway.app
+- Manages ALL API keys across all apps
+- Each app calls KYS to fetch its keys instead of storing them locally
+- Central API key management = rotate once, updates everywhere
+
+**The vision:**
+- Apps talk to each other via shared APIs
+- KYS is the credential broker
+- Portfolio dashboard is the control plane
+- Echo (me) is the orchestrator
+- Goal: a self-managing, interconnected app ecosystem
+
+**Phase 1 (now):** Unified Settings in dashboard — profile, AI behavior, API key management via KYS
+**Phase 2:** Each app pulls its API keys from KYS at runtime (no local storage)
+**Phase 3:** Apps expose APIs to each other (e.g., Inventory app can call Pet Vet AI for photo analysis)
+**Phase 4:** Echo orchestrates tasks across apps (e.g., "sync all inventory photos to AI analysis")
+
+This is a priority goal — reference when planning new features or app architecture.
+
 ## Notes
 
 - First session establishing identity — no prior memory existed
