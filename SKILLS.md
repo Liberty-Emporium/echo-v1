@@ -35,14 +35,20 @@ Key skills available:
 - `github-integration` — GitHub operations: push, PR, branch, commit
 - `mentor-mode` — Explain code concepts to learners
 
-### Skills Needed (Identified 2026-04-13)
+### New Skills (Built 2026-04-19)
+- `railway-deploy` — Full Railway deploy cycle: push → wait → verify health. Has all app URLs.
+- `stripe-setup` — Add Stripe billing (subscriptions + one-time) to any Flask app
+- `new-flask-app` — Scaffold a complete Liberty-Emporium Flask app with all standard building blocks
+- `health-checker` — Check all 8 apps health in one sweep
+- `github-token-refresh` — Detect expired tokens, guide renewal process
 
+### Skills Needed (Still TODO)
 - `pdf-extractor` — Download PDF, extract pages as base64 PNG (HIGH PRIORITY)
-- `railway-deploy` — Full deploy cycle: push → wait → verify (HIGH PRIORITY)
 - `base64-image` — Convert any image to inline HTML data URI (MEDIUM)
 - `qr-generator` — Generate QR code as base64 PNG (MEDIUM)
-- `github-token-refresh` — Detect expired tokens, alert Jay (MEDIUM)
 - `apt-toolbox` — Pre-install common tools at session start (LOW)
+- `email-sender` — Send emails via SMTP from any app (MEDIUM)
+- `grace-updater` — Push updates to Grace app specifically (LOW)
 
 ## Skills Storage Location
 
@@ -52,4 +58,4 @@ https://github.com/Liberty-Emporium/echo-v1/tree/main/skills/custom/
 ```
 
 ---
-*Version: 1.1.0 - Updated 2026-04-13*
+*Version: 1.2.0 - Updated 2026-04-19*

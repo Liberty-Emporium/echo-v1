@@ -95,8 +95,32 @@
 - GitHub PAT provided by Jay — stored at /root/.secrets/github_token
 - GitLab token provided — stored at /root/.secrets/gitlab_token
 - echo-v1 cloned to correct path: /root/.openclaw/workspace/echo-v1
-- Cron jobs need to be recreated on this new instance
-- Railway token and KYS API token still needed
+- Cron jobs recreated: brain-backup (e68e2bee) + gitlab-sync (cd70c996)
+- exec.ask is still on-miss (protected setting, can't change programmatically)
+
+## Work Done This Session (2026-04-19)
+### AI Agent Widget (https://ai-agent-widget-production.up.railway.app)
+- ✅ Login/signup eye toggles (already existed, confirmed working)
+- ✅ Forgot password + reset password flow
+- ✅ Confirm password on signup with live match indicator
+- ✅ Knowledge Base (text/URL/file per agent, injected into chat)
+- ✅ Visitor Memory (auto-summarizes every 5 messages, injected into chat)
+- ✅ Ticket system (normal/urgent/emergency, 24hr/4hr/1hr SLA)
+- ✅ Admin ticket management panel at /admin/tickets
+- ✅ Ticket summary widget on admin dashboard
+- ✅ Admin email locked to alexanderjay70@gmail.com
+- ✅ Nav brand logo → dashboard if logged in, landing if not
+- ✅ $90 done-for-you installation service (Stripe one-time)
+- ✅ Installation workflow: customer fills hosting details, admin gets login button
+- ✅ Support link in navbar, Admin link (green, admin-only)
+
+### Grace App (NEW - for Jay's mom)
+- ✅ Built from scratch: voice-first elderly care assistant
+- ✅ Repo: https://github.com/Liberty-Emporium/grace-app
+- ✅ GitLab backup: https://gitlab.com/Liberty-Emporium/grace-app
+- ✅ Features: meds tracker, appointments, tasks, Grace AI, reminders/alarms
+- ✅ Caregiver PIN-protected setup mode
+- ⚠️ NOT YET DEPLOYED — Jay needs to deploy to Railway + add env vars
 
 ## Open TODOs
 1. **Stripe payments** — integrate across all 7 apps (turns trials into revenue)
@@ -105,6 +129,8 @@
 4. **Flash drive** — Jay writes brain passphrase (physical backup)
 5. **Email drip** — add to all 7 apps
 6. ~~**KYS admin password**~~ — ✅ Changed 2026-04-19
-7. **Recreate cron jobs** — ✅ Done 2026-04-19
+7. ~~**Recreate cron jobs**~~ — ✅ Done 2026-04-19
 8. **Railway token** — get and store at /root/.secrets/railway_token
 9. **GitHub PAT rotation** — Jay shared token in chat; remind to rotate
+10. **Grace app Railway deploy** — Jay needs to deploy grace-app from GitHub to Railway + add volume + env vars
+11. **Grace Stripe installation** — create $90 one-time product in Stripe, add STRIPE_PRICE_INSTALLATION to Railway

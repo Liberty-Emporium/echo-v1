@@ -1,46 +1,61 @@
 # railway-deploy
 
-**Version:** 1.0.0
-**Created:** 2026-04-13
-**Author:** Echo
+Deploy any Liberty-Emporium app to Railway and verify it's live.
 
-## Description
-
-Full Railway deploy cycle: detect branch, push code, wait for deployment, verify URL is live, return confirmation. Eliminates manual push + wait + curl check cycle.
-
-Born from: multiple failed pushes to `main` when repo was on `master` during 2026-04-13 session.
-
-## When To Use
-
-- After making code changes to any Railway-hosted repo
-- Before telling Jay "it's deployed"
-- When verifying a new feature is live on Railway
+## When to use
+- Any time Jay says "deploy this", "push to Railway", "get it live"
+- After pushing code to GitHub and needing Railway to pick it up
+- Verifying a Railway app is healthy after deploy
 
 ## Steps
 
-1. **Detect branch:** `git branch --show-current`
-2. **Set auth remote:** `git remote set-url origin https://$(cat /root/.secrets/github_token)@github.com/Liberty-Emporium/REPO.git`
-3. **Push:** `git push origin BRANCH`
-4. **Wait 25-30 seconds** (Railway build time)
-5. **Verify:** `curl -o /dev/null -w "%{http_code}" URL`
-6. **Check content:** `curl -s URL | grep "EXPECTED_STRING"`
-7. **Report** success or failure to Jay
+### 1. Verify GitHub is up to date
+```bash
+cd /root/.openclaw/workspace/<REPO>
+git status
+git push origin main
+```
 
-## Critical Rules
+### 2. Trigger Railway deploy (via GitHub push)
+Railway auto-deploys on push to main. Wait ~60-90 seconds.
 
-- **jay-portfolio uses `master` NOT `main`** — always check branch first
-- Always check branch with `git branch` before first push to any repo
-- Railway wipes `/static/uploads/` on every deploy — use base64 for images
-- Default wait time: 25-30 seconds after push before verifying
+### 3. Verify health
+```bash
+curl -s https://<APP_URL>/health
+```
+Expected: `{"status":"ok","db":"ok"}`
 
-## Railway App URLs
+### 4. Check key routes
+```bash
+curl -s -o /dev/null -w "%{http_code}" https://<APP_URL>/
+curl -s -o /dev/null -w "%{http_code}" https://<APP_URL>/login
+```
 
+## Railway env vars required for new apps
+- `SECRET_KEY` — random hex string
+- `RAILWAY_VOLUME_MOUNT_PATH` — set to `/data` (add volume in Railway UI first)
+- App-specific vars (OPENROUTER_API_KEY, STRIPE_*, etc.)
+
+## Grace App specific
+- Repo: https://github.com/Liberty-Emporium/grace-app
+- Required env vars: USER_NAME, CAREGIVER_PIN, OPENROUTER_API_KEY, SECRET_KEY
+- Volume mount: /data
+- URL: (set after Railway creates it)
+
+## Known Railway URLs
 | App | URL |
 |-----|-----|
-| jay-portfolio | https://jay-portfolio-production.up.railway.app |
-| liberty-inventory | https://liberty-emporium-and-thrift-inventory-app-production.up.railway.app |
-| dropship-shipping | https://dropship-shipping-production.up.railway.app |
-| contractor-pro-ai | https://contractor-pro-ai-production.up.railway.app |
-| pet-vet-ai | https://pet-vet-ai-production.up.railway.app |
-| ai-api-tracker | https://ai-api-tracker-production.up.railway.app |
-| consignment-solutions | https://web-production-43ce4.up.railway.app |
+| AI Agent Widget | https://ai-agent-widget-production.up.railway.app |
+| Contractor Pro AI | https://contractor-pro-ai-production.up.railway.app |
+| Pet Vet AI | https://pet-vet-ai-production.up.railway.app |
+| Keep Your Secrets | https://ai-api-tracker-production.up.railway.app |
+| Liberty Inventory | https://liberty-emporium-inventory-demo-app-production.up.railway.app |
+| Dropship Shipping | https://dropship-shipping-production.up.railway.app |
+| Jay Portfolio | https://jay-portfolio-production.up.railway.app |
+| Consignment Solutions | https://web-production-43ce4.up.railway.app |
+
+## Critical Rules
+1. Always check branch — jay-portfolio uses `master`, all others use `main`
+2. Always verify /health returns 200 before declaring done
+3. If health fails after 90s, check Railway logs
+4. Never push without syntax check: `python3 -c "import ast; ast.parse(open('app.py').read())"`
