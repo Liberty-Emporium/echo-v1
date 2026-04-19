@@ -120,7 +120,7 @@
 - ✅ GitLab backup: https://gitlab.com/Liberty-Emporium/grace-app
 - ✅ Features: meds tracker, appointments, tasks, Grace AI, reminders/alarms
 - ✅ Caregiver PIN-protected setup mode
-- ✅ DEPLOYED: https://web-production-1015f.up.railway.app/
+- ✅ DEPLOYED: https://moms-ai-helper.up.railway.app/
 
 ## Product Vision — Grace (IMPORTANT - 2026-04-19)
 - Grace v1 = prototype for Jay's mom to test for 1-2 days
@@ -161,5 +161,5 @@ Full list: echo-v1/skills/custom/playwright-automation/USE_CASES.md
 7. ~~**Recreate cron jobs**~~ — ✅ Done 2026-04-19
 8. **Railway token** — get and store at /root/.secrets/railway_token
 9. **GitHub PAT rotation** — Jay shared token in chat; remind to rotate
-10. ~~**Grace app Railway deploy**~~ — ✅ Live at https://web-production-1015f.up.railway.app/
+10. ~~**Grace app Railway deploy**~~ — ✅ Live at https://moms-ai-helper.up.railway.app/
 11. **Grace Stripe installation** — create $90 one-time product in Stripe, add STRIPE_PRICE_INSTALLATION to Railway

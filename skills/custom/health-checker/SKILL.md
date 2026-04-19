@@ -38,4 +38,4 @@ done
 3. Try manual redeploy in Railway UI
 4. If DB issue: check volume is mounted at /data
 
-  "Grace App|https://web-production-1015f.up.railway.app"
+  "Grace App|https://moms-ai-helper.up.railway.app"
