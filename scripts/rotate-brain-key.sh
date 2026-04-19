@@ -12,7 +12,7 @@
 # Usage:
 #   rotate-brain-key.sh <new_passphrase> [old_passphrase]
 #
-# Or let KiloClaw handle it — just say:
+# Or let Echo handle it — just say:
 #   "rotate my brain key to: [new passphrase]"
 # ============================================================
 
@@ -62,5 +62,5 @@ bash "$ECHO_REPO/scripts/save-brain.sh"
 
 echo ""
 echo "=================================================="
-echo "✅ Brain key rotated. KiloClaw will use the new key next session."
+echo "✅ Brain key rotated. Echo will use the new key next session."
 echo "   Remember: the old key is gone. Don't lose the new one!"
