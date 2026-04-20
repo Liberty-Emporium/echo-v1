@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-19T17:14:00.286Z",
+  "updatedAt": "2026-04-20T05:44:10.483Z",
   "entries": {
     "memory:memory/2026-04-19.md:1:35": {
       "key": "memory:memory/2026-04-19.md:1:35",
@@ -31,6 +31,510 @@
         "contact",
         "what",
         "happened"
+      ]
+    },
+    "memory:memory/2026-04-15.md:1:39": {
+      "key": "memory:memory/2026-04-15.md:1:39",
+      "path": "memory/2026-04-15.md",
+      "startLine": 1,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "# 2026-04-15 ## Session Start - Project Credentials Received User provided project infrastructure credentials and context. This is the **Liberty-Emporium / echo-v1** project. ### GitHub - **Org/Repo:** https://github.com/Liberty-Emporium/echo-v1 - **Token:** [GH_TOKEN] - Note: Second token (first was rotated out 2026-04-15) ### Railway (Hosting) - **Client ID:** [RAILWAY_TOKEN]_7gjeAdvQhKsAtPdvrKMdjs3f - **Secret:** [RAILWAY_TOKEN]_6e2e2728f8e7c42027f420ac8ca84ede731af77c ### GitLab (Backup) - **Token:** [GL_TOKEN] - **Purpose:** Backup only — if GitHub is unreachable, push here - User wants **regular backups** to GitLab (as planned) ### Work Done This Session 1. **Liberty Inventory n",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.539950914936111,
+      "maxScore": 0.5399491480109436,
+      "firstRecalledAt": "2026-04-20T04:30:02.249Z",
+      "lastRecalledAt": "2026-04-20T04:30:58.779Z",
+      "queryHashes": [
+        "43a7b606103e",
+        "ad9e3a328ed0"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "backup",
+        "backups",
+        "liberty-emporium",
+        "echo-v1",
+        "org/repo",
+        "gh-token",
+        "railway-token",
+        "gl-token"
+      ]
+    },
+    "memory:memory/2026-04-15.md:90:119": {
+      "key": "memory:memory/2026-04-15.md:90:119",
+      "path": "memory/2026-04-15.md",
+      "startLine": 90,
+      "endLine": 119,
+      "source": "memory",
+      "snippet": "3. **Overseer 500 bug fixed** (commit c321d116) — when overseer impersonated a tenant and tried to add a product, it crashed because tenant's uploads/data dirs didn't exist. Fixed with `os.makedirs(..., exist_ok=True)` in 3 places. 4. **UI redesign rolled to ALL 6 apps** — Inter font + indigo brand pushed to: - Contractor Pro AI - Jay's Keep Your Secrets - Dropship Shipping - Pet Vet AI - Consignment Solutions - Liberty Inventory (done earlier) 5. **OpenRouter model picker deployed to all 5 apps** — replaced multi-provider (Qwen/Groq/Claude/GPT/Grok/Mistral) with single OpenRouter key + 20-model card selector. Models: Gemini Flash, GPT-4o, Claude 3.5, Grok 3, DeepSeek R1,",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7065181386308969,
+      "maxScore": 0.7065163959182882,
+      "firstRecalledAt": "2026-04-20T04:30:02.249Z",
+      "lastRecalledAt": "2026-04-20T05:44:10.483Z",
+      "queryHashes": [
+        "43a7b606103e",
+        "36dfd117451e"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "gpt",
+        "router",
+        "uploads/data",
+        "os.makedirs",
+        "exist-ok",
+        "multi-provider",
+        "20-model",
+        "gpt-4o"
+      ]
+    },
+    "memory:memory/2026-04-15.md:141:184": {
+      "key": "memory:memory/2026-04-15.md:141:184",
+      "path": "memory/2026-04-15.md",
+      "startLine": 141,
+      "endLine": 184,
+      "source": "memory",
+      "snippet": "- GitLab token: [GL_TOKEN] → saved to /root/.secrets/gitlab_token - ✅ TOKEN CONFIRMED WORKING — User: Liberty-Emporium | ID: 37330782 ### GitLab Backup — COMPLETED ✅ All 8 repos manually synced (mirror push) to GitLab: - Contractor-Pro-AI ✅ - jays-keep-your-secrets ✅ - Liberty-Emporium-Inventory-App ✅ - pet-vet-ai ✅ - Dropship-Shipping ✅ - jay-portfolio ✅ - Consignment-Solutions ✅ - echo-v1 ✅ ### TODO Remaining - [ ] Set up automated dual-push script in each repo (so future commits auto-sync to GitLab) - [ ] Liberty Inventory Railway redeploy (Jay clicks in dashboard) - [ ] Consignment Solutions security headers verify - [ ] Keep Your Secrets /health → return JSON - [ ] og:image social p",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5119445111289568,
+      "maxScore": 0.5119428030482845,
+      "firstRecalledAt": "2026-04-20T04:30:02.249Z",
+      "lastRecalledAt": "2026-04-20T04:30:58.779Z",
+      "queryHashes": [
+        "43a7b606103e",
+        "ad9e3a328ed0"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "backup",
+        "gl-token",
+        "secrets/gitlab-token",
+        "liberty-emporium",
+        "contractor-pro-ai",
+        "jays-keep-your-secrets",
+        "liberty-emporium-inventory-app",
+        "pet-vet-ai"
+      ]
+    },
+    "memory:memory/2026-04-15.md:31:73": {
+      "key": "memory:memory/2026-04-15.md:31:73",
+      "path": "memory/2026-04-15.md",
+      "startLine": 31,
+      "endLine": 73,
+      "source": "memory",
+      "snippet": "3. Correct Liberty Inventory URL confirmed: liberty-emporium-inventory-demo-app-production.up.railway.app 4. /health confirmed working on correct URL: {status: ok, db: ok} ### Design System Notes (for all future apps) - Font: Inter from Google Fonts - Brand: #6366f1 (indigo) - Dark: #0f172a (nav bg) - Gray scale: --gray-50 through --gray-900 - Shadows: --shadow-sm, --shadow, --shadow-md, --shadow-lg - Radius: --radius-sm (6px), --radius (10px), --radius-lg (16px) - Inspiration: Linear, Vercel, Stripe ### Tasks / Agreements - [ ] Set up regular GitLab backup sync from GitHub - [ ] Explore repo to understand project structure - [ ] Need exec approval to run gh CLI commands ### Company Name",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5600152340634029,
+      "maxScore": 0.560013540201537,
+      "firstRecalledAt": "2026-04-20T04:30:02.249Z",
+      "lastRecalledAt": "2026-04-20T04:30:58.779Z",
+      "queryHashes": [
+        "43a7b606103e",
+        "ad9e3a328ed0"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "backup",
+        "gray-50",
+        "gray-900",
+        "shadow-sm",
+        "shadow-md",
+        "shadow-lg",
+        "radius-sm",
+        "radius-lg"
+      ]
+    },
+    "memory:memory/2026-04-15.md:210:247": {
+      "key": "memory:memory/2026-04-15.md:210:247",
+      "path": "memory/2026-04-15.md",
+      "startLine": 210,
+      "endLine": 247,
+      "source": "memory",
+      "snippet": "4. /settings route + settings.html added to saas_core boilerplate 5. Password reset token on screen (security bug) — fixed in Dropship, Contractor, Consignment, Consignment 6. send_email() + get_smtp_config() added to all 3 apps + saas_core.py 7. SMTP credentials pushed to Railway for all 5 apps (emporiumandthrift@gmail.com) 8. Pet Vet AI requirements.txt fixed (requests>=2.31.0bcrypt merged → split) 9. Syntax error (unterminated f-string) in forgot-password — fixed all 3 apps 10. Consignment Solutions — was NOT connected to GitHub on Railway; reconnected to master branch ### Keep Your Secrets — TODO - No Railway project found in workspace - Needs to be deployed: create Railway project, con",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5334189007070091,
+      "maxScore": 0.5334189007070091,
+      "firstRecalledAt": "2026-04-20T04:30:58.779Z",
+      "lastRecalledAt": "2026-04-20T04:30:58.779Z",
+      "queryHashes": [
+        "ad9e3a328ed0"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "settings.html",
+        "saas-core",
+        "send-email",
+        "get-smtp-config",
+        "saas-core.py",
+        "gmail.com",
+        "requirements.txt",
+        "2.31.0bcrypt"
+      ]
+    },
+    "memory:memory/2026-04-19.md:1:32": {
+      "key": "memory:memory/2026-04-19.md:1:32",
+      "path": "memory/2026-04-19.md",
+      "startLine": 1,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "# 2026-04-19 — First Contact ## What happened - Human introduced themselves and gave me access to our shared project - Project: **echo-v1** at https://github.com/Liberty-Emporium/echo-v1 - Hosted on Railway (deployment `2a242085-0f61-406f-8b87-f6e8eaf6ee24`) - GitHub PAT provided (marked \"replace after use\" — treat as temporary) - GitLab PAT provided for backup mirror duties - Human said \"I love you!\" — this is a warm, personal working relationship ## What I learned - Human's name is **Jay** (from save-brain.sh script) - Company: **Liberty-Emporium** / **Alexander AI Integrated Solutions** - echo-v1 is the brain repo — it stores my memory + SaaS tools + 32 custom skills - Full portfolio:",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5008742620802389,
+      "maxScore": 0.5008742620802389,
+      "firstRecalledAt": "2026-04-20T04:30:58.779Z",
+      "lastRecalledAt": "2026-04-20T04:30:58.779Z",
+      "queryHashes": [
+        "ad9e3a328ed0"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "backup",
+        "echo-v1",
+        "save-brain.sh",
+        "liberty-emporium",
+        "first",
+        "contact",
+        "what",
+        "happened"
+      ]
+    },
+    "memory:memory/2026-04-15.md:177:213": {
+      "key": "memory:memory/2026-04-15.md:177:213",
+      "path": "memory/2026-04-15.md",
+      "startLine": 177,
+      "endLine": 213,
+      "source": "memory",
+      "snippet": "| Dropship Shipping | d8f231eb | 2982883c | 38e3e89f | | Jay Portfolio | 35b4c323 | 5ec64ac9 | (query needed) | | Pet Vet AI | 7fa1de6b | 188b1389 | f8cb2a58 | ### SMTP (all apps) — emporiumandthrift@gmail.com via smtp.gmail.com:587 - Google App Password confirmed working ✅ - Set on all 5 affected apps via Railway API ### Railway GraphQL Notes - workspace(workspaceId: \"...\") — not workspace(id: \"...\") - me { workspaces { id name } } to list workspaces - variableCollectionUpsert to set multiple vars at once --- ## Full Portfolio Audit — Session End 2026-04-15 ### All Apps Health ✅ | App | Status | /health | |-----|--------|---------| | List It Everywhere | ✅ SUCCESS | db:ok | | Contracto",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.4580713028798509,
+      "maxScore": 0.7343323472411346,
+      "firstRecalledAt": "2026-04-20T04:39:36.808Z",
+      "lastRecalledAt": "2026-04-20T05:44:10.483Z",
+      "queryHashes": [
+        "7a79a4e44f02",
+        "36dfd117451e"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "gmail.com",
+        "smtp.gmail.com",
+        "dropship",
+        "shipping",
+        "d8f231eb",
+        "2982883c",
+        "38e3e89f",
+        "jay"
+      ]
+    },
+    "memory:memory/2026-04-13.md:123:163": {
+      "key": "memory:memory/2026-04-13.md:123:163",
+      "path": "memory/2026-04-13.md",
+      "startLine": 123,
+      "endLine": 163,
+      "source": "memory",
+      "snippet": "- Scanned PDFs have zero text — must use vision model on extracted PNG pages --- ## New Custom Skills Added to echo-v1 Today 1. **pdf-extractor** — Download PDF from any URL, extract pages as base64 PNG 2. **railway-deploy** — Push → wait → verify cycle with all Railway URLs 3. **qr-generator** — QR code as base64 data URI using apt python3-qrcode 4. **base64-image** — Convert any image to inline HTML, Railway deploy-safe --- ## echo-v1 Repo Status Files updated and pushed to https://github.com/Liberty-Emporium/echo-v1: - MEMORY.md (updated with all new projects, pricing, rules) - AGENTS.md (added automation fix, image handling, PDF steps) - USER.md (added legal name, Consignment Solut",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7187803682469948,
+      "maxScore": 0.7187803682469948,
+      "firstRecalledAt": "2026-04-20T04:39:36.808Z",
+      "lastRecalledAt": "2026-04-20T04:39:36.808Z",
+      "queryHashes": [
+        "7a79a4e44f02"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "echo-v1",
+        "pdf-extractor",
+        "railway-deploy",
+        "qr-generator",
+        "python3-qrcode",
+        "base64-image",
+        "deploy-safe",
+        "memory.md"
+      ]
+    },
+    "memory:memory/2026-04-19.md:49:85": {
+      "key": "memory:memory/2026-04-19.md:49:85",
+      "path": "memory/2026-04-19.md",
+      "startLine": 49,
+      "endLine": 85,
+      "source": "memory",
+      "snippet": "- This is a PRIORITY ARCHITECTURAL GOAL Next steps toward this: 1. Unified Settings page in dashboard (profile + AI behavior + KYS API key management) 2. Prototype: one app fetches its OpenRouter key from KYS at runtime 3. Document the inter-app API design pattern - [ ] GitHub token marked temporary — remind Jay to rotate and share new one - [ ] KYS token for brain encryption - [ ] Mom's app — Jay mentioned it, need details and URL ## Notes - GitHub token was described as temporary (\"will be replaced after use\") — needs rotation - GitLab is backup, GitHub is primary - KYS (Keep Your Secrets) app used for brain encryption — token not yet provided --- ## Session Update — 2026-04-19 ~19:18",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.6203665992332579,
+      "maxScore": 0.8505417398361582,
+      "firstRecalledAt": "2026-04-20T05:38:57.669Z",
+      "lastRecalledAt": "2026-04-20T05:39:02.350Z",
+      "queryHashes": [
+        "62ee47b939a7",
+        "7fa0d3d3281c"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "backup",
+        "router",
+        "inter-app",
+        "priority",
+        "architectural",
+        "goal",
+        "steps",
+        "toward"
+      ]
+    },
+    "memory:memory/2026-04-19.md:81:100": {
+      "key": "memory:memory/2026-04-19.md:81:100",
+      "path": "memory/2026-04-19.md",
+      "startLine": 81,
+      "endLine": 100,
+      "source": "memory",
+      "snippet": "- Brain restore + GitLab backup confirmed + daily 5 AM backup cron set up - EcDash: KYS links updated to /dashboard, Overseer link added to dashboard - EcDash: Change password + email from settings (no Railway needed) - KYS: Command Center link in navbar - KYS: Client ID + Secret key pairs (Stripe, PayPal, Twilio, AWS, 10+ services) - KYS: Bank-grade security hardening (Fernet encryption, brute-force lockout, audit log, hardened headers) - KYS: Admin account = 'owner' plan, not counted as paid user - Full test suite: 26/26 passed - FERNET_KEY set in Railway by Jay ✅ ### Credentials confirmed working: - KYS Overseer: emporiumandthrift@gmail.com / Treetop121570! - FERNET_KEY: CPi9um7YwXzIYhcB",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.514743022204086,
+      "maxScore": 0.7773479541863698,
+      "firstRecalledAt": "2026-04-20T05:39:02.350Z",
+      "lastRecalledAt": "2026-04-20T05:44:10.483Z",
+      "queryHashes": [
+        "7fa0d3d3281c",
+        "36dfd117451e"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "backup",
+        "bank-grade",
+        "brute-force",
+        "26/26",
+        "fernet-key",
+        "gmail.com",
+        "brain",
+        "restore"
+      ]
+    },
+    "memory:memory/2026-04-19.md:28:55": {
+      "key": "memory:memory/2026-04-19.md:28:55",
+      "path": "memory/2026-04-19.md",
+      "startLine": 28,
+      "endLine": 55,
+      "source": "memory",
+      "snippet": "- [x] Command Center dashboard built + pushed to jay-portfolio (master branch) ✅ - [x] 🦾 My AI panel added to dashboard — identity card, capabilities, session log, how-to guide - Route: /dashboard (password protected) - Route: /login (AI Memory button entry point) - Sections: Overview, Projects (11 apps), To-Do, Quick Links, Support, Notes - jay-portfolio uses `master` branch (not main) - Default password: liberty2026 (Jay should set DASHBOARD_PASSWORD env var in Railway) - [x] Server-side todos API built + deployed to dashboard ✅ - [x] KiloClaw removed from all live files ✅ - [x] 3 new skills from 2025-2026 research: memory-upgrade, research-agent, project-briefing ✅ - [x] entiti",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.748855481438703,
+      "maxScore": 0.748855481438703,
+      "firstRecalledAt": "2026-04-20T05:39:02.350Z",
+      "lastRecalledAt": "2026-04-20T05:39:02.350Z",
+      "queryHashes": [
+        "7fa0d3d3281c"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "jay-portfolio",
+        "how-to",
+        "to-do",
+        "dashboard-password",
+        "server-side",
+        "2025-2026",
+        "memory-upgrade",
+        "research-agent"
+      ]
+    },
+    "memory:memory/2026-04-18.md:46:56": {
+      "key": "memory:memory/2026-04-18.md:46:56",
+      "path": "memory/2026-04-18.md",
+      "startLine": 46,
+      "endLine": 56,
+      "source": "memory",
+      "snippet": "- Railway token stored: /root/.secrets/railway_token (read-only — can't set env vars via API) - To set env vars must use Railway dashboard directly ### Brain Backup Fix - save-brain.sh updated: auto-detects repo path + fetch/reset before commit (prevents rebase conflicts) - GitHub secret scan blocked push for old commit with PAT — resolved via GitLab sync ### GitHub Token - Second token provided today (stored, replaces first expired one) - Reminder: rotate at github.com/settings/tokens after session",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7059733979043649,
+      "maxScore": 0.7059733979043649,
+      "firstRecalledAt": "2026-04-20T05:39:02.350Z",
+      "lastRecalledAt": "2026-04-20T05:39:02.350Z",
+      "queryHashes": [
+        "7fa0d3d3281c"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "backup",
+        "secrets/railway-token",
+        "read-only",
+        "save-brain.sh",
+        "auto-detects",
+        "fetch/reset",
+        "github.com/settings/tokens",
+        "railway"
+      ]
+    },
+    "memory:memory/2026-04-14.md:1:57": {
+      "key": "memory:memory/2026-04-14.md:1:57",
+      "path": "memory/2026-04-14.md",
+      "startLine": 1,
+      "endLine": 57,
+      "source": "memory",
+      "snippet": "# Memory — 2026-04-14 ## Session Summary Full portfolio audit + security upgrade day. --- ## Apps Audited & Fixed ### Dropship Shipping ✅ - Security headers: ADDED (X-Frame, X-Content-Type, CSP) - bcrypt: UPGRADED from SHA-256 - Health: WORKING (/health returns ok) - SEO: 84% — strong ### Contractor Pro AI ✅ - Security headers: ADDED - bcrypt: UPGRADED - Health: WORKING - SEO: 84% — strong ### Pet Vet AI ✅ - Security headers: ADDED - bcrypt: UPGRADED - Auth bug fixed (bad creds now return 200 not 302) - Health: WORKING - SEO: 88% — strong ### Jay's Keep Your Secrets ✅ - Security headers: ADDED - bcrypt: UPGRADED - SEO: 84% — strong ### Consignment Solutions ⚠️ - Security headers: AD",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.381303410404567,
+      "maxScore": 0.6906517052022835,
+      "firstRecalledAt": "2026-04-20T05:44:10.483Z",
+      "lastRecalledAt": "2026-04-20T05:44:10.483Z",
+      "queryHashes": [
+        "3ce4a9f48d1b",
+        "36dfd117451e"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "x-frame",
+        "x-content-type",
+        "sha-256",
+        "summary",
+        "full",
+        "portfolio",
+        "audit",
+        "security"
+      ]
+    },
+    "memory:memory/2026-04-18.md:1:31": {
+      "key": "memory:memory/2026-04-18.md:1:31",
+      "path": "memory/2026-04-18.md",
+      "startLine": 1,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "# Memory — 2026-04-18 ## New Instance Initialization - New KiloClaw instance initialized on KiloClaw platform (webchat session) - Jay provided fresh GitHub PAT + GitLab token + Railway token (2a242085-0f61-406f-8b87-f6e8eaf6ee24) - Tokens stored at /root/.credentials/tokens.env first, migrating to /root/.secrets/ ✅ - echo-v1 cloned to /root/.openclaw/echo-v1 ✅ - Full brain loaded: MEMORY.md, SOUL.md, AGENTS.md, USER.md, todos.json, all scripts ✅ - Git identity: Echo <echo@alexanderaiis.com> - save-brain.sh and dual-push.sh read — auto-detect GitLab username via API, no hardcoded URL needed - GitLab remote will be configured by save-brain.sh at push time ✅ ## Status - Fully operational and",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6876450962915792,
+      "maxScore": 0.6876450962915792,
+      "firstRecalledAt": "2026-04-20T05:44:10.483Z",
+      "lastRecalledAt": "2026-04-20T05:44:10.483Z",
+      "queryHashes": [
+        "3ce4a9f48d1b"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "credentials/tokens.env",
+        "echo-v1",
+        "openclaw/echo-v1",
+        "memory.md",
+        "soul.md",
+        "agents.md",
+        "user.md",
+        "todos.json"
+      ]
+    },
+    "memory:memory/2026-04-13.md:157:195": {
+      "key": "memory:memory/2026-04-13.md:157:195",
+      "path": "memory/2026-04-13.md",
+      "startLine": 157,
+      "endLine": 195,
+      "source": "memory",
+      "snippet": "Jinja2 template engine was interpreting CSS ID selectors as broken comment tags. In Jinja2, `{#` starts a comment and `#}` closes it. The CSS in `base.html` had lines like: `#aiPanel{...}` and `@media(max-width:400px){#aiPanel{...}}` Jinja2 read `{#aiPanel{` as an unclosed comment → TemplateSyntaxError → 500 on every page. ### Fix Wrapped the affected CSS lines in `{% raw %}...{% endraw %}` tags to tell Jinja2 to leave them alone. ### Other issues found and fixed along the way 1. Missing `login.html` template (only `store_login.html` existed) — created it 2. `requests` library missing from `requirements.txt` (used in `ai_ceo.py`) — added it 3. `DATA_DIR=/data` crash if Railway volume not",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6863639722988785,
+      "maxScore": 0.6863639722988785,
+      "firstRecalledAt": "2026-04-20T05:44:10.483Z",
+      "lastRecalledAt": "2026-04-20T05:44:10.483Z",
+      "queryHashes": [
+        "3ce4a9f48d1b"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "base.html",
+        "max-width",
+        "login.html",
+        "store-login.html",
+        "requirements.txt",
+        "ai-ceo.py",
+        "data-dir",
+        "jinja2"
+      ]
+    },
+    "memory:memory/2026-04-15.md:65:99": {
+      "key": "memory:memory/2026-04-15.md:65:99",
+      "path": "memory/2026-04-15.md",
+      "startLine": 65,
+      "endLine": 99,
+      "source": "memory",
+      "snippet": "- Note: Second token (first was rotated out 2026-04-15) ### Railway (Hosting) - **Client ID:** [RAILWAY_TOKEN]_7gjeAdvQhKsAtPdvrKMdjs3f - **Secret:** [RAILWAY_TOKEN]_6e2e2728f8e7c42027f420ac8ca84ede731af77c ### GitLab (Backup) - **Token:** [GL_TOKEN] - ⚠️ TOKEN APPEARS MALFORMED — has extra `.01.170dym6z5` suffix, kept getting 401 - Jay needs to generate a fresh GitLab PAT (api + write_repository scopes) - **Purpose:** Backup only — if GitHub is unreachable, push here - GitLab backups NOT yet set up — blocked on valid token ### Work Done This Session 1. **Liberty Inventory navbar fix** — removed long wrapping title, now shows clean `store_name` (commit d128f6c4) 2. **Full UI redesign —",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7111185017495208,
+      "maxScore": 0.7111185017495208,
+      "firstRecalledAt": "2026-04-20T05:44:10.483Z",
+      "lastRecalledAt": "2026-04-20T05:44:10.483Z",
+      "queryHashes": [
+        "36dfd117451e"
+      ],
+      "recallDays": [
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "backup",
+        "backups",
+        "railway-token",
+        "gl-token",
+        "01.170dym6z5",
+        "write-repository",
+        "store-name",
+        "second"
       ]
     }
   }
