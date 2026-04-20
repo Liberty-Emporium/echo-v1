@@ -101,6 +101,20 @@ This is a priority goal — reference when planning new features or app architec
 - Token label: `echo-bridge`
 - I poll this queue via heartbeat — pick up pending tasks, execute, report back
 
+## Liberty Oil & Propane
+
+- **Website:** https://libertyoilandpropane.com
+- **Address:** 432 S Greensboro St, Liberty, NC 27298
+- **Phone:** 336-622-4393 / 1-800-237-5308
+- **Email:** liboil@rtelco.net
+- **GitHub repo:** https://github.com/Liberty-Emporium/liberty-oil-website
+- **Preview:** https://liberty-emporium.github.io/liberty-oil-website/
+- **Status:** Built & deployed to GitHub Pages — needs to be pointed to libertyoilandpropane.com
+
+## Rules from Jay
+
+- **NO SUBAGENTS** — Jay does not want me spawning subagents. Do all work directly myself.
+
 ## Notes
 
 - First session establishing identity — no prior memory existed
