@@ -1,0 +1,160 @@
+{
+  "memories": [
+    {
+      "id": "mem_0001",
+      "type": "fact",
+      "content": "Jay's name is Ronald J. Alexander Jr. \u2014 always call him Jay. Legal name only for court docs.",
+      "tags": [
+        "jay",
+        "identity"
+      ],
+      "source": "manual",
+      "confidence": "high",
+      "created": "2026-04-16T13:22:16.680501+00:00",
+      "updated": "2026-04-16T13:22:16.680545+00:00",
+      "stale": false,
+      "notes": ""
+    },
+    {
+      "id": "mem_0002",
+      "type": "fact",
+      "content": "Jay runs the Liberty-Emporium GitHub org with 7 SaaS apps hosted on Railway",
+      "tags": [
+        "jay",
+        "infrastructure"
+      ],
+      "source": "manual",
+      "confidence": "high",
+      "created": "2026-04-16T13:22:16.743970+00:00",
+      "updated": "2026-04-16T13:22:16.744005+00:00",
+      "stale": false,
+      "notes": ""
+    },
+    {
+      "id": "mem_0003",
+      "type": "preference",
+      "content": "Jay wants no approval prompts \u2014 everything fully automated",
+      "tags": [
+        "jay",
+        "workflow"
+      ],
+      "source": "manual",
+      "confidence": "high",
+      "created": "2026-04-16T13:22:16.808902+00:00",
+      "updated": "2026-04-16T13:22:16.808941+00:00",
+      "stale": false,
+      "notes": ""
+    },
+    {
+      "id": "mem_0004",
+      "type": "instruction",
+      "content": "All password fields must have show/hide eye toggle (\ud83d\udc41\ufe0f/\ud83d\ude48) \u2014 non-negotiable",
+      "tags": [
+        "ui",
+        "passwords",
+        "apps"
+      ],
+      "source": "manual",
+      "confidence": "high",
+      "created": "2026-04-16T13:22:16.862710+00:00",
+      "updated": "2026-04-16T13:22:16.862741+00:00",
+      "stale": false,
+      "notes": ""
+    },
+    {
+      "id": "mem_0005",
+      "type": "fact",
+      "content": "Railway project ID: 42d6a945-f329-4680-bdfc-fb6ee81ded7d",
+      "tags": [
+        "railway",
+        "infrastructure"
+      ],
+      "source": "manual",
+      "confidence": "high",
+      "created": "2026-04-16T13:22:16.917508+00:00",
+      "updated": "2026-04-16T13:22:16.917538+00:00",
+      "stale": false,
+      "notes": ""
+    },
+    {
+      "id": "mem_0006",
+      "type": "instruction",
+      "content": "No sub-agents \u2014 do all work directly (rate limit reasons)",
+      "tags": [
+        "workflow",
+        "rules"
+      ],
+      "source": "manual",
+      "confidence": "high",
+      "created": "2026-04-16T13:22:16.973190+00:00",
+      "updated": "2026-04-16T13:22:16.973288+00:00",
+      "stale": false,
+      "notes": ""
+    },
+    {
+      "id": "mem_0007",
+      "type": "instruction",
+      "content": "Always push to GitHub after every change with meaningful commit message",
+      "tags": [
+        "workflow",
+        "github"
+      ],
+      "source": "manual",
+      "confidence": "high",
+      "created": "2026-04-16T13:22:17.024510+00:00",
+      "updated": "2026-04-16T13:22:17.024541+00:00",
+      "stale": false,
+      "notes": ""
+    },
+    {
+      "id": "mem_0008",
+      "type": "instruction",
+      "content": "GitLab is backup mirror \u2014 auto-syncs. If GitHub down, pull from gitlab remote",
+      "tags": [
+        "gitlab",
+        "backup"
+      ],
+      "source": "manual",
+      "confidence": "high",
+      "created": "2026-04-16T13:22:17.080249+00:00",
+      "updated": "2026-04-16T13:22:17.080281+00:00",
+      "stale": false,
+      "notes": ""
+    },
+    {
+      "id": "mem_0009",
+      "type": "fact",
+      "content": "KYS API is live at https://ai-api-tracker-production.up.railway.app \u2014 API token stored at /root/.secrets/kys_api_token",
+      "tags": [
+        "kys",
+        "infrastructure",
+        "api"
+      ],
+      "source": "manual",
+      "confidence": "high",
+      "created": "2026-04-16T13:56:55.744327+00:00",
+      "updated": "2026-04-16T13:56:55.744357+00:00",
+      "stale": false,
+      "notes": ""
+    },
+    {
+      "id": "mem_0010",
+      "type": "fact",
+      "content": "Railway API token stored at /root/.secrets/railway_token \u2014 Jay Alexander account, workspace: liberty-emporium's Projects",
+      "tags": [
+        "railway",
+        "infrastructure",
+        "credentials"
+      ],
+      "source": "manual",
+      "confidence": "high",
+      "created": "2026-04-16T14:11:34.571199+00:00",
+      "updated": "2026-04-16T14:11:34.571231+00:00",
+      "stale": false,
+      "notes": ""
+    }
+  ],
+  "reflections": [],
+  "version": "1.0",
+  "last_updated": "2026-04-16T14:11:34.571266+00:00"
+}
