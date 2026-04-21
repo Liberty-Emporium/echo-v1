@@ -290,3 +290,69 @@ if __name__ == '__main__':
     repo_name = Path(repo_path).name
     scanned = scan_repo(repo_path)
     print_report(scanned, repo_name)
+
+
+# ── Pro Tools: Bandit + Ruff ──────────────────────────────────────────────────
+def run_bandit(repo_path):
+    """Run Bandit security scanner (80+ Python security checks)."""
+    try:
+        result = subprocess.run(
+            ['bandit', '-r', repo_path, '-f', 'json', '-q', '--exit-zero'],
+            capture_output=True, text=True, timeout=120
+        )
+        if not result.stdout.strip():
+            return
+        data = json.loads(result.stdout)
+        sev_map = {'HIGH': 'high', 'MEDIUM': 'medium', 'LOW': 'low'}
+        for issue in data.get('results', []):
+            if issue.get('issue_confidence') == 'LOW':
+                continue
+            severity = sev_map.get(issue.get('issue_severity', 'LOW'), 'low')
+            rel_file = issue.get('filename', '').replace(repo_path.rstrip('/') + '/', '')
+            bug(severity, rel_file, issue.get('line_number', 0),
+                f'BANDIT:{issue.get("test_id","")}',
+                f"{issue.get('issue_text','').rstrip('.')} [{issue.get('test_name','')}]")
+    except Exception as e:
+        print(f'  (Bandit: {e})')
+
+
+def run_ruff(repo_path):
+    """Run Ruff linter (800+ rules, 100x faster than Pylint)."""
+    try:
+        result = subprocess.run(
+            ['ruff', 'check', repo_path, '--output-format=json', '--quiet'],
+            capture_output=True, text=True, timeout=60
+        )
+        data = json.loads(result.stdout) if result.stdout.strip().startswith('[') else []
+        for issue in data[:50]:  # cap at 50 to avoid noise
+            code = issue.get('code', '')
+            if not code:
+                continue
+            severity = 'medium' if code.startswith(('E9', 'F8', 'F4')) else 'low'
+            rel_file = issue.get('filename', '').replace(repo_path.rstrip('/') + '/', '')
+            bug(severity, rel_file,
+                issue.get('location', {}).get('row', 0),
+                f'RUFF:{code}', issue.get('message', ''))
+    except Exception as e:
+        print(f'  (Ruff: {e})')
+
+
+# ── UPGRADED Entry Point (replaces original) ──────────────────────────────────
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python3 bug-hunter.py /path/to/repo")
+        sys.exit(1)
+    repo_path = sys.argv[1]
+    repo_name = Path(repo_path).name
+    print(f"\n🔍 Bug Hunter v2 scanning: {repo_name}")
+    print("=" * 60)
+    print('  🔎 Bandit security scan...')
+    run_bandit(repo_path)
+    print('  🔎 Ruff linter...')
+    run_ruff(repo_path)
+    print('  🔎 Custom Flask/JS checks...')
+    scanned = scan_repo(repo_path)
+    print_report(scanned, repo_name)
+
+if __name__ == '__main__':
+    main()
