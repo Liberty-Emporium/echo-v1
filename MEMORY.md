@@ -111,6 +111,16 @@ This is a priority goal — reference when planning new features or app architec
 - **Preview:** https://liberty-emporium.github.io/liberty-oil-website/
 - **Status:** Built & deployed to GitHub Pages — needs to be pointed to libertyoilandpropane.com
 
+## Session 2026-04-21 — Major Builds
+
+- FloodClaim Pro: fixed unit dropdown (`sf` first), separated View/Delete buttons, recreated deleted claims
+- EcDash `/testing` page: Speed Tests (API, 11 apps) + Manual Browser Tests with copy buttons
+- `echo-v1/scripts/browser_suite.py`: full Chromium test suite for all apps
+- AI Agent Widget: living memory system (auto-extract facts every 6 messages, Learned Facts tab)
+- AI Agent Widget: Chat Intelligence Reports — Topic, Health, Gap reports from chat logs
+- Fixed Railway boot crash: `migrate_learned_facts()` app context bug
+- Maria Gonzalez, Derek Simmons, Bill Alexander claims were accidentally deleted by browser agent — need to recreate
+
 ## Rules from Jay
 
 - **NO SUBAGENTS** — Jay does not want me spawning subagents. Do all work directly myself.
