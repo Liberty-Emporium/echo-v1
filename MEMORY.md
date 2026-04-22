@@ -120,6 +120,7 @@ This is a priority goal — reference when planning new features or app architec
 - AI Agent Widget: Chat Intelligence Reports — Topic, Health, Gap reports from chat logs
 - Fixed Railway boot crash: `migrate_learned_facts()` app context bug
 - Maria Gonzalez, Derek Simmons, Bill Alexander claims were accidentally deleted by browser agent — need to recreate
+- ✅ Sweet Spot Railway /data volume — Jay added in Railway UI (2026-04-22)
 
 ## Rules from Jay
 
