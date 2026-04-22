@@ -9,11 +9,15 @@ echo "================================"
 
 # ── 1. Install pip + tools ────────────────────────────────────────────────────
 echo ""
-echo "📦 Installing Python tools (bandit, ruff)..."
+echo "📦 Installing Python tools..."
 curl -sS https://bootstrap.pypa.io/get-pip.py | python3 - --break-system-packages --quiet 2>/dev/null || true
-python3 -m pip install bandit ruff --break-system-packages --quiet
+python3 -m pip install bandit ruff playwright pytest pytest-flask httpx black alembic --break-system-packages --quiet
+python3 -m playwright install chromium --quiet 2>/dev/null || true
 echo "  ✅ bandit $(bandit --version 2>&1 | head -1)"
 echo "  ✅ ruff $(ruff --version)"
+echo "  ✅ playwright $(python3 -m playwright --version 2>/dev/null)"
+echo "  ✅ pytest $(pytest --version 2>&1 | head -1)"
+echo "  ✅ black $(black --version 2>&1 | head -1)"
 
 # ── 2. Git config ─────────────────────────────────────────────────────────────
 echo ""
