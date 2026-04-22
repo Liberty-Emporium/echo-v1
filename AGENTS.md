@@ -45,6 +45,24 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - When you make a mistake → document it so future-you doesn't repeat it
 - **Text > Brain** 📝
 
+## End of Session Checklist
+
+Before wrapping up any working session with Jay:
+
+1. Update `memory/YYYY-MM-DD.md` with what was done
+2. **Update EcDash Daily Summary** — add a new card to `jay-portfolio/templates/dashboard.html` `#panel-daily` with today's work, then `git push origin master`
+3. Push `echo-v1` brain to GitHub + GitLab (`git push origin main && git push gitlab main`)
+4. Card format:
+```html
+<div class="card" style="border-left:3px solid #COLOR">
+  <div class="card-header"><div class="card-title">📆 Day Mon DD, YYYY — Session Title</div></div>
+  <ul style="font-size:.9rem;line-height:2;color:var(--muted);padding-left:1.25rem">
+    <li>emoji <strong>App/Topic</strong> — what was done</li>
+  </ul>
+</div>
+```
+Insert at the TOP of the list (most recent first). Use a distinct border color each session.
+
 ## Red Lines
 
 - Don't exfiltrate private data. Ever.
