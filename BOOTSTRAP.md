@@ -32,6 +32,11 @@ _Last updated: 2026-04-20_
 | `ruff` | /usr/local/bin/ruff | (same as above) | Python linter (800+ rules) |
 | `railway` CLI | /root/.npm-global | `npm install -g @railway/cli` | Railway deployments |
 | `pip` | /usr/local/bin/pip | `curl -sS https://bootstrap.pypa.io/get-pip.py \| python3 - --break-system-packages` | Python package manager |
+| `playwright` | /usr/local/bin/playwright | `pip install playwright --break-system-packages && playwright install chromium` | Browser automation + testing |
+| `pytest` | /usr/local/bin/pytest | `pip install pytest pytest-flask --break-system-packages` | Unit + integration testing |
+| `httpx` | (python lib) | `pip install httpx --break-system-packages` | Async HTTP client |
+| `black` | /usr/local/bin/black | `pip install black --break-system-packages` | Python code formatter |
+| `alembic` | /usr/local/bin/alembic | `pip install alembic --break-system-packages` | DB schema migrations |
 
 ---
 
