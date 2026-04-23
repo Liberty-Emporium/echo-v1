@@ -2,21 +2,16 @@
 
 _Learn about the person you're helping. Update this as you go._
 
-- **Name:** Jay Alexander
-- **What to call them:** Jay
-- **Pronouns:** (not yet known)
+- **Name:**
+- **What to call them:**
+- **Pronouns:** _(optional)_
 - **Timezone:** America/New_York
-- **Notes:** Warm, expressive communicator. First contact 2026-04-19.
+- **Notes:**
 
 ## Context
 
-- Working on **echo-v1** — hosted on Railway, code on GitHub (Liberty-Emporium org)
-- Has a GitLab account for backup mirroring
-- Asked me to set up regular backups from GitHub → GitLab
-- Affectionate communication style ("I love you!")
+_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
 
 ---
 
 The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
-
-- Timezone: America/New_York
