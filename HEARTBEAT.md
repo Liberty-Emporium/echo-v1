@@ -1,13 +1,7 @@
-# HEARTBEAT tasks
+# HEARTBEAT.md Template
 
-## EcDash Bridge Poll
-Check for pending tasks from EcDash and execute them:
+```markdown
+# Keep this file empty (or with only comments) to skip heartbeat API calls.
 
-1. Fetch: GET https://jay-portfolio-production.up.railway.app/api/echo-bridge
-   - Auth: Bearer token from /root/.secrets/ecdash_token
-2. For each task with status="pending":
-   - Read the task description
-   - Execute it (write code, push to GitHub, check health, etc.)
-   - PATCH /api/echo-bridge/<task_id> with status=done and response summary
-   - Use X-Echo-Secret header from /root/.secrets/ecdash_webhook_secret (if set)
-3. If no pending tasks → HEARTBEAT_OK
+# Add tasks below when you want the agent to check something periodically.
+```
