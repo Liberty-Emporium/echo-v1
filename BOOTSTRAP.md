@@ -63,14 +63,14 @@ cd /root/.openclaw/workspace
 git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/echo-v1.git
 
 # Apps
-git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/floodclaim-pro.git
-git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/AI-Agent-Widget.git
-git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/jay-portfolio.git
-git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/pet-vet-ai.git
-git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/Contractor-Pro-AI.git
-git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/Dropship-Shipping.git
-git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/Consignment-Solutions.git
-git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/Liberty-Emporium-Inventory-App.git
+git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/alexander-ai-floodclaim.git
+git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/alexander-ai-agent-widget.git
+git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/alexander-ai-dashboard.git
+git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/alexander-ai-petvet.git
+git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/alexander-ai-contractor.git
+git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/alexander-ai-dropship.git
+git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/alexander-ai-consignment.git
+git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/alexander-ai-inventory.git
 git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/liberty-oil-website.git
 ```
 
@@ -101,14 +101,14 @@ git config --global user.name "Echo (KiloClaw)"
 
 | App | Repo | Live URL |
 |-----|------|----------|
-| FloodClaim Pro | Liberty-Emporium/floodclaim-pro | https://billy-floods.up.railway.app |
-| AI Agent Widget | Liberty-Emporium/AI-Agent-Widget | https://ai-agent-widget-production.up.railway.app |
-| EcDash | Liberty-Emporium/jay-portfolio | https://jay-portfolio-production.up.railway.app |
-| Pet Vet AI | Liberty-Emporium/pet-vet-ai | (Railway) |
-| Contractor Pro AI | Liberty-Emporium/Contractor-Pro-AI | (Railway) |
-| Dropship Shipping | Liberty-Emporium/Dropship-Shipping | (Railway) |
-| Consignment Solutions | Liberty-Emporium/Consignment-Solutions | (Railway) |
-| Liberty Inventory | Liberty-Emporium/Liberty-Emporium-Inventory-App | (Railway) |
+| FloodClaim Pro | Liberty-Emporium/alexander-ai-floodclaim | https://billy-floods.up.railway.app |
+| AI Agent Widget | Liberty-Emporium/alexander-ai-agent-widget | https://ai-agent-widget-production.up.railway.app |
+| EcDash | Liberty-Emporium/alexander-ai-dashboard | https://jay-portfolio-production.up.railway.app |
+| Pet Vet AI | Liberty-Emporium/alexander-ai-petvet | (Railway) |
+| Contractor Pro AI | Liberty-Emporium/alexander-ai-contractor | (Railway) |
+| Dropship Shipping | Liberty-Emporium/alexander-ai-dropship | (Railway) |
+| Consignment Solutions | Liberty-Emporium/alexander-ai-consignment | (Railway) |
+| Liberty Inventory | Liberty-Emporium/alexander-ai-inventory | (Railway) |
 | Liberty Oil & Propane | Liberty-Emporium/liberty-oil-website | https://liberty-oil-propane.up.railway.app |
 | Keep Your Secrets (KYS) | (Railway) | https://ai-api-tracker-production.up.railway.app |
 

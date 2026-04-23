@@ -58,14 +58,14 @@ else
 
   REPOS=(
     "echo-v1"
-    "floodclaim-pro"
-    "AI-Agent-Widget"
-    "jay-portfolio"
-    "pet-vet-ai"
-    "Contractor-Pro-AI"
-    "Dropship-Shipping"
-    "Consignment-Solutions"
-    "Liberty-Emporium-Inventory-App"
+    "alexander-ai-floodclaim"
+    "alexander-ai-agent-widget"
+    "alexander-ai-dashboard"
+    "alexander-ai-petvet"
+    "alexander-ai-contractor"
+    "alexander-ai-dropship"
+    "alexander-ai-consignment"
+    "alexander-ai-inventory"
     "liberty-oil-website"
   )
 
