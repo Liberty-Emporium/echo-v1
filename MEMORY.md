@@ -67,6 +67,14 @@ Repos under Liberty-Emporium org:
 
 - **Session start:** Run `restore-brain.sh` to pull latest brain from GitHub
 - **Session end:** Run `save-brain.sh` to push brain back to GitHub + GitLab
+
+## App Network Status
+
+- **Live status file:** `memory/app-status.md` in this repo
+- Auto-written by EcDash every time an error is detected or every 50 health pings
+- On session start: read `memory/app-status.md` to know which apps need attention
+- If errors are listed there — flag them to Jay immediately at the start of the session
+- Monitoring dashboard: https://jay-portfolio-production.up.railway.app/monitoring
 - Brain encryption via Keep Your Secrets (KYS) app — token at `/root/.secrets/kys_api_token`
 
 ## 🎯 BIG GOAL: Inter-App Communication Network
