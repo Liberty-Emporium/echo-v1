@@ -14,7 +14,7 @@ APPS = {
     "contractor-pro":   "https://contractor-pro-ai-production.up.railway.app",
     "pet-vet-ai":       "https://pet-vet-ai-production.up.railway.app",
     "keep-your-secrets":"https://ai-api-tracker-production.up.railway.app",
-    "liberty-inventory":"https://liberty-emporium-inventory-demo-app-production.up.railway.app",
+    "liberty-inventory":"https://liberty-emporium-inventory-demo-app-production.up.railway.app",  # confirmed working URL
     "dropship-shipping":"https://dropship-shipping-production.up.railway.app",
     "jay-portfolio":    "https://jay-portfolio-production.up.railway.app",
     "consignment":      "https://web-production-43ce4.up.railway.app",
@@ -51,7 +51,7 @@ class TestHealthChecks:
         ("keep-your-secrets", APPS["keep-your-secrets"]),
         ("liberty-inventory", APPS["liberty-inventory"]),
         ("dropship-shipping", APPS["dropship-shipping"]),
-        ("consignment",     APPS["consignment"]),
+        ("consignment",     APPS["consignment"] + "/store"),  # consignment uses /store/login
     ])
     def test_login_page_loads(self, name, url):
         """Login page must be accessible."""
