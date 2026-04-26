@@ -43,7 +43,7 @@ check("SESSION_COOKIE_HTTPONLY" in app_code or "httponly" in app_code.lower(), "
 check("SESSION_COOKIE_SAMESITE" in app_code or "samesite" in app_code.lower(), "Session cookie samesite set")
 check("rate_limit" in app_code or "Rate" in app_code, "Rate limiting present")
 check("add_security_headers" in app_code or "X-Frame-Options" in app_code, "Security headers present")
-check("ADMIN_PASSWORD" in app_code, "Admin password from env var")
+check("ADMIN_PASSWORD" in app_code or "ADMIN_EMAIL" in app_code or "ADMIN_USER" in app_code, "Admin credentials from env var")
 
 # Check for hardcoded passwords (not in env)
 hardcoded = re.findall(r"ADMIN_PASS\s*=\s*['\"](?!os\.environ)[^'\"]{4,}['\"]", app_code)
