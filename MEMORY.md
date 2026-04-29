@@ -55,6 +55,23 @@ Repos under Liberty-Emporium org:
 - Contractor-Pro-AI, jays-keep-your-secrets
 - Liberty-Emporium-Inventory-App, pet-vet-ai
 - Dropship-Shipping, jay-portfolio, Consignment-Solutions
+- **Drop-Shipping-by-alexander-ai-solutions** (NEW 2026-04-28)
+
+## CJ Dropshipping
+- API key stored at: `/root/.secrets/cj_api_key`
+- API key page: https://www.cjdropshipping.com/myCJ.html#/apikey
+- Path: My CJ → Authorization → API → Generate
+- Key also stored in EcDash Credentials panel
+- Used by: Drop-Shipping-by-alexander-ai-solutions app
+
+## Drop-Shipping-by-alexander-ai-solutions
+- GitHub: https://github.com/Liberty-Emporium/Drop-Shipping-by-alexander-ai-solutions
+- Brand: Alexander AI Solutions
+- Niche: Tech gear for developers & builders
+- Stack: Flask + Railway + SQLite (same pattern as other apps)
+- Status (2026-04-28): Built, pushed to GitHub, awaiting Railway deploy
+- Admin login: username=admin, password=admin1234 (set ADMIN_PASSWORD env var to override)
+- Key feature: CJ Dropshipping one-click product import + auto-fulfillment
 
 ## GitLab Setup
 
