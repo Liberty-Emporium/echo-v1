@@ -286,3 +286,23 @@ Jay must add these in the Railway dashboard for each service:
 - Stored at `/root/.secrets/railway_token`
 - Workspace: `liberty-emporium's Projects` (ID: 57932cce-5b27-4acf-b82d-c92c0ca45d6e)
 - Used for setting env vars, querying service IDs, deployments
+
+## Custom Domain Map (updated 2026-04-30)
+| App | Custom Domain | Railway URL |
+|-----|--------------|-------------|
+| EcDash (Portfolio) | alexanderai.site | jay-portfolio-production.up.railway.app |
+| AI Agent Widget | ai.widget.alexanderai.site | ai-agent-widget-production.up.railway.app |
+| Drop Shipping | shop.alexanderai.site | drop-shipping-by-alexander-ai-solutions-production.up.railway.app |
+| Alexander AI Voice | voice.alexanderai.site | alexander-ai-voice-landing-production.up.railway.app |
+| List It Everywhere | ai.info1.alexanderai.site | web-production-c799c.up.railway.app |
+| FloodClaim Pro | (none yet) | billy-floods.up.railway.app |
+| Pet Vet AI | (none yet) | pet-vet-ai-production.up.railway.app |
+| Contractor Pro AI | (none yet) | contractor-pro-ai-production.up.railway.app |
+| Consignment Solutions | (none yet) | web-production-43ce4.up.railway.app |
+| Liberty Inventory | (none yet) | liberty-emporium-and-thrift-inventory-app-production.up.railway.app |
+| Sweet Spot Cakes | (none yet) | sweet-spot-cakes.up.railway.app |
+| Grace (Mom's AI) | (none yet) | moms-ai-helper.up.railway.app |
+| Liberty Oil | (none yet) | liberty-oil-propane.up.railway.app |
+| GymForge | (none yet) | web-production-1c23.up.railway.app |
+
+**Note:** Jay is buying more custom domains — update this table as they come in. I have Railway API access so I can look them up automatically anytime.
