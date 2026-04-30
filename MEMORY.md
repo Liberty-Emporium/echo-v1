@@ -48,6 +48,11 @@ echo-v1 is our **brain repo + multi-tenant SaaS toolkit**. It contains:
 - **GitLab user ID:** 37330782, username: `Liberty-Emporium`
 - Company: **Liberty-Emporium** / **Alexander AI Integrated Solutions**
 
+## Custom Domains (updated 2026-04-30)
+- **AI Agent Widget:** https://ai.widget.alexanderai.site (was ai-agent-widget-production.up.railway.app)
+- **Drop Shipping app:** https://shop.alexanderai.site (was dropship-shipping-production.up.railway.app)
+- **FloodClaim Pro:** https://billy-floods.up.railway.app (Railway URL unchanged; sales page at /sales)
+
 ## Full Portfolio (from sync-all-to-gitlab.sh)
 
 Repos under Liberty-Emporium org:
@@ -236,6 +241,7 @@ This is a priority goal — reference when planning new features or app architec
 4. **Full audit** — All 9 apps healthy. Found: `debug=True` in Inventory (needs fix), Inventory missing `/health`, KYS confirmed gone
 5. **KYS deleted** — Confirmed gone. Secrets migrated to EcDash credentials panel
 6. **Memory updated** — KYS references struck, EcDash credentials panel is new secrets home
+7. **Custom domains updated in EcDash** — AI Widget → ai.widget.alexanderai.site, Dropship → shop.alexanderai.site; FloodClaim sales page link added to credentials panel
 
 ## ⚠️ Open Action Items (from 2026-04-30 audit)
 - 🔴 Fix `debug=True` → `debug=False` in `alexander-ai-inventory/app_with_ai.py` line 4392
