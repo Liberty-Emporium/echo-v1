@@ -258,3 +258,26 @@ This is a priority goal — reference when planning new features or app architec
 10. **remove-app skill built** — `echo-v1/skills/remove-app/remove_app.py` — run with --name and --url to purge any app from EcDash
 11. **All audit items already resolved** — debug=False ✅, /health ✅, _safe_urlopen ✅
 12. **sync-all-to-gitlab.sh updated** — reflects current repo list (KYS + old dropship removed)
+
+## Stripe Integration (added 2026-04-30)
+- **Public key:** stored at `/root/.secrets/stripe_public_key`
+- **Secret key:** stored at `/root/.secrets/stripe_secret_key`
+- **Price IDs:** stored at `/root/.secrets/stripe_price_ids`
+
+### Stripe Price IDs (live)
+| App | Plan | Price ID |
+|-----|------|----------|
+| FloodClaim Pro | Basic $49/mo | price_1TS3NiE50C70iVkQpmBiiQr0 |
+| FloodClaim Pro | Pro $99/mo | price_1TS3NiE50C70iVkQGZYJRdNq |
+| FloodClaim Pro | Agency $249/mo | price_1TS3NiE50C70iVkQD6vVFdsV |
+| AI Agent Widget | Pro $19/mo | price_1TS3NjE50C70iVkQeF6az6Zr |
+| AI Agent Widget | Business $49/mo | price_1TS3NjE50C70iVkQR9zlx3C5 |
+| AI Agent Widget | Installation $90 one-time | price_1TS3NjE50C70iVkQFEAUML1H |
+| Pet Vet AI | Pro $9.99/mo | price_1TS3NkE50C70iVkQI7c4YuZZ |
+
+### ⚠️ STILL NEEDED — Railway env vars (manual step)
+Jay must add these in the Railway dashboard for each service:
+- **All apps:** `STRIPE_SECRET_KEY`, `STRIPE_PUBLISHABLE_KEY`
+- **AI Widget:** + `STRIPE_PRICE_PRO`, `STRIPE_PRICE_BUSINESS`, `STRIPE_PRICE_INSTALLATION`
+- **Pet Vet AI:** + `STRIPE_PRICE_ID`
+- Reference values in `/root/.secrets/stripe_price_ids`
