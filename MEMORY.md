@@ -281,3 +281,8 @@ Jay must add these in the Railway dashboard for each service:
 - **AI Widget:** + `STRIPE_PRICE_PRO`, `STRIPE_PRICE_BUSINESS`, `STRIPE_PRICE_INSTALLATION`
 - **Pet Vet AI:** + `STRIPE_PRICE_ID`
 - Reference values in `/root/.secrets/stripe_price_ids`
+
+## Railway API Token
+- Stored at `/root/.secrets/railway_token`
+- Workspace: `liberty-emporium's Projects` (ID: 57932cce-5b27-4acf-b82d-c92c0ca45d6e)
+- Used for setting env vars, querying service IDs, deployments
