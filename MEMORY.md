@@ -92,26 +92,27 @@ Repos under Liberty-Emporium org:
 - On session start: read `memory/app-status.md` to know which apps need attention
 - If errors are listed there — flag them to Jay immediately at the start of the session
 - Monitoring dashboard: https://jay-portfolio-production.up.railway.app/monitoring
-- Brain encryption via Keep Your Secrets (KYS) app — token at `/root/.secrets/kys_api_token`
+- ~~Brain encryption via Keep Your Secrets (KYS) app~~ — **KYS DELETED 2026-04-29**
+- All secrets now stored in EcDash Credentials panel: https://jay-portfolio-production.up.railway.app/dashboard
 
 ## 🎯 BIG GOAL: Inter-App Communication Network
 
 Jay's vision (stated 2026-04-19): Build a network where all Liberty-Emporium apps can communicate and do things for each other.
 
-**The hub:** Keep Your Secrets (KYS) at https://ai-api-tracker-production.up.railway.app
-- Manages ALL API keys across all apps
-- Each app calls KYS to fetch its keys instead of storing them locally
-- Central API key management = rotate once, updates everywhere
+**The hub (UPDATED 2026-04-30):** EcDash Credentials panel at https://jay-portfolio-production.up.railway.app/dashboard
+- KYS (Keep Your Secrets) was **deleted on 2026-04-29** — no longer exists
+- All secrets and API keys are now stored directly in EcDash credentials panel
+- EcDash is now the single source of truth for all credentials
 
 **The vision:**
 - Apps talk to each other via shared APIs
-- KYS is the credential broker
+- EcDash credentials panel is the credential store
 - Portfolio dashboard is the control plane
 - Echo (me) is the orchestrator
 - Goal: a self-managing, interconnected app ecosystem
 
-**Phase 1 (now):** Unified Settings in dashboard — profile, AI behavior, API key management via KYS
-**Phase 2:** Each app pulls its API keys from KYS at runtime (no local storage)
+**Phase 1 (now):** Credentials panel on EcDash — all API keys and passwords stored there
+**Phase 2:** Each app pulls its API keys from EcDash at runtime (no local storage)
 **Phase 3:** Apps expose APIs to each other (e.g., Inventory app can call Pet Vet AI for photo analysis)
 **Phase 4:** Echo orchestrates tasks across apps (e.g., "sync all inventory photos to AI analysis")
 
@@ -206,7 +207,7 @@ This is a priority goal — reference when planning new features or app architec
 |-----|-----|--------|
 | Contractor Pro AI | https://contractor-pro-ai-production.up.railway.app | ✅ |
 | Pet Vet AI | https://pet-vet-ai-production.up.railway.app | ✅ |
-| Jay's Keep Your Secrets | https://ai-api-tracker-production.up.railway.app | ✅ |
+| ~~Keep Your Secrets (KYS)~~ | **DELETED 2026-04-29** | — |
 | Liberty Inventory | https://liberty-emporium-and-thrift-inventory-app-production.up.railway.app | ✅ |
 | Dropship Shipping | https://dropship-shipping-production.up.railway.app | ✅ |
 | Jay Portfolio + Investors | https://jay-portfolio-production.up.railway.app | ✅ |
@@ -222,3 +223,24 @@ This is a priority goal — reference when planning new features or app architec
 5. Flash drive — brain passphrase backup (Jay only)
 
 *Auto-updated by Echo · 2026-04-16 end of session*
+
+---
+
+## Session 2026-04-30 — Work Done
+
+1. **Bootstrap** — Fresh instance boot, all 9 repos cloned, secrets saved, tools installed
+2. **Bot/Scanner 410 sink** — Added to EcDash AND FloodClaim Pro (blocks wp-admin, .env, sitemap, etc.)
+3. **FloodClaim Pro sales page** — Built `/sales` hidden route for Billy pitch (no nav links, no login needed)
+   - URL: https://billy-floods.up.railway.app/sales
+   - Delete route when Billy buys
+4. **Full audit** — All 9 apps healthy. Found: `debug=True` in Inventory (needs fix), Inventory missing `/health`, KYS confirmed gone
+5. **KYS deleted** — Confirmed gone. Secrets migrated to EcDash credentials panel
+6. **Memory updated** — KYS references struck, EcDash credentials panel is new secrets home
+
+## ⚠️ Open Action Items (from 2026-04-30 audit)
+- 🔴 Fix `debug=True` → `debug=False` in `alexander-ai-inventory/app_with_ai.py` line 4392
+- 🟡 Add `/health` endpoint to Inventory app
+- 🟡 Add `https://` scheme whitelist to `urlopen` calls in EcDash + AI Agent Widget
+- 🟢 Replace silent `try/except/pass` blocks with logging across all apps
+
+*Updated by Echo · 2026-04-30*
