@@ -250,3 +250,11 @@ This is a priority goal — reference when planning new features or app architec
 - 🟢 Replace silent `try/except/pass` blocks with logging across all apps
 
 *Updated by Echo · 2026-04-30*
+
+## Session 2026-04-30 (continued) — Cleanup + Skills
+
+8. **Removed alexander-ai-dropship** — GitHub repo deleted, all EcDash references purged
+9. **Custom domains confirmed** — AI Widget: ai.widget.alexanderai.site, Drop Shipping: shop.alexanderai.site
+10. **remove-app skill built** — `echo-v1/skills/remove-app/remove_app.py` — run with --name and --url to purge any app from EcDash
+11. **All audit items already resolved** — debug=False ✅, /health ✅, _safe_urlopen ✅
+12. **sync-all-to-gitlab.sh updated** — reflects current repo list (KYS + old dropship removed)
