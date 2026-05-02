@@ -337,6 +337,19 @@ Jay must add these in the Railway dashboard for each service:
 - Workspace: `liberty-emporium's Projects` (ID: 57932cce-5b27-4acf-b82d-c92c0ca45d6e)
 - Used for setting env vars, querying service IDs, deployments
 
+## GymForge (updated 2026-05-01)
+
+- **Live URL:** https://web-production-1c23.up.railway.app
+- **Owner login:** jay@gymforge.com / GymForge2026!
+- **Demo users:** `<role>@demo.gymforge.com` / `Demo2026!` (manager, trainer, front_desk, cleaner, nutritionist, member)
+- **Status:** Fully debugged and working — all 7 roles green, 29 pages tested, 0 hard errors
+- **Stack:** Django + Railway Postgres (single-tenant, no django-tenants)
+- **Browser test script:** `GymForge/scripts/browser_test.py` (Playwright, all 7 roles, 29 pages)
+- **Architecture:** Single-tenant — one Railway service = one gym. `GymConfig` + `GymProfile` are singleton rows.
+- **Setup wizard:** `/setup/` — 7 steps, provisions the gym
+- **Key fix applied:** Stale Railway Postgres migration records — wrote repair migrations (`0002_ensure_tables.py`, `0003_create_all_missing_tables.py`, `0004/0005_fix_missing_columns.py`)
+- **Stripe:** env vars still needed per-service
+
 ## Custom Domain Map (updated 2026-04-30)
 | App | Custom Domain | Railway URL |
 |-----|--------------|-------------|
