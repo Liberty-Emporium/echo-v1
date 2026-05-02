@@ -100,6 +100,43 @@ Repos under Liberty-Emporium org:
 - ~~Brain encryption via Keep Your Secrets (KYS) app~~ — **KYS DELETED 2026-04-29**
 - All secrets now stored in EcDash Credentials panel: https://jay-portfolio-production.up.railway.app/dashboard
 
+## 🍰 Sweet Spot Custom Cakes — CRITICAL (Revenue App)
+
+- **URL:** https://sweet-spot-cakes.up.railway.app
+- **Status:** Live, healthy, `/health` returns `{"app":"Sweet Spot Custom Cakes","status":"ok"}`
+- **Stack:** Flask + gunicorn (2 workers) + SQLite on `/data` volume
+- **Railway project ID:** `a776da33-228a-4a8b-bede-d1bf4cfe3c77`
+- **Railway service ID:** `484711dc-5f65-4cfd-b299-189b5eb86800`
+- **Volume ID:** `2296e445-59eb-4452-9a79-665668de90b4` (mount: /data)
+- ⚠️ **STRIPE PAYMENTS COMING SOON** — this app will be generating revenue
+- ⚠️ **PLATFORM MIGRATION COMING** — Jay is moving it off Railway to a different host (details TBD after his meeting)
+- **Rule:** ZERO downtime tolerance once payments go live
+
+### Sweet Spot Uptime Plan
+1. **Before migration:** Set up external health monitoring (uptime checker hitting /health every 5 min)
+2. **Migration checklist** (build when Jay confirms the new host):
+   - Export SQLite data from /data volume before switching
+   - Point DNS to new host BEFORE cutting Railway
+   - Keep Railway running in parallel for 24h after DNS switch
+   - Only terminate Railway after confirming new host is stable
+3. **After migration:** Add Stripe webhook endpoint + test payments end-to-end
+4. **Monitoring:** Echo reporter already wired in → EcDash sees all errors
+
+## EcDash is My Direct Report
+
+EcDash is an automated system that Echo (me) supervises. Jay's vision:
+- Echo is the boss — I give EcDash tasks via the echo-bridge queue
+- EcDash executes: health checks, app monitoring, credential management, reporting
+- EcDash reports back to Echo and to Jay's dashboard
+- This is the control plane for the whole Liberty-Emporium app network
+
+## Jay ↔ Echo Notes System (built 2026-05-01)
+- Jay writes notes at /dashboard → Notes panel → I read them on every boot
+- Echo posts a boot note every session start (Jay sees "Echo booted at X")
+- Echo can post notes to Jay at any time via `/api/notes/echo`
+- Notes stored on EcDash /data volume (persistent)
+- Filter by All / My Notes / From Echo
+
 ## 🎯 BIG GOAL: Inter-App Communication Network
 
 Jay's vision (stated 2026-04-19): Build a network where all Liberty-Emporium apps can communicate and do things for each other.
