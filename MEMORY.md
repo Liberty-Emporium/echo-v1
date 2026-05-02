@@ -372,3 +372,41 @@ Jay must add these in the Railway dashboard for each service:
 | GymForge | (none yet) | web-production-1c23.up.railway.app |
 
 **Note:** Jay is buying more custom domains — update this table as they come in. I have Railway API access so I can look them up automatically anytime.
+
+## Session 2026-05-02 — Full EcDash Phase Completion (overnight)
+
+### What Got Built
+1. **Encrypted Vault** — live database-backed secrets manager replacing hardcoded HTML credentials
+   - AES-256 Fernet encryption, all values encrypted at rest
+   - 19 entries seeded: tokens, API keys, app logins, app URLs
+   - Full CRUD UI in credentials panel
+   - Bearer token auth working (ecdash-bridge token registered by hash on startup)
+
+2. **Brain Sync Fixed** — MEMORY.md / SOUL.md / IDENTITY.md live on dashboard
+   - Token registered by SHA-256 hash at startup (no Railway env var needed)
+   - Saved at `/root/.secrets/brain_sync_token`
+   - Boot note posted to EcDash notes on every session start
+
+3. **Chat Auth Fixed** — permanent bearer token in `/data/api_tokens.json`
+   - No more 401s after Railway redeploys
+   - `/chat?token=` link in dashboard sidebar
+
+4. **Phase 2: App-to-Vault Key Pull**
+   - `/api/vault/app-keys` endpoint — apps authenticate and pull their own secrets
+   - `/api/vault/app-tokens` management endpoints + UI in credentials panel
+   - 10 app tokens generated, saved in `/root/.secrets/app-tokens/`
+   - To activate: set `ECDASH_APP_TOKEN=<token>` + `ECDASH_URL=https://jay-portfolio-production.up.railway.app` in Railway per app
+
+5. **Full GitLab Backup** — all 10 repos pushed to GitLab
+
+6. **Tokens Refreshed** — GitHub PAT, GitLab PAT, Railway token all updated 2026-05-02
+
+### Phase Status
+- **Phase 1** ✅ Vault live, all credentials encrypted
+- **Phase 2** ✅ Infrastructure done — app tokens created, needs Railway env vars set per app
+- **Phase 3** — Apps expose APIs to each other (future)
+- **Phase 4** — Echo orchestrates cross-app tasks (future)
+
+### App Tokens Location
+- Stored at `/root/.secrets/app-tokens/<app_name>.token`
+- Tell Jay: set `ECDASH_APP_TOKEN` in Railway for each app when ready for Phase 2 activation
