@@ -251,6 +251,19 @@ This is a priority goal — reference when planning new features or app architec
 
 *Updated by Echo · 2026-04-30*
 
+## Session 2026-05-01 — Fresh Boot + Brain Sync
+
+1. **Bootstrap slimmed** — bootstrap.sh now only clones echo-v1, not all repos
+2. **Brain sync built** — `scripts/sync-brain-to-dashboard.py` pushes MEMORY.md/SOUL.md/IDENTITY.md to EcDash
+3. **BRAIN_SYNC_TOKEN** — set on Railway EcDash service, saved at `/root/.secrets/brain_sync_token`
+4. **Dashboard memory viewer** — Added 🧠 Echo's Memory panel to EcDash dashboard
+   - Jay can now see MEMORY.md, SOUL.md, IDENTITY.md live at the dashboard
+   - Tab switcher + Sync Now button
+   - Auto-loads MEMORY.md on panel open
+5. **Railway token saved** — `/root/.secrets/railway_token` (workspace ID: 57932cce-5b27-4acf-b82d-c92c0ca45d6e)
+6. **EcDash service ID** — `5ec64ac9-06b1-44a6-8604-047a9804bff8`, project: `35b4c323-3f01-4407-910e-5e5f00ab6560`
+7. **Drop-Shipping-by-alexander-ai-solutions** — confirmed correct repo name (bootstrap had old name)
+
 ## Session 2026-04-30 (continued) — Cleanup + Skills
 
 8. **Removed alexander-ai-dropship** — GitHub repo deleted, all EcDash references purged
