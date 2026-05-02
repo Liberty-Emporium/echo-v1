@@ -212,3 +212,11 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+## Repo Cloning Rule
+
+**Do NOT clone all repos on bootstrap or session start.**
+- `echo-v1` is always present (it's the brain repo)
+- All other repos (floodclaim, agent-widget, dashboard, etc.) are cloned **on demand** — only when we are actively working on that repo
+- Jay's instruction (2026-05-01): "I only want to clone the repo we are working on"
+- If a task requires a repo that isn't cloned yet, ask Jay for the GitHub token first, then clone only that one
