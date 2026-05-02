@@ -2,6 +2,7 @@
 # bootstrap.sh — Echo's post-reboot setup script
 # Run this on a fresh KiloClaw instance to restore full capability
 # Usage: bash /root/.openclaw/workspace/echo-v1/scripts/bootstrap.sh
+# Last updated: 2026-05-01
 
 set -e
 echo "🚀 Echo Bootstrap starting..."
@@ -46,78 +47,87 @@ if [ ! -f /root/.secrets/willie_api_key ]; then
 else
   echo "  ✅ willie_api_key present"
 fi
+if [ ! -f /root/.secrets/ecdash_token ]; then
+  echo "  ⚠️  /root/.secrets/ecdash_token NOT FOUND — get from EcDash → Settings → Create Token"
+else
+  echo "  ✅ ecdash_token present"
+fi
 
-# ── 4. Clone repos ────────────────────────────────────────────────────────────
+# ── 4. Clone echo-v1 (brain repo only) ───────────────────────────────────────
 echo ""
-echo "📁 Cloning repos..."
+echo "📁 Cloning brain repo..."
 if [ ! -f /root/.secrets/github_token ]; then
   echo "  ❌ Cannot clone — github_token missing. Add it to /root/.secrets/ and re-run."
 else
   GH_TOKEN=$(cat /root/.secrets/github_token)
   cd /root/.openclaw/workspace
 
-  REPOS=(
-    "echo-v1"
-    "alexander-ai-floodclaim"
-    "alexander-ai-agent-widget"
-    "alexander-ai-dashboard"
-    "alexander-ai-petvet"
-    "alexander-ai-contractor"
-    "alexander-ai-dropship"
-    "alexander-ai-consignment"
-    "alexander-ai-inventory"
-    "liberty-oil-website"
-  )
+  if [ -d "echo-v1" ]; then
+    echo "  ⏩ echo-v1 (already cloned, pulling latest...)"
+    cd echo-v1
+    git pull --quiet 2>/dev/null || true
+    cd ..
+  else
+    git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/echo-v1.git --quiet && echo "  ✅ echo-v1 cloned"
+  fi
 
-  for repo in "${REPOS[@]}"; do
-    if [ -d "$repo" ]; then
-      echo "  ⏩ $repo (already cloned)"
-    else
-      git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/${repo}.git --quiet && echo "  ✅ $repo"
-    fi
-  done
-
-  # Set token in git remotes for pushing
-  for repo in "${REPOS[@]}"; do
-    if [ -d "$repo" ]; then
-      cd /root/.openclaw/workspace/$repo
-      git remote set-url origin https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/${repo}.git 2>/dev/null || true
-      cd /root/.openclaw/workspace
-    fi
-  done
+  # Set token in remote for pushing
+  cd /root/.openclaw/workspace/echo-v1
+  git remote set-url origin https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/echo-v1.git 2>/dev/null || true
+  cd /root/.openclaw/workspace
 fi
 
-# ── 5. Set up GitLab remotes ──────────────────────────────────────────────────
+# ── 5. Set up GitLab remote on echo-v1 ───────────────────────────────────────
 echo ""
-echo "🦊 Setting up GitLab backup remotes..."
-if [ -f /root/.secrets/gitlab_token ]; then
+echo "🦊 Setting up GitLab backup remote..."
+if [ -f /root/.secrets/gitlab_token ] && [ -d "/root/.openclaw/workspace/echo-v1" ]; then
   GL_TOKEN=$(cat /root/.secrets/gitlab_token)
-  for repo in echo-v1 floodclaim-pro AI-Agent-Widget jay-portfolio; do
-    if [ -d "/root/.openclaw/workspace/$repo" ]; then
-      cd /root/.openclaw/workspace/$repo
-      git remote remove gitlab 2>/dev/null || true
-      git remote add gitlab https://oauth2:${GL_TOKEN}@gitlab.com/Liberty-Emporium/${repo}.git 2>/dev/null || true
-      echo "  ✅ $repo → gitlab remote set"
-      cd /root/.openclaw/workspace
-    fi
-  done
+  cd /root/.openclaw/workspace/echo-v1
+  git remote remove gitlab 2>/dev/null || true
+  git remote add gitlab https://oauth2:${GL_TOKEN}@gitlab.com/Liberty-Emporium/echo-v1.git 2>/dev/null || true
+  echo "  ✅ echo-v1 → gitlab remote set"
+  cd /root/.openclaw/workspace
 else
-  echo "  ⚠️  gitlab_token missing — skipping GitLab remotes"
+  echo "  ⚠️  gitlab_token missing or echo-v1 not cloned — skipping"
 fi
 
-# ── 6. Quick health check ─────────────────────────────────────────────────────
+# ── 6. Dashboard health check + brain sync ───────────────────────────────────
 echo ""
-echo "🏥 Health check..."
-echo -n "  FloodClaim Pro: " && curl -s https://billy-floods.up.railway.app/health 2>/dev/null || echo "unreachable"
-echo -n "  EcDash: " && curl -s -o /dev/null -w "HTTP %{http_code}" https://jay-portfolio-production.up.railway.app/ 2>/dev/null || echo "unreachable"
-echo -n "  AI Agent Widget: " && curl -s -o /dev/null -w "HTTP %{http_code}" https://ai-agent-widget-production.up.railway.app/ 2>/dev/null || echo "unreachable"
+echo "🏥 Dashboard health check..."
+DASHBOARD_URL="https://jay-portfolio-production.up.railway.app"
+
+HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$DASHBOARD_URL/" 2>/dev/null || echo "000")
+if [ "$HTTP_STATUS" = "200" ]; then
+  echo "  ✅ EcDash: HTTP $HTTP_STATUS — dashboard is live"
+else
+  echo "  ⚠️  EcDash: HTTP $HTTP_STATUS — may be down or slow"
+fi
+
+# Check echo-bridge queue
+if [ -f /root/.secrets/ecdash_token ]; then
+  ECDASH_TOKEN=$(cat /root/.secrets/ecdash_token)
+  BRIDGE_RESP=$(curl -s -H "Authorization: Bearer $ECDASH_TOKEN" "$DASHBOARD_URL/api/echo-bridge" 2>/dev/null || echo "{}")
+  TASK_COUNT=$(echo "$BRIDGE_RESP" | python3 -c "import sys,json; d=json.load(sys.stdin); print(len(d.get('tasks',[])))" 2>/dev/null || echo "?")
+  echo "  📬 Echo-bridge queue: $TASK_COUNT pending task(s)"
+else
+  echo "  ⚠️  ecdash_token missing — skipping bridge check"
+fi
+
+# Sync brain files to dashboard
+echo ""
+echo "🧠 Syncing brain to dashboard..."
+if [ -f /root/.openclaw/workspace/echo-v1/scripts/sync-brain-to-dashboard.py ]; then
+  python3 /root/.openclaw/workspace/echo-v1/scripts/sync-brain-to-dashboard.py 2>&1 | sed 's/^/  /'
+else
+  echo "  ⚠️  sync-brain-to-dashboard.py not found — skipping"
+fi
 
 echo ""
 echo "================================"
 echo "✅ Echo Bootstrap complete!"
 echo ""
 echo "Next steps:"
-echo "  1. Add /root/.secrets/github_token if missing"
-echo "  2. Add /root/.secrets/gitlab_token if missing"
-echo "  3. Run: python3 echo-v1/scripts/bug-hunter.py floodclaim-pro"
+echo "  1. Add /root/.secrets/ecdash_token if missing (EcDash → Settings → Create Token → label: echo-bridge)"
+echo "  2. Add /root/.secrets/willie_api_key if missing"
+echo "  3. Check https://jay-portfolio-production.up.railway.app/dashboard"
 echo "  4. Read echo-v1/memory/$(date +%Y-%m-%d).md for today's context"
