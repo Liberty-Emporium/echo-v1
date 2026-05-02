@@ -111,7 +111,7 @@ Repos under Liberty-Emporium org:
 - **Railway project ID:** `a776da33-228a-4a8b-bede-d1bf4cfe3c77`
 - **Railway service ID:** `484711dc-5f65-4cfd-b299-189b5eb86800`
 - **Volume ID:** `2296e445-59eb-4452-9a79-665668de90b4` (mount: /data)
-- ⚠️ **STRIPE PAYMENTS COMING SOON** — this app will be generating revenue
+- ⏸️ **STRIPE ON HOLD** — Jay decided to wait on Stripe for Sweet Spot (2026-05-02)
 - ⚠️ **PLATFORM MIGRATION COMING** — Jay is moving it off Railway to a different host (details TBD after his meeting)
 - **Rule:** ZERO downtime tolerance once payments go live
 
