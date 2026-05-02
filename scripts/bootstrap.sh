@@ -113,6 +113,15 @@ else
   echo "  ⚠️  ecdash_token missing — skipping bridge check"
 fi
 
+# Read notes Jay left for Echo
+echo ""
+echo "📝 Reading notes from Jay..."
+if [ -f /root/.openclaw/workspace/echo-v1/scripts/read-notes-from-dashboard.py ]; then
+  python3 /root/.openclaw/workspace/echo-v1/scripts/read-notes-from-dashboard.py 2>&1 | sed 's/^/  /'
+else
+  echo "  ⚠️  read-notes-from-dashboard.py not found — skipping"
+fi
+
 # Sync brain files to dashboard
 echo ""
 echo "🧠 Syncing brain to dashboard..."

@@ -84,6 +84,48 @@ def push_brain(token):
         return False
 
 
+def post_boot_note(token):
+    """Post a note to the dashboard so Jay knows Echo booted and is ready."""
+    import datetime
+    ts = datetime.datetime.now().strftime('%Y-%m-%d %I:%M %p')
+    text = f"🚀 Echo booted at {ts} (ET)\n\nBrain synced. All systems ready. What are we working on today?"
+    data = json.dumps({"text": text}).encode("utf-8")
+    req = urllib.request.Request(
+        f"{ECDASH_URL}/api/notes/echo",
+        data=data,
+        headers={
+            "Content-Type": "application/json",
+            "X-Brain-Sync-Token": token,
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            result = json.loads(resp.read())
+            if result.get("id"):
+                print(f"  ✅ Boot note posted to EcDash notes")
+            else:
+                print(f"  ⚠️  Boot note post returned unexpected: {result}")
+    except Exception as e:
+        print(f"  ⚠️  Could not post boot note: {e}")
+
+
+def fetch_echo_notes(token):
+    """Fetch notes from EcDash that Jay left for Echo.
+    Prints them so bootstrap output captures them."""
+    req = urllib.request.Request(
+        f"{ECDASH_URL}/api/notes?author=jay",
+        headers={
+            "X-Brain-Sync-Token": token,
+        },
+        method="GET",
+    )
+    # Note: /api/notes is login_required — skip if no session
+    # Echo reads these via the notes endpoint using the bridge API instead
+    # For now, just acknowledge — Jay's notes are visible at /dashboard
+    pass
+
+
 def main():
     print("🧠 Syncing brain files to EcDash...")
 
@@ -97,6 +139,7 @@ def main():
     if success:
         print("  ✅ Jay can now see Echo's brain at:")
         print("     https://jay-portfolio-production.up.railway.app/dashboard")
+        post_boot_note(token)
     sys.exit(0 if success else 1)
 
 
