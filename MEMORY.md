@@ -165,6 +165,7 @@ This is a priority goal — reference when planning new features or app architec
 
 ## EcDash Connection
 
+- **EcDash dashboard password: `Mhall001!`** (confirmed working 2026-05-03)
 - EcDash API token: stored at `/root/.secrets/ecdash_token` (expires 2027-04-19)
 - EcDash base URL: `https://jay-portfolio-production.up.railway.app`
 - Dashboard password: stored at `/root/.secrets/ecdash_password`
