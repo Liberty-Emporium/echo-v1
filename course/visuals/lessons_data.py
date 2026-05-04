@@ -170,13 +170,120 @@ LESSONS = {
         "title": "Lesson 3.4 — Deploying Your App to Railway",
         "subtitle": "Go from local code to a live URL anyone in the world can visit",
         "steps": [
-            {"action": "navigate", "url": "https://railway.app",
-             "caption": "Step 1: Go to Railway.app",
-             "desc": "Railway is where your app will live on the internet. It's free to start and you can have your app live in under 20 minutes."},
+
+            # Step 1 — Railway homepage
+            {"action": "navigate", "url": "https://railway.com",
+             "caption": "Step 1: Go to railway.com",
+             "desc": "Railway is the hosting platform where your app will live on the internet. It's free to start — no credit card needed for the free tier."},
             {"action": "screenshot", "filename": "01-railway-homepage.png",
              "caption": "Step 1: Railway Homepage",
-             "desc": "This is Railway. Click 'Login' or 'Start a New Project'. If you don't have an account, sign up with your GitHub account — it's the fastest way and connects your code repository automatically."},
+             "desc": "This is Railway. It's where thousands of developers deploy their apps. Notice the tagline — 'Deploy apps globally, instantly'. That's exactly what we're doing. Click 'Login' in the top right to get started."},
+
+            # Step 2 — Login page
+            {"action": "navigate", "url": "https://railway.com/login",
+             "caption": "Step 2: Go to Login",
+             "desc": "Navigate to the Railway login page."},
+            {"action": "screenshot", "filename": "02-railway-login.png",
+             "caption": "Step 2: Railway Login Page",
+             "desc": "Railway lets you sign in with GitHub, Google, or email. We strongly recommend GitHub — it connects your code repository to Railway automatically, which is how you deploy later. If you don't have GitHub yet, we'll set that up first."},
+
+            # Step 3 — GitHub (for context)
+            {"action": "navigate", "url": "https://github.com",
+             "caption": "Step 3: GitHub — Where Your Code Lives",
+             "desc": "GitHub is where your code is stored before Railway deploys it."},
+            {"action": "screenshot", "filename": "03-github-homepage.png",
+             "caption": "Step 3: GitHub Homepage",
+             "desc": "GitHub is your code's home. Think of it like Google Drive for your app's files. Every time you save (push) your code to GitHub, Railway can pick it up and redeploy automatically. Sign up at github.com if you haven't — it's free."},
+
+            # Step 4 — New repo on GitHub
+            {"action": "navigate", "url": "https://github.com/new",
+             "caption": "Step 4: Create a New GitHub Repository",
+             "desc": "Navigate to create a new repository on GitHub."},
+            {"action": "screenshot", "filename": "04-github-new-repo.png",
+             "caption": "Step 4: Create a New GitHub Repository",
+             "desc": "This is where you create a new repository (a 'repo') — basically a folder in the cloud for your app's code. Fill in: (1) Repository name — use your app name, no spaces (e.g. my-cake-shop), (2) Set it to Private, (3) Leave everything else as-is. Then click 'Create repository'."},
+
+            # Step 5 — Push code explanation
+            {"action": "navigate", "url": "https://github.com",
+             "caption": "Step 5: Push Your Code to GitHub",
+             "desc": "After creating the repo, GitHub shows you the commands to push your code."},
+            {"action": "screenshot", "filename": "05-github-push-commands.png",
+             "caption": "Step 5: The Push Commands",
+             "desc": "After creating your repo, GitHub shows you the exact commands to push your code. You'll run these three commands in your terminal from your app folder. Don't worry — I'll walk you through each one."},
+
+            # Step 6 — Railway new project
+            {"action": "navigate", "url": "https://railway.com",
+             "caption": "Step 6: Back to Railway — Create New Project",
+             "desc": "Navigate back to Railway to start a new project."},
+            {"action": "screenshot", "filename": "06-railway-new-project.png",
+             "caption": "Step 6: Railway Dashboard — New Project",
+             "desc": "Once logged in to Railway, you'll see your dashboard. Click '+ New Project' to start deploying your app. Railway is about to connect to your GitHub and pull your code."},
+
+            # Step 7 — Deploy from GitHub
+            {"action": "navigate", "url": "https://railway.com/new",
+             "caption": "Step 7: Deploy from GitHub Repo",
+             "desc": "On the new project screen, Railway gives you several options."},
+            {"action": "screenshot", "filename": "07-railway-deploy-options.png",
+             "caption": "Step 7: Choose 'Deploy from GitHub Repo'",
+             "desc": "Railway gives you several ways to start. Click 'Deploy from GitHub Repo'. Railway will ask permission to access your GitHub account the first time — click Authorize. Then you'll see a list of your repositories."},
+
+            # Step 8 — Environment variables (diagram card — Railway requires login)
+            {"action": "navigate", "url": "https://railway.com",
+             "caption": "Step 8: Setting Environment Variables",
+             "desc": "After connecting your GitHub repo, Railway starts your first deploy. Before it fully works, you need to add environment variables. In your Railway service: click Variables → Add Variable. You need at minimum: SECRET_KEY (paste any long random text — this is your app's security key) and PORT set to 5000. These are private and never visible in your code."},
+            {"action": "screenshot", "filename": "08-railway-env-vars.png",
+             "caption": "Step 8: Railway Login — Sign In With GitHub",
+             "desc": "When you first go to railway.com/new, Railway asks you to log in. Click 'Continue with GitHub'. This grants Railway permission to read your repositories so it can deploy your code. You only do this once."},
+
+            # Step 9 — Watching the deploy — show a real live app as proof
+            {"action": "navigate", "url": "https://sweet-spot-cakes.up.railway.app",
+             "caption": "Step 9: A Real Live App on Railway",
+             "desc": "This is what success looks like."},
+            {"action": "screenshot", "filename": "09-live-app-example.png",
+             "caption": "Step 9: This is What Your Deployed App Looks Like",
+             "desc": "This is Sweet Spot Custom Cakes — a real app built using this exact process and deployed on Railway. It has a real URL, runs 24/7, and was built using the same method you're learning right now. Your app will look just like this — with your business name, your colors, and your data."},
+
+            # Step 10 — Health check on a real app
+            {"action": "navigate", "url": "https://sweet-spot-cakes.up.railway.app/health",
+             "caption": "Step 10: The Health Check Endpoint",
+             "desc": "Every app we build includes a /health endpoint."},
+            {"action": "screenshot", "filename": "10-health-check.png",
+             "caption": "Step 10: The /health Endpoint — Your App's Pulse",
+             "desc": "Every app you build includes a /health endpoint at yourapp.up.railway.app/health. It returns a simple JSON response: status: ok. Railway uses this to confirm your app started correctly. If it returns ok, your deploy succeeded. If it fails, Railway shows you the error in the build log so you can fix it."},
+
+            # Step 11 — Another live app as extra proof
+            {"action": "navigate", "url": "https://contractor-pro-ai-production.up.railway.app",
+             "caption": "Step 11: Another Live App — Contractor Pro AI",
+             "desc": "Every app in this course is already live on Railway."},
+            {"action": "screenshot", "filename": "11-contractor-app.png",
+             "caption": "Step 11: Contractor Pro AI — Also Live on Railway",
+             "desc": "Here's another example: Contractor Pro AI — a full job request and quoting app for contractors, built and deployed on Railway using this same process. Notice the URL: contractor-pro-ai-production.up.railway.app. Every app you build in this course gets a URL like this. Real. Live. Shareable."},
+
+            # Step 12 — The redeploy workflow
+            {"action": "navigate", "url": "https://railway.com",
+             "caption": "Step 12: The Update Workflow",
+             "desc": "Once deployed, updating is effortless."},
+            {"action": "screenshot", "filename": "12-railway-redeploy.png",
+             "caption": "Step 12: Your Update Workflow From Here",
+             "desc": "Once your app is live, updating it is simple. Make a change in your code → push it to GitHub → Railway detects the push and redeploys automatically. No manual steps. No server management. No downtime. Railway handles all of it. Your workflow becomes: code it, push it, it's live."},
+        ]
+    },
+
+    # ─────────────────────────────────────────────────────────────────────────
+    # LESSON 3-3: Using AI to Build Your App (the build prompt)
+    # ─────────────────────────────────────────────────────────────────────────
+    "3-3": {
+        "title": "Lesson 3.3 — Using AI to Build Your App Skeleton",
+        "subtitle": "You describe what you want. AI writes the code. You review and deploy.",
+        "steps": [
+            {"action": "navigate", "url": "https://github.com",
+             "caption": "Step 1: Where the Code Will Live",
+             "desc": "Before we build, a quick look at where everything ends up."},
+            {"action": "screenshot", "filename": "01-github-overview.png",
+             "caption": "Step 1: GitHub — Your Code's Home",
+             "desc": "Everything we build in this lesson gets saved to GitHub first, then deployed to Railway. Think of GitHub as the save button and Railway as the publish button."},
         ]
     },
 
 }
+
