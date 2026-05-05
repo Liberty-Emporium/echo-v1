@@ -411,3 +411,54 @@ Jay must add these in the Railway dashboard for each service:
 ### App Tokens Location
 - Stored at `/root/.secrets/app-tokens/<app_name>.token`
 - Tell Jay: set `ECDASH_APP_TOKEN` in Railway for each app when ready for Phase 2 activation
+
+## Session 2026-05-05 — AionUi Fork → Alexander AI Solutions / EcDash
+
+### What Got Built
+1. **Forked AionUi** → Liberty-Emporium/AionUi-1 (https://github.com/Liberty-Emporium/AionUi-1)
+2. **Full rebrand** — 916 files changed, AionUi → Alexander AI Solutions everywhere
+3. **Theme color** — #4E5969 → #00CCFF (Jay's cyan)
+4. **Web pet widget** — floating SVG mascot for Railway deployment
+   - WebPetWidget component with drag, auto-sleep, wake on activity
+   - PetEventEmitter bridges pet state → WebSocket → browser
+5. **ADMIN_PASSWORD** env var support — fixed login for ephemeral Railway deploys
+6. **Dockerfile VOLUME fix** — removed VOLUME instruction (Railway uses managed volumes)
+7. **Startup diagnostics** — step-by-step logging in server.ts (Step 1-5)
+8. **GitHub Actions build** — all 6 platforms built (macOS x64/ARM64 failed, 4 succeeded)
+9. **CNAME** — agent.ecjayalexanderai.site → aionui-1-production.up.railway.app
+
+### App Status
+| Item | Status |
+|------|--------|
+| AionUi-1 fork | ✅ https://github.com/Liberty-Emporium/AionUi-1 |
+| Railway deploy | ✅ https://aionui-1-production.up.railway.app |
+| Branding | ✅ "Alexander AI Solutions" on all pages |
+| Pet widget | ✅ Pushed, needs `railway up` |
+| Desktop builds | ⚠️ 4/6 succeeded (macOS failed — missing cert) |
+| GitHub Actions | ✅ Workflow exists at `.github/workflows/build-and-release.yml` |
+| GitHub backup | ✅ echo-v1 brain backed up |
+
+### Key Files Changed
+- `src/server.ts` — step-by-step startup logging
+- `src/process/webserver/index.ts` — ADMIN_PASSWORD support
+- `src/renderer/components/WebPetWidget/` — new floating pet widget
+- `src/process/pet/petEventEmitter.ts` — new event emitter for pet state
+- `src/process/webserver/websocket/WebSocketManager.ts` — broadcastPetState()
+- `src/renderer/components/layout/Layout.tsx` — sidebar logo replaced
+- `src/renderer/components/layout/Titlebar/index.tsx` — titlebar logo replaced
+- `Dockerfile` — VOLUME instruction removed
+- `package.json` — ecdash / Alexander AI Solutions
+- `electron-builder.yml` — appId, protocol, vendor changed
+- `resources/` — all icons replaced with Jay's Business Logo
+
+### Jay's Brand
+- Primary color: #00CCFF (cyan)
+- Company: Liberty-Emporium / Alexander AI Integrated Solutions
+- Logo: /home/lol/Pictures/Front of Card.png
+- GitHub Logos repo: https://github.com/Liberty-Emporium/Logos
+
+### Railway Deploy Command
+```bash
+railway up
+```
+(Use Railway CLI — auto-deploys latest GitHub push)
