@@ -91,3 +91,42 @@ Example flow:
 
 *Skills v2.0 — Enhanced by Echo (KiloClaw) on 2026-05-04*
 *Absorbed Agent-Z capabilities into echo-v1*
+
+---
+
+## Skills Learned 2026-05-05 (Alexander AI / EcDash Branding)
+
+### 10. branding-rebrand-app ⭐ NEW
+Fork open-source app and apply full custom branding.
+- Trigger: "Rebrand this app", "Put my logo on the app", "Apply branding"
+- Type: Branding
+- Source: echo-v1/skills/custom/branding-rebrand-app
+- Location: `skills/custom/branding-rebrand-app/skill.md`
+
+### 11. railway-deploy-fix ⭐ NEW
+Diagnose and fix Railway deployment issues (hangs, VOLUME errors, env vars).
+- Trigger: "Railway is hanging", "Fix Railway", "Dockerfile VOLUME error"
+- Type: Deployment
+- Source: echo-v1/skills/custom/railway-deploy-fix
+- Location: `skills/custom/railway-deploy-fix/skill.md`
+
+### 12. github-actions-desktop-build ⭐ NEW
+Build cross-platform desktop installers via GitHub Actions.
+- Trigger: "Build for Windows", "Build for Mac", "Get the .exe"
+- Type: Build & Release
+- Source: echo-v1/skills/custom/github-actions-desktop-build
+- Location: `skills/custom/github-actions-desktop-build/skill.md`
+
+### 13. web-pet-widget ⭐ NEW
+Add animated floating mascot companion to web app via WebSocket bridge.
+- Trigger: "Add the pet", "Floating mascot", "The little guy is missing"
+- Type: Feature
+- Source: echo-v1/skills/custom/web-pet-widget
+- Location: `skills/custom/web-pet-widget/skill.md`
+
+### 14. git-push-auth-fix ⭐ NEW
+Fix git push authentication failures (403, 401, credential issues).
+- Trigger: "Git push failed", "Permission denied", "Can't push"
+- Type: DevOps
+- Source: echo-v1/skills/custom/git-push-auth-fix
+- Location: `skills/custom/git-push-auth-fix/skill.md`
