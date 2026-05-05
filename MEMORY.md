@@ -412,7 +412,7 @@ Jay must add these in the Railway dashboard for each service:
 - Stored at `/root/.secrets/app-tokens/<app_name>.token`
 - Tell Jay: set `ECDASH_APP_TOKEN` in Railway for each app when ready for Phase 2 activation
 
-## Session 2026-05-05 — AionUi Fork → Alexander AI Solutions / EcDash
+### Session 2026-05-05 — AionUi Fork → Alexander AI Solutions / EcDash
 
 ### What Got Built
 1. **Forked AionUi** → Liberty-Emporium/AionUi-1 (https://github.com/Liberty-Emporium/AionUi-1)
@@ -426,6 +426,10 @@ Jay must add these in the Railway dashboard for each service:
 7. **Startup diagnostics** — step-by-step logging in server.ts (Step 1-5)
 8. **GitHub Actions build** — all 6 platforms built (macOS x64/ARM64 failed, 4 succeeded)
 9. **CNAME** — agent.ecjayalexanderai.site → aionui-1-production.up.railway.app
+10. **Landing page** — /landing with download links for all platforms
+11. **Skills Market removed** — banner removed from top-right corner
+12. **"Aion CLI" agent renamed** → "Alexander AI"
+13. **"Hi, plan for today?" removed** → "Hi, how can I help you today?"
 
 ### App Status
 | Item | Status |
@@ -434,7 +438,10 @@ Jay must add these in the Railway dashboard for each service:
 | Railway deploy | ✅ https://aionui-1-production.up.railway.app |
 | Branding | ✅ "Alexander AI Solutions" on all pages |
 | Pet widget | ✅ Pushed, needs `railway up` |
+| Landing page | ✅ Pushed, at /landing |
 | Desktop builds | ⚠️ 4/6 succeeded (macOS failed — missing cert) |
+| Skills Market | ✅ Removed |
+| "Aion CLI" | ✅ Renamed to "Alexander AI" |
 | GitHub Actions | ✅ Workflow exists at `.github/workflows/build-and-release.yml` |
 | GitHub backup | ✅ echo-v1 brain backed up |
 
@@ -446,6 +453,12 @@ Jay must add these in the Railway dashboard for each service:
 - `src/process/webserver/websocket/WebSocketManager.ts` — broadcastPetState()
 - `src/renderer/components/layout/Layout.tsx` — sidebar logo replaced
 - `src/renderer/components/layout/Titlebar/index.tsx` — titlebar logo replaced
+- `src/renderer/pages/landing/LandingPage.tsx` — new landing page
+- `src/renderer/components/layout/Router.tsx` — /landing route + default redirect
+- `src/renderer/pages/guid/components/SkillsMarketBanner.tsx` — exported null (removed)
+- `src/renderer/pages/guid/GuidPage.tsx` — SkillsMarketBanner removed
+- `src/process/agent/AgentRegistry.ts` — "Aion CLI" → "Alexander AI"
+- `src/renderer/services/i18n/locales/en-US/conversation.json` — greeting text
 - `Dockerfile` — VOLUME instruction removed
 - `package.json` — ecdash / Alexander AI Solutions
 - `electron-builder.yml` — appId, protocol, vendor changed
@@ -456,9 +469,45 @@ Jay must add these in the Railway dashboard for each service:
 - Company: Liberty-Emporium / Alexander AI Integrated Solutions
 - Logo: /home/lol/Pictures/Front of Card.png
 - GitHub Logos repo: https://github.com/Liberty-Emporium/Logos
+- Business Logo: https://github.com/Liberty-Emporium/Logos/blob/main/Business%20Logo.png
 
-### Railway Deploy Command
-```bash
-railway up
-```
-(Use Railway CLI — auto-deploys latest GitHub push)
+### Projects Cloned
+| Repo | Local Path | Description |
+|------|-----------|-------------|
+| Liberty-Emporium/AionUi-1 | /home/lol/Downloads/11/AionUi-branded | Alexander AI / EcDash — AI companion app |
+| Liberty-Emporium/echo-v1 | /home/lol/Downloads/11/echo-v1-clone | My brain — skills, memory, tools |
+| Liberty-Emporium/alexander-ai-dashboard | /home/lol/Downloads/11/alexander-ai-dashboard | Jay's Command Center — Flask dashboard on alexanderai.site |
+| Liberty-Emporium/Logos | /tmp/logos | Brand assets |
+
+### Alexander AI Dashboard (Command Center)
+- URL: https://alexanderai.site (hosted on Railway)
+- Repo: https://github.com/Liberty-Emporium/alexander-ai-dashboard
+- Tech: Flask + SQLite + Gunicorn
+- ECDASH_URL updated: `jay-portfolio-production` → `aionui-1-production` (EcDash on Railway)
+- echo_reporter ECDASH_URL also updated
+- Connected apps: Pet Vet AI, FloodClaim Pro, Sweet Spot Cakes, Contractor Pro AI, etc.
+- Each app uses `ecdash_client.py` to pull secrets from EcDash vault
+
+### Railway Projects
+| Project | URL | Project ID |
+|---------|-----|------------|
+| Alexander AI / EcDash (AionUi-1) | aionui-1-production.up.railway.app | 69c623b0-3087-41b7-ae7a-a5baaea3b946 |
+| Alexander AI Dashboard | alexanderai.site | 4af3be24-740e-4e76-8ea5-ea39d5878608 |
+
+### What's Left to Build
+- [ ] `railway up` on EcDash — deploy pet widget + landing page + removals
+- [ ] Landing page is live at /landing (not linked from nav yet)
+- [ ] Skills Market removed from GuidPage
+- [ ] Self-building AI tools (reverse engineer skills, build new tools on demand)
+- [ ] GitHub release with proper installer .exe/.dmg/.deb links
+- [ ] macOS build — needs code signing cert
+- [ ] Connect alexanderai.site to link to EcDash landing page
+
+### Self-Building AI Tools Architecture (TODO)
+The AI should be able to:
+1. See a task that has no existing tool → write a new skill/tool
+2. See a skill → reverse-engineer it → create own version
+3. The Skills Market itself can be a source of "skill templates" to reverse-engineer
+4. Skills stored as Markdown with YAML frontmatter (like my brain!)
+5. Tool builder: takes natural language description of task → outputs runnable code
+6. Storage: `~/.alexander-ai/tools/` or in the app's data directory
