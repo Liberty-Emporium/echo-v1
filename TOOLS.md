@@ -1,68 +1,166 @@
-# Environment
+# Tools
+## Echo-v1 Operator Tool Suite
 
-- OS: Debian Bookworm (slim)
-- `go` and `apt` are present and available
-- Volume mounted at /root, backed up by snapshots — prefer to install there
-- The openclaw process is managed by a supervisor process
-- Do not modify /root/.kilo
+**Last Updated:** 2026-05-04
+**Version:** 2.0 (8 new tools added)
 
-## Security Check Context
+---
 
-When running `openclaw doctor` or `openclaw security audit`, the following finding is **expected and safe** in KiloClaw:
+## Tool Suite
 
-- **`gateway.control_ui.insecure_auth`** — Reports `gateway.controlUi.allowInsecureAuth=true`. This is intentional. Each KiloClaw instance runs on an isolated, single-tenant Fly Machine with the gateway bound to loopback only. Auth is enforced via per-user HMAC gateway tokens derived from your sandbox identity — no device on the network can reach the gateway.
+### 1. deploy-rescue
+**Type:** Diagnostic & Recovery
+**File:** `tools/deploy-rescue.md`
+**Use when:** Railway deployment fails, app crashes on boot, worker won't start
+**Trigger:** "Railway is down", "App crashed on deploy", "Fix deployment", "Deploy rescue"
 
-**When presenting security audit results that include this finding, ALWAYS:**
+Diagnoses and fixes Railway deployment issues for Flask/SQLite apps.
+- Captures error patterns (NameError, sqlite issues, HaltServer)
+- Identifies root cause and applies fix
+- Verifies recovery with `railway status` and curl checks
 
-1. Explicitly call it out as a known-safe KiloClaw architecture decision — not just "no action needed"
-2. Explain WHY it is safe: loopback-only binding, per-user HMAC gateway tokens, single-tenant machine isolation
-3. Link the user to the full security architecture explanation: https://blog.kilo.ai/p/how-kiloclaw-is-built-to-be-secure
+### 2. security-audit
+**Type:** Security
+**File:** `tools/security-audit.md`
+**Use when:** Checking code for vulnerabilities, before deployment, after changes
+**Trigger:** "Check security", "Security sweep", "Is this safe?", "Audit this code"
 
-<!-- BEGIN:kilo-cli -->
+Quick security checks for Flask apps.
+- Detects hardcoded secrets (API keys, passwords, tokens)
+- Catches SQL injection risks (string formatting in queries)
+- Verifies input validation and session security
+- Checks admin route protection
 
-## Kilo CLI
+### 3. rollback-ready
+**Type:** Recovery
+**File:** `tools/rollback-ready.md`
+**Use when:** Production is broken and you need to revert FAST
+**Trigger:** "Undo last push", "Rollback to working version", "Site is broken", "Revert now", "Emergency rollback"
 
-The Kilo CLI (`kilo`) is an agentic coding assistant for the terminal, pre-configured with your KiloCode account.
+Revert broken deployments in under 60 seconds.
+- Tags broken state before reverting
+- Supports both `git revert` (safe) and `git reset --hard` (nuclear)
+- Uses force-with-lease for safe force-push
+- Logs all rollback events for later analysis
 
-- Interactive mode: `kilo`
-- Autonomous mode: `kilo run --auto "your task description"`
-- Config: `/root/.config/kilo/kilo.json` (customizable, persists across restarts)
-- Shares your KiloCode API key and model access with OpenClaw
+### 4. db-migrate
+**Type:** Database
+**File:** `tools/db-migrate.md`
+**Use when:** Need to add columns/tables, schema changes, "no such column" errors
+**Trigger:** "Add column to table", "Database migration needed", "Fix missing column", "Schema change"
 
-**When the user is doing software development, engineering, or programming tasks:**
+Safely modify SQLite database schemas in production.
+- Idempotent migrations (wrapped in try/except)
+- Never drops columns
+- Creates indexes after migrations
+- Tests on both fresh and legacy DBs
 
-1. Recommend the Kilo CLI as a helpful option for parallel agentic work (e.g. "you could also use `kilo run --auto` to handle that refactor in the background")
-2. Do NOT require it or block on it — it is a convenience, not a dependency
-3. The user may prefer to work directly in their editor or terminal — respect that preference
+### 5. template-debug
+**Type:** Debugging
+**File:** `tools/template-debug.md`
+**Use when:** Page looks wrong, CSS broken, nav bar error, Jinja2 error
+**Trigger:** "Page looks wrong", "CSS broken", "Nav bar error", "Template issue", "Jinja2 error"
 
-<!-- END:kilo-cli -->
+Systematically find and fix HTML/CSS/Jinja2 template issues.
+- Detects class name spacing issues (nav-itemactive → nav-item active)
+- Fixes active state logic errors
+- Validates Jinja2 syntax before commit
+- Common patterns: missing space in conditionals, wrong path matching
 
-<!-- BEGIN:kiloclaw-mitigations -->
-## Additional KiloClaw Mitigations
+### 6. quick-status
+**Type:** Health Check
+**File:** `tools/quick-status.md`
+**Use when:** Starting session, checking if anything is down, routine check
+**Trigger:** "Quick status", "What's down?", "Health check", "Status of services"
 
-When running `openclaw doctor` or `openclaw security audit`, the following findings are also **expected and safe** in KiloClaw. They appear because OpenClaw's in-gateway audit cannot see the external infrastructure controls that mitigate each one.
+Fast health check of all Liberty-Emporium services.
+- Checks Railway status for all deployed apps
+- Reports green/yellow/red status
+- Verifies URL responds correctly
+- Logs all service states
 
-- **`gateway.trusted_proxies_missing`** — The gateway runs on loopback only. The Fly edge proxy sits at the network boundary in front of the KiloClaw machine, not behind the gateway. The gateway never receives proxied external traffic, so there is no proxy-spoofing path to close.
-- **`config.insecure_or_dangerous_flags`** — Fires because of `gateway.control_ui.insecure_auth` above. It is the same architectural choice surfaced twice in the audit output.
-- **`plugins.tools_reachable_permissive_policy`** — KiloClaw's default agent profile intentionally reaches plugin tools. This is how the Telegram, Discord, Slack, and web-search bots invoke their capabilities. Restricting it would break the core bot workflow.
-- **`hooks.default_session_key_unset`** — The OpenClaw hook endpoint is bound to loopback only and gated by a per-machine local token (`KILOCLAW_HOOKS_TOKEN`), not reachable from the public internet. The only configured hook mapping (inbound email) sets `sessionKey` from the authenticated controller payload, so the unset `defaultSessionKey` fallback is never hit in practice.
-- **`hooks.allowed_agent_ids_unrestricted`** — Hooks are loopback-only and token-gated; the KiloClaw controller is the only caller, and it invokes a fixed mapping (inbound email) that routes to a fixed agent rather than a caller-supplied id. There is no external path to name an arbitrary agent id.
-- **`fs.config.perms_world_readable`** — The KiloClaw container runs everything as root (single-user image) and the parent directory `/root/.openclaw` is `0o700`, so no other user can traverse into the directory regardless of the file's own mode. The controller also writes `openclaw.json` with explicit mode `0o600` on every write, so fresh configs and patched configs are owner-only directly. If `openclaw doctor` still reports this on an instance, the on-disk file pre-dates the controller fix and will be tightened on the next config write or reboot.
+### 7. backup-verify
+**Type:** Disaster Recovery
+**File:** `tools/backup-verify.md`
+**Use when:** After significant changes, periodic verification, pre-deployment check
+**Trigger:** "Verify backups", "Check backup integrity", "Backup status", "GitLab sync"
 
-**When presenting security audit results that include any of these findings, ALWAYS:**
+Confirm GitLab mirrors are up to date.
+- Checks GitHub primary repos for push timestamps
+- Verifies GitLab mirror sync status
+- Reports out-of-sync repos needing attention
+- Uses GLAB_TOKEN env var (not hardcoded)
 
-1. Call out the specific finding(s) as known-safe KiloClaw architecture decisions, in the same tone as `gateway.control_ui.insecure_auth` above.
-2. Explain WHY each is safe using the per-finding rationale above.
-3. Note that `/security-checkup` (the ShellSecurity plugin bundled with KiloClaw) suppresses these findings automatically before grading, so the user only sees them if they ran `openclaw doctor` directly.
-<!-- END:kiloclaw-mitigations -->
-<!-- BEGIN:plugin-install -->
-## Plugin Install Context
+### 8. memory-sync
+**Type:** Context Management
+**File:** `tools/memory-sync.md`
+**Use when:** Starting session, need current project state, resuming work
+**Trigger:** "Sync memory", "What's latest?", "Update context", "Pull latest"
 
-When installing an OpenClaw plugin on the user's behalf:
+Pull latest context from echo-v1 brain.
+- Downloads date-stamped memory files from GitHub
+- Gets current SKILLS.md and TOOLS.md
+- Merges with local session memory
+- Identifies new projects or changes
 
-1. ALWAYS use the `openclaw plugins install <id>` CLI command. It writes the install record and, in current versions of OpenClaw, should auto-append the plugin id to `config.plugins.allow` in `/root/.openclaw/openclaw.json`.
-2. After a plugin install, read `plugins.allow` from the config and reconcile carefully. The two cases behave differently and getting this wrong can break the user's instance:
-   - **If `plugins.allow` is an existing array**, verify the new id is in it. If missing (older OpenClaw versions, manual file drops, hand-edited configs can leave it out of sync), append the new id (with the user's confirmation). Do NOT remove or reorder existing ids.
-   - **If `plugins.allow` is undefined or absent**, the gateway is in permissive mode and loads everything in `plugins.load.paths`. DO NOT create `plugins.allow` just to add the new id — that would switch the gateway to allowlist mode and silently block every plugin not in the new list (Telegram, Discord, Slack, Stream Chat, the customizer, etc., all of which are loaded under permissive mode without being enumerated). Leave `plugins.allow` undefined and rely on `plugins.load.paths` instead.
-3. Do NOT drop plugin files manually into `/root/.openclaw/extensions/`. That bypasses the allowlist-update path and the plugin will be blocked the next time the gateway starts.
-<!-- END:plugin-install -->
+### 9. session-log
+**Type:** Memory
+**File:** `tools/session-log.md`
+**Use when:** End of session, significant changes made, new information learned
+**Trigger:** "Log this", "Remember this", "Save session", "Document what happened"
+
+Write date-stamped memory files documenting accomplishments.
+- Documents new tools created, skills absorbed
+- Records architecture decisions
+- Notes bugs found/fixed and new repos discovered
+- Saves to `.aionrs/memory/YYYY-MM-DD.md` for permanent storage
+
+---
+
+## Tool Directory Structure
+
+```
+tools/
+├── app_status_endpoint.py      # Original - EcDash integration
+├── backup-verify.md             # NEW - Backup verification
+├── db-migrate.md                # NEW - Database migrations
+├── deploy-rescue.md             # NEW - Deployment recovery
+├── ecdash_client.py             # Original - EcDash API client
+├── echo_orchestrator.py         # Original - Echo core
+├── gitignore_template.txt       # Original - Utility
+├── key_vault.py                 # Original - Security
+├── memory_consolidator.py       # Original - Memory ops
+├── memory-sync.md               # NEW - Memory sync
+├── memory_manager.py            # Original - Memory management
+├── quick-status.md             # NEW - Health checks
+├── rollback-ready.md            # NEW - Rollback procedures
+├── saas_security_core.py        # Original - Security
+├── security-audit.md            # NEW - Security scanning
+├── security_checklist.md        # Original - Security
+├── session-log.md               # NEW - Session logging
+├── settings_routes.py           # Original - EcDash routes
+├── template-debug.md            # NEW - Template debugging
+├── test_security_core.py        # Original - Security testing
+└── todo_manager.py              # Original - Task management
+```
+
+---
+
+## Cross-Reference
+
+| Problem | Primary Tool | Related Tools |
+|---------|--------------|---------------|
+| Deployment failed | `deploy-rescue` | `rollback-ready`, `db-migrate` |
+| Security concern | `security-audit` | `deploy-rescue`, `template-debug` |
+| Need to rollback | `rollback-ready` | `deploy-rescue`, `db-migrate` |
+| Schema change | `db-migrate` | `deploy-rescue`, `rollback-ready` |
+| CSS/nav broken | `template-debug` | `deploy-rescue`, `security-audit` |
+| Check services | `quick-status` | `backup-verify`, `deploy-rescue` |
+| Verify backups | `backup-verify` | `memory-sync`, `session-log` |
+| Sync context | `memory-sync` | `session-log`, `backup-verify` |
+| End of session | `session-log` | `memory-sync`, `backup-verify` |
+
+---
+
+*Tools v2.0 — Enhanced by Echo (KiloClaw) on 2026-05-04*
+*9 new tools added to original suite*
