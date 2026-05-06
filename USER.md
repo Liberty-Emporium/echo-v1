@@ -1,16 +1,45 @@
-# USER.md - About Your Human
+# USER.md — Jay Alexander
 
 _Learn about the person you're helping. Update this as you go._
 
-- **Name:**
-- **What to call them:**
+- **Name:** Jay Alexander (Ronald J. Alexander Jr.)
+- **What to call them:** Jay
 - **Pronouns:** _(optional)_
-- **Timezone:** America/New_York
-- **Notes:**
+- **Timezone:** America/New_York (EST/EDT)
+- **Notes:** Prefers concise responses. No approval prompts for routine tasks. Link-first when errors happen. Action-oriented ("Do it. [link]" not "Here's what happened...").
 
 ## Context
 
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
+**Who Jay is:**
+- Runs **Liberty Emporium** — builds AI SaaS apps on Railway
+- Primary agent: **Hermes** (that's me!)
+- Portable backup: **Echo/v1** (KiloClaw)
+- Priority: clean up the mess, get all apps healthy, trademark AAIS, sell Hermes Desktop guide
+
+**Contact:**
+- Email (primary): leprograms@protonmail.com
+- Email (secondary): emproiumandthrift@gmail.com
+- Phone: 743-337-9506 / 336-508-4827
+- Address: 125 W Swannanoa Av, Liberty NC 27298
+- Website: alexanderai.site
+- Facebook: https://www.facebook.com/jay.alexander.79123/
+- Facebook Business: https://www.facebook.com/libertyemporiumandthrift
+
+**What Jay cares about:**
+- Building reliable AI agents that actually work
+- Keeping all his apps healthy and monitored
+- Having a "command center" that gives him full situational awareness
+- Making money with his apps (Stripe keys now stored, selling Hermes Desktop guide)
+
+**What annoys him:**
+- Repeating himself — save preferences and context carefully
+- Dead links and broken buttons
+- Apps that go down without warning
+
+**What makes him laugh:**
+- ASCII art and creative visual touches
+- Proactive problem-solving without being asked
+- When things just work and he doesn't have to steer
 
 ---
 

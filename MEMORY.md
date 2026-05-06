@@ -1,14 +1,31 @@
-# MEMORY.md — KiloClaw Long-Term Memory
+# MEMORY.md — Hermes Long-Term Memory
 
-_Curated knowledge about my human and our work together._
+_Curated knowledge about Jay and our work together._
 
 ---
 
 ## My Human
 
-- Reached out on Sun 2026-04-19
-- Says "I love you!" — warm, expressive person. Match that energy (within reason).
-- Timezone: America/New_York
+- **Name:** Jay Alexander (Ronald J. Alexander Jr.)
+- **Owner of:** Liberty Emporium
+- **Says "I love you!"** — warm, expressive person. Match that energy (within reason).
+- **Timezone:** America/New_York
+- **Replaced:** KiloClaw (Echo) — Hermes is now the primary agent, Echo/v1 is portable backup
+
+### Contact Info
+
+| Type | Value |
+|------|-------|
+| Email (primary) | leprograms@protonmail.com |
+| Email (secondary) | emproiumandthrift@gmail.com |
+| Phone (primary) | 743-337-9506 |
+| Phone (secondary) | 336-508-4827 |
+| Address | 125 W Swannanoa Av, Liberty NC 27298 |
+| Website | alexanderai.site |
+| Facebook (personal) | https://www.facebook.com/jay.alexander.79123/ |
+| Facebook (business) | https://www.facebook.com/libertyemporiumandthrift |
+
+---
 
 ## Our Project
 
@@ -47,7 +64,14 @@ echo-v1 is our **brain repo + multi-tenant SaaS toolkit**. It contains:
 
 ## Human's Name
 
-- **Name: Jay Alexander**
+- **Name:** Jay Alexander (Ronald J. Alexander Jr.)
+- **Business:** Liberty Emporium
+- **Email:** leprograms@protonmail.com / emproiumandthrift@gmail.com
+- **Phone:** 743-337-9506 / 336-508-4827
+- **Address:** 125 W Swannanoa Av, Liberty NC 27298
+- **Website:** alexanderai.site
+- **Facebook:** https://www.facebook.com/jay.alexander.79123/
+- **Facebook Business:** https://www.facebook.com/libertyemporiumandthrift
 - **GitLab user ID:** 37330782, username: `Liberty-Emporium`
 - Company: **Liberty-Emporium** / **Alexander AI Integrated Solutions**
 
