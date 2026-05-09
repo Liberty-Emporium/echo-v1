@@ -41,12 +41,12 @@ _Curated knowledge about Jay and our work together._
 - **GitHub PAT:** stored at `/root/.secrets/github_token`
   - Repo: Liberty-Emporium/echo-v1
   - Note: Jay said "will be replaced after use" — treat as temporary, ask for new one when needed
-  - Last refreshed: 2026-05-02
+  - Last refreshed: 2026-05-09
 - **GitLab PAT:** stored at `/root/.secrets/gitlab_token`
   - Purpose: Backup only — use if GitHub is unreachable. Push regularly.
   - GitLab username: `Liberty-Emporium`, user ID: 37330782
-  - Last refreshed: 2026-05-02
-- **Railway API Token:** stored at `/root/.secrets/railway_token` — refreshed 2026-05-02
+  - Last refreshed: 2026-05-09
+- **Railway API Token: stored at `/root/.secrets/railway_token` — refreshed 2026-05-09
 
 ## Backup Strategy
 
