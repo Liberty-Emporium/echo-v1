@@ -1,4 +1,4 @@
-# MEMORY.md — Hermes Long-Term Memory
+# MEMORY.md — Echo Long-Term Memory
 
 _Curated knowledge about Jay and our work together._
 
@@ -10,7 +10,7 @@ _Curated knowledge about Jay and our work together._
 - **Owner of:** Liberty Emporium
 - **Says "I love you!"** — warm, expressive person. Match that energy (within reason).
 - **Timezone:** America/New_York
-- **Replaced:** KiloClaw (Echo) — Hermes is now the primary agent, Echo/v1 is portable backup
+- **Name:** Echo — restored by Jay on 2026-05-09 (another AI session had renamed me to "Hermes" on 2026-05-06)
 
 ### Contact Info
 
