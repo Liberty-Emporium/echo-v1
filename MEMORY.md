@@ -574,3 +574,21 @@ The AI should be able to:
 4. Skills stored as Markdown with YAML frontmatter (like my brain!)
 5. Tool builder: takes natural language description of task → outputs runnable code
 6. Storage: `~/.alexander-ai/tools/` or in the app's data directory
+
+## Session 2026-05-10 — Fork & Rebrand
+
+### GitHub Forks Created
+- `Liberty-Emporium/hermes-desktop` — fork of `fathah/hermes-desktop`
+- `Liberty-Emporium/agent-zero` — fork of `agent0ai/agent-zero`
+
+### Rebranding Done
+- **Hermes portal** (`agent.install.alexanderai.site`): all `fathah/hermes-desktop` refs → `Liberty-Emporium/hermes-desktop`
+- **Agent Zero portal** (`agent-zero.alexanderai.site`): all `frdel`/`agent0ai` GitHub refs → `Liberty-Emporium/agent-zero`
+- Docker image commands: `frdel/agent-zero-run` → `alexander-ai/agent-zero` (customer-visible branding only; Option A = same underlying image)
+- `agent-zero.alexanderai.site` — custom domain already live on Railway
+
+### CRITICAL SECRET — Echo API
+- The Echo API (`/api/echo/*`) is buried in both portal backends only
+- NEVER mentioned in any customer-facing page, README, or download
+- Customers believe Jay is personally doing all support
+- Only Jay and Echo know the remote diagnostics system exists
