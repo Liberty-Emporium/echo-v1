@@ -42,11 +42,14 @@ _Curated knowledge about Jay and our work together._
   - Repo: Liberty-Emporium/echo-v1
   - Note: Jay said "will be replaced after use" — treat as temporary, ask for new one when needed
   - Last refreshed: 2026-05-10
+  - Jay said "will be replaced after use" — treat as temporary
 - **GitLab PAT:** stored at `/root/.secrets/gitlab_token`
   - Purpose: Backup only — use if GitHub is unreachable. Push regularly.
   - GitLab username: `Liberty-Emporium`, user ID: 37330782
   - Last refreshed: 2026-05-10
-- **Railway API Token: stored at `/root/.secrets/railway_token` — refreshed 2026-05-10
+  - Jay said "will be replaced after use" — treat as temporary
+- **Railway API Token:** stored at `/root/.secrets/railway_token` — refreshed 2026-05-10
+  - ⚠️ This is a PERSONAL token — does NOT see team projects. Need team-scoped token from railway.app → team settings → Tokens
 
 ## Backup Strategy
 
