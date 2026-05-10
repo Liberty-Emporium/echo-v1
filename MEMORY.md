@@ -518,6 +518,45 @@ Jay must add these in the Railway dashboard for each service:
 | Alexander AI / EcDash (AionUi-1) | aionui-1-production.up.railway.app | 69c623b0-3087-41b7-ae7a-a5baaea3b946 |
 | Alexander AI Dashboard | alexanderai.site | 4af3be24-740e-4e76-8ea5-ea39d5878608 |
 
+## Session 2026-05-10 — Echo Support System Built
+
+### Echo Remote Support Architecture
+Built a full 3-piece remote support system tonight:
+
+**1. Agent Zero Portal** — `Liberty-Emporium/agent-zero-install`
+- Live: https://agent-zero-install-production.up.railway.app
+- Has Echo API (`/api/echo/clients`, `/api/echo/client/<id>`, `/api/echo/run`, `/api/echo/message`)
+- Auth: `X-Echo-Key` header with ECHO_API_KEY
+- Admin: password=`AlexanderAI2026!`, bypass code=`d47dda39351a1d64`
+
+**2. Hermes Portal** — `Liberty-Emporium/Customer-Install-Hermes`
+- Live: https://agent.install.alexanderai.site
+- Same Echo API block added (same key)
+- `hermes_client.py` updated to handle `echo_command` and `echo_message` socket events
+
+**3. Echo Support Client** — `Liberty-Emporium/echo-support-client`
+- Universal script — works for both Agent Zero AND Hermes customers
+- Customer runs: `python3 support_client.py --session CODE`
+- Connects back to portal via WebSocket, reports machine info, awaits commands
+
+**4. Dashboard Command Center** (`alexanderai.site/dashboard` → 🧑‍💻 Support Clients)
+- Full customer CRM panel added to alexander-ai-dashboard
+- Shows all support clients (Agent Zero + Hermes) with name, phone, address, package
+- `/api/echo-proxy/*` → Agent Zero portal
+- `/api/echo-proxy/hermes/*` → Hermes portal
+- `/api/echo-proxy/all-clients` → combined view from both portals
+- First customer: **Greg Dose** (to be added via dashboard UI)
+
+**Echo API Key:** `98e879f12c4ada6ed7fa2337cf270793638c1cb9b4b61424e007119bd78b8276`
+(stored at `/root/.secrets/echo_api_key` — DO NOT commit)
+
+### How I Use It
+- Jay says "customer X is connected, session CODE"
+- I call `GET /api/echo-proxy/clients` (Agent Zero) or `/api/echo-proxy/hermes/clients` (Hermes)
+- I see their machine info
+- I call `POST /api/echo-proxy/run` with `{session_id, cmd}` to run diagnostics
+- I fix it, report back to Jay
+
 ### What's Left to Build
 - [ ] `railway up` on EcDash — deploy pet widget + landing page + removals
 - [ ] Landing page is live at /landing (not linked from nav yet)
