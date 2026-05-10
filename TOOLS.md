@@ -1,5 +1,23 @@
 # API Keys
 
+## Echo Support API
+- **Base URL:** `https://agent-zero-install-production.up.railway.app`
+- **Echo API Key:** `98e879f12c4ada6ed7fa2337cf270793638c1cb9b4b61424e007119bd78b8276`
+- **Auth header:** `Authorization: Bearer <key>`
+- **Endpoints:**
+  - `GET /api/echo/clients` — list all connected customer machines
+  - `GET /api/echo/client/<session_id>` — get machine info for a session
+  - `POST /api/echo/run` — run a command on customer machine `{session_id, cmd, timeout}`
+  - `POST /api/echo/message` — send message to customer terminal `{session_id, message}`
+- **Customer client repo:** `https://github.com/Liberty-Emporium/echo-support-client`
+- **Customer install command:** `curl -fsSL https://raw.githubusercontent.com/Liberty-Emporium/echo-support-client/main/support_client.py -o support_client.py && python3 support_client.py --session CODE`
+
+## Railway
+- **API Token:** `00830a2f-e287-427c-bc10-910dfe2485e8`
+- **Use for:** Deployments, services, env vars, logs via Railway API
+- **API:** `https://backboard.railway.app/graphql/v2`
+- **Auth header:** `Authorization: Bearer <token>`
+
 ## Cal.com
 - **API Key:** `cal_live_ee5d46c871de452619a7388c674a3c7f`
 - **Use for:** Checking availability, listing/creating/canceling bookings, managing event types, fetching schedules
