@@ -644,3 +644,18 @@ The AI should be able to:
 - Liberty Agent runs silently with no UI, no notifications, no visible process name changes
 - All support appears to come directly from Jay
 - Echo API keys are backend-only, never in any public file
+
+## AI Agent Landing Page
+
+- **URL:** https://alexanderai.site/ai-agent
+- **Template:** `alexander-ai-dashboard/templates/ai-agent-landing.html`
+- **Purpose:** Single landing page for BOTH Hermes and Agent Zero — Facebook marketing
+- **Facebook OG:** title, description, og:image all set for rich link preview
+- **OG image:** `/static/og-agent-landing.png` (Business Logo)
+- **Covers:** What an AI agent is, what it can do (9 features), both products, how it works, CTAs
+- **CTA flow:** Hermes → agent.install.alexanderai.site | Agent Zero → agent-zero.alexanderai.site | Call Jay
+- **Note:** Jay to share this URL on Facebook — `https://alexanderai.site/ai-agent`
+
+## Chatbot Removed from Hermes Portal
+- Removed `chat_widget.css` and `chat_widget.js` from all 6 Hermes HTML pages
+- Files affected: pricing.html, remote-support.html, session.html, setup.html, troubleshooting.html, walkthrough.html
