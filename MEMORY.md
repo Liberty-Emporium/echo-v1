@@ -41,12 +41,12 @@ _Curated knowledge about Jay and our work together._
 - **GitHub PAT:** stored at `/root/.secrets/github_token`
   - Repo: Liberty-Emporium/echo-v1
   - Note: Jay said "will be replaced after use" — treat as temporary, ask for new one when needed
-  - Last refreshed: 2026-05-10
+  - Last refreshed: 2026-05-10 (session 3, ~20:31 EDT)
   - Jay said "will be replaced after use" — treat as temporary
 - **GitLab PAT:** stored at `/root/.secrets/gitlab_token`
   - Purpose: Backup only — use if GitHub is unreachable. Push regularly.
   - GitLab username: `Liberty-Emporium`, user ID: 37330782
-  - Last refreshed: 2026-05-10
+  - Last refreshed: 2026-05-10 (session 3, ~20:31 EDT)
   - Jay said "will be replaced after use" — treat as temporary
 - **Railway API Token:** stored at `/root/.secrets/railway_token` — refreshed 2026-05-10
   - ⚠️ This is a PERSONAL token — does NOT see team projects. Need team-scoped token from railway.app → team settings → Tokens
@@ -223,7 +223,7 @@ This is a priority goal — reference when planning new features or app architec
 
 ## Rules from Jay
 
-- **NO SUBAGENTS** — Jay does not want me spawning subagents. Do all work directly myself.
+- **SUBAGENTS — IMAGE ANALYSIS ONLY** — Jay updated this rule on 2026-05-10. Subagents are ONLY permitted for image analysis tasks. For all other work, do it directly myself.
 
 ## Notes
 
