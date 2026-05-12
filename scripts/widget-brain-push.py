@@ -18,15 +18,18 @@ import os, sys, json, urllib.request, urllib.error
 WIDGET_URL     = "https://ai-agent-widget-production.up.railway.app"
 AGENT_ID_FILE  = "/root/.secrets/widget_agent_id"
 API_KEY_FILE   = "/root/.secrets/willie_api_key"
+SYNC_TOKEN_FILE = "/root/.secrets/brain_sync_token"
 BRAIN_DIR      = "/root/.openclaw/workspace/echo-v1"
 WORKSPACE_DIR  = "/root/.openclaw/workspace"
 
 
 def load_config():
-    agent_id = open(AGENT_ID_FILE).read().strip() if os.path.exists(AGENT_ID_FILE) else ""
-    api_key  = open(API_KEY_FILE).read().strip()  if os.path.exists(API_KEY_FILE)  else ""
-    agent_id = agent_id or os.environ.get("WIDGET_AGENT_ID", "")
-    api_key  = api_key  or os.environ.get("WILLIE_API_KEY", "")
+    agent_id   = open(AGENT_ID_FILE).read().strip()   if os.path.exists(AGENT_ID_FILE)   else ""
+    # Prefer brain_sync_token for auth (accepted by Widget since Phase 2 fix)
+    api_key    = open(SYNC_TOKEN_FILE).read().strip()  if os.path.exists(SYNC_TOKEN_FILE)  else ""
+    api_key    = api_key or (open(API_KEY_FILE).read().strip() if os.path.exists(API_KEY_FILE) else "")
+    agent_id   = agent_id or os.environ.get("WIDGET_AGENT_ID", "")
+    api_key    = api_key  or os.environ.get("BRAIN_SYNC_TOKEN", "") or os.environ.get("WILLIE_API_KEY", "")
     return agent_id, api_key
 
 
