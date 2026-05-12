@@ -78,7 +78,7 @@ An intelligent AI assistant trained on your menu, pricing, and offerings. Cakely
 - Menu and pricing updates as your business evolves
 
 ### Flexible Payment Option:
-- **$500 down** at signing
+- **$1,000 down** at signing
 - **$200/month** — covers remaining balance + ongoing service
 - No interest, no hidden fees
 
