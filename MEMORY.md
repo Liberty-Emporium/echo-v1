@@ -229,7 +229,17 @@ Full vision documented in: `memory/vision-tailscale-network.md`
 - **Support Dashboard** updated — shows 🔒 Tailscale IP per machine, live badge updates
 - **Tailscale auth key:** stored at `/root/.secrets/tailscale_key` — used to connect KiloClaw to Jay's Tailnet
 - **KiloClaw Tailscale hostname:** `kiloclaw-echo` | **IP:** `100.89.104.22`
+- **Tailscale API key:** stored at `/root/.secrets/tailscale_api_key`
 - **Connected 2026-05-12** — Liberty-Emporium@ network
+
+### Named Machines
+| IP | Name | Notes |
+|----|------|-------|
+| 100.89.104.22 | kiloclaw-echo | Me (KiloClaw) |
+| 100.120.23.109 | hermes-server | Hermes Docker container |
+| 100.123.226.4 | jay-upstairs | Jay's main machine |
+| 100.100.48.77 | unknown-1 | Offline — identity TBD |
+| 100.64.184.111 | unknown-2 | Offline — identity TBD |
 - **Next:** Set ACL rules in Tailscale admin, create dedicated customer pre-auth key, test real install
 - **Tailscale free plan:** 100 devices = $0. Upgrade to Starter when needed.
 
