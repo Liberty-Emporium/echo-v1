@@ -1,5 +1,5 @@
 # MEMORY.md — KiloClaw Long-Term Memory
-_Last updated: 2026-05-12_
+_Last updated: 2026-05-12 (session restart)_
 
 ---
 
@@ -35,6 +35,7 @@ I am also known as **Echo** in the echo-v1 brain repo context.
 ## Subagent Rule ⚠️
 **Subagents are ONLY permitted for image analysis tasks.**
 Do all other work directly. Never spawn subagents for coding, GitHub, deployment, or general tasks.
+_Confirmed by Jay 2026-05-12._
 
 ---
 
@@ -94,7 +95,7 @@ After purchase, a silent background agent (Liberty Agent) keeps their machine co
 - **Cal.com booking:**
   - Discovery Call (15 min): https://cal.com/leprograms/discovery-call
   - AI Strategy Session (30 min): https://cal.com/leprograms/ai-strategy-session
-- **Cal.com API key:** `REDACTED-CAL-KEY`
+- **Cal.com API key:** stored at `/root/.secrets/cal_token` (live key, rotated 2026-05-12)
 - **Cal.com username:** `leprograms`
 
 ### Liberty Agent (liberty_agent.py)
@@ -147,7 +148,7 @@ After purchase, a silent background agent (Liberty Agent) keeps their machine co
 ## Railway
 
 - **Token:** stored at `/root/.secrets/railway_token`
-- **Project ID (Support Dashboard):** `00830a2f-e287-427c-bc10-910dfe2485e8`
+- **Project ID (Support Dashboard):** `00830a2f-e287-427c-bc10-910dfe2485e8` ✅ confirmed 2026-05-12
 - **Workspace:** liberty-emporium's Projects (ID: 57932cce-5b27-4acf-b82d-c92c0ca45d6e)
 - **EcDash service ID:** `5ec64ac9-06b1-44a6-8604-047a9804bff8`
 
@@ -156,13 +157,13 @@ After purchase, a silent background agent (Liberty Agent) keeps their machine co
 ## GitHub
 
 - **Org:** https://github.com/Liberty-Emporium
-- **Token:** stored at `/root/.secrets/github_token` (temporary — rotate when Jay provides new one)
+- **Token:** stored at `/root/.secrets/github_token` (rotated 2026-05-12 — Jay will replace after use)
 - **gh CLI:** authenticated as Liberty-Emporium
 
 ## GitLab (Backup Only)
 
 - **Org:** https://gitlab.com/Liberty-Emporium
-- **Token:** stored at `/root/.secrets/gitlab_token`
+- **Token:** stored at `/root/.secrets/gitlab_token` (rotated 2026-05-12 — Jay will replace after use)
 - **Purpose:** Mirror of all GitHub repos — use if GitHub unreachable
 - **Sync script:** `echo-v1/scripts/sync-all-to-gitlab.sh`
 
@@ -226,6 +227,7 @@ Full vision documented in: `memory/vision-tailscale-network.md`
 
 - **Liberty Agent v1.1.0** shipped — silently installs + connects Tailscale on every customer machine
 - **Support Dashboard** updated — shows 🔒 Tailscale IP per machine, live badge updates
+- **Tailscale auth key (KiloClaw access):** `tskey-auth-kwJBbBAg4P11CNTRL-sGbec1YDUdhpavFYxfqNehVJ1UypVREWX` — stored for connecting KiloClaw to Jay's Tailnet
 - **Next:** Set ACL rules in Tailscale admin, create dedicated customer pre-auth key, test real install
 - **Tailscale free plan:** 100 devices = $0. Upgrade to Starter when needed.
 
