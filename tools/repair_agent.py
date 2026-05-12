@@ -32,6 +32,8 @@ SSH_OPTS = [
     "-o", "UserKnownHostsFile=/dev/null",
     "-o", "ConnectTimeout=10",
     "-o", "BatchMode=yes",          # never prompt for password
+    # Route through Tailscale SOCKS5 proxy (required for userspace-networking mode)
+    "-o", "ProxyCommand=nc -X 5 -x localhost:1055 %h %p",
 ]
 
 
