@@ -21,17 +21,22 @@ API = "https://backboard.railway.app/graphql/v2"
 
 
 def gql(query: str, variables: dict = None) -> dict:
+    """Use curl subprocess — urllib has intermittent 403s against Railway API."""
     if not TOKEN:
         raise RuntimeError("No railway_token at ~/.secrets/railway_token")
-    body = json.dumps({"query": query, "variables": variables or {}}).encode()
-    req = urllib.request.Request(
-        API, data=body,
-        headers={"Authorization": f"Bearer {TOKEN}", "Content-Type": "application/json"}
+    import subprocess
+    payload = json.dumps({"query": query, "variables": variables or {}})
+    result = subprocess.run(
+        ["curl", "-s", "-X", "POST", API,
+         "-H", f"Authorization: Bearer {TOKEN}",
+         "-H", "Content-Type: application/json",
+         "-d", payload],
+        capture_output=True, text=True, timeout=20
     )
-    result = json.loads(urllib.request.urlopen(req, timeout=20).read())
-    if "errors" in result:
-        raise RuntimeError(f"Railway API error: {result['errors']}")
-    return result["data"]
+    data = json.loads(result.stdout)
+    if "errors" in data:
+        raise RuntimeError(f"Railway API error: {data['errors']}")
+    return data["data"]
 
 
 def get_services():
