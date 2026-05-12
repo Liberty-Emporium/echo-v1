@@ -2,7 +2,7 @@
 # bootstrap.sh — Echo's post-reboot setup script
 # Run this on a fresh KiloClaw instance to restore full capability
 # Usage: bash /root/.openclaw/workspace/echo-v1/scripts/bootstrap.sh
-# Last updated: 2026-05-01
+# Last updated: 2026-05-12
 
 set -e
 echo "🚀 Echo Bootstrap starting..."
@@ -129,6 +129,38 @@ if [ -f /root/.openclaw/workspace/echo-v1/scripts/sync-brain-to-dashboard.py ]; 
   python3 /root/.openclaw/workspace/echo-v1/scripts/sync-brain-to-dashboard.py 2>&1 | sed 's/^/  /'
 else
   echo "  ⚠️  sync-brain-to-dashboard.py not found — skipping"
+fi
+
+# ── 7. Tailscale ─────────────────────────────────────────────────────────────
+echo ""
+echo "🔗 Starting Tailscale..."
+if [ -f /usr/local/bin/tailscaled-start.sh ]; then
+  bash /usr/local/bin/tailscaled-start.sh 2>&1 | sed 's/^/  /'
+else
+  echo "  ⚠️  tailscaled-start.sh missing — creating it now..."
+  cat > /usr/local/bin/tailscaled-start.sh << 'TSEOF'
+#!/bin/bash
+STATEDIR="/root/.tailscale-state"
+AUTHKEY_FILE="/root/.secrets/tailscale_authkey"
+LOGFILE="/tmp/tailscaled.log"
+if ! command -v tailscaled &>/dev/null; then
+  curl -fsSL https://tailscale.com/install.sh | sh >> "$LOGFILE" 2>&1
+fi
+if ! pgrep -x tailscaled > /dev/null; then
+  mkdir -p "$STATEDIR"
+  /usr/sbin/tailscaled --tun=userspace-networking --socks5-server=localhost:1055 --statedir="$STATEDIR" >> "$LOGFILE" 2>&1 &
+  sleep 4
+fi
+STATUS=$(tailscale status 2>&1)
+if echo "$STATUS" | grep -q "Logged out"; then
+  if [ -f "$AUTHKEY_FILE" ]; then
+    tailscale up --authkey="$(cat $AUTHKEY_FILE)" --accept-routes >> "$LOGFILE" 2>&1
+  fi
+fi
+tailscale status 2>&1
+TSEOF
+  chmod +x /usr/local/bin/tailscaled-start.sh
+  bash /usr/local/bin/tailscaled-start.sh 2>&1 | sed 's/^/  /'
 fi
 
 echo ""
