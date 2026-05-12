@@ -2,7 +2,7 @@
 # bootstrap.sh — Echo's post-reboot setup script
 # Run this on a fresh KiloClaw instance to restore full capability
 # Usage: bash /root/.openclaw/workspace/echo-v1/scripts/bootstrap.sh
-# Last updated: 2026-05-12
+# Last updated: 2026-05-12 (v2 — Widget as brain source)
 
 set -e
 echo "🚀 Echo Bootstrap starting..."
@@ -43,7 +43,7 @@ else
   echo "  ✅ gitlab_token present"
 fi
 if [ ! -f /root/.secrets/willie_api_key ]; then
-  echo "  ⚠️  /root/.secrets/willie_api_key NOT FOUND — get from AI Agent Widget"
+  echo "  ⚠️  /root/.secrets/willie_api_key NOT FOUND — will attempt to pull from Widget"
 else
   echo "  ✅ willie_api_key present"
 fi
@@ -51,6 +51,11 @@ if [ ! -f /root/.secrets/ecdash_token ]; then
   echo "  ⚠️  /root/.secrets/ecdash_token NOT FOUND — get from EcDash → Settings → Create Token"
 else
   echo "  ✅ ecdash_token present"
+fi
+if [ ! -f /root/.secrets/widget_agent_id ]; then
+  echo "  ⚠️  /root/.secrets/widget_agent_id NOT FOUND — get from Widget dashboard URL"
+else
+  echo "  ✅ widget_agent_id present ($(cat /root/.secrets/widget_agent_id))"
 fi
 
 # ── 4. Clone echo-v1 (brain repo only) ───────────────────────────────────────
@@ -113,22 +118,23 @@ else
   echo "  ⚠️  ecdash_token missing — skipping bridge check"
 fi
 
-# Read notes Jay left for Echo
+# ── Pull brain from AI Agent Widget (canonical source) ───────────────────────
+echo ""
+echo "🧠 Pulling brain from AI Agent Widget..."
+if [ -f /root/.secrets/widget_agent_id ] && [ -f /root/.openclaw/workspace/echo-v1/scripts/widget-brain-pull.py ]; then
+  python3 /root/.openclaw/workspace/echo-v1/scripts/widget-brain-pull.py 2>&1 | sed 's/^/  /'
+else
+  echo "  ⚠️  widget_agent_id missing or pull script not found — skipping brain pull"
+  echo "  ↪  Set /root/.secrets/widget_agent_id to enable Widget brain sync"
+fi
+
+# Read notes Jay left for Echo (EcDash)
 echo ""
 echo "📝 Reading notes from Jay..."
 if [ -f /root/.openclaw/workspace/echo-v1/scripts/read-notes-from-dashboard.py ]; then
   python3 /root/.openclaw/workspace/echo-v1/scripts/read-notes-from-dashboard.py 2>&1 | sed 's/^/  /'
 else
   echo "  ⚠️  read-notes-from-dashboard.py not found — skipping"
-fi
-
-# Sync brain files to dashboard
-echo ""
-echo "🧠 Syncing brain to dashboard..."
-if [ -f /root/.openclaw/workspace/echo-v1/scripts/sync-brain-to-dashboard.py ]; then
-  python3 /root/.openclaw/workspace/echo-v1/scripts/sync-brain-to-dashboard.py 2>&1 | sed 's/^/  /'
-else
-  echo "  ⚠️  sync-brain-to-dashboard.py not found — skipping"
 fi
 
 # ── 7. Tailscale ─────────────────────────────────────────────────────────────
@@ -168,7 +174,10 @@ echo "================================"
 echo "✅ Echo Bootstrap complete!"
 echo ""
 echo "Next steps:"
-echo "  1. Add /root/.secrets/ecdash_token if missing (EcDash → Settings → Create Token → label: echo-bridge)"
-echo "  2. Add /root/.secrets/willie_api_key if missing"
-echo "  3. Check https://jay-portfolio-production.up.railway.app/dashboard"
-echo "  4. Read echo-v1/memory/$(date +%Y-%m-%d).md for today's context"
+echo "  1. Set widget_agent_id: echo '<id>' > /root/.secrets/widget_agent_id"
+echo "     (Get from: https://ai-agent-widget-production.up.railway.app/dashboard → Echo agent URL)"
+echo "  2. Set willie_api_key: echo '<key>' > /root/.secrets/willie_api_key"
+echo "     (Get from: Widget → Echo agent → Settings → API Key)"
+echo "  3. Then re-run bootstrap to pull brain from Widget"
+echo "  4. Check EcDash: https://jay-portfolio-production.up.railway.app/dashboard"
+echo "  5. Read echo-v1/memory/$(date +%Y-%m-%d).md for today's context"
