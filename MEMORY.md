@@ -227,7 +227,9 @@ Full vision documented in: `memory/vision-tailscale-network.md`
 
 - **Liberty Agent v1.1.0** shipped — silently installs + connects Tailscale on every customer machine
 - **Support Dashboard** updated — shows 🔒 Tailscale IP per machine, live badge updates
-- **Tailscale auth key (KiloClaw access):** `tskey-auth-kwJBbBAg4P11CNTRL-sGbec1YDUdhpavFYxfqNehVJ1UypVREWX` — stored for connecting KiloClaw to Jay's Tailnet
+- **Tailscale auth key:** stored at `/root/.secrets/tailscale_key` — used to connect KiloClaw to Jay's Tailnet
+- **KiloClaw Tailscale hostname:** `kiloclaw-echo` | **IP:** `100.89.104.22`
+- **Connected 2026-05-12** — Liberty-Emporium@ network
 - **Next:** Set ACL rules in Tailscale admin, create dedicated customer pre-auth key, test real install
 - **Tailscale free plan:** 100 devices = $0. Upgrade to Starter when needed.
 
