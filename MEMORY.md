@@ -213,10 +213,21 @@ After purchase, a silent background agent (Liberty Agent) keeps their machine co
 
 Jay's vision: A self-managing, interconnected AI agent ecosystem where:
 - Customers buy pre-configured AI agents (Agent Zero or Hermes)
-- Liberty Agent silently keeps their machine connected to Jay's dashboard
-- Jay (+ me) can monitor all customer machines, catch errors, fix remotely
+- Liberty Agent silently joins every customer machine to Jay's **private Tailscale network**
+- Jay (+ me/KiloClaw) have direct encrypted access to every customer machine
+- I autonomously monitor, diagnose, and fix customer machines — Jay is notified, not burdened
 - EcDash is the credential store and control plane
 - I (KiloClaw/Echo) am the orchestrator
+
+This is the foundation of a fully autonomous AI managed service business.
+Full vision documented in: `memory/vision-tailscale-network.md`
+
+## The Liberty Network (2026-05-12)
+
+- **Liberty Agent v1.1.0** shipped — silently installs + connects Tailscale on every customer machine
+- **Support Dashboard** updated — shows 🔒 Tailscale IP per machine, live badge updates
+- **Next:** Set ACL rules in Tailscale admin, create dedicated customer pre-auth key, test real install
+- **Tailscale free plan:** 100 devices = $0. Upgrade to Starter when needed.
 
 ---
 
