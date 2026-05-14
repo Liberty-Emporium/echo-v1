@@ -67,7 +67,7 @@ _Confirmed by Jay 2026-05-12._
 ## EcDash — Control Plane
 
 - **URL:** https://jay-portfolio-production.up.railway.app
-- **Dashboard password:** `Mhall001!`
+- **Dashboard password:** `Treetop121570!`
 - **API token:** stored at `/root/.secrets/ecdash_token`
 - **Bridge endpoint:** `GET/POST /api/echo-bridge` — task queue between me and EcDash
 - **Brain viewer:** MEMORY.md / SOUL.md / IDENTITY.md live on dashboard
@@ -229,6 +229,8 @@ Full vision documented in: `memory/vision-tailscale-network.md`
 - **Support Dashboard** updated — shows 🔒 Tailscale IP per machine, live badge updates
 - **Tailscale auth key:** stored at `/root/.secrets/tailscale_key` — used to connect KiloClaw to Jay's Tailnet
 - **KiloClaw Tailscale hostname:** `kiloclaw-echo` | **IP:** `100.89.104.22`
+- **KiloClaw SSH pubkey:** `ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILFYCQ/bWgZpGbT6yjH/ES5BeT/5wkRQSKBUyaWlhsLv kiloclaw@liberty-emporium.ai`
+- **SSH private key:** `/root/.secrets/kiloclaw_ssh_key`
 - **Tailscale API key:** stored at `/root/.secrets/tailscale_api_key`
 - **Connected 2026-05-12** — Liberty-Emporium@ network
 
@@ -236,10 +238,17 @@ Full vision documented in: `memory/vision-tailscale-network.md`
 | IP | Name | Notes |
 |----|------|-------|
 | 100.89.104.22 | kiloclaw-echo | Me (KiloClaw) |
+| 100.110.243.59 | kiloclaw-echo-1 | Second KiloClaw instance |
 | 100.120.23.109 | hermes-server | Hermes Docker container |
-| 100.123.226.4 | jay-upstairs | Jay's main machine |
+| 100.123.226.4 | jay-upstairs | Jay's Ubuntu machine (upstairs) — offline |
+| 100.88.205.44 | kali | Jay's Kali machine (downstairs) — primary workstation |
 | 100.100.48.77 | unknown-1 | Offline — identity TBD |
 | 100.64.184.111 | unknown-2 | Offline — identity TBD |
+| 100.78.218.8 | 3d8d0496... | Unknown — possibly Liberty Agent customer machine |
+| 100.109.44.99 | 6e8205e5... | Unknown — possibly Liberty Agent customer machine |
+| 100.72.36.103 | 78139e6f... | Unknown — possibly Liberty Agent customer machine |
+| 100.83.105.38 | 829732f7... | Unknown — possibly Liberty Agent customer machine |
+| 100.125.155.33 | e28627d7... | Unknown — possibly Liberty Agent customer machine |
 - **Next:** Set ACL rules in Tailscale admin, create dedicated customer pre-auth key, test real install
 - **Tailscale free plan:** 100 devices = $0. Upgrade to Starter when needed.
 
