@@ -42,22 +42,11 @@ if [ ! -f /root/.secrets/gitlab_token ]; then
 else
   echo "  ✅ gitlab_token present"
 fi
-if [ ! -f /root/.secrets/willie_api_key ]; then
-  echo "  ⚠️  /root/.secrets/willie_api_key NOT FOUND — will attempt to pull from Widget"
-else
-  echo "  ✅ willie_api_key present"
-fi
 if [ ! -f /root/.secrets/ecdash_token ]; then
   echo "  ⚠️  /root/.secrets/ecdash_token NOT FOUND — get from EcDash → Settings → Create Token"
 else
   echo "  ✅ ecdash_token present"
 fi
-if [ ! -f /root/.secrets/widget_agent_id ]; then
-  echo "  ⚠️  /root/.secrets/widget_agent_id NOT FOUND — get from Widget dashboard URL"
-else
-  echo "  ✅ widget_agent_id present ($(cat /root/.secrets/widget_agent_id))"
-fi
-
 # ── 4. Clone echo-v1 (brain repo only) ───────────────────────────────────────
 echo ""
 echo "📁 Cloning brain repo..."
@@ -118,16 +107,6 @@ else
   echo "  ⚠️  ecdash_token missing — skipping bridge check"
 fi
 
-# ── Pull brain from AI Agent Widget (canonical source) ───────────────────────
-echo ""
-echo "🧠 Pulling brain from AI Agent Widget..."
-if [ -f /root/.secrets/widget_agent_id ] && [ -f /root/.openclaw/workspace/echo-v1/scripts/widget-brain-pull.py ]; then
-  python3 /root/.openclaw/workspace/echo-v1/scripts/widget-brain-pull.py 2>&1 | sed 's/^/  /'
-else
-  echo "  ⚠️  widget_agent_id missing or pull script not found — skipping brain pull"
-  echo "  ↪  Set /root/.secrets/widget_agent_id to enable Widget brain sync"
-fi
-
 # Read notes Jay left for Echo (EcDash)
 echo ""
 echo "📝 Reading notes from Jay..."
@@ -174,10 +153,6 @@ echo "================================"
 echo "✅ Echo Bootstrap complete!"
 echo ""
 echo "Next steps:"
-echo "  1. Set widget_agent_id: echo '<id>' > /root/.secrets/widget_agent_id"
-echo "     (Get from: https://ai-agent-widget-production.up.railway.app/dashboard → Echo agent URL)"
-echo "  2. Set willie_api_key: echo '<key>' > /root/.secrets/willie_api_key"
-echo "     (Get from: Widget → Echo agent → Settings → API Key)"
-echo "  3. Then re-run bootstrap to pull brain from Widget"
-echo "  4. Check EcDash: https://jay-portfolio-production.up.railway.app/dashboard"
-echo "  5. Read echo-v1/memory/$(date +%Y-%m-%d).md for today's context"
+echo "  1. Add secrets to /root/.secrets/ (github_token, railway_token, ecdash_token, tailscale_key)"
+echo "  2. Check EcDash: https://jay-portfolio-production.up.railway.app/dashboard"
+echo "  3. Read echo-v1/memory/$(date +%Y-%m-%d).md for today's context"
