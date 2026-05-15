@@ -1,0 +1,9 @@
+{
+  "last_checked": 0,
+  "last_status": "unknown",
+  "last_age_minutes": null,
+  "errors_24h": 0,
+  "alerted": false,
+  "alert_sent_at": null,
+  "note": "Initialized 2026-05-15. Updated every heartbeat by Echo."
+}
