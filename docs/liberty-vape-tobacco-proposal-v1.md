@@ -19,23 +19,25 @@ Every minute wasted on slow systems or manual tracking is money left on the tabl
 
 ## The Solution
 
-A **custom-built, AI-powered retail management platform** designed specifically for vape and tobacco shops — already built, already live, ready for your team today.
+A **custom-built, AI-powered companion platform** that runs alongside your existing National Retail Solutions (NRS) POS — no replacement, no disruption. Your NRS handles the register and checkout. Our app handles everything NRS wasn't built to do.
+
+Think of it as the **brain layer** on top of your POS — giving you customer intelligence, employee management, marketing tools, and business insights that NRS simply doesn't offer.
 
 ---
 
 ## What's Included
 
-### 🛒 Point of Sale (POS)
-- Fast, clean checkout built for retail counter use
-- Product catalog with pricing, categories, and stock levels
-- Customer-facing kiosk mode at `/` — browse products and specials
-- Staff login portal — secure, PIN or password based
+### 🤝 NRS Companion — No Disruption
+- Your NRS POS stays exactly as-is — registers, checkout, tobacco scan data, all of it
+- Our app connects alongside it — staff use both, zero conflict
+- No retraining on checkout. Your team keeps doing what they do
+- We fill the gaps NRS leaves behind
 
-### 📦 Inventory Management
-- Track all products across your entire catalog
-- Low stock alerts so you never run out of top sellers
-- Restock tracking and supplier notes
-- Built for high-SKU environments (mods, juice, disposables, tobacco, accessories)
+### 🛒 Customer-Facing Kiosk
+- Wall or counter tablet showing your products, specials, and promotions
+- Customers browse while they wait — no staff needed
+- Drives upsells and keeps people engaged
+- Fully branded to your shop
 
 ### 👥 Employee Management
 - Staff accounts with role-based access
