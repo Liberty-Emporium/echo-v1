@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sweet Spot Custom Cakes — Proposal</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: #1e293b;
+  background: #fff;
+  font-size: 9pt;
+  line-height: 1.5;
+}
+
+@page { size: letter; margin: 0; }
+
+/* ─── PAGE SHELL ─── */
+.page {
+  width: 8.5in;
+  height: 11in;
+  display: flex;
+  flex-direction: column;
+  page-break-after: always;
+  overflow: hidden;
+}
+.page:last-child { page-break-after: avoid; }
+
+/* ─── HEADER BAND (pages 2-5) ─── */
+.hdr {
+  background: linear-gradient(90deg, #0f172a, #1e3a5f);
+  padding: 0.1in 0.5in;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+.hdr-brand { color: #ec4899; font-size: 7.5pt; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; }
+.hdr-title { color: rgba(255,255,255,0.5); font-size: 7pt; }
+
+/* ─── BODY CONTENT ─── */
+.body {
+  flex: 1;
+  padding: 0.3in 0.5in 0.2in;
+  overflow: hidden;
+}
+
+/* ─── FOOTER ─── */
+.ftr {
+  background: #0f172a;
+  padding: 0.07in 0.5in;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+.ftr span { color: rgba(255,255,255,0.45); font-size: 6.5pt; white-space: nowrap; }
+.ftr a { color: #ec4899; text-decoration: none; font-size: 6.5pt; }
+
+/* ─── SECTION TITLE ─── */
+.sec-title {
+  font-size: 14pt;
+  font-weight: 800;
+  color: #0f172a;
+  border-bottom: 2.5px solid #ec4899;
+  padding-bottom: 0.05in;
+  margin-bottom: 0.15in;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* ══════════════════════════════
+   PAGE 1 — COVER
+══════════════════════════════ */
+.cover-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #0f172a 100%);
+  padding: 0.42in 0.5in 0.32in;
+  text-align: center;
+  flex-shrink: 0;
+}
+.cover-brand {
+  color: #ec4899;
+  font-size: 7.5pt;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.12in;
+}
+.cover-title {
+  color: #fff;
+  font-size: 28pt;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+.cover-sub {
+  color: rgba(255,255,255,0.65);
+  font-size: 12pt;
+  font-weight: 400;
+  margin-bottom: 0.2in;
+}
+.cover-meta {
+  display: flex;
+  justify-content: center;
+  gap: 0.35in;
+  flex-wrap: wrap;
+}
+.cover-meta-item { text-align: center; }
+.cover-meta-label { color: rgba(255,255,255,0.45); font-size: 6.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+.cover-meta-val   { color: #fff; font-size: 8.5pt; font-weight: 600; margin-top: 2px; }
+
+/* ACCESS CARD */
+.access-card {
+  margin: 0.2in 0.5in 0;
+  background: linear-gradient(135deg, #0f172a, #1e3a5f);
+  border: 2px solid #ec4899;
+  border-radius: 12px;
+  padding: 0.16in 0.25in;
+  display: flex;
+  align-items: center;
+  gap: 0.2in;
+  flex-shrink: 0;
+}
+.ac-main { flex: 1; }
+.ac-pill {
+  display: inline-block;
+  background: #ec4899;
+  color: #fff;
+  font-size: 6.5pt;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+.ac-link {
+  display: block;
+  color: #fff;
+  font-size: 13pt;
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-color: #ec4899;
+  line-height: 1.2;
+}
+.ac-sep { width: 1px; height: 0.45in; background: rgba(255,255,255,0.15); flex-shrink: 0; }
+.ac-field { text-align: center; min-width: 1.5in; }
+.ac-field-label { color: rgba(255,255,255,0.45); font-size: 6pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; }
+.ac-field-val   { color: #fff; font-size: 9pt; font-weight: 700; }
+
+/* COVER COLUMNS */
+.cover-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.15in;
+  margin: 0.18in 0.5in 0;
+  flex: 1;
+}
+.cover-card {
+  border-radius: 10px;
+  padding: 0.16in;
+}
+.cc-challenge { background: #fff7ed; border: 1.5px solid #fed7aa; }
+.cc-solution  { background: #f0fdf4; border: 1.5px solid #bbf7d0; }
+.cc-heading {
+  font-size: 10pt;
+  font-weight: 800;
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cc-heading.orange { color: #c2410c; }
+.cc-heading.green  { color: #15803d; }
+.cover-card p { font-size: 8.5pt; color: #374151; line-height: 1.6; }
+
+/* PROMISE BANNER */
+.promise-banner {
+  margin: 0.13in 0.5in 0;
+  background: linear-gradient(135deg, #ec4899, #be185d);
+  border-radius: 10px;
+  padding: 0.1in 0.22in;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.promise-banner .pb-icon { font-size: 16pt; flex-shrink: 0; }
+.promise-banner .pb-text { color: #fff; font-size: 9pt; font-weight: 700; line-height: 1.4; }
+.promise-banner .pb-text span { font-size: 8pt; font-weight: 400; opacity: 0.85; }
+
+/* ══════════════════════════════
+   PAGE 2 — FEATURES
+══════════════════════════════ */
+.feat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.09in;
+}
+.feat-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.1in 0.12in;
+}
+.feat-heading {
+  font-size: 8.8pt;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.feat-card p { font-size: 7.8pt; color: #64748b; line-height: 1.45; }
+
+/* ══════════════════════════════
+   PAGE 3 — FULL PLATFORM
+══════════════════════════════ */
+.modules-sub { font-size: 8pt; color: #64748b; margin-bottom: 0.12in; }
+.mod-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.09in;
+}
+.mod-col {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.mod-hdr {
+  background: linear-gradient(90deg, #0f172a, #1e3a5f);
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 8pt;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.mod-col ul { list-style: none; padding: 6px 10px; }
+.mod-col ul li {
+  font-size: 7.4pt;
+  color: #334155;
+  padding: 2px 0;
+  border-bottom: 0.5px solid #f1f5f9;
+  display: flex;
+  gap: 5px;
+}
+.mod-col ul li::before { content: "✓"; color: #10b981; font-weight: 700; flex-shrink: 0; }
+.mod-col ul li:last-child { border-bottom: none; }
+
+/* ══════════════════════════════
+   PAGE 4 — INVESTMENT
+══════════════════════════════ */
+.invest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.1in;
+  margin-bottom: 0.13in;
+}
+.inv-card {
+  border-radius: 10px;
+  padding: 0.14in 0.16in;
+  text-align: center;
+}
+.inv-dark  { background: linear-gradient(135deg, #0f172a, #1e3a5f); }
+.inv-green { background: #f0fdf4; border: 1.5px solid #bbf7d0; }
+.inv-pink  { background: linear-gradient(135deg, #ec4899, #be185d); }
+.inv-label { font-size: 6.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+.inv-dark  .inv-label, .inv-pink .inv-label { color: rgba(255,255,255,0.55); }
+.inv-green .inv-label { color: #065f46; }
+.inv-amount { font-size: 26pt; font-weight: 900; line-height: 1; margin-bottom: 4px; }
+.inv-dark  .inv-amount { color: #ec4899; }
+.inv-green .inv-amount { color: #065f46; }
+.inv-pink  .inv-amount { color: #fff; }
+.inv-desc { font-size: 7.5pt; line-height: 1.55; }
+.inv-dark  .inv-desc, .inv-pink .inv-desc { color: rgba(255,255,255,0.65); }
+.inv-green .inv-desc { color: #374151; }
+
+.compare-title { font-size: 10pt; font-weight: 800; color: #0f172a; margin-bottom: 0.08in; display: flex; align-items: center; gap: 6px; }
+.cmp-table { width: 100%; border-collapse: collapse; font-size: 7.5pt; }
+.cmp-table th { padding: 6px 8px; font-weight: 700; text-align: center; font-size: 8pt; }
+.cmp-table th:first-child { text-align: left; background: #f8fafc; color: #374151; }
+.th-ss  { background: linear-gradient(135deg, #ec4899, #be185d); color: #fff; border-radius: 0 6px 0 0; }
+.th-pos { background: #fef9c3; color: #713f12; }
+.th-spr { background: #f1f5f9; color: #64748b; border-radius: 6px 0 0 0; }
+.cmp-table td { padding: 5px 8px; border-bottom: 0.5px solid #f1f5f9; text-align: center; color: #374151; }
+.cmp-table td:first-child { text-align: left; font-weight: 500; color: #0f172a; }
+.cmp-table tr:nth-child(even) td { background: #fafafa; }
+.ck { color: #10b981; font-weight: 800; font-size: 10pt; }
+.cx { color: #ef4444; font-weight: 800; font-size: 10pt; }
+.cp { color: #f59e0b; font-size: 7.5pt; font-weight: 600; }
+
+/* ══════════════════════════════
+   PAGE 5 — WHY + STEPS + SIG
+══════════════════════════════ */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.09in;
+  margin-bottom: 0.12in;
+}
+.why-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  padding: 0.1in;
+  text-align: center;
+}
+.why-icon  { font-size: 17pt; margin-bottom: 4px; }
+.why-title { font-size: 8.5pt; font-weight: 800; color: #0f172a; margin-bottom: 3px; }
+.why-desc  { font-size: 7.5pt; color: #64748b; line-height: 1.45; }
+
+.steps-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.09in;
+  margin-bottom: 0.12in;
+}
+.step-card {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  padding: 0.08in;
+  text-align: center;
+}
+.step-num {
+  background: #ec4899;
+  color: #fff;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9pt; font-weight: 800;
+  margin: 0 auto 5px;
+}
+.step-title { font-size: 8.5pt; font-weight: 700; color: #0f172a; margin-bottom: 2px; }
+.step-sub   { font-size: 7pt; color: #64748b; }
+
+.sig-box {
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.1in 0.14in;
+  margin-bottom: 0.1in;
+}
+.sig-box h3 { font-size: 9pt; font-weight: 800; color: #0f172a; margin-bottom: 0.1in; display: flex; align-items: center; gap: 6px; }
+.sig-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0.2in; }
+.sig-party-label { font-size: 8pt; font-weight: 700; color: #0f172a; margin-bottom: 0.08in; }
+.sig-line { border-top: 1.5px solid #334155; margin-top: 0.12in; padding-top: 4px; }
+.sig-line-label { font-size: 7pt; color: #64748b; font-weight: 600; }
+.sig-line-name  { font-size: 8pt; color: #374151; margin-top: 1px; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ PAGE 1 — COVER ═══════════ -->
+<div class="page">
+
+  <div class="cover-hero">
+    <div class="cover-brand">Alexander AI Integrated Solutions</div>
+    <div class="cover-title">Sweet Spot Custom Cakes</div>
+    <div class="cover-sub">AI-Powered Bakery Management System</div>
+    <div class="cover-meta">
+      <div class="cover-meta-item">
+        <div class="cover-meta-label">Prepared For</div>
+        <div class="cover-meta-val">Sweet Spot Custom Cakes</div>
+      </div>
+      <div class="cover-meta-item">
+        <div class="cover-meta-label">Date</div>
+        <div class="cover-meta-val">May 2026</div>
+      </div>
+      <div class="cover-meta-item">
+        <div class="cover-meta-label">Valid Through</div>
+        <div class="cover-meta-val">May 30, 2026</div>
+      </div>
+      <div class="cover-meta-item">
+        <div class="cover-meta-label">Prepared By</div>
+        <div class="cover-meta-val">Jay Alexander</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACCESS CARD -->
+  <div class="access-card">
+    <div class="ac-main">
+      <div class="ac-pill">🔗 Live App — Click to Access</div>
+      <a class="ac-link" href="https://sweet-spot-cakes.up.railway.app">sweet-spot-cakes.up.railway.app</a>
+    </div>
+    <div class="ac-sep"></div>
+    <div class="ac-field">
+      <div class="ac-field-label">Username</div>
+      <div class="ac-field-val">info@sweetspotcustomcakes.com</div>
+    </div>
+    <div class="ac-sep"></div>
+    <div class="ac-field">
+      <div class="ac-field-label">Password</div>
+      <div class="ac-field-val">sweetspot2026</div>
+    </div>
+  </div>
+
+  <!-- PROMISE BANNER -->
+  <div class="promise-banner">
+    <div class="pb-icon">🚀</div>
+    <div class="pb-text">
+      Your app will be fully operational on the day you open your doors for business.<br>
+      <span>$1,000 deposit gets everything started — we handle the rest.</span>
+    </div>
+  </div>
+
+  <!-- CHALLENGE / SOLUTION -->
+  <div class="cover-cols">
+    <div class="cover-card cc-challenge">
+      <div class="cc-heading orange">⚠️ The Challenge</div>
+      <p>Running a custom cake bakery means juggling orders, tracking inventory, managing staff, and answering the same customer questions — all while actually baking. Most bakeries rely on notebooks, spreadsheets, or generic tools that weren't built for them. Every hour spent on admin is an hour not spent on your craft.</p>
+    </div>
+    <div class="cover-card cc-solution">
+      <div class="cc-heading green">✅ The Solution</div>
+      <p>A custom-built, AI-powered bakery management platform designed specifically for Sweet Spot Custom Cakes — already built, already live, and ready for your team today. One platform handles everything: orders, inventory, staff, customers, marketing, and a 24/7 AI assistant named Cakely.</p>
+    </div>
+  </div>
+
+  <div class="ftr">
+    <span>Alexander AI Integrated Solutions &nbsp;·&nbsp; Valid through May 30, 2026</span>
+    <span><a href="mailto:leprograms@protonmail.com">leprograms@protonmail.com</a> &nbsp;·&nbsp; <a href="https://alexanderai.site">alexanderai.site</a> &nbsp;·&nbsp; Liberty, NC</span>
+  </div>
+</div>
+
+
+<!-- ═══════════ PAGE 2 — WHAT'S INCLUDED ═══════════ -->
+<div class="page">
+  <div class="hdr">
+    <div class="hdr-brand">Alexander AI Integrated Solutions</div>
+    <div class="hdr-title">Sweet Spot Custom Cakes — Proposal</div>
+  </div>
+  <div class="body">
+    <div class="sec-title">📋 What's Included — Core Features</div>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-heading">🤖 Cakely — AI Bakery Assistant</div>
+        <p>Your 24/7 AI assistant trained on your menu, pricing, and offerings. Answers customer questions instantly — flavors, sizing, custom requests — day or night. Never puts a customer on hold.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-heading">📋 Order Management</div>
+        <p>Create, track, and manage all custom orders in one place. Full status tracking from pending to picked up. Customer info stored and searchable. Refunds handled in-app.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-heading">📱 Online &amp; Tablet Kiosk Ordering</div>
+        <p>Beautiful public order form customers can access from any device. Plus a touch-screen kiosk mode for in-store iPads — cakes, drinks, treats, add-ons, and checkout in one elegant flow.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-heading">👩‍🍳 Kitchen &amp; Prep Management</div>
+        <p>Live kitchen view with today's orders queued. Auto-generated prep sheets and decoration tickets tell bakers exactly what to make and how. Equipment tracking ensures the right tools are ready.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-heading">📦 Inventory &amp; Suppliers</div>
+        <p>Track ingredients and supplies in real time. Low stock alerts so you never run short. Supplier management and automatic purchase orders mean restocking is nearly hands-free.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-heading">👥 Customers &amp; VIP Loyalty Club</div>
+        <p>Full customer profiles with order history. VIP Loyalty program with points, exclusive specials, and birthday offers. Birthday campaign tracking — your highest-converting marketing moment.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-heading">📣 Marketing &amp; Campaigns</div>
+        <p>Targeted email campaigns to all customers, VIP members, or birthday customers. AI writes the ad copy for you. Holiday promos, flash sales, new item launches — all from one place.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-heading">👔 Staff, Timesheets &amp; Payroll</div>
+        <p>PIN-based staff login — no passwords to forget. Track time, manage timesheets, and run payroll from the same system. Activity logs keep everyone accountable.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-heading">💰 Price Matrix</div>
+        <p>Set your cake sizes, flavors, and add-on prices once — they apply automatically everywhere: the online order form, tablet kiosk, menu, and public catalog.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-heading">📊 Reports &amp; Business Intelligence</div>
+        <p>Order history, revenue trends, top-selling items, and staff performance — all in one dashboard. Know exactly how your bakery is performing, any time.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-heading">📅 Pickup Scheduling</div>
+        <p>Visual pickup calendar to see every order by date, manage scheduling conflicts, and keep your kitchen running smoothly with clear customer confirmations.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-heading">💳 Square POS Integration</div>
+        <p>Connects directly with Square so your in-store payments, online orders, and inventory stay in sync. No double entry — one source of truth for all transactions.</p>
+      </div>
+    </div>
+  </div>
+  <div class="ftr">
+    <span>Alexander AI Integrated Solutions &nbsp;·&nbsp; Valid through May 30, 2026</span>
+    <span><a href="mailto:leprograms@protonmail.com">leprograms@protonmail.com</a> &nbsp;·&nbsp; <a href="https://alexanderai.site">alexanderai.site</a> &nbsp;·&nbsp; Liberty, NC</span>
+  </div>
+</div>
+
+
+<!-- ═══════════ PAGE 3 — FULL PLATFORM ═══════════ -->
+<div class="page">
+  <div class="hdr">
+    <div class="hdr-brand">Alexander AI Integrated Solutions</div>
+    <div class="hdr-title">Sweet Spot Custom Cakes — Proposal</div>
+  </div>
+  <div class="body">
+    <div class="sec-title">🗂️ Full Platform — Every Module Included</div>
+    <p class="modules-sub">Your subscription includes the entire platform — not a stripped-down version. Every module below is live, fully built, and available from day one.</p>
+    <div class="mod-grid">
+      <div class="mod-col">
+        <div class="mod-hdr">🗂️ Orders &amp; Production</div>
+        <ul>
+          <li>Order creation &amp; management</li>
+          <li>Order status tracking</li>
+          <li>Order detail view</li>
+          <li>Refunds &amp; adjustments</li>
+          <li>Kitchen live view</li>
+          <li>Kitchen order queue</li>
+          <li>Decoration tickets</li>
+          <li>Prep sheets (daily)</li>
+          <li>Pickup scheduling &amp; calendar</li>
+          <li>Receipt generation</li>
+        </ul>
+      </div>
+      <div class="mod-col">
+        <div class="mod-hdr">📱 Customer-Facing</div>
+        <ul>
+          <li>Public online order form</li>
+          <li>Touch-screen tablet kiosk</li>
+          <li>Cakes, drinks &amp; treats menu</li>
+          <li>Add-ons &amp; customizations</li>
+          <li>Online checkout &amp; confirm</li>
+          <li>Public menu catalog</li>
+          <li>VIP loyalty signup page</li>
+          <li>QR code generator</li>
+          <li>Cakely AI chat assistant</li>
+        </ul>
+      </div>
+      <div class="mod-col">
+        <div class="mod-hdr">👥 Customers &amp; Marketing</div>
+        <ul>
+          <li>Customer profiles &amp; history</li>
+          <li>Customer search</li>
+          <li>VIP Loyalty Club</li>
+          <li>Loyalty points &amp; specials</li>
+          <li>Birthday tracking &amp; offers</li>
+          <li>Marketing campaigns</li>
+          <li>AI-generated ad copy</li>
+          <li>Audience targeting</li>
+          <li>Campaign history &amp; tracking</li>
+        </ul>
+      </div>
+      <div class="mod-col">
+        <div class="mod-hdr">🧁 Recipes &amp; Menu</div>
+        <ul>
+          <li>Full recipe management</li>
+          <li>Ingredient linking</li>
+          <li>Recipe detail view</li>
+          <li>Recipe creation form</li>
+          <li>Price matrix (sizes, flavors)</li>
+          <li>Tools &amp; equipment tracking</li>
+          <li>Equipment linked to recipes</li>
+          <li>Menu management</li>
+        </ul>
+      </div>
+      <div class="mod-col">
+        <div class="mod-hdr">📦 Inventory &amp; Suppliers</div>
+        <ul>
+          <li>Real-time inventory tracking</li>
+          <li>Low stock alerts</li>
+          <li>Auto-generated shopping list</li>
+          <li>Supplier management</li>
+          <li>Automatic purchase orders</li>
+          <li>Expense tracking</li>
+        </ul>
+      </div>
+      <div class="mod-col">
+        <div class="mod-hdr">👔 Staff &amp; Operations</div>
+        <ul>
+          <li>Employee management</li>
+          <li>PIN-based staff login</li>
+          <li>Timesheet tracking</li>
+          <li>Payroll management</li>
+          <li>Activity &amp; audit logs</li>
+          <li>Revenue analytics dashboard</li>
+          <li>Square POS integration</li>
+          <li>Admin backup &amp; restore</li>
+          <li>Full settings &amp; brand config</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="ftr">
+    <span>Alexander AI Integrated Solutions &nbsp;·&nbsp; Valid through May 30, 2026</span>
+    <span><a href="mailto:leprograms@protonmail.com">leprograms@protonmail.com</a> &nbsp;·&nbsp; <a href="https://alexanderai.site">alexanderai.site</a> &nbsp;·&nbsp; Liberty, NC</span>
+  </div>
+</div>
+
+
+<!-- ═══════════ PAGE 4 — INVESTMENT ═══════════ -->
+<div class="page">
+  <div class="hdr">
+    <div class="hdr-brand">Alexander AI Integrated Solutions</div>
+    <div class="hdr-title">Sweet Spot Custom Cakes — Proposal</div>
+  </div>
+  <div class="body">
+    <div class="sec-title">💵 Investment</div>
+
+    <div class="invest-grid">
+      <div class="inv-card inv-dark">
+        <div class="inv-label">💵 Due at Signing</div>
+        <div class="inv-amount">$1,000</div>
+        <div class="inv-desc">
+          Deposit to get started<br>
+          App build begins immediately<br>
+          <strong style="color:#ec4899;">Fully live on opening day</strong>
+        </div>
+      </div>
+      <div class="inv-card inv-green">
+        <div class="inv-label">📅 Remaining Balance</div>
+        <div class="inv-amount">$2,000</div>
+        <div class="inv-desc">
+          <strong>$200.00 / month × 10 months</strong><br>
+          No interest · No hidden fees<br>
+          Balance cleared after month 10
+        </div>
+      </div>
+      <div class="inv-card inv-pink">
+        <div class="inv-label">📊 Monthly Service</div>
+        <div class="inv-amount">$200</div>
+        <div class="inv-desc">
+          Cloud hosting · Cakely AI<br>
+          Updates · Priority support<br>
+          <strong style="color:#fff;">Continues after payoff</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="compare-title">📊 How We Compare</div>
+    <table class="cmp-table">
+      <thead>
+        <tr>
+          <th style="text-align:left; background:#f8fafc; color:#374151; border-radius:6px 0 0 0;">Feature</th>
+          <th class="th-spr">Spreadsheets</th>
+          <th class="th-pos">Generic POS</th>
+          <th class="th-ss">Sweet Spot Platform</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Built specifically for bakeries</td><td><span class="cx">✗</span></td><td><span class="cp">Partial</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>AI customer assistant (24/7)</td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="ck">✓</span> Cakely</td></tr>
+        <tr><td>Online + tablet ordering</td><td><span class="cx">✗</span></td><td><span class="cp">Partial</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>Kitchen view &amp; prep sheets</td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>VIP loyalty &amp; birthday marketing</td><td><span class="cx">✗</span></td><td><span class="cp">Add-on $$</span></td><td><span class="ck">✓</span> Included</td></tr>
+        <tr><td>AI-generated marketing copy</td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>Recipes + ingredient tracking</td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>Payroll &amp; timesheets</td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>Automatic purchase orders</td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>Square POS integration</td><td><span class="cx">✗</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>Custom to your menu &amp; brand</td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="ck">✓</span></td></tr>
+        <tr><td>Local, dedicated support</td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="ck">✓</span> Jay Alexander</td></tr>
+        <tr><td><strong>Monthly cost</strong></td><td>$0 (costs time)</td><td>$100–300/mo</td><td style="color:#be185d;font-weight:800;">$200/mo total</td></tr>
+      </tbody>
+    </table>
+
+    <div class="sec-title" style="font-size:12pt; margin-bottom:0.09in; margin-top:0.15in;">🗺️ Next Steps</div>
+    <div class="steps-row">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-title">Review Proposal</div>
+        <div class="step-sub">Share with your team</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-title">Live Demo</div>
+        <div class="step-sub">Walk through it together</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-title">Sign &amp; Start</div>
+        <div class="step-sub">$1,000 deposit + customize</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-title">Go Live</div>
+        <div class="step-sub">Ready on opening day</div>
+      </div>
+    </div>
+  </div>
+  <div class="ftr">
+    <span>Alexander AI Integrated Solutions &nbsp;·&nbsp; Valid through May 30, 2026</span>
+    <span><a href="mailto:leprograms@protonmail.com">leprograms@protonmail.com</a> &nbsp;·&nbsp; <a href="https://alexanderai.site">alexanderai.site</a> &nbsp;·&nbsp; Liberty, NC</span>
+  </div>
+</div>
+
+
+<!-- ═══════════ PAGE 5 — WHY + NEXT STEPS + SIGNATURE ═══════════ -->
+<div class="page">
+  <div class="hdr">
+    <div class="hdr-brand">Alexander AI Integrated Solutions</div>
+    <div class="hdr-title">Sweet Spot Custom Cakes — Proposal</div>
+  </div>
+  <div class="body">
+    <div class="sec-title">⭐ Why Alexander AI</div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <div class="why-title">Built For You</div>
+        <div class="why-desc">Not generic software adapted to fit. Built specifically for a custom cake bakery — your menu, your brand, your workflow.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🚀</div>
+        <div class="why-title">Already Live</div>
+        <div class="why-desc">You can demo it today. This isn't a promise — it's a finished product ready to go on opening day.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🤖</div>
+        <div class="why-title">AI-Powered</div>
+        <div class="why-desc">Cakely gives you a 24/7 customer service team member at a fraction of the cost of a part-time hire.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🤝</div>
+        <div class="why-title">Local Support</div>
+        <div class="why-desc">You're working with a real person who built the system and can fix anything fast — not a help desk ticket.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📈</div>
+        <div class="why-title">Grows With You</div>
+        <div class="why-desc">As Sweet Spot grows, we add features. Your platform evolves with your business — no switching costs.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔒</div>
+        <div class="why-title">Secure &amp; Reliable</div>
+        <div class="why-desc">Cloud-hosted with automatic backups. Your data is safe and your app is always available when you need it.</div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Spacer pushes sig to bottom -->
+  <div style="flex:1;"></div>
+  <div class="sig-box" style="margin: 0 0.5in 0.15in;">
+    <h3>✍️ Acceptance &amp; Agreement</h3>
+    <div class="sig-cols">
+      <div>
+        <div class="sig-party-label">Sweet Spot Custom Cakes — Authorized Signature</div>
+        <div class="sig-line"><div class="sig-line-label">Signature</div></div>
+        <div class="sig-line" style="margin-top:0.08in;"><div class="sig-line-label">Printed Name &amp; Title</div></div>
+        <div class="sig-line" style="margin-top:0.08in;"><div class="sig-line-label">Date</div></div>
+      </div>
+      <div>
+        <div class="sig-party-label">Alexander AI Integrated Solutions</div>
+        <div class="sig-line">
+          <div class="sig-line-label">Signature</div>
+          <div class="sig-line-name">Jay Alexander — Founder</div>
+        </div>
+        <div class="sig-line" style="margin-top:0.08in;"><div class="sig-line-label">Date</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ftr">
+    <span>Alexander AI Integrated Solutions &nbsp;·&nbsp; Valid through May 30, 2026</span>
+    <span><a href="mailto:leprograms@protonmail.com">leprograms@protonmail.com</a> &nbsp;·&nbsp; <a href="https://alexanderai.site">alexanderai.site</a> &nbsp;·&nbsp; Liberty, NC</span>
+  </div>
+</div>
+
+</body>
+</html>
