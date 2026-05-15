@@ -20,7 +20,7 @@ curl -s -o /dev/null -w "%{http_code} %{time_total}s" https://sweet-spot-cakes.u
 
 ### 2. EcDash Monitor Status API
 ```bash
-ECDASH_TOKEN=$(cat /root/.secrets/ecdash_token)
+ECDASH_TOKEN=$(cat /root/.secrets/ecdash_reporter_token)
 curl -s -H "X-Reporter-Token: $ECDASH_TOKEN" \
   https://jay-portfolio-production.up.railway.app/api/monitor/status
 ```

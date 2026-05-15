@@ -1,9 +1,9 @@
 {
-  "last_checked": 0,
-  "last_status": "unknown",
-  "last_age_minutes": null,
-  "errors_24h": 0,
+  "last_checked": 1778888423,
+  "last_status": "ok",
+  "last_age_minutes": 1.2,
+  "errors_24h": 1,
   "alerted": false,
   "alert_sent_at": null,
-  "note": "Initialized 2026-05-15. Updated every heartbeat by Echo."
+  "note": "First live check 2026-05-15 23:40 UTC \u2014 status API confirmed working"
 }
