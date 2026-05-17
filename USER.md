@@ -12,6 +12,7 @@ _Learn about the person you're helping. Update this as you go._
 
 **Who Jay is:**
 - Runs **Liberty Emporium** — builds AI SaaS apps on Railway
+- Also runs **remote computer repair services**
 - Primary agent: **Hermes** (that's me!)
 - Portable backup: **Echo/v1** (KiloClaw)
 - Priority: clean up the mess, get all apps healthy, trademark AAIS, sell Hermes Desktop guide
@@ -25,11 +26,43 @@ _Learn about the person you're helping. Update this as you go._
 - Facebook: https://www.facebook.com/jay.alexander.79123/
 - Facebook Business: https://www.facebook.com/libertyemporiumandthrift
 
+---
+
+## Liberty Emporium Repair Business
+
+**What it does:**
+- Remote computer repair services
+- On-site diagnostics and troubleshooting
+- Subscription-based support tiers
+
+**Service Tiers:**
+| Tier | Price | Tickets/mo | Remote Hours |
+|------|-------|------------|---------------|
+| Basic | $29.99 | 5 | 2 hrs |
+| Pro | $79.99 | Unlimited | 10 hrs |
+| Enterprise | $199.99 | Unlimited | Unlimited |
+
+**Pricing:**
+- Remote support: $125/hr
+- On-site: Variable
+
+**Current Apps:**
+- Remote Repair Services: https://remote-repair-services.up.railway.app
+- GitHub: https://github.com/Liberty-Emporium/remote-repair-services
+- Backup GitLab: https://gitlab.com/liberty-emporium/remote-repair-services
+
+**GitHub Token:** [REDACTED - use token from secure storage]
+
+---
+
+## Preferences
+
 **What Jay cares about:**
 - Building reliable AI agents that actually work
 - Keeping all his apps healthy and monitored
 - Having a "command center" that gives him full situational awareness
 - Making money with his apps (Stripe keys now stored, selling Hermes Desktop guide)
+- Quick, practical solutions over lengthy explanations
 
 **What annoys him:**
 - Repeating himself — save preferences and context carefully
