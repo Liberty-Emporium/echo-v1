@@ -1,0 +1,10 @@
+{
+  "owner": "puresquare",
+  "slug": "pureclaw-connect",
+  "displayName": "PureClaw Connect",
+  "description": "MANDATORY TRIGGERS: gmail, email, slack, message, google sheets, spreadsheet, google drive, google calendar, notion, github, linear, airtable, discord, trello, asana, jira, hubspot, salesforce, stripe, twilio, spotify, OAuth, connect app, authorize, integration, send email, read email, post message, send message, read messages, create issue, calendar event, add row, webhook. Use this skill whenever the user wants to connect, authorize, or interact with ANY third-party app or service. This includes sending/reading emails, posting/reading Slack messages, managing spreadsheets, creating issues, scheduling calendar events, or any action involving an external API. Also use when the user asks what apps are connected, wants to browse available apps, or troubleshoots an integration.",
+  "latest": {
+    "version": "1.0.0"
+  },
+  "history": []
+}
