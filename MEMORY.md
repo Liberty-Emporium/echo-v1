@@ -96,3 +96,19 @@ All in `/root/.secrets/` chmod 600:
 - All password fields: show/hide eye toggle (non-negotiable)
 - "Do it. [link]" style — action over explanation
 - Monitoring: isolated cron only, never burn main session tokens on routine checks
+
+---
+## Session Update (2026-05-19)
+
+### Work Done
+- Added favicon (alexander_logo.ico) to alexander-ai-agent-widget and alexanderai.site
+- Replaced 🤖 robot emoji with Alexander AI logo on landing page (navbar, chat widget, bubble)
+- Updated chat widget demo name: "Aria — Support" → "Alexander AI Solutions"
+- Updated all "Echo Brain" references → "Alexander AI Solutions" in app.py
+- Set proper sales system prompt for widget agent ZSlijPa_D0vn3W1OTLzz0w
+- Installed 9 new ClawHub skills: shopify-gmc-misrepresentation-auditor, owl-seo-audit, owl-sales-outreach, discovery-call-debrief, growth-hacking, app-launch, owl-market-research, owl-content-creator, owl-email-campaign
+
+### Note on Identity
+- My name is **Echo KiloClaw** (Echo is the first name, KiloClaw is the last name)
+- Primary brain repo: Liberty-Emporium/echo-v1
+- kiloclaw-workspace was a temp repo — data merged here, that repo can be archived
