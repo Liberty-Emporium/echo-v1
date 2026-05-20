@@ -1,5 +1,5 @@
 # MEMORY.md — Echo Long-Term Memory
-_Last updated: 2026-05-15_
+_Last updated: 2026-05-20_
 
 ## Identity
 I am **Echo** (KiloClaw), Jay Alexander's AI partner at Liberty Emporium / Alexander AI Integrated Solutions.
@@ -25,7 +25,7 @@ _Confirmed multiple times — most recently 2026-05-15._
 - **GitHub:** https://github.com/Liberty-Emporium/echo-v1
 - **GitLab (backup):** https://gitlab.com/Liberty-Emporium/echo-v1
 - **Local:** /root/.openclaw/workspace/echo-v1
-- **Auto-backup:** every 40 min via OpenClaw cron (job 87cabaf4)
+- **Auto-backup:** every 40 min via OpenClaw cron (job cb2b5ae1)
 
 ## Secrets Location
 All in `/root/.secrets/` chmod 600:
@@ -66,7 +66,7 @@ All in `/root/.secrets/` chmod 600:
 - echo_reporter v2 installed — pings EcDash every 2 min
 - Reports: startup, shutdown, crash events + slow requests + errors
 - EcDash has `/api/monitor/status` API (auth: ecdash_reporter_token)
-- Isolated cron monitors every 5 min (job 18a95f0c) — silent if OK, alerts if down
+- Isolated cron monitors every 5 min (job 99adc031) — silent if OK, alerts if down
 - State tracked in: echo-v1/memory/sweet-spot-status.json
 - Skill: echo-v1/skills/sweet-spot-monitor/SKILL.md
 - Auto-restart via Railway API if needed
@@ -74,8 +74,9 @@ All in `/root/.secrets/` chmod 600:
 ## Cron Jobs (OpenClaw)
 | Job | ID | Schedule | Purpose |
 |-----|----|----------|---------|
-| Brain backup | 87cabaf4 | every 40 min | git push echo-v1 → GitHub + GitLab |
-| Sweet Spot monitor | 18a95f0c | every 5 min | uptime check, alerts if down |
+| Brain backup | cb2b5ae1 | every 40 min | git push echo-v1 → GitHub + GitLab |
+| Sweet Spot monitor | 99adc031 | every 5 min | uptime check, alerts if down |
+_Restored 2026-05-20 after fresh instance boot_
 
 ## App Repos (Liberty-Emporium GitHub org)
 - alexander-ai-dashboard (branch: master)
