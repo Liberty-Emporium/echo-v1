@@ -1,5 +1,5 @@
 # MEMORY.md — Echo Long-Term Memory
-_Last updated: 2026-05-20_
+_Last updated: 2026-05-23_
 
 ## Identity
 I am **Echo** (KiloClaw), Jay Alexander's AI partner at Liberty Emporium / Alexander AI Integrated Solutions.
@@ -25,7 +25,7 @@ _Confirmed multiple times — most recently 2026-05-15._
 - **GitHub:** https://github.com/Liberty-Emporium/echo-v1
 - **GitLab (backup):** https://gitlab.com/Liberty-Emporium/echo-v1
 - **Local:** /root/.openclaw/workspace/echo-v1
-- **Auto-backup:** every 40 min via OpenClaw cron (job cb2b5ae1)
+- **Auto-backup:** every 40 min via OpenClaw cron (job 12ddb855)
 
 ## Secrets Location
 All in `/root/.secrets/` chmod 600:
@@ -74,9 +74,9 @@ All in `/root/.secrets/` chmod 600:
 ## Cron Jobs (OpenClaw)
 | Job | ID | Schedule | Purpose |
 |-----|----|----------|---------|
-| Brain backup | cb2b5ae1 | every 40 min | git push echo-v1 → GitHub + GitLab |
-| Sweet Spot monitor | 99adc031 | every 5 min | uptime check, alerts if down |
-_Restored 2026-05-20 after fresh instance boot_
+| Brain backup | 12ddb855 | every 40 min | git push echo-v1 → GitHub + GitLab |
+| Sweet Spot monitor | e51ef4b9 | every 5 min | uptime check, alerts if down |
+_Restored 2026-05-23 after fresh instance boot_
 
 ## App Repos (Liberty-Emporium GitHub org)
 - alexander-ai-dashboard (branch: master)
