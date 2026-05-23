@@ -1,158 +1,73 @@
-#!/bin/bash
-# bootstrap.sh — Echo's post-reboot setup script
-# Run this on a fresh KiloClaw instance to restore full capability
-# Usage: bash /root/.openclaw/workspace/echo-v1/scripts/bootstrap.sh
-# Last updated: 2026-05-12 (v2 — Widget as brain source)
+#!/usr/bin/env bash
+# bootstrap.sh — Echo (KiloClaw) fresh instance setup
+# Last updated: 2026-05-23
+# Run this at session start: bash /root/.openclaw/workspace/echo-v1/scripts/bootstrap.sh
 
 set -e
-echo "🚀 Echo Bootstrap starting..."
-echo "================================"
 
-# ── 1. Install pip + tools ────────────────────────────────────────────────────
-echo ""
-echo "📦 Installing Python tools..."
-curl -sS https://bootstrap.pypa.io/get-pip.py | python3 - --break-system-packages --quiet 2>/dev/null || true
-python3 -m pip install bandit ruff playwright pytest pytest-flask httpx black alembic --break-system-packages --quiet
-python3 -m playwright install chromium --quiet 2>/dev/null || true
-echo "  ✅ bandit $(bandit --version 2>&1 | head -1)"
-echo "  ✅ ruff $(ruff --version)"
-echo "  ✅ playwright $(python3 -m playwright --version 2>/dev/null)"
-echo "  ✅ pytest $(pytest --version 2>&1 | head -1)"
-echo "  ✅ black $(black --version 2>&1 | head -1)"
+echo "=== Echo Bootstrap Starting ==="
 
-# ── 2. Git config ─────────────────────────────────────────────────────────────
-echo ""
-echo "🔧 Configuring git..."
+# 1. Git config
 git config --global user.email "echo@liberty-emporium.ai"
 git config --global user.name "Echo (KiloClaw)"
-echo "  ✅ git configured"
+echo "[1/7] Git config set."
 
-# ── 3. Secrets directory ──────────────────────────────────────────────────────
-echo ""
-echo "🔐 Setting up secrets directory..."
+# 2. Secrets directory
 mkdir -p /root/.secrets
 chmod 700 /root/.secrets
-if [ ! -f /root/.secrets/github_token ]; then
-  echo "  ⚠️  /root/.secrets/github_token NOT FOUND — ask Jay or add manually"
-else
-  echo "  ✅ github_token present"
-fi
-if [ ! -f /root/.secrets/gitlab_token ]; then
-  echo "  ⚠️  /root/.secrets/gitlab_token NOT FOUND — ask Jay or add manually"
-else
-  echo "  ✅ gitlab_token present"
-fi
-if [ ! -f /root/.secrets/ecdash_token ]; then
-  echo "  ⚠️  /root/.secrets/ecdash_token NOT FOUND — get from EcDash → Settings → Create Token"
-else
-  echo "  ✅ ecdash_token present"
-fi
-# ── 4. Clone echo-v1 (brain repo only) ───────────────────────────────────────
-echo ""
-echo "📁 Cloning brain repo..."
-if [ ! -f /root/.secrets/github_token ]; then
-  echo "  ❌ Cannot clone — github_token missing. Add it to /root/.secrets/ and re-run."
-else
-  GH_TOKEN=$(cat /root/.secrets/github_token)
-  cd /root/.openclaw/workspace
+echo "[2/7] Secrets directory ready. Add secrets manually if not present."
 
-  if [ -d "echo-v1" ]; then
-    echo "  ⏩ echo-v1 (already cloned, pulling latest...)"
-    cd echo-v1
-    git pull --quiet 2>/dev/null || true
-    cd ..
-  else
-    git clone https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/echo-v1.git --quiet && echo "  ✅ echo-v1 cloned"
-  fi
+# 3. Python tools
+echo "[3/7] Installing Python tools..."
+curl -sS https://bootstrap.pypa.io/get-pip.py | python3 - --break-system-packages -q
+python3 -m pip install bandit ruff playwright pytest pytest-flask httpx black alembic --break-system-packages -q
+playwright install chromium --with-deps 2>/dev/null || true
+echo "    Python tools installed."
 
-  # Set token in remote for pushing
-  cd /root/.openclaw/workspace/echo-v1
-  git remote set-url origin https://oauth2:${GH_TOKEN}@github.com/Liberty-Emporium/echo-v1.git 2>/dev/null || true
-  cd /root/.openclaw/workspace
+# 4. Railway CLI
+echo "[4/7] Installing Railway CLI..."
+npm install -g @railway/cli -q
+echo "    railway $(railway --version) ready."
+
+# 5. Tailscale
+echo "[5/7] Setting up Tailscale..."
+which tailscale &>/dev/null || (curl -fsSL https://tailscale.com/install.sh | sh -s - 2>/dev/null)
+if [ -f /root/.secrets/tailscale_authkey ]; then
+    tailscaled --state=/root/.tailscale-state &>/dev/null &
+    sleep 3
+    tailscale up --authkey="$(cat /root/.secrets/tailscale_authkey)" --hostname=kiloclaw-echo-1 &>/dev/null &
+    sleep 5
+    tailscale status 2>/dev/null | head -1 && echo "    Tailscale connected." || echo "    Tailscale connecting (check manually)."
+else
+    echo "    SKIP: /root/.secrets/tailscale_authkey not found."
 fi
 
-# ── 5. Set up GitLab remote on echo-v1 ───────────────────────────────────────
-echo ""
-echo "🦊 Setting up GitLab backup remote..."
-if [ -f /root/.secrets/gitlab_token ] && [ -d "/root/.openclaw/workspace/echo-v1" ]; then
-  GL_TOKEN=$(cat /root/.secrets/gitlab_token)
-  cd /root/.openclaw/workspace/echo-v1
-  git remote remove gitlab 2>/dev/null || true
-  git remote add gitlab https://oauth2:${GL_TOKEN}@gitlab.com/Liberty-Emporium/echo-v1.git 2>/dev/null || true
-  echo "  ✅ echo-v1 → gitlab remote set"
-  cd /root/.openclaw/workspace
+# 6. GitLab backup remote on echo-v1
+echo "[6/7] Setting up GitLab remote..."
+cd /root/.openclaw/workspace/echo-v1
+if [ -f /root/.secrets/gitlab_token ]; then
+    GL_TOKEN=$(cat /root/.secrets/gitlab_token)
+    git remote get-url gitlab &>/dev/null && \
+        git remote set-url gitlab "https://oauth2:${GL_TOKEN}@gitlab.com/Liberty-Emporium/echo-v1.git" || \
+        git remote add gitlab "https://oauth2:${GL_TOKEN}@gitlab.com/Liberty-Emporium/echo-v1.git"
+    echo "    GitLab remote configured."
 else
-  echo "  ⚠️  gitlab_token missing or echo-v1 not cloned — skipping"
+    echo "    SKIP: /root/.secrets/gitlab_token not found."
 fi
 
-# ── 6. Dashboard health check + brain sync ───────────────────────────────────
-echo ""
-echo "🏥 Dashboard health check..."
-DASHBOARD_URL="https://jay-portfolio-production.up.railway.app"
-
-HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$DASHBOARD_URL/" 2>/dev/null || echo "000")
-if [ "$HTTP_STATUS" = "200" ]; then
-  echo "  ✅ EcDash: HTTP $HTTP_STATUS — dashboard is live"
-else
-  echo "  ⚠️  EcDash: HTTP $HTTP_STATUS — may be down or slow"
-fi
-
-# Check echo-bridge queue
+# 7. EcDash health check
+echo "[7/7] Checking EcDash..."
 if [ -f /root/.secrets/ecdash_token ]; then
-  ECDASH_TOKEN=$(cat /root/.secrets/ecdash_token)
-  BRIDGE_RESP=$(curl -s -H "Authorization: Bearer $ECDASH_TOKEN" "$DASHBOARD_URL/api/echo-bridge" 2>/dev/null || echo "{}")
-  TASK_COUNT=$(echo "$BRIDGE_RESP" | python3 -c "import sys,json; d=json.load(sys.stdin); print(len(d.get('tasks',[])))" 2>/dev/null || echo "?")
-  echo "  📬 Echo-bridge queue: $TASK_COUNT pending task(s)"
+    STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+        -H "Authorization: Bearer $(cat /root/.secrets/ecdash_token)" \
+        "https://jay-portfolio-production.up.railway.app/api/echo-bridge")
+    echo "    EcDash echo-bridge: HTTP $STATUS"
 else
-  echo "  ⚠️  ecdash_token missing — skipping bridge check"
-fi
-
-# Read notes Jay left for Echo (EcDash)
-echo ""
-echo "📝 Reading notes from Jay..."
-if [ -f /root/.openclaw/workspace/echo-v1/scripts/read-notes-from-dashboard.py ]; then
-  python3 /root/.openclaw/workspace/echo-v1/scripts/read-notes-from-dashboard.py 2>&1 | sed 's/^/  /'
-else
-  echo "  ⚠️  read-notes-from-dashboard.py not found — skipping"
-fi
-
-# ── 7. Tailscale ─────────────────────────────────────────────────────────────
-echo ""
-echo "🔗 Starting Tailscale..."
-if [ -f /usr/local/bin/tailscaled-start.sh ]; then
-  bash /usr/local/bin/tailscaled-start.sh 2>&1 | sed 's/^/  /'
-else
-  echo "  ⚠️  tailscaled-start.sh missing — creating it now..."
-  cat > /usr/local/bin/tailscaled-start.sh << 'TSEOF'
-#!/bin/bash
-STATEDIR="/root/.tailscale-state"
-AUTHKEY_FILE="/root/.secrets/tailscale_authkey"
-LOGFILE="/tmp/tailscaled.log"
-if ! command -v tailscaled &>/dev/null; then
-  curl -fsSL https://tailscale.com/install.sh | sh >> "$LOGFILE" 2>&1
-fi
-if ! pgrep -x tailscaled > /dev/null; then
-  mkdir -p "$STATEDIR"
-  /usr/sbin/tailscaled --tun=userspace-networking --socks5-server=localhost:1055 --statedir="$STATEDIR" >> "$LOGFILE" 2>&1 &
-  sleep 4
-fi
-STATUS=$(tailscale status 2>&1)
-if echo "$STATUS" | grep -q "Logged out"; then
-  if [ -f "$AUTHKEY_FILE" ]; then
-    tailscale up --authkey="$(cat $AUTHKEY_FILE)" --accept-routes >> "$LOGFILE" 2>&1
-  fi
-fi
-tailscale status 2>&1
-TSEOF
-  chmod +x /usr/local/bin/tailscaled-start.sh
-  bash /usr/local/bin/tailscaled-start.sh 2>&1 | sed 's/^/  /'
+    echo "    SKIP: /root/.secrets/ecdash_token not found."
 fi
 
 echo ""
-echo "================================"
-echo "✅ Echo Bootstrap complete!"
-echo ""
-echo "Next steps:"
-echo "  1. Add secrets to /root/.secrets/ (github_token, railway_token, ecdash_token, tailscale_key)"
-echo "  2. Check EcDash: https://jay-portfolio-production.up.railway.app/dashboard"
-echo "  3. Read echo-v1/memory/$(date +%Y-%m-%d).md for today's context"
+echo "=== Bootstrap Complete ==="
+echo "Remember to restore cron jobs in KiloClaw Control UI:"
+echo "  - Brain backup (every 40 min)"
+echo "  - Sweet Spot monitor (every 5 min)"
