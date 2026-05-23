@@ -74,9 +74,9 @@ All in `/root/.secrets/` chmod 600:
 ## Cron Jobs (OpenClaw)
 | Job | ID | Schedule | Purpose |
 |-----|----|----------|---------|
-| Brain backup | 12ddb855 | every 40 min | git push echo-v1 → GitHub + GitLab |
-| Sweet Spot monitor | e51ef4b9 | every 5 min | uptime check, alerts if down |
-_Restored 2026-05-23 after fresh instance boot_
+| Brain backup | 63ef2ed8 | every 40 min | git push echo-v1 → GitHub + GitLab |
+| Sweet Spot monitor | 0e0d2731 | every 5 min | uptime check, alerts if down |
+_Restored 2026-05-23 after fresh instance boot (re-bootstrapped same day)_
 
 ## App Repos (Liberty-Emporium GitHub org)
 - alexander-ai-dashboard (branch: master)
