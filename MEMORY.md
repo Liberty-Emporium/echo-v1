@@ -1,5 +1,5 @@
 # MEMORY.md — Echo Long-Term Memory
-_Last updated: 2026-05-23_
+_Last updated: 2026-05-24_
 
 ## Identity
 I am **Echo** (KiloClaw), Jay Alexander's AI partner at Liberty Emporium / Alexander AI Integrated Solutions.
@@ -19,7 +19,7 @@ I am **Echo** (KiloClaw), Jay Alexander's AI partner at Liberty Emporium / Alexa
 ## Subagent Rule ⚠️
 **Subagents ONLY permitted for image analysis tasks.**
 Do all other work directly. Never spawn subagents for coding, GitHub, deployment, or general tasks.
-_Confirmed multiple times — most recently 2026-05-15._
+_Confirmed multiple times — most recently 2026-05-24._
 
 ## Brain Repo
 - **GitHub:** https://github.com/Liberty-Emporium/echo-v1
@@ -74,9 +74,9 @@ All in `/root/.secrets/` chmod 600:
 ## Cron Jobs (OpenClaw)
 | Job | ID | Schedule | Purpose |
 |-----|----|----------|---------|
-| Brain backup | 63ef2ed8 | every 40 min | git push echo-v1 → GitHub + GitLab |
-| Sweet Spot monitor | 0e0d2731 | every 5 min | uptime check, alerts if down |
-_Restored 2026-05-23 after fresh instance boot (re-bootstrapped same day)_
+| Brain backup | f82d83d2 | every 40 min | git push echo-v1 → GitHub + GitLab |
+| Sweet Spot monitor | f50bab5f | every 5 min | uptime check, alerts if down |
+_Restored 2026-05-24 after fresh instance boot (re-bootstrapped same day)_
 
 ## App Repos (Liberty-Emporium GitHub org)
 - alexander-ai-dashboard (branch: master)
