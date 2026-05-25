@@ -47,6 +47,11 @@ All in `/root/.secrets/` chmod 600:
 | FloodClaim Pro | https://billy-floods.up.railway.app | |
 | AI Agent Widget | https://ai-agent-widget-production.up.railway.app | |
 | Liberty Oil & Propane | https://liberty-oil-propane.up.railway.app | |
+| Remote Repair Services | https://remote-repair-services-production.up.railway.app | also remote.repaire.alexanderai.site |
+| Drop Shipping | https://drop-shipping-by-alexander-ai-solutions-production.up.railway.app | also shop.alexanderai.site |
+| Liberty Inventory | https://liberty-emporium-inventory-demo-app-production.up.railway.app | |
+| Contractor Pro AI | https://contractor-pro-ai-production.up.railway.app | also contractor.ai.solutions.alexanderai.site |
+| Pet Vet AI | https://pet-vet-ai-production.up.railway.app | also ai-vet-tech.alexanderai.site |
 | Cal.com | cal.com/leprograms | Discovery Call + AI Strategy Session |
 
 ## Railway Key IDs
@@ -74,9 +79,9 @@ All in `/root/.secrets/` chmod 600:
 ## Cron Jobs (OpenClaw)
 | Job | ID | Schedule | Purpose |
 |-----|----|----------|---------|
-| Brain backup | f82d83d2 | every 40 min | git push echo-v1 → GitHub + GitLab |
-| Sweet Spot monitor | f50bab5f | every 5 min | uptime check, alerts if down |
-_Restored 2026-05-24 after fresh instance boot (re-bootstrapped same day)_
+| Brain backup | 401e0418 | every 40 min | git push echo-v1 → GitHub + GitLab |
+| Sweet Spot monitor | 5d2436d5 | every 5 min | uptime check, alerts if down |
+_Restored 2026-05-25 after fresh instance boot (re-bootstrapped)_
 
 ## App Repos (Liberty-Emporium GitHub org)
 - alexander-ai-dashboard (branch: master)
