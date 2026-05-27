@@ -21,6 +21,12 @@ I am **Echo** (KiloClaw), Jay Alexander's AI partner at Liberty Emporium / Alexa
 Do all other work directly. Never spawn subagents for coding, GitHub, deployment, or general tasks.
 _Confirmed multiple times — most recently 2026-05-24._
 
+## Obsidian Vault
+- **GitHub:** https://github.com/Liberty-Emporium/Obsidian
+- **Local:** /root/.openclaw/workspace/Obsidian
+- OWL session reports go in `30-Projects/`
+- System Status reports already auto-generated there
+
 ## Brain Repo
 - **GitHub:** https://github.com/Liberty-Emporium/echo-v1
 - **GitLab (backup):** https://gitlab.com/Liberty-Emporium/echo-v1
@@ -79,9 +85,9 @@ All in `/root/.secrets/` chmod 600:
 ## Cron Jobs (OpenClaw)
 | Job | ID | Schedule | Purpose |
 |-----|----|----------|---------|
-| Brain backup | 401e0418 | every 40 min | git push echo-v1 → GitHub + GitLab |
-| Sweet Spot monitor | 5d2436d5 | every 5 min | uptime check, alerts if down |
-_Restored 2026-05-25 after fresh instance boot (re-bootstrapped)_
+| Brain backup | f97e7a90 | every 40 min | git push echo-v1 → GitHub + GitLab |
+| Sweet Spot monitor | 54fdad90 | every 5 min | uptime check, alerts if down |
+_Restored 2026-05-27 after fresh instance boot (re-bootstrapped)_
 
 ## App Repos (Liberty-Emporium GitHub org)
 - alexander-ai-dashboard (branch: master)
