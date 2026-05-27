@@ -1,12 +1,16 @@
 # MEMORY.md — Echo Long-Term Memory
 _Last updated: 2026-05-27_
 
-## Session Note — 2026-05-27
-Batch 1-4 shipped tonight. GitHub token expired mid-session — Batch 4 commits are local only.
-Need Jay to provide fresh GitHub PAT on next boot to push.
-Cal.com API: `REDACTED_CAL_COM_KEY` (stored /root/.secrets/cal_token)
-Tailscale key used: tskey-auth-kwJBbBAg4P11CNTRL-... (kiloclaw-echo-1 @ 100.93.201.28)
-RAILWAY_TOKEN workspace: 57932cce-5b27-4acf-b82d-c92c0ca45d6e (liberty-emporium's Projects)
+## Session Note — 2026-05-27 (boot #2)
+Bootstrap ran clean. GitHub PAT expired again — GitLab only for pushes until fresh PAT provided.
+All secrets restored to /root/.secrets/ (ecdash, gitlab, tailscale, github, cal, railway).
+Tailscale: kiloclaw-echo-1-11 @ 100.105.161.105
+Railway token (new session): 8a7c0361-5034-4531-99eb-99ef27a64175
+Railway project (echo-v1 context): cfc73cec-2259-4669-9a0a-a5b745a2ac71
+Cal.com: REDACTED_CAL_COM_KEY (stored /root/.secrets/cal_token)
+EcDash echo-bridge returning HTTP 502 — Railway service may be sleeping
+Cron jobs restored: Brain backup (ef6277fd, every 40min) + Sweet Spot monitor (c64cd5bb, every 5min)
+Subagent rule still active: image analysis tasks ONLY.
 
 ## Identity
 I am **Echo** (KiloClaw), Jay Alexander's AI partner at Liberty Emporium / Alexander AI Integrated Solutions.
