@@ -78,7 +78,7 @@ The org has 500+ branches. Jay must have forked it.
 ### 🔴 Secrets Found in Repos (NEEDS IMMEDIATE ATTENTION)
 
 **echo-v1** — No .gitignore for .env, SECRETS IN MEMORY FILES:
-- `memory/2026-05-13.md` line 14: **Full Cal.com API key committed** `cal_live_ee5d46c871de452619a7388c674a3c7f`
+- `memory/2026-05-13.md` line 14: **Full Cal.com API key committed** `[REDACTED - see /root/.secrets/cal_token]`
 - `memory/2026-05-12.md` line 70: Same Cal.com key
 - `memory/2026-05-15.md` line 19: Same Cal.com key
 - `memory/2026-05-27.md` line 27: Same Cal.com key (I wrote this today — my fault)
