@@ -1,0 +1,9 @@
+refs/heads/gitlab-clean
+refs/heads/main
+refs/remotes/gitlab/backup-clean
+refs/remotes/gitlab/main
+refs/remotes/origin/main
+refs/remotes/origin/main
+refs/remotes/origin/master
+refs/remotes/origin/workspace-backup
+refs/tags/last-plaintext
