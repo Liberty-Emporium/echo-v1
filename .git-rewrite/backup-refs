@@ -1,0 +1,9 @@
+08bbb09e99c7eaf69835cbce55df9333b0b456d8 commit	refs/heads/gitlab-clean
+ac84bbae1eaf3640e0f53026c78ae6d4cd388969 commit	refs/heads/main
+c7896828828d0866bb9a7179390ad67539c56a36 commit	refs/remotes/gitlab/backup-clean
+3e6b0ddddc87302549a0888dbc8adb7f27ca236a commit	refs/remotes/gitlab/main
+1fcba0b203d98c951a94e0b433b086868220b429 commit	refs/remotes/origin/HEAD
+1fcba0b203d98c951a94e0b433b086868220b429 commit	refs/remotes/origin/main
+310c668a8e8d335eef1c66272a74ea95172dc0e2 commit	refs/remotes/origin/master
+d2726dc01633aa052ab475ad3d4553a92a25403c commit	refs/remotes/origin/workspace-backup
+ab3e3adec8af59b181528da656da7f01bb035f62 commit	refs/tags/last-plaintext
