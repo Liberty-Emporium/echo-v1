@@ -52,7 +52,7 @@ All in `/root/.secrets/` chmod 600:
 - `ecdash_token` — EcDash bridge/app token (u8aKEAXz...)
 - `ecdash_reporter_token` — 64-char token for /api/monitor/status API
 - `tailscale_authkey` — Tailscale auth key
-- `railway_token` — Railway project ID / token
+- `railway_api_token — Railway GraphQL API token (workspace: liberty-emporium's Projects) / token
 - `cal_token` — Cal.com API key
 
 ## Infrastructure
