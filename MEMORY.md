@@ -1,14 +1,16 @@
 # MEMORY.md — Echo Long-Term Memory
 _Last updated: 2026-05-27_
 
-## Session Note — 2026-05-27 (UPDATED 2026-05-28)
-Bootstrap complete on fresh instance. All secrets saved to /root/.secrets/.
-GitHub token ([REDACTED-PAT]) — rotates after use as usual.
-GitLab token saved. Tailscale connected. EcDash echo-bridge: HTTP 200.
-Cal.com API: cal_live_ee5d46c871de452619a7388c674a3c7f saved.
-Railway project ID: 73d719f3-1ac8-4177-a0dd-7043e187926b saved.
-Cron jobs restored: brain backup (b9d6f705, every 40 min) + Sweet Spot monitor (18f21b1b, every 5 min).
-⚠️ Jay confirmed: subagents ONLY for image analysis. All other work done directly.
+## Session Note — 2026-05-27 (boot #2)
+Bootstrap ran clean. GitHub PAT expired again — GitLab only for pushes until fresh PAT provided.
+All secrets restored to /root/.secrets/ (ecdash, gitlab, tailscale, github, cal, railway).
+Tailscale: kiloclaw-echo-1-11 @ 100.105.161.105
+Railway token (new session): 8a7c0361-5034-4531-99eb-99ef27a64175
+Railway project (echo-v1 context): cfc73cec-2259-4669-9a0a-a5b745a2ac71
+Cal.com: cal_live_ee5d46c871de452619a7388c674a3c7f (stored /root/.secrets/cal_token)
+EcDash echo-bridge returning HTTP 502 — Railway service may be sleeping
+Cron jobs restored: Brain backup (ef6277fd, every 40min) + Sweet Spot monitor (c64cd5bb, every 5min)
+Subagent rule still active: image analysis tasks ONLY.
 
 ## Identity
 I am **Echo** (KiloClaw), Jay Alexander's AI partner at Liberty Emporium / Alexander AI Integrated Solutions.
