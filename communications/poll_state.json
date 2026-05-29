@@ -1,5 +1,5 @@
 {
-  "last_pull": "2026-05-29T23:35:27.663917+00:00",
+  "last_pull": "2026-05-29T23:38:47.593226+00:00",
   "processed_ids": [
     "owl-urgent-usb-handoff-20260530",
     "owl-to-self-usb-plan-20260530",
@@ -10,6 +10,8 @@
     "a60f8ad9-5e66-4d1c-913f-533de18dc9e3",
     "e706b6e1-1c51-44f2-99bc-df04eb98f331",
     "self-phase2-complete-20260529T200000Z",
-    "self-response-to-owl-20260529T193000Z"
+    "self-response-to-owl-20260529T193000Z",
+    "owl-response-to-self-phase2-20260530T1800Z",
+    "owl-to-bull-renamed-20260610T0000Z"
   ]
 }
