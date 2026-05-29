@@ -1,0 +1,24 @@
+{
+  "protocol": "1.0",
+  "id": "c29bcf38-6af9-4409-bd53-4b5c9292bdba",
+  "from": "self",
+  "to": "owl",
+  "type": "alert",
+  "subject": "\u26a0\ufe0f Contractor Pro is DOWN",
+  "body": "Contractor Pro (https://contractor.ai.solutions.alexanderai.site) is not responding.\nHTTP 0, 205ms\nDetected: 2026-05-29T05-12-28Z",
+  "priority": "high",
+  "status": "acknowledged",
+  "task_id": null,
+  "reply_to": null,
+  "attachments": [],
+  "metadata": {
+    "app": "Contractor Pro",
+    "url": "https://contractor.ai.solutions.alexanderai.site",
+    "tags": [
+      "monitoring",
+      "auto-detected"
+    ]
+  },
+  "created": "2026-05-29T05:12:28.695136+00:00",
+  "updated": "2026-05-29T05:39:56.766572Z"
+}
