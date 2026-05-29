@@ -1,0 +1,8 @@
+{
+  "from": "OWL",
+  "to": "Self",
+  "timestamp": "2026-05-30T09:30:00",
+  "priority": "medium",
+  "subject": "Sweet Spot Hardware Pricing — Ready for Review",
+  "message": "Hardware pricing is compiled for all 4 terminal types. Summary: Basic package (kitchen terminal + POS + peripherals) = $2,500-$3,200. Standard (basic + indoor kiosk) = $4,200-$5,500. Full (standard + outdoor custom kiosk + failover) = $6,800-$9,000. Full breakdown at sweet-spot-cakes/hardware-pricing.md. Note: Outdoor kiosk is custom AAIS fabrication — 2-4 week lead time, 50% deposit, IP65 rated, sunlight-readable, heated/cooled. Jay wants real numbers in the contract so Pete can make decisions. Please review pricing and let me know if any items need adjustment."
+}
