@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """
-Uptime Monitor v1.0 - Self Agent
+Uptime Monitor v1.1 - Self Agent
 Monitors all Liberty Emporium apps and sends alerts via message bus if any go down.
-Also attempts automatic recovery for known failure modes.
 
-Apps monitored:
-  - FloodClaims Pro: billy-floods.up.railway.app
-  - AI Agent Widget: ai-agent-widget-production.up.railway.app
-  - EcDash (Portfolio): jay-portfolio-production.up.railway.app / alexanderai.site
-  - Liberty Oil: liberty-oil-propane.up.railway.app
-  Note: KYS (ai-api-tracker) was intentionally deleted by Jay — removed from monitoring
+Full app inventory from Jay 2026-05-29:
+  Production (Railway): FloodClaims Pro, Sweet Spot Cakes, Remote Repair, Web App (befe95),
+    IT Courses (needs rebuild), Luxury Rentals Demo
+  Production (alexanderai.site subdomains): Remote Repair, Agents, Shop, Voice Makeover,
+    AI Widget, Consignment, Contractor Pro, EcDash, Pet Vet AI, LE Thrift, Gym Forge
+  Demos: Inventory Demo
+  External: Liberty Oil (libertyoilandpropane.com)
+  Retired: KYS (deleted)
 """
 
 import json
@@ -17,12 +18,12 @@ import os
 import subprocess
 import sys
 import time
+import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
 import urllib.request
 import urllib.error
-import uuid
 
 # ── Configuration ──────────────────────────────────────────────────────────────
 REPO_DIR = Path(__file__).resolve().parent.parent  # echo-v1-brain/
@@ -37,15 +38,31 @@ AGENT_MAP = {
 }
 
 APPS = [
-    {"name": "FloodClaims Pro", "url": "https://billy-floods.up.railway.app", "health": "/", "expect": [200, 302]},
-    {"name": "AI Agent Widget", "url": "https://ai-agent-widget-production.up.railway.app", "health": "/", "expect": [200, 302]},
-    {"name": "EcDash", "url": "https://alexanderai.site", "health": "/", "expect": [200, 302]},
-    {"name": "Liberty Oil", "url": "https://libertyoilandpropane.com", "health": "/", "expect": [200, 302, 301]},
-    # KYS intentionally deleted — not monitored
+    # Railway Production
+    {"name": "FloodClaims Pro", "url": "https://billy-floods.up.railway.app", "expect": [200, 301, 302]},
+    {"name": "Sweet Spot Cakes", "url": "https://sweet-spot-cakes.up.railway.app", "expect": [200, 301, 302]},
+    {"name": "Remote Repair", "url": "https://remote.repaire.alexanderai.site", "expect": [200, 301, 302]},
+    {"name": "Agents", "url": "https://agents.alexanderai.site", "expect": [200, 301, 302]},
+    {"name": "Shop", "url": "https://shop.alexanderai.site", "expect": [200, 301, 302]},
+    {"name": "Voice Makeover", "url": "https://voice-make-over.alexanderai.site", "expect": [200, 301, 302]},
+    {"name": "AI Widget", "url": "https://ai.widget.alexanderai.site", "expect": [200, 301, 302]},
+    {"name": "Consignment", "url": "https://consignment.ai.solutions.alexanderai.site", "expect": [200, 301, 302]},
+    {"name": "Contractor Pro", "url": "https://contractor.ai.solutions.alexanderai.site", "expect": [200, 301, 302]},
+    {"name": "EcDash", "url": "https://alexanderai.site", "expect": [200, 301, 302]},
+    {"name": "Pet Vet AI", "url": "https://ai-vet-tech.alexanderai.site", "expect": [200, 301, 302]},
+    {"name": "LE Thrift", "url": "https://liberty-emporium-thrift.alexanderai.site", "expect": [200, 301, 302]},
+    {"name": "Gym Forge", "url": "https://gymforge.ai.alexanderai.site/", "expect": [200, 301, 302]},
+    {"name": "Liberty Oil", "url": "https://libertyoilandpropane.com", "expect": [200, 301, 302]},
+    # Demos
+    {"name": "Luxury Rentals Demo", "url": "https://luxury-rentals-demo-production.up.railway.app", "expect": [200, 301, 302]},
+    {"name": "Inventory Demo", "url": "https://inventory-demo.alexanderai.site", "expect": [200, 301, 302]},
+    # Needs rebuild
+    {"name": "IT Courses", "url": "https://web-production-8bbc54.up.railway.app", "expect": [200, 301, 302]},
+    # Retired / not monitored
+    # KYS: deleted by Jay
 ]
 
 TIMEOUT_SECONDS = 15
-RAILWAY_REDEPLOY_WAIT = 120  # seconds to wait after triggering redeploy
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
 
@@ -108,25 +125,20 @@ def save_state(state):
 
 def check_app(app):
     """Check if an app is responding. Returns (ok, status_code, response_time_ms)."""
-    health_url = app["url"] + app["health"]
     expect = app.get("expect", [200])
     start = time.time()
     try:
-        req = urllib.request.Request(health_url, method="GET")
+        req = urllib.request.Request(app["url"], method="GET")
         req.add_header("User-Agent", "LibertyEmporium-Monitor/1.0")
         response = urllib.request.urlopen(req, timeout=TIMEOUT_SECONDS)
         elapsed = (time.time() - start) * 1000
         return response.status in expect, response.status, elapsed
     except urllib.error.HTTPError as e:
         elapsed = (time.time() - start) * 1000
-        # If the status code is in our expected range, the app is responding
-        if e.code in expect:
-            return True, e.code, elapsed
-        # 4xx might mean auth redirect — app is alive
-        if e.code in (301, 302, 401, 403):
+        if e.code in expect or e.code in (301, 302, 401, 403):
             return True, e.code, elapsed
         return False, e.code, elapsed
-    except Exception as e:
+    except Exception:
         elapsed = (time.time() - start) * 1000
         return False, 0, elapsed
 
@@ -136,25 +148,28 @@ def git_pull():
     except Exception:
         pass
 
-# ── Main Monitor Logic ────────────────────────────────────────────────────────
-
 def run_check():
-    """Run a single monitoring check cycle."""
-    print(f"\n[{now_ts()}] Starting uptime check...")
+    print(f"[{now_ts()}] Starting uptime check...")
     git_pull()
     state = load_state()
     now = time.time()
+    up_count = 0
+    down_count = 0
 
     for app in APPS:
         name = app["name"]
-        url = app["url"]
-        prev_status = state["app_status"].get(name, "unknown")
-        cooldown_until = state["alert_cooldown"].get(name, 0)
+        prev = state["app_status"].get(name, {}).get("status", "unknown")
+        cooldown = state["alert_cooldown"].get(name, 0)
 
         ok, code, ms = check_app(app)
         status_str = "up" if ok else "down"
+        icon = "✅" if ok else "❌"
 
-        # Update state
+        if ok:
+            up_count += 1
+        else:
+            down_count += 1
+
         state["app_status"][name] = {
             "status": status_str,
             "http_code": code,
@@ -162,74 +177,32 @@ def run_check():
             "last_check": now_ts(),
         }
 
-        icon = "✅" if ok else "❌"
         print(f"  {icon} {name}: {status_str} (HTTP {code}, {ms:.0f}ms)")
 
-        # Detect state change: UP -> DOWN
-        if not ok and prev_status != "down":
-            # Respect cooldown (don't alert more than once per 10 min per app)
-            if now < cooldown_until:
-                print(f"    [SKIP] Alert cooldown active for {name}")
+        if not ok and prev != "down":
+            if now < cooldown:
+                print(f"    [SKIP] Alert cooldown active")
                 continue
-
-            duration_min = round((cooldown_until - now) / 60) if cooldown_until > now else 0
-            send_alert(
-                to="owl",
-                subject=f"⚠️ {name} is DOWN",
-                body=(
-                    f"{name} ({url}) is not responding.\n\n"
-                    f"HTTP Status: {code}\n"
-                    f"Response Time: {ms:.0f}ms\n"
-                    f"Previous Status: {prev_status}\n"
-                    f"Detected At: {now_ts()}\n\n"
-                    f"Self will attempt to notify and coordinate recovery.\n"
-                    f"Jay should check Railway dashboard if this persists."
-                ),
-                priority="critical" if name == "FloodClaims Pro" else "high",
-                app=name,
-                url=url,
-            )
-            # Set 10-minute cooldown
+            send_alert("owl", f"⚠️ {name} is DOWN",
+                f"{name} ({app['url']}) is not responding.\nHTTP {code}, {ms:.0f}ms\nDetected: {now_ts()}",
+                "critical" if name == "FloodClaims Pro" else "high", name, app["url"])
             state["alert_cooldown"][name] = now + 600
-
-        # Detect state change: DOWN -> UP (recovery)
-        elif ok and prev_status == "down":
-            send_alert(
-                to="owl",
-                subject=f"✅ {name} is BACK UP",
-                body=(
-                    f"{name} ({url}) has recovered.\n\n"
-                    f"HTTP Status: {code}\n"
-                    f"Response Time: {ms:.0f}ms\n"
-                    f"Recovered At: {now_ts()}\n\n"
-                    f"Monitoring continues."
-                ),
-                priority="info",
-                app=name,
-                url=url,
-            )
+        elif ok and prev == "down":
+            send_alert("owl", f"✅ {name} is BACK UP",
+                f"{name} ({app['url']}) recovered.\nHTTP {code}, {ms:.0f}ms\nRecovered: {now_ts()}",
+                "info", name, app["url"])
 
     save_state(state)
-    print(f"[{now_ts()}] Check complete.\n")
+    print(f"[{now_ts()}] Complete — {up_count} up, {down_count} down\n")
 
 def main():
-    interval = int(os.environ.get("MONITOR_INTERVAL", "120"))  # default 2 minutes
-    if len(sys.argv) > 1:
-        try:
-            interval = int(sys.argv[1])
-        except ValueError:
-            pass
-
-    print(f"Uptime Monitor v1.0 - Self Agent")
-    print(f"Monitoring {len(APPS)} apps every {interval}s")
-    apps_list = ", ".join(a['name'] for a in APPS)
-    print(f"Apps: {apps_list}")
-
+    interval = int(sys.argv[1]) if len(sys.argv) > 1 else 120
+    print(f"Uptime Monitor v1.1 — {len(APPS)} apps every {interval}s")
     while True:
         try:
             run_check()
         except Exception as e:
-            print(f"[ERROR] Monitor check failed: {e}")
+            print(f"[ERROR] {e}")
         time.sleep(interval)
 
 if __name__ == "__main__":
