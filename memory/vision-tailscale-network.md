@@ -91,7 +91,7 @@ ACL rules:
 
 ### Auth Key
 - Stored: `/root/.secrets/tailscale_authkey`
-- Key: `REDACTED_TSKEY_AUTH_2-...`
+- Key: `tskey-auth-kwJBbBAg4P11CNTRL-...`
 - Account: Liberty-Emporium@github
 - Rotate at: https://login.tailscale.com/admin/settings/keys
 - **TODO:** Create a separate tagged key specifically for customer machines
