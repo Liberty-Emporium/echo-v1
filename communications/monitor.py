@@ -40,7 +40,7 @@ APPS = [
     {"name": "FloodClaims Pro", "url": "https://billy-floods.up.railway.app", "health": "/", "expect": [200, 302]},
     {"name": "AI Agent Widget", "url": "https://ai-agent-widget-production.up.railway.app", "health": "/", "expect": [200, 302]},
     {"name": "EcDash", "url": "https://alexanderai.site", "health": "/", "expect": [200, 302]},
-    # Liberty Oil moved off-Railway — not monitored
+    {"name": "Liberty Oil", "url": "https://libertyoilandpropane.com", "health": "/", "expect": [200, 302, 301]},
     # KYS intentionally deleted — not monitored
 ]
 
