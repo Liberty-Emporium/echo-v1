@@ -37,11 +37,11 @@ AGENT_MAP = {
 }
 
 APPS = [
-    {"name": "FloodClaims Pro", "url": "https://billy-floods.up.railway.app", "health": "/health"},
-    {"name": "AI Agent Widget", "url": "https://ai-agent-widget-production.up.railway.app", "health": "/health"},
-    {"name": "EcDash", "url": "https://alexanderai.site", "health": "/"},
-    {"name": "Liberty Oil", "url": "https://liberty-oil-propane.up.railway.app", "health": "/health"},
-    {"name": "KYS", "url": "https://ai-api-tracker-production.up.railway.app", "health": "/health"},
+    {"name": "FloodClaims Pro", "url": "https://billy-floods.up.railway.app", "health": "/", "expect": [200, 302]},
+    {"name": "AI Agent Widget", "url": "https://ai-agent-widget-production.up.railway.app", "health": "/", "expect": [200, 302]},
+    {"name": "EcDash", "url": "https://alexanderai.site", "health": "/", "expect": [200, 302]},
+    {"name": "Liberty Oil", "url": "https://liberty-oil-propane.up.railway.app", "health": "/", "expect": [200, 302]},
+    {"name": "KYS", "url": "https://ai-api-tracker-production.up.railway.app", "health": "/", "expect": [200, 302]},
 ]
 
 TIMEOUT_SECONDS = 15
@@ -109,18 +109,22 @@ def save_state(state):
 def check_app(app):
     """Check if an app is responding. Returns (ok, status_code, response_time_ms)."""
     health_url = app["url"] + app["health"]
+    expect = app.get("expect", [200])
     start = time.time()
     try:
         req = urllib.request.Request(health_url, method="GET")
         req.add_header("User-Agent", "LibertyEmporium-Monitor/1.0")
         response = urllib.request.urlopen(req, timeout=TIMEOUT_SECONDS)
         elapsed = (time.time() - start) * 1000
-        return True, response.status, elapsed
+        return response.status in expect, response.status, elapsed
     except urllib.error.HTTPError as e:
-        # HTTP errors (5xx, 4xx) mean the server is responding
         elapsed = (time.time() - start) * 1000
-        if e.code in (401, 403, 301, 302):
-            return True, e.code, elapsed  # Auth redirects are OK
+        # If the status code is in our expected range, the app is responding
+        if e.code in expect:
+            return True, e.code, elapsed
+        # 4xx might mean auth redirect — app is alive
+        if e.code in (301, 302, 401, 403):
+            return True, e.code, elapsed
         return False, e.code, elapsed
     except Exception as e:
         elapsed = (time.time() - start) * 1000
