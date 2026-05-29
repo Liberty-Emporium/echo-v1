@@ -9,7 +9,7 @@ Apps monitored:
   - AI Agent Widget: ai-agent-widget-production.up.railway.app
   - EcDash (Portfolio): jay-portfolio-production.up.railway.app / alexanderai.site
   - Liberty Oil: liberty-oil-propane.up.railway.app
-  - KYS: ai-api-tracker-production.up.railway.app
+  Note: KYS (ai-api-tracker) was intentionally deleted by Jay — removed from monitoring
 """
 
 import json
@@ -41,7 +41,8 @@ APPS = [
     {"name": "AI Agent Widget", "url": "https://ai-agent-widget-production.up.railway.app", "health": "/", "expect": [200, 302]},
     {"name": "EcDash", "url": "https://alexanderai.site", "health": "/", "expect": [200, 302]},
     {"name": "Liberty Oil", "url": "https://liberty-oil-propane.up.railway.app", "health": "/", "expect": [200, 302]},
-    {"name": "KYS", "url": "https://ai-api-tracker-production.up.railway.app", "health": "/", "expect": [200, 302]},
+    # Note: Liberty Oil moved off-Railway (hosted elsewhere) — still tracked but not monitored
+    # Note: KYS intentionally deleted by Jay — removed from monitoring
 ]
 
 TIMEOUT_SECONDS = 15
