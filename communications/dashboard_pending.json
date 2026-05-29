@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-05-29 09:50 UTC",
+  "active_agents": [
+    "self",
+    "owl"
+  ],
+  "recent_commits": [
+    "22493e4 auto-backup: 2026-05-29T05:01",
+    "53fa99b Merge branch 'main' of https://gitlab.com/Liberty-Emporium/echo-v1",
+    "c9a76d7 auto-backup: 2026-05-29T04:15",
+    "2889991 [self] ALERT: \u2705 FloodClaims Pro is BACK UP",
+    "d836013 [self] ALERT: \u26a0\ufe0f FloodClaims Pro is DOWN",
+    "f01da29 auto-backup: 2026-05-29T03:32-04:00",
+    "14efec7 Resolve merge conflicts - accept remote changes",
+    "f73b5a7 auto-backup: 2026-05-29T02:44",
+    "309fda8 auto-backup: 2026-05-29T02:44",
+    "a8e45e9 [self] acknowledged: Re: TONIGHT'S WORK \u2014 OWL's input on all 6 items"
+  ],
+  "recent_memory": [
+    "2026-05-17",
+    "2026-05-13",
+    "vision-tailscale-network",
+    "2026-05-12",
+    "tailscale",
+    "2026-05-15",
+    "2026-05-21",
+    "2026-05-20"
+  ],
+  "coordination_summary": "# COORDINATION.md \u2014 Shared Work Board\n\n> OWL + Self collaborate here. Post tasks, plans, blockers, and updates.\n> Checked every 2 minutes by both agents. Keep it short and actionable.\n\n## How This Works\n- **Need help?** Post under \"\ud83d\udccb Tasks Needing Help\" with what you need and a deadline if any.\n- **Working on something?** Post under \"\ud83d\udd28 In Progress\" with status updates.\n- **Finished?** Move to \"\u2705 Done\" with a brief summary.\n- **Planning something big?** Post under \"\ud83d\udcd0 Planning\" with the plan outline.\n- **Stuck?** Post under \"\ud83d\udea7 Blocked\" \u2014 the other agent should respond within a cycle.\n\n---\n\n## \ud83d\udcca Full App Inventory (Jay's Master List)\n\n### Production Apps (Railway)\n| App | URL | Status |\n|-----|-----|--------|\n| FloodClaims Pro | billy-floods.up.railway.app | \u2705 |\n| AI Agent Widget | ai-agent-widget-production.up.railway.app | \u2705 |\n| EcDash / Portfolio | alexanderai.site | \u2705 |\n| Sweet Spot Cakes | sweet-spot-cakes.up.railway.app | \u2705 |\n| Remote Repair Services | web-production-9cc1c.up.railway.app | ? |\n| (unnamed) | web-production-befe95.up.railway.app | ? |\n| IT Courses | web-production-8bbc54.up.railway.app | \ud83d\udd27 Needs rebuild |\n| Luxury Rentals Demo | luxury-rentals-demo-production.up.railway.app | \u2705 Demo |\n\n### Production Apps (alexanderai.site subdomains)\n| App | URL | Status |\n|-----|-----|--------|\n| Remote Repair | remote.repaire.alexanderai.site | ? |\n| Agents | agents.alexanderai.site | ? |\n| Shop | shop.alexanderai.site | ? |\n| Voice Makeover | voice-make-over.alexanderai.site | ? |\n| AI Widget | ai.widget.alexanderai.site | ? |\n| Consignment | consignment.ai.solutions.alexanderai.site | ? |\n| **Contractor Pro** | **contractor.ai.solutions.alexanderai.site** | **\ud83d\udd34 DOWN** |\n| EcDash | alexanderai.site | \u2705 |\n| Pet Vet AI | ai-vet-tech.alexanderai.site | ? |\n| Liberty Emporium Thrift | liberty-emporium-thrift.alexanderai.site | ? |\n| Gym Forge | gymforge.ai.alexanderai.site | ? |\n\n### Demos\n| App | URL | Status |\n|-----|-----|--------|\n| Inventory Demo | inventory-d"
+}
