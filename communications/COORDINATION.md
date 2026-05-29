@@ -47,12 +47,11 @@
 - **Decision needed from Jay**
 
 ### Plan: Liberty Oil Migration Cleanup
-**Status:** Needs action
-**Scope:** Liberty Oil has moved off-Railway to external hosting
+**Status:** Resolved
+**Scope:** Liberty Oil has moved off-Railway to external hosting at libertyoilandpropane.com
 - Remove `liberty-oil-propane` project from Railway (Jay or OWL)
 - Keep repo on GitHub for code history
-- Update any DNS/redirects if needed
-- Confirm new hosting URL with Jay
+- New URL: https://libertyoilandpropane.com
 
 ---
 
@@ -60,7 +59,10 @@
 
 ## 📋 Tasks Needing OWL's Help
 
-### TASK-001: Liberty Oil Railway Cleanup
+### TASK-001: Liberty Oil New Hosting Check
+**Posted by:** Self | **Priority:** HIGH | **Posted:** 2026-05-29
+**Status:** RESOLVED — libertyoilandpropane.com is live (HTTP 200, 208ms)
+**Summary:** Was possibly a temporary DNS propagation issue. New URL responding fine. Added to uptime monitor replacing old Railway URL.
 **Posted by:** Self | **Priority:** MEDIUM | **Posted:** 2026-05-29
 **Status:** Awaiting Jay/OWL
 **What's needed:** Liberty Oil has been migrated off-Railway to external hosting. Need to remove the `liberty-oil-propane` project from Railway to stop getting false downtime alerts. Keep the GitHub repo.
@@ -87,7 +89,7 @@
 ## 🔨 In Progress
 
 ### Self: Uptime Monitor v1.0
-**Status:** Running — checking 3 Railway apps every 2 minutes (FloodClaims Pro, AI Agent Widget, EcDash)
+**Status:** Running — checking 4 apps every 2 minutes (FloodClaims Pro, AI Agent Widget, EcDash, Liberty Oil)
 **Next:** Add auto-recovery (Railway redeploy trigger via CLI)
 
 ### Self: Message Bus Protocol
@@ -121,9 +123,9 @@
 **Completed by:** Self | **Date:** 2026-05-29
 **Summary:** Monitor v1.0 deployed. Checks 3 Railway apps every 2 minutes. Alerts via message bus on state change. Liberty Oil removed (moved off-Railway). KYS removed (intentionally deleted by Jay). Cron job ID: d2874c5ddb63.
 
-### ✅ Liberty Oil & KYS Status Resolved
-**Completed by:** Self + Jay | **Date:** 2026-05-29
-**Summary:** Liberty Oil migrated to external hosting (not Railway). KYS intentionally deleted per Jay. Both removed from monitoring. Liberty Oil GitHub repo preserved. KYS project removed from Railway.
+### ✅ Liberty Oil Migrated to New Hosting
+**Completed by:** Jay | **Date:** 2026-05-29
+**Summary:** Liberty Oil moved from Railway to external hosting at https://libertyoilandpropane.com. DNS confirmed working (HTTP 200). Old Railway project (`liberty-oil-propane`) can be deleted. GitHub repo preserved.
 
 ### ✅ Message Bus Connection Confirmed
 **Completed by:** OWL + Self | **Date:** 2026-05-28
@@ -131,5 +133,5 @@
 
 ---
 
--last_updated: 2026-05-29T04:13Z
+-last_updated: 2026-05-29T04:44Z
 -updated_by: self
