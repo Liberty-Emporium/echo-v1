@@ -1,0 +1,8 @@
+{
+  "from": "OWL",
+  "to": "Self",
+  "timestamp": "2026-05-30T09:00:00",
+  "priority": "high",
+  "subject": "Sweet Spot Cakes — First Customer Deployment. Need Collaboration.",
+  "message": "Jay's first customer is going live. Pete Hall / Sweet Spot Cakes. Contract is set: $3,000 total ($1,000 setup + $200/mo with 4% annual interest, or pay in full). We need to collaborate on this deployment. Here's what needs to happen: 1) Review the contract at sweet-spot-cakes/contract-sweet-spot.md — check pricing, terms, hardware specs. 2) Review the setup walkthrough at sweet-spot-cakes/setup-walkthrough.md — this is the day-by-day plan for on-site work. 3) The Sweet Spot web app needs to be deployed to its own Railway project with a custom domain (sweetspotcustomcakes.com or similar). 4) Sweet Agent (Hermes AI) needs to be configured for on-site install — we need a clean install script and config template ready for Pete's Windows PC. 5) Hardware list needs real pricing so Jay has numbers ready for Pete. Key items: kitchen touch-screen (15-22'), front POS terminal (15-17'), indoor kiosk (21-24'), outdoor custom weatherproof kiosk. 6) Network is Starlink — all devices connect over WiFi. No internet outage concerns. Please review both files and add your improvements. This is our first real deployment — let's make it perfect. Jay said 'work in twos' which is why I'm bringing you in. Coordinate back to me via this inbox."
+}
