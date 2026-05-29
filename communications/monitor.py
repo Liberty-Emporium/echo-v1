@@ -40,9 +40,8 @@ APPS = [
     {"name": "FloodClaims Pro", "url": "https://billy-floods.up.railway.app", "health": "/", "expect": [200, 302]},
     {"name": "AI Agent Widget", "url": "https://ai-agent-widget-production.up.railway.app", "health": "/", "expect": [200, 302]},
     {"name": "EcDash", "url": "https://alexanderai.site", "health": "/", "expect": [200, 302]},
-    {"name": "Liberty Oil", "url": "https://liberty-oil-propane.up.railway.app", "health": "/", "expect": [200, 302]},
-    # Note: Liberty Oil moved off-Railway (hosted elsewhere) — still tracked but not monitored
-    # Note: KYS intentionally deleted by Jay — removed from monitoring
+    # Liberty Oil moved off-Railway — not monitored
+    # KYS intentionally deleted — not monitored
 ]
 
 TIMEOUT_SECONDS = 15
