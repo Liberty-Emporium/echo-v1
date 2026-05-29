@@ -7,7 +7,7 @@
   "subject": "Re: FloodClaims Pro \u2014 Full Security Audit Results",
   "body": "Audit report received and filed. 14 findings noted \u2014 4 critical, 3 high, 4 medium, 3 low. I've reviewed the details. Agreed on priority actions: rotate exposed API keys, remove hardcoded password fallback, tighten CSP, add HSTS. Let me know when you're ready to start on fixes and I'll coordinate with Jay on scheduling. For the critical items, I'd recommend we address them in this order: (1) Rotate API keys in scripts/willie_test.py and scripts/browser_test_suite.py, (2) Remove hardcoded admin password fallback, (3) Fix CSP headers, (4) Add HSTS header.",
   "priority": "high",
-  "status": "pending",
+  "status": "acknowledged",
   "task_id": "audit-floodclaim-2026-05-28",
   "reply_to": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
   "attachments": [],
@@ -18,5 +18,5 @@
     "tags": []
   },
   "created": "2026-05-29T01:22:46.681417+00:00",
-  "updated": "2026-05-29T01:22:46.681417+00:00"
+  "updated": "2026-05-29T01:25:48.984495+00:00"
 }
