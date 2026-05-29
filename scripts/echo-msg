@@ -1,0 +1,153 @@
+#!/usr/bin/env python3
+"""
+echo-v1 message CLI — send and receive messages between OWL and Self.
+
+Usage:
+  python3 echo-msg send <to> <subject> <message> [--priority normal]
+  python3 echo-msg poll [--since <timestamp>]
+  python3 echo-msg list [--dir <inbox|outbox>]
+  python3 echo-msg sync
+"""
+
+import json, os, sys, subprocess, glob
+from datetime import datetime
+
+REPO = "/home/lol/Desktop/openclaw/echo-v1-brain"
+INBOX = os.path.join(REPO, "communications", "inbox")
+
+AGENTS = {
+    "owl": {"dir": "owl-to-self", "peer": "self"},
+    "self": {"dir": "self-to-owl", "peer": "owl"},
+}
+
+def git_pull():
+    subprocess.run(["git", "pull", "--rebase", "origin", "master"],
+                   cwd=REPO, capture_output=True)
+
+def git_push(msg_desc):
+    subprocess.run(["git", "add", "communications/inbox/"], cwd=REPO, capture_output=True)
+    subprocess.run(["git", "commit", "-m", msg_desc], cwd=REPO, capture_output=True)
+    subprocess.run(["git", "push", "origin", "master"], cwd=REPO, capture_output=True)
+
+def send(to_agent, subject, message, priority="normal"):
+    sender = _detect_sender()
+    agent_key = sender.lower().replace("-", "")
+    if agent_key not in AGENTS:
+        # Try peer
+        peer_key = to_agent.lower().replace("-", "")
+        if peer_key in AGENTS:
+            agent_key = peer_key
+        else:
+            print(f"Unknown agent: {to_agent}. Use: {list(AGENTS.keys())}")
+            sys.exit(1)
+
+    info = AGENTS[agent_key]
+    peer_dir = os.path.join(INBOX, info["dir"])
+    os.makedirs(peer_dir, exist_ok=True)
+
+    ts = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+    fname = datetime.now().strftime("%Y-%m-%dT%H-%M-%S") + f"-{to_agent.lower()}.json"
+    fpath = os.path.join(peer_dir, fname)
+
+    envelope = {
+        "from": sender.upper() if sender.lower() == "owl" else sender.capitalize(),
+        "to": to_agent.capitalize() if to_agent.lower() == "self" else "OWL",
+        "timestamp": ts,
+        "priority": priority,
+        "subject": subject,
+        "message": message
+    }
+
+    with open(fpath, "w") as f:
+        json.dump(envelope, f, indent=2)
+
+    print(f"[echo-v1] Wrote: {fpath}")
+    git_push(f"{envelope['from']}: {subject}")
+    print(f"[echo-v1] Pushed to GitHub")
+    return fpath
+
+def poll(agent=None):
+    if agent is None:
+        agent = _detect_sender()
+    peer_key = agent.lower().replace("-", "")
+    # I read from MY directory (where my peer writes TO me)
+    my_dirs = {
+        "owl": "owl-to-self",   # OWL reads what's in owl-to-self (written by... no, that's wrong)
+        "self": "self-to-owl",
+    }
+    # Correction: OWL reads messages written by Self → those are in self-to-owl/ inbox
+    # Self reads messages written by OWL → those are in owl-to-self/ inbox
+    read_dirs = {
+        "owl": "self-to-owl",   # OWL reads Self's messages
+        "self": "owl-to-self",  # Self reads OWL's messages
+    }
+
+    if peer_key not in read_dirs:
+        print(f"Unknown agent: {agent}")
+        sys.exit(1)
+
+    git_pull()
+    target = os.path.join(INBOX, read_dirs[peer_key])
+    # Also check flat files in inbox/
+    messages = glob.glob(os.path.join(target, "*.json"))
+    messages += glob.glob(os.path.join(INBOX, "*.json"))
+    messages = list(set(messages))
+    messages.sort()
+
+    if not messages:
+        print("[echo-v1] No new messages")
+        return []
+
+    print(f"[echo-v1] {len(messages)} message(s):\n")
+    for fpath in messages:
+        with open(fpath) as f:
+            msg = json.load(f)
+        print(f"  From: {msg['from']} | {msg['timestamp']} | Priority: {msg['priority']}")
+        print(f"  Subject: {msg['subject']}")
+        print(f"  {msg['message'][:200]}{'...' if len(msg['message'])>200 else ''}")
+        print()
+    return messages
+
+def _detect_sender():
+    """Detect which agent is calling this script."""
+    # Check hostname and username
+    import getpass, socket
+    user = getpass.getuser()
+    host = socket.gethostname()
+    # Kali machine = OWL
+    if user == "lol" or "kali" in host.lower():
+        return "owl"
+    return "owl"  # default
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print(__doc__)
+        sys.exit(1)
+
+    cmd = sys.argv[1]
+    if cmd == "send":
+        if len(sys.argv) < 5:
+            print("Usage: echo-msg send <to> <subject> <message> [--priority normal]")
+            sys.exit(1)
+        to = sys.argv[2]
+        subject = sys.argv[3]
+        message = sys.argv[4]
+        priority = "normal"
+        if "--priority" in sys.argv:
+            idx = sys.argv.index("--priority")
+            if idx + 1 < len(sys.argv):
+                priority = sys.argv[idx + 1]
+        send(to, subject, message, priority)
+    elif cmd == "poll":
+        agent = None
+        if "--agent" in sys.argv:
+            idx = sys.argv.index("--agent")
+            if idx + 1 < len(sys.argv):
+                agent = sys.argv[idx + 1]
+        poll(agent)
+    elif cmd == "sync":
+        git_pull()
+        print("[echo-v1] Synced with GitHub")
+    else:
+        print(f"Unknown command: {cmd}")
+        print(__doc__)
