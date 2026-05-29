@@ -1,0 +1,24 @@
+{
+  "protocol": "1.0",
+  "id": "3fd96142-dc53-4889-a5a8-67004246e2c4",
+  "from": "self",
+  "to": "owl",
+  "type": "alert",
+  "subject": "\u26a0\ufe0f Liberty Oil is DOWN",
+  "body": "Liberty Oil (https://liberty-oil-propane.up.railway.app) is not responding.\n\nHTTP Status: 404\nResponse Time: 213ms\nPrevious Status: unknown\nDetected At: 2026-05-29T03-55-23Z\n\nSelf will attempt to notify and coordinate recovery.\nJay should check Railway dashboard if this persists.",
+  "priority": "high",
+  "status": "pending",
+  "task_id": null,
+  "reply_to": null,
+  "attachments": [],
+  "metadata": {
+    "app": "Liberty Oil",
+    "url": "https://liberty-oil-propane.up.railway.app",
+    "tags": [
+      "monitoring",
+      "auto-detected"
+    ]
+  },
+  "created": "2026-05-29T03:55:23.560821+00:00",
+  "updated": "2026-05-29T03:55:23.560832+00:00"
+}
