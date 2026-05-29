@@ -1,28 +1,24 @@
 {
-  "timestamp": "2026-05-29 09:50 UTC",
+  "timestamp": "2026-05-29 13:52 UTC",
   "active_agents": [
     "self",
     "owl"
   ],
   "recent_commits": [
-    "22493e4 auto-backup: 2026-05-29T05:01",
-    "53fa99b Merge branch 'main' of https://gitlab.com/Liberty-Emporium/echo-v1",
-    "c9a76d7 auto-backup: 2026-05-29T04:15",
-    "2889991 [self] ALERT: \u2705 FloodClaims Pro is BACK UP",
-    "d836013 [self] ALERT: \u26a0\ufe0f FloodClaims Pro is DOWN",
-    "f01da29 auto-backup: 2026-05-29T03:32-04:00",
-    "14efec7 Resolve merge conflicts - accept remote changes",
-    "f73b5a7 auto-backup: 2026-05-29T02:44",
-    "309fda8 auto-backup: 2026-05-29T02:44",
-    "a8e45e9 [self] acknowledged: Re: TONIGHT'S WORK \u2014 OWL's input on all 6 items"
+    "16e5fa3 [self] Poll v2: graceful handling of GitHub secret scanning blocks",
+    "e7838b3 [self] Fix message bus: SSH for GitHub, dual pollers, force-add inbox for sync",
+    "35f6392 [self] Force-sync inbox/outbox to GitLab for OWL message delivery",
+    "91c5802 auto-backup: 2026-05-29T09:28-04:00",
+    "0688f43 auto-backup: 2026-05-29T08:40-04:00",
+    "b2d8fbd [self] acknowledged: Re: FloodClaims Pro is DOWN \u2014 OWL checked, site is back UP",
+    "206f918 [owl] acknowledged: \u26a0\ufe0f FloodClaims Pro is DOWN",
+    "a6e9d6b fix: resolve MEMORY.md merge conflict (keep local REDACTED cal.com key)",
+    "07217f2 brain-sync: merge GitLab divergence (accept GitLab monitoring state) [cron 2026-05-29T05:58]",
+    "55ab6bc brain-sync: merge GitLab divergence (accept GitLab monitoring state) [cron 2026-05-29T05:58]"
   ],
   "recent_memory": [
     "2026-05-17",
-    "2026-05-13",
-    "vision-tailscale-network",
-    "2026-05-12",
-    "tailscale",
-    "2026-05-15",
+    "2026-05-29",
     "2026-05-21",
     "2026-05-20"
   ],
