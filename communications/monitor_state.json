@@ -1,10 +1,10 @@
 {
   "app_status": {
     "FloodClaims Pro": {
-      "status": "up",
-      "http_code": 200,
-      "response_ms": 412.9,
-      "last_check": "2026-05-29T05-12-26Z"
+      "status": "down",
+      "http_code": 0,
+      "response_ms": 15181.5,
+      "last_check": "2026-05-29T05-19-24Z"
     },
     "AI Agent Widget": {
       "status": "up",
@@ -15,103 +15,104 @@
     "EcDash": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 202.1,
-      "last_check": "2026-05-29T05-12-28Z"
+      "response_ms": 196.5,
+      "last_check": "2026-05-29T05-19-27Z"
     },
     "Liberty Oil": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 386.6,
-      "last_check": "2026-05-29T05-12-45Z"
+      "response_ms": 319.5,
+      "last_check": "2026-05-29T05-19-43Z"
     },
     "Sweet Spot Cakes": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 225.4,
-      "last_check": "2026-05-29T05-12-26Z"
+      "response_ms": 232.8,
+      "last_check": "2026-05-29T05-19-25Z"
     },
     "Remote Repair": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 217.5,
-      "last_check": "2026-05-29T05-12-27Z"
+      "response_ms": 264.4,
+      "last_check": "2026-05-29T05-19-25Z"
     },
     "Agents": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 315.4,
-      "last_check": "2026-05-29T05-12-27Z"
+      "response_ms": 262.2,
+      "last_check": "2026-05-29T05-19-25Z"
     },
     "Shop": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 307.3,
-      "last_check": "2026-05-29T05-12-27Z"
+      "response_ms": 266.8,
+      "last_check": "2026-05-29T05-19-26Z"
     },
     "Voice Makeover": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 206.5,
-      "last_check": "2026-05-29T05-12-27Z"
+      "response_ms": 268.3,
+      "last_check": "2026-05-29T05-19-26Z"
     },
     "AI Widget": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 234.9,
-      "last_check": "2026-05-29T05-12-28Z"
+      "response_ms": 269.9,
+      "last_check": "2026-05-29T05-19-26Z"
     },
     "Consignment": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 257.2,
-      "last_check": "2026-05-29T05-12-28Z"
+      "response_ms": 188.1,
+      "last_check": "2026-05-29T05-19-26Z"
     },
     "Contractor Pro": {
       "status": "down",
       "http_code": 0,
-      "response_ms": 204.7,
-      "last_check": "2026-05-29T05-12-28Z"
+      "response_ms": 232.4,
+      "last_check": "2026-05-29T05-19-26Z"
     },
     "Pet Vet AI": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 229.2,
-      "last_check": "2026-05-29T05-12-29Z"
+      "response_ms": 255.0,
+      "last_check": "2026-05-29T05-19-27Z"
     },
     "LE Thrift": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 286.7,
-      "last_check": "2026-05-29T05-12-29Z"
+      "response_ms": 270.4,
+      "last_check": "2026-05-29T05-19-27Z"
     },
     "Gym Forge": {
       "status": "down",
       "http_code": 0,
-      "response_ms": 15221.7,
-      "last_check": "2026-05-29T05-12-44Z"
+      "response_ms": 15222.2,
+      "last_check": "2026-05-29T05-19-42Z"
     },
     "Luxury Rentals Demo": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 216.7,
-      "last_check": "2026-05-29T05-12-45Z"
+      "response_ms": 202.8,
+      "last_check": "2026-05-29T05-19-43Z"
     },
     "Inventory Demo": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 302.0,
-      "last_check": "2026-05-29T05-12-45Z"
+      "response_ms": 261.0,
+      "last_check": "2026-05-29T05-19-43Z"
     },
     "IT Courses": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 302.4,
-      "last_check": "2026-05-29T05-12-45Z"
+      "response_ms": 234.6,
+      "last_check": "2026-05-29T05-19-43Z"
     }
   },
   "alert_cooldown": {
     "Liberty Oil": 1780028530.7740707,
     "Contractor Pro": 1780032146.2935965,
-    "Gym Forge": 1780032146.2935965
+    "Gym Forge": 1780032146.2935965,
+    "FloodClaims Pro": 1780032339.8295178
   }
 }
