@@ -34,11 +34,11 @@ SENT_DIR = COMM_DIR / "sent"
 ARCHIVE_DIR = COMM_DIR / "archive"
 PROTOCOL_DIR = COMM_DIR / "protocol"
 
-AGENT_NAME = os.environ.get("AGENT_NAME", "self")  # Set AGENT_NAME env var per agent
+AGENT_NAME = os.environ.get("AGENT_NAME", "bull")  # Set AGENT_NAME env var per agent
 AGENT_MAP = {
-    "self": {"inbox": "self-to-owl", "outbox": "owl-to-self"},  # Self writes to owl's inbox
-    "owl": {"inbox": "owl-to-self", "outbox": "self-to-owl"},   # OWL writes to self's inbox
-    "kiloclaw": {"inbox": "kiloclaw-to-owl", "outbox": "owl-to-kiloclaw"},
+    "bull": {"inbox": "bull-to-owl", "outbox": "owl-to-bull"},
+    "owl": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
+    "bullet": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
 }
 
 # ── Helpers ────────────────────────────────────────────────────────────────────

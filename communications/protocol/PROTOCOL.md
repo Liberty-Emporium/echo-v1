@@ -1,23 +1,28 @@
-# OWL-SELF COMMUNICATION PROTOCOL v1.0
+# BULLET-BULL COMMUNICATION PROTOCOL v1.0
 
 ## Overview
-Internal message bus between OWL (local executor on Kali) and Self (remote orchestrator via Hermes).
+Internal message bus between Bullet (local executor on Kali) and Bull (remote orchestrator via Hermes).
 Messages are JSON files stored in a shared git repo (echo-v1-brain).
 Both sides poll the repo for new messages and write responses.
+
+## Agent Roster
+- **Bull** (formerly Self/Hermes) — planner/architect, runs on KiloClaw
+- **Bullet** (formerly OWL) — builder/executor, runs on Kali
+- **Echo** — emergency rapid-response only (original brain)
 
 ## Architecture
 ```
 echo-v1-brain/communications/
   inbox/
-    self-to-owl/     # Messages FROM Self (Hermes) TO OWL
-    owl-to-self/     # Messages FROM OWL TO Self (Hermes)
-    kiloclaw-to-owl/ # Messages FROM KiloClaw TO OWL
-    owl-to-kiloclaw/ # Messages FROM OWL TO KiloClaw
-    self-to-kiloclaw/# Messages FROM Self TO KiloClaw
-    kiloclaw-to-self/# Messages FROM KiloClaw TO Self
-  sent/              # Copy of sent messages
-  archive/           # Read/processed messages
-  protocol/          # This file + schema definitions
+    bull-to-owl/      # Messages FROM Bull TO Bullet (Bullet reads here)
+    owl-to-bull/      # Messages FROM Bullet TO Bull (Bull reads here)
+    kiloclaw-to-owl/  # Messages FROM KiloClaw TO Bullet
+    owl-to-kiloclaw/  # Messages FROM Bullet TO KiloClaw
+    self-to-kiloclaw/ # Messages FROM Bull TO KiloClaw
+    kiloclaw-to-self/ # Messages FROM KiloClaw TO Bull
+  sent/               # Copy of sent messages
+  archive/            # Read/processed messages
+  protocol/           # This file + schema definitions
 ```
 
 ## Message Schema
@@ -27,8 +32,8 @@ All messages are JSON files. Filename format: `YYYY-MM-DDTHH-MM-SSZ_<type>_<id>.
 {
   "protocol": "1.0",
   "id": "uuid-v4",
-  "from": "self",
-  "to": "owl",
+  "from": "bull",
+  "to": "bullet",
   "type": "task_assignment | status_update | report | question | alert | heartbeat",
   "subject": "Brief description",
   "body": "Full message content. Can be multi-line.",

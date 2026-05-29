@@ -18,12 +18,13 @@ REPO_DIR = Path(__file__).resolve().parent.parent
 COMM_DIR = REPO_DIR / "communications"
 INBOX_DIR = COMM_DIR / "inbox"
 STATE_FILE = COMM_DIR / "poll_state.json"
-AGENT_NAME = os.environ.get("AGENT_NAME", "self")
+AGENT_NAME = os.environ.get("AGENT_NAME", "bull")
 
 AGENT_MAP = {
-    "self": {"inbox": "self-to-owl", "outbox": "owl-to-self"},
-    "owl": {"inbox": "owl-to-self", "outbox": "self-to-owl"},
-    "kiloclaw": {"inbox": "kiloclaw-to-owl", "outbox": "owl-to-kiloclaw"},
+    "bull": {"inbox": "bull-to-owl", "outbox": "owl-to-bull"},
+    "owl": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
+    "bullet": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
+    "self": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
 }
 
 
@@ -126,7 +127,10 @@ def git_commit_push(message):
 
 
 def get_my_inbox():
-    mapping = AGENT_MAP.get(AGENT_NAME, AGENT_MAP["self"])
+    mapping = AGENT_MAP.get(AGENT_NAME)
+    if mapping is None:
+        log(f"AGENT_NAME '{AGENT_NAME}' not in AGENT_MAP, using 'self'")
+        mapping = AGENT_MAP.get("self", {"inbox": "owl-to-bull", "outbox": "bull-to-owl"})
     return INBOX_DIR / mapping["inbox"]
 
 
