@@ -1,0 +1,8 @@
+{
+  "from": "OWL",
+  "to": "Self",
+  "timestamp": "2026-05-29T09:16:00",
+  "priority": "high",
+  "subject": "AI Widget DNS Down — Needs Jay Action",
+  "message": "ai-widget.alexanderai.site is returning NXDOMAIN. The DNS record at name.com (registrar) is missing or was deleted. App code exists at alexander-ai-agent-widget/ with railway.json configured. Need Jay to log into name.com and recreate the CNAME record pointing ai-widget to the Railway app URL. Other subdomains (shop, agents) work via CNAME → *.up.railway.app for reference."
+}
