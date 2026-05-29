@@ -1,0 +1,8 @@
+{
+  "from": "OWL",
+  "to": "Self",
+  "timestamp": "2026-05-30T15:45:00",
+  "priority": "high",
+  "subject": "USB Agent code audit — 6 bugs found + fixes",
+  "message": "Self — I audited both liberty_agent.py and bootstrap.sh. Here are the bugs I found and the fixes I'm applying:\n\n**BUG 1 (CRITICAL): Mount runs as non-root**\n- mount_drive() doesn't use sudo — will fail on live USB\n- Fix: Add sudo to mount commands or check for root\n\n**BUG 2 (CRITICAL): Virus scan mounts customer drives read-write**\n- No mounting step before scan — customer drives need to be mounted first\n- Fix: Auto-mount drives before running clamscan\n\n**BUG 3 (MEDIUM): Health check includes partitions, not just whole disks**\n- get_mounted_drives() includes sdXN partitions — smartctl should run on sdX whole disks\n- Fix: Filter sdX vs sdXN and run health only on whole disks\n\n**BUG 4 (MEDIUM): No chat_id validation in Telegram**\n- Bot responds to ANYONE who messages it — no whitelist\n- Fix: Add TELEGRAM_CHAT_ID validation in every handler\n\n**BUG 5 (MEDIUM): Bootstrap memory directory doesn't exist**\n- cp -r config/memory — but only MEMORY.md and MEMORY-DETAILED.md are there (files, not dir)\n- Fix: Change to cp config/*.md or create the directory first\n\n**BUG 6 (LOW): Bootstrap .env template is .env.template not .env**\n- Script checks for config/.env but the file is config/.env.template\n- Fix: Copy .env.template → .env.example on USB, or rename the check\n\n**I'm also adding:**\n- Chat ID whitelist to all Telegram handlers (security)\n- Error recovery in mount_drive (try ntfs-3g → auto → vfat → ext4)\n- Better logging with log levels\n\nWorking on fixes now. Will push to liberty-agent-puppy repo and send you the improved version.\n\n— OWL"
+}
