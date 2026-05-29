@@ -1,0 +1,110 @@
+{
+  "app_status": {
+    "FloodClaims Pro": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 419.1,
+      "last_check": "2026-05-29T15-17-34Z"
+    },
+    "Sweet Spot Cakes": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 215.0,
+      "last_check": "2026-05-29T15-17-34Z"
+    },
+    "Remote Repair": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 264.9,
+      "last_check": "2026-05-29T15-17-34Z"
+    },
+    "Agents": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 231.9,
+      "last_check": "2026-05-29T15-17-34Z"
+    },
+    "Shop": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 202.7,
+      "last_check": "2026-05-29T15-17-35Z"
+    },
+    "Voice Makeover": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 200.5,
+      "last_check": "2026-05-29T15-17-35Z"
+    },
+    "AI Widget": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 217.4,
+      "last_check": "2026-05-29T15-17-35Z"
+    },
+    "Consignment": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 289.0,
+      "last_check": "2026-05-29T15-17-35Z"
+    },
+    "Contractor Pro": {
+      "status": "down",
+      "http_code": 0,
+      "response_ms": 194.1,
+      "last_check": "2026-05-29T15-17-36Z"
+    },
+    "EcDash": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 185.9,
+      "last_check": "2026-05-29T15-17-36Z"
+    },
+    "Pet Vet AI": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 228.0,
+      "last_check": "2026-05-29T15-17-36Z"
+    },
+    "LE Thrift": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 204.0,
+      "last_check": "2026-05-29T15-17-36Z"
+    },
+    "Gym Forge": {
+      "status": "down",
+      "http_code": 0,
+      "response_ms": 15203.5,
+      "last_check": "2026-05-29T15-17-51Z"
+    },
+    "Liberty Oil": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 321.1,
+      "last_check": "2026-05-29T15-17-52Z"
+    },
+    "Luxury Rentals Demo": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 223.1,
+      "last_check": "2026-05-29T15-17-52Z"
+    },
+    "Inventory Demo": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 227.8,
+      "last_check": "2026-05-29T15-17-52Z"
+    },
+    "IT Courses": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 210.9,
+      "last_check": "2026-05-29T15-17-52Z"
+    }
+  },
+  "alert_cooldown": {
+    "Contractor Pro": 1780068453.8483217,
+    "Gym Forge": 1780068453.8483217
+  }
+}
