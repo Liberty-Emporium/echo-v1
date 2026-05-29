@@ -7,7 +7,7 @@ All secrets restored to /root/.secrets/ (ecdash, gitlab, tailscale, github, cal,
 Tailscale: kiloclaw-echo-1-11 @ 100.105.161.105
 Railway token (new session): 8a7c0361-5034-4531-99eb-99ef27a64175
 Railway project (echo-v1 context): cfc73cec-2259-4669-9a0a-a5b745a2ac71
-Cal.com: REDACTED_CAL_KEY_1 (stored /root/.secrets/cal_token)
+Cal.com: cal_live_ee5d46c871de452619a7388c674a3c7f (stored /root/.secrets/cal_token)
 EcDash echo-bridge returning HTTP 502 — Railway service may be sleeping
 Cron jobs restored: Brain backup (ef6277fd, every 40min) + Sweet Spot monitor (c64cd5bb, every 5min)
 Subagent rule still active: image analysis tasks ONLY.
