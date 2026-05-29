@@ -31,10 +31,11 @@ COMM_DIR = REPO_DIR / "communications"
 INBOX_DIR = COMM_DIR / "inbox"
 STATE_FILE = COMM_DIR / "monitor_state.json"
 
-AGENT_NAME = "self"
+AGENT_NAME = "bull"
 AGENT_MAP = {
-    "self": {"inbox": "self-to-owl", "outbox": "owl-to-self"},
-    "owl": {"inbox": "owl-to-self", "outbox": "self-to-owl"},
+    "bull": {"inbox": "bull-to-owl", "outbox": "owl-to-bull"},
+    "owl": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
+    "bullet": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
 }
 
 APPS = [

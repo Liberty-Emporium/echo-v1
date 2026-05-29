@@ -45,7 +45,7 @@ def archive_old_messages():
     for directory in [INBOX_DIR, SENT_DIR]:
         if not directory.exists():
             continue
-        # Walk subdirectories (inbox/owl-to-self, inbox/self-to-owl, etc.)
+        # Walk subdirectories (inbox/owl-to-bull, inbox/bull-to-owl, etc.)
         for subdir in directory.iterdir():
             if not subdir.is_dir():
                 continue
