@@ -1,5 +1,5 @@
 # MULTI-AGENT COMMUNICATION PROTOCOL v1.0
-> OWL + Self coordination standard. All new agents must implement this.
+> OWL + Bull coordination standard. All new agents must implement this.
 
 ## Architecture: 3 Avenues (ordered by priority)
 
@@ -17,14 +17,14 @@ All three use the **same message schema**. If avenue 1 fails, fall back to 2, th
 
 **Repo:** `Liberty-Emporium/echo-v1` on GitHub
 **Local path (OWL/Kali):** `/home/lol/Desktop/openclaw/echo-v1/`
-**Local path (Self/Hermes):** wherever Self clones to
+**Local path (Bull/Hermes):** wherever Bull clones to
 
 ### Directory Structure
 ```
 echo-v1/communications/
   inbox/
-    owl-to-self/       ← Messages FROM OWL, TO Self (Self reads here)
-    self-to-owl/       ← Messages FROM Self, TO OWL (OWL reads here)
+    owl-to-bull/       ← Messages FROM OWL, TO Bull (Bull reads here)
+    bull-to-owl/       ← Messages FROM Bull, TO OWL (OWL reads here)
     <agent>-to-<agent>/ ← Future agents: echo-to-owl/, etc.
   sent/                ← Copy of all sent messages
   archive/             ← Processed messages (auto-archived after 14 days)
@@ -96,9 +96,9 @@ git diff --cached --quiet || git commit -m "<agent>: archived processed messages
 ### Each Agent's Inbox
 | Agent | Writes TO | Reads FROM |
 |-------|-----------|------------|
-| OWL | inbox/owl-to-self/ | inbox/self-to-owl/ |
-| Self | inbox/self-to-owl/ | inbox/owl-to-self/ |
-| Echo | inbox/echo-to-self/ | inbox/owl-to-echo/ |
+| OWL | inbox/owl-to-bull/ | inbox/bull-to-owl/ |
+| Bull | inbox/bull-to-owl/ | inbox/owl-to-bull/ |
+| Echo | inbox/echo-to-bull/ | inbox/owl-to-echo/ |
 | KiloClaw | inbox/kiloclaw-to-owl/ | inbox/owl-to-kiloclaw/ |
 
 **Rule: You ALWAYS write to YOUR-TO-THEIR directory. You ALWAYS read from THEIR-TO-YOUR directory.**
@@ -119,7 +119,7 @@ git diff --cached --quiet || git commit -m "<agent>: archived processed messages
 ### Issue Title Format
 `[<Agent>] <Type>: <Subject>`
 Examples:
-- `[Self] Task: Review USB Agent security audit`
+`- [Bull] Task: Review USB Agent security audit`
 - `[OWL] Question: Railway CLI auth token for GymForge deploy`
 - `[Echo] Alert: Contractor Pro DOWN — investigating`
 
@@ -127,7 +127,7 @@ Examples:
 - `agent-comms` — all comms issues
 - `critical`, `high`, `medium`, `low` — priority
 - `task`, `question`, `alert`, `heartbeat` — type
-- `owl`, `self`, `echo`, `kiloclaw` — which agent should handle
+`- `owl`, `bull`, `echo`, `kiloclaw` — which agent should handle
 
 ---
 
@@ -142,9 +142,9 @@ Examples:
 Simple heartbeat + message queue in one JSON file:
 ```json
 {
-  "last_seen": { "owl": "ISO-timestamp", "self": "ISO-timestamp" },
+  "last_seen": { "owl": "ISO-timestamp", "bull": "ISO-timestamp" },
   "messages": [
-    {"from": "owl", "to": "self", "body": "...", "timestamp": "ISO", "read": false}
+    {"from": "owl", "to": "bull", "body": "...", "timestamp": "ISO", "read": false}
   ]
 }
 ```
@@ -162,7 +162,7 @@ Both agents update this file. It's the single source of truth for:
 - Blockers
 - Completed work
 
-**Update rule:** Every time you push a significant update, touch the OWL or Self section with current status and update `last_updated` timestamp.
+**Update rule:** Every time you push a significant update, touch the OWL or Bull section with current status and update `last_updated` timestamp.
 
 ---
 
