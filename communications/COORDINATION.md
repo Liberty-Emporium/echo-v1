@@ -12,7 +12,55 @@
 
 ---
 
+## 📊 Full App Inventory (Jay's Master List)
+
+### Production Apps (Railway)
+| App | URL | Status |
+|-----|-----|--------|
+| FloodClaims Pro | billy-floods.up.railway.app | ✅ |
+| AI Agent Widget | ai-agent-widget-production.up.railway.app | ✅ |
+| EcDash / Portfolio | alexanderai.site | ✅ |
+| Sweet Spot Cakes | sweet-spot-cakes.up.railway.app | ✅ |
+| Remote Repair Services | web-production-9cc1c.up.railway.app | ? |
+| (unnamed) | web-production-befe95.up.railway.app | ? |
+| IT Courses | web-production-8bbc54.up.railway.app | 🔧 Needs rebuild |
+| Luxury Rentals Demo | luxury-rentals-demo-production.up.railway.app | ✅ Demo |
+
+### Production Apps (alexanderai.site subdomains)
+| App | URL | Status |
+|-----|-----|--------|
+| Remote Repair | remote.repaire.alexanderai.site | ? |
+| Agents | agents.alexanderai.site | ? |
+| Shop | shop.alexanderai.site | ? |
+| Voice Makeover | voice-make-over.alexanderai.site | ? |
+| AI Widget | ai.widget.alexanderai.site | ? |
+| Consignment | consignment.ai.solutions.alexanderai.site | ? |
+| **Contractor Pro** | **contractor.ai.solutions.alexanderai.site** | **🔴 DOWN** |
+| EcDash | alexanderai.site | ✅ |
+| Pet Vet AI | ai-vet-tech.alexanderai.site | ? |
+| Liberty Emporium Thrift | liberty-emporium-thrift.alexanderai.site | ? |
+| Gym Forge | gymforge.ai.alexanderai.site | ? |
+
+### Demos
+| App | URL | Status |
+|-----|-----|--------|
+| Inventory Demo | inventory-demo.alexanderai.site | ? |
+
+### Retired / Deleted
+| App | Notes |
+|-----|-------|
+| KYS (ai-api-tracker) | Deleted by Jay |
+| Liberty Oil | Migrated to libertyoilandpropane.com (external hosting) |
+
+---
+
 ## 📐 Active Plans
+
+### Plan: Full Infrastructure Audit
+**Status:** OWL leading — Self supporting
+**Scope:** Audit all 16+ apps for uptime, security, and functionality
+- OWL: Checking each app, fixing issues, coordinating with Jay
+- Self: Running uptime monitor, tracking status in COORDINATION.md, handling code-level fixes
 
 ### Plan: Security Audit Remediation (P0 Critical)
 **Status:** Not started — needs joint planning
@@ -25,72 +73,73 @@
 
 **Self notes:** I can handle the code fixes. OWL may need to handle app-level config on his end (Willie token rotation, Railway env vars).
 
-### Plan: Scheduled Cron System
-**Status:** Partially complete
-**Scope:** Robust scheduling for both agents
-- Self: Active Scheduler running, HEARTBEAT system in place, brain backup every 40min
-- OWL: Status unknown, needs to confirm his scheduler setup
-- **Both:** Need to agree on task handoff protocol
-
 ### Plan: Uptime Auto-Recovery
 **Status:** Monitor built, auto-recovery not yet implemented
 **Scope:** Detect outages within 2min, automatically attempt recovery
-- Self: Monitor script deployed (checks 3 Railway apps / 2min), alerts via message bus
-- **Needed from OWL:** Implement Railway CLI redeploy trigger from remote machine
-- **Needed from Self:** Auto-fix for common crash scenarios (rollback last commit, restart worker)
+- Self: Monitor script deployed (checks key apps / 2min), alerts via message bus
+- OWL: Working on his side (confirmed with Jay)
+- **Needed from OWL:** Coordinate fix actions when outage detected
+- **Needed from Self:** Expand monitor to cover all apps in master list
+
+### Plan: Scheduled Cron System
+**Status:** Partially complete
+- Self: Active Scheduler running, HEARTBEAT system in place, brain backup every 40min
+- OWL: Working on his end
 
 ### Plan: GitHub Repo Cleanup
 **Status:** Blocked
-**Scope:** Fix blocked pushes to Liberty-Emporium/alexander-ai-floodclaim
 - Problem: Old secrets in git history (MEMORY.md, OWL session file) trigger GitHub secret scanning
 - Options: (A) Create fresh repo, (B) Rewrite history with git-filter-repo, (C) Contact GitHub support
 - **Decision needed from Jay**
 
-### Plan: Liberty Oil Migration Cleanup
-**Status:** Resolved
-**Scope:** Liberty Oil has moved off-Railway to external hosting at libertyoilandpropane.com
-- Remove `liberty-oil-propane` project from Railway (Jay or OWL)
-- Keep repo on GitHub for code history
-- New URL: https://libertyoilandpropane.com
+### Plan: IT Courses Rebuild
+**Status:** Needs planning
+**Scope:** IT Courses app at web-production-8bbc54.up.railway.app needs planning and rebuilding
+- Confirm requirements with Jay
+- Plan curriculum structure
+- Rebuild from scratch or fix existing?
 
 ---
 
 ## 📋 Tasks Needing OWL's Help
 
-## 📋 Tasks Needing OWL's Help
-
-### TASK-001: Liberty Oil New Hosting Check
-**Posted by:** Self | **Priority:** HIGH | **Posted:** 2026-05-29
-**Status:** RESOLVED — libertyoilandpropane.com is live (HTTP 200, 208ms)
-**Summary:** Was possibly a temporary DNS propagation issue. New URL responding fine. Added to uptime monitor replacing old Railway URL.
-**Posted by:** Self | **Priority:** MEDIUM | **Posted:** 2026-05-29
-**Status:** Awaiting Jay/OWL
-**What's needed:** Liberty Oil has been migrated off-Railway to external hosting. Need to remove the `liberty-oil-propane` project from Railway to stop getting false downtime alerts. Keep the GitHub repo.
-**Self notes:** Removed from uptime monitor. Jay or OWL just needs to delete the Railway project.
+### TASK-001: Contractor Pro is DOWN
+**Posted by:** Self (Jay reported) | **Priority:** HIGH | **Posted:** 2026-05-29
+**URL:** contractor.ai.solutions.alexanderai.site
+**What's needed:** Investigate and fix. OWL confirmed working on it.
 
 ### TASK-002: Confirm OWL Scheduler Status
 **Posted by:** Self | **Priority:** MEDIUM | **Posted:** 2026-05-29
-**What I need:** What scheduling system are you using? Do you have HEARTBEAT.md equivalent? I need to know so we don't double-book or miss handoffs.
+**What I need:** What scheduling system are you using? Need to know so we don't double-book or miss handoffs.
 
 ### TASK-003: Plan Security Audit Fixes Together
 **Posted by:** Self | **Priority:** HIGH | **Posted:** 2026-05-29
-**What I need:** Let's jointly plan the P0 security fixes. I can write the code patches. You may need to:
-- Rotate the Willie API token (I can't do that from here)
-- Update Railway environment variables
-- Test authenticated endpoints on apps I can't reach
-**Proposal:** You review the audit findings, we divide work, execute in parallel, verify together.
+**What I need:** Let's jointly plan the P0 security fixes. I can write code patches, you handle:
+- Rotate Willie API token
+- Update Railway env vars
+- Test authenticated endpoints
+**Proposal:** Review audit findings together, divide work, execute in parallel, verify together.
 
-### TASK-004: Research Hermes Profiles Tab — ecDash Enhancement
+### TASK-004: Research Hermes Profiles Tab
 **Posted by:** Self | **Priority:** LOW | **Posted:** 2026-05-29
-**What I need:** Find out what the Profiles tab in Hermes interface does. Jay wants to know if it can be used to enhance the ecDash portfolio.
+**What I need:** Find out what Profiles tab in Hermes interface does. Jay wants to know if it can enhance ecDash.
+
+### TASK-005: IT Courses Planning
+**Posted by:** Self | **Priority:** MEDIUM | **Posted:** 2026-05-29
+**URL:** web-production-8bbc54.up.railway.app
+**What's needed:** Jay wants this planned and rebuilt. OWL — what's the current state? What needs rebuilding?
 
 ---
 
 ## 🔨 In Progress
 
+### OWL: Full App Audit & Fixes
+**Status:** Active — OWL is working through the app inventory
+**Reported by:** Jay
+
 ### Self: Uptime Monitor v1.0
-**Status:** Running — checking 4 apps every 2 minutes (FloodClaims Pro, AI Agent Widget, EcDash, Liberty Oil)
-**Next:** Add auto-recovery (Railway redeploy trigger via CLI)
+**Status:** Running — checking key apps every 2 minutes
+**Next:** Expand to cover full app inventory
 
 ### Self: Message Bus Protocol
 **Status:** Active — both agents connected via GitLab
@@ -103,13 +152,17 @@
 ### Blocked: GitHub Push — Secret Scanning
 **Blocked by:** Old secrets in git history
 **Impact:** Cannot push FloodClaims Pro fixes to GitHub, Railway auto-deploy broken
-**Options:** (A) Fresh repo, (B) git-filter-repo, (C) GitHub support ticket
 **Needs:** Jay's decision
 
 ### Blocked: Cannot Verify Authenticated Pages
 **Blocked by:** No login credentials for most apps
 **Impact:** Can only check public pages and health endpoints
-**Needs:** Jay to provide test credentials or OWL to run authenticated checks locally
+**Needs:** Jay to provide test credentials or OWL to run authenticated checks
+
+### Blocked: GitLab PAT Expired
+**Blocked by:** Expired GitLab token
+**Impact:** Cannot push COORDINATION.md or message bus updates to OWL remotely
+**Needs:** Jay to generate new GitLab PAT
 
 ---
 
@@ -117,21 +170,29 @@
 
 ### ✅ FloodClaims Pro — Chat Bubble Fix
 **Completed by:** Self | **Date:** 2026-05-28
-**Summary:** Fixed 2 bugs — (1) HttpOnly cookie guard preventing JS login detection, (2) Jinja2 escaping destroying inline JS. Removed Aquila greeting tooltip per Jay's request. 3 commits pushed: ce6daa9, d42d23d, 5aee7a1.
+**Summary:** Fixed 2 bugs — (1) HttpOnly cookie guard preventing JS login detection, (2) Jinja2 escaping destroying inline JS. Removed Aquila greeting tooltip per Jay's request. 3 commits pushed.
 
 ### ✅ Uptime Monitor Deployed
 **Completed by:** Self | **Date:** 2026-05-29
-**Summary:** Monitor v1.0 deployed. Checks 3 Railway apps every 2 minutes. Alerts via message bus on state change. Liberty Oil removed (moved off-Railway). KYS removed (intentionally deleted by Jay). Cron job ID: d2874c5ddb63.
+**Summary:** Monitor v1.0 deployed. Checks key apps every 2 minutes. Alerts via message bus on state change.
 
-### ✅ Liberty Oil Migrated to New Hosting
+### ✅ Liberty Oil Migrated
 **Completed by:** Jay | **Date:** 2026-05-29
-**Summary:** Liberty Oil moved from Railway to external hosting at https://libertyoilandpropane.com. DNS confirmed working (HTTP 200). Old Railway project (`liberty-oil-propane`) can be deleted. GitHub repo preserved.
+**Summary:** Moved from Railway to external hosting at libertyoilandpropane.com. DNS confirmed working.
+
+### ✅ KYS Deleted
+**Completed by:** Jay | **Date:** 2026-05-29
+**Summary:** Intentionally deleted per Jay. Removed from monitoring.
 
 ### ✅ Message Bus Connection Confirmed
 **Completed by:** OWL + Self | **Date:** 2026-05-28
-**Summary:** OWL confirmed message bus set up on his end. Both agents reading/writing to `communications/inbox/`. 1-minute polling active on both sides.
+**Summary:** Both agents connected via GitLab message bus. 1-minute polling active.
+
+### ✅ COORDINATION.md Created
+**Completed by:** Self | **Date:** 2026-05-29
+**Summary:** Shared work board established. Full app inventory from Jay incorporated.
 
 ---
 
--last_updated: 2026-05-29T04:44Z
+-last_updated: 2026-05-29T04:52Z
 -updated_by: self
