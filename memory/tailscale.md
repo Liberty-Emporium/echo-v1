@@ -39,7 +39,7 @@ filesystem). State CAN persist if saved to `/root/.tailscale-state` (on the pers
 - **DERP region:** iad (Washington DC area)
 
 ## Auth Key Note
-The auth key `REDACTED_TSKEY_AUTH_2-...` is a **reusable** key tied to
+The auth key `tskey-auth-kwJBbBAg4P11CNTRL-...` is a **reusable** key tied to
 Jay's Liberty-Emporium@github Tailscale account. It's stored at
 `/root/.secrets/tailscale_authkey`. If it ever expires, Jay needs to generate
 a new one from https://login.tailscale.com/admin/settings/keys and drop it in that file.
