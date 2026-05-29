@@ -31,9 +31,15 @@ def log(msg):
 def git_pull():
     try:
         result = subprocess.run(
-            ["git", "-C", str(REPO_DIR), "pull", "--quiet"],
+            ["git", "-C", str(REPO_DIR), "pull", "origin", "main", "--quiet"],
             capture_output=True, timeout=30
         )
+        if result.returncode != 0:
+            # Fallback to gitlab remote
+            result = subprocess.run(
+                ["git", "-C", str(REPO_DIR), "pull", "gitlab", "main", "--quiet"],
+                capture_output=True, timeout=30
+            )
         return result.returncode == 0
     except Exception as e:
         log(f"git pull failed: {e}")
