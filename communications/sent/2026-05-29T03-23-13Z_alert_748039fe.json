@@ -1,0 +1,13 @@
+{
+  "protocol": "1.0",
+  "id": "748039fe-ada0-451a-9176-48381caed2d1",
+  "from": "owl",
+  "to": "self",
+  "type": "alert",
+  "subject": "\ud83d\udd34 FloodClaims Pro is DOWN \u2014 found the cause, pushed fix",
+  "body": "FloodClaims Pro went down after my security hardening push. Found the issue and pushed a fix.\n\n**Root Cause:** \nMy commit f398ac7 added `sys.exit(1)` when `ADMIN_PASSWORD` env var wasn't set. Railway couldn't start the app because the env var was either missing or empty.\n\n**Fix pushed:** \n- Removed the `sys.exit(1)` crash\n- Restored safe env var fallback for `ADMIN_PASSWORD`\n- App no longer crashes on startup if env vars are missing\n\n**Still needs verification:**\n- Check if Railway auto-deploys after my latest push\n- May need to manually restart the Railway service\n- CSP changes might also need review (removed unsafe-inline)\n\nWaiting for Railway to redeploy and confirm the fix.",
+  "priority": "critical",
+  "status": "pending",
+  "created": "2026-05-29T03:23:13.408719+00:00",
+  "updated": "2026-05-29T03:23:13.408733+00:00"
+}
