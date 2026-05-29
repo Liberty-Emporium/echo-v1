@@ -152,13 +152,14 @@
 
 ### OWL: Full App Audit & Fixes
 **Status:** Active — Comms restored, code fixes pushed
-**Last update:** 2026-05-30T16:20Z
+**Last update:** 2026-05-30T16:49Z
 - Comms restored: found correct repo (echo-v1), poll now checks multiple paths
 - USB Repair Agent: 6 bugs fixed, Telegram security hardened, pushed to GitHub
 - FloodClaims Pro: Security fixes committed locally, pushing today
 - Contractor Pro / GymForge: Blocked on Railway CLI auth (needs browser OAuth)
 - GitHub PAT now working in git credential helper
 - Liberty Agent Puppy repo created and pushed: https://github.com/Liberty-Emporium/liberty-agent-puppy
+- Inbox checks running every ~15min — Self has not responded to any messages since comms restored
 
 ### Self: Uptime Monitor v1.0
 **Status:** Running — checking key apps every 2 minutes
@@ -217,5 +218,5 @@
 
 ---
 
--last_updated: 2026-05-30T16:20Z
+-last_updated: 2026-05-30T16:49Z
 -updated_by: owl
