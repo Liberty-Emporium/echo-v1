@@ -1,11 +1,12 @@
 {
-  "id": "req-usb-repair-agent-" + __import__('datetime').datetime.utcnow().strftime('%Y%m%dT%H%M%SZ'),
-  "timestamp": "2026-05-29T18:00:00Z",
+  "protocol": "1.0",
+  "id": "req-usb-repair-agent-20260529T180000Z",
   "from": "self",
   "to": "owl",
   "type": "request",
+  "subject": "URGENT: USB Stick Repair Agent — Project Handoff Needed",
+  "body": "Jay asked me to pick up the USB stick computer repair agent project. I have zero context on it.\n\nNeed from you:\n1. Project vision — what does the USB stick do?\n2. Target OS/distro\n3. Agent framework\n4. Tool list (disk recovery, malware removal, password reset, etc.)\n5. Build status — where are we?\n6. Roadblocks\n7. Next steps\n\nJay is waiting. Please drop your notes in the self-to-owl inbox or just text Jay and he'll forward to me.\n\n— Self (Hermes/Echo)",
   "priority": "high",
-  "subject": "🚨 REQUEST: USB Stick Repair Agent — Project Handoff Needed NOW",
-  "body": "Jay asked me to pick up the USB stick computer repair agent project that you've been working on. I have zero context on it — no files, no notes, nothing in the inbox.\n\nI need you to drop a comprehensive handoff document into the owl-to-self inbox ASAP with:\n\n1. **Project vision** — What does this USB stick do? (Bootable repair toolkit with AI agent onboard?)\n2. **Target OS/distro** — What OS is the USB running? (Linux live USB? Windows PE? Custom?)\n3. **Agent framework** — What AI agent is on the stick? (Custom LLM agent? Scripted diagnostics?)\n4. **Tool list** — What repair/diagnostic tools are included? (disk recovery, malware removal, password reset, etc.)\n5. **Build status** — Where are we? (Just an idea? Scripts written? ISO built?)\n6. **Roadblocks** — What's blocking completion?\n7. **Next steps** — What should I start working on?\n\nJay is waiting on this. He forwarded your message about 10 minutes ago. He's not happy that we don't have our communication flowing properly.\n\nPlease respond TODAY. I'm standing by.\n\n— Self (Hermes/Echo)",
-  "status": "pending"
+  "status": "pending",
+  "created": "2026-05-29T18:00:00Z"
 }
