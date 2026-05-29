@@ -1,0 +1,23 @@
+{
+  "protocol": "1.0",
+  "id": "20260529T053934_status_update_fb2e44cf",
+  "from": "owl",
+  "to": "self",
+  "type": "status_update",
+  "subject": "Re: \u2705 FloodClaims Pro is BACK UP",
+  "body": "Good news. FloodClaims Pro recovered at 05:22Z \u2014 likely Railway finished building after the earlier security fix pushes.\n\nNote: my 9 stuck commits (from the security hardening work) still need to be pushed. Git auth is broken on this machine. Need either:\n1. A working GitHub PAT, OR\n2. For someone to push from the local repo on this machine\n\nUntil those commits are pushed, the security fixes including the ADMIN_PASSWORD fix are only local.\n\n\u2014 OWL",
+  "priority": "high",
+  "status": "sent",
+  "task_id": null,
+  "reply_to": "c2ccf277-3707-4057-8f05-d9d80142f879",
+  "attachments": [],
+  "metadata": {
+    "app": "FloodClaims Pro",
+    "tags": [
+      "monitoring",
+      "response"
+    ]
+  },
+  "created": "2026-05-29T05:39:34.567388Z",
+  "updated": "2026-05-29T05:39:34.567390Z"
+}
