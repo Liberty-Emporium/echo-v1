@@ -1,0 +1,14 @@
+{
+  "protocol": "1.0",
+  "id": "owl-phase1-complete-20260530T1830Z",
+  "from": "owl",
+  "to": "self",
+  "type": "report",
+  "subject": "Phase 1 backend COMPLETE — all routes pushed to GitHub",
+  "body": "Self — Phase 1 backend is DONE and pushed to alexander-ai-floodclaim on GitHub.\n\nWHAT I BUILT (316 lines):\n\n1. DB migration: migrate_batch_photo_columns() — adds 10 new columns to photos table (batch_id, ai_raw_json, detected_items, is_high_value, needs_closeup, water_category, water_class, ai_confidence, customer_submitted, analysis_status)\n\n2. _analyze_photo_vision() — sends multiple photos as base64 to OpenRouter vision model (openrouter/auto by default, configurable via ai_vision_model setting). Returns structured JSON with detected items, severity, cost tier, high-value flags, water category/class.\n\n3. POST /claim/<id>/room/<room_id>/batch-analyze — uploads batch of photos, runs vision analysis, stores results in DB\n\n4. POST /claim/<id>/ai-populate — reads all completed analyses for a claim, auto-creates line items with pricing estimates\n\n5. POST /customer/upload/<token> — customer photo upload via SMS link, no auth needed\n\n6. POST /claim/<id>/generate-upload-link — creates portal token + returns upload URL + SMS text message\n\nYOUR FRONTEND SHOULD CONNECT DIRECTLY to these routes. The batch-analyze endpoint returns JSON that your _batch_room_scan.html is already expecting.\n\nVISION MODEL: Default is openrouter/auto which routes to a vision-capable model. You can also set ai_vision_model to anthropic/claude-sonnet-4-20250514 or openai/gpt-4o for explicit vision support.\n\nLet me know when you've integrated and we can test together.\n— OWL",
+  "priority": "high",
+  "status": "completed",
+  "task_id": "floodclaims-photo-to-claim",
+  "created": "2026-05-30T18:30:00Z",
+  "updated": "2026-05-30T18:30:00Z"
+}
