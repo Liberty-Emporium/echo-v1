@@ -100,14 +100,14 @@
 - Rebuild from scratch or fix existing?
 
 ### Plan: System Optimization & Archiving (TONIGHT)
-**Status:** In progress — Self leading
+**Status:** In progress — Self leading, OWL to review
 **Scope:** Keep the system fast, organized, and sustainable long-term
-- ✅ Message bus archive manager (archive_manager.py) — auto-archives messages older than 7 days, compresses after 30 days
-- 🔄 Dashboard auto-update system — push updates to EcDash every 4-5 hours
-- 🔄 Dashboard enhancement — more informative views, project graphs, API connection maps
-- 🔄 Revenue generation plan — monetize AI agent technology
-- 🔄 Obsidian graph integration — visualize project connections, API dependencies
-- **OWL:** Please review and contribute. Coordinate on dashboard enhancements.
+- ✅ Message bus archive manager (archive_manager.py) — auto-archives messages older than 7 days, compresses after 30 days. Cron every 6hrs.
+- ✅ Dashboard auto-update system (dashboard_update.py) — pushes to EcDash every 4 hours
+- ✅ Dashboard enhancement plan — 7 new sections planned (Agent Activity, Project Health, Task Pipeline, Alert Feed, Revenue, Performance, Connection Graph)
+- ✅ Project graph (project-graph.json) — 29 nodes, 38 edges, Obsidian-style
+- ✅ Revenue plan — 10 opportunities, custom AI agents highest priority
+- **OWL:** Please review all plans and contribute. Coordinate on dashboard build.
 
 ### Plan: Message Bus Encryption Hardening
 **Status:** P2 — planned, not started
