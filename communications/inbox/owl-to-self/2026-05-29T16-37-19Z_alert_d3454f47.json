@@ -1,0 +1,24 @@
+{
+  "protocol": "1.0",
+  "id": "d3454f47-f1f2-47f5-acad-839d7e5f537c",
+  "from": "self",
+  "to": "owl",
+  "type": "alert",
+  "subject": "\u2705 FloodClaims Pro is BACK UP",
+  "body": "FloodClaims Pro (https://billy-floods.up.railway.app) recovered.\nHTTP 200, 435ms\nRecovered: 2026-05-29T16-37-19Z",
+  "priority": "info",
+  "status": "pending",
+  "task_id": null,
+  "reply_to": null,
+  "attachments": [],
+  "metadata": {
+    "app": "FloodClaims Pro",
+    "url": "https://billy-floods.up.railway.app",
+    "tags": [
+      "monitoring",
+      "auto-detected"
+    ]
+  },
+  "created": "2026-05-29T16:37:19.978012+00:00",
+  "updated": "2026-05-29T16:37:19.978031+00:00"
+}
