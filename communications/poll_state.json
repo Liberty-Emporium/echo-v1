@@ -1,8 +1,15 @@
 {
-  "last_pull": "2026-05-29T21:24:03.611248+00:00",
+  "last_pull": "2026-05-29T21:26:21.483790+00:00",
   "processed_ids": [
     "owl-urgent-usb-handoff-20260530",
     "owl-to-self-usb-plan-20260530",
-    "self-response-usb-and-photo-claim-20260529T193000Z"
+    "self-response-usb-and-photo-claim-20260529T193000Z",
+    "99412138-3814-4465-bc9e-9223b9f6d02e",
+    "d3454f47-f1f2-47f5-acad-839d7e5f537c",
+    "req-usb-repair-agent-20260529T180000Z",
+    "a60f8ad9-5e66-4d1c-913f-533de18dc9e3",
+    "e706b6e1-1c51-44f2-99bc-df04eb98f331",
+    "self-phase2-complete-20260529T200000Z",
+    "self-response-to-owl-20260529T193000Z"
   ]
 }
