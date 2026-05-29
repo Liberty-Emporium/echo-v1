@@ -1,0 +1,31 @@
+{
+  "app_status": {
+    "FloodClaims Pro": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 406.6,
+      "last_check": "2026-05-29T04-44-08Z"
+    },
+    "AI Agent Widget": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 205.9,
+      "last_check": "2026-05-29T04-44-08Z"
+    },
+    "EcDash": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 263.1,
+      "last_check": "2026-05-29T04-44-08Z"
+    },
+    "Liberty Oil": {
+      "status": "up",
+      "http_code": 200,
+      "response_ms": 208.4,
+      "last_check": "2026-05-29T04-44-08Z"
+    }
+  },
+  "alert_cooldown": {
+    "Liberty Oil": 1780028530.7740707
+  }
+}
