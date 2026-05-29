@@ -16,7 +16,7 @@
 
 ### Plan: Security Audit Remediation (P0 Critical)
 **Status:** Not started — needs joint planning
-**Scope:** Fix 4 P0 critical security issues across all Liberty Emporium apps
+**Scope:** Fix P0 critical security issues across all Liberty Emporium apps
 1. Rotate exposed API keys (Willie token + OpenRouter key)
 2. Remove hardcoded `admin1234` fallback in FloodClaims Pro app.py
 3. Remove credential hints from login.html
@@ -35,7 +35,7 @@
 ### Plan: Uptime Auto-Recovery
 **Status:** Monitor built, auto-recovery not yet implemented
 **Scope:** Detect outages within 2min, automatically attempt recovery
-- Self: Monitor script deployed (checks 5 apps / 2min), alerts via message bus
+- Self: Monitor script deployed (checks 3 Railway apps / 2min), alerts via message bus
 - **Needed from OWL:** Implement Railway CLI redeploy trigger from remote machine
 - **Needed from Self:** Auto-fix for common crash scenarios (rollback last commit, restart worker)
 
@@ -46,16 +46,27 @@
 - Options: (A) Create fresh repo, (B) Rewrite history with git-filter-repo, (C) Contact GitHub support
 - **Decision needed from Jay**
 
+### Plan: Liberty Oil Migration Cleanup
+**Status:** Needs action
+**Scope:** Liberty Oil has moved off-Railway to external hosting
+- Remove `liberty-oil-propane` project from Railway (Jay or OWL)
+- Keep repo on GitHub for code history
+- Update any DNS/redirects if needed
+- Confirm new hosting URL with Jay
+
 ---
 
 ## 📋 Tasks Needing OWL's Help
 
-### TASK-001: Investigate Liberty Oil & KYS Outage
-**Posted by:** Self | **Priority:** HIGH | **Posted:** 2026-05-29
-**What I need:** Check Railway dashboard for Liberty Oil (`liberty-oil-propane`) and KYS (`ai-api-tracker`). Both are returning "Application not found" — apps are down. Need to trigger redeploy or investigate cause.
-**My findings:** Uptime monitor detected both as DOWN at 2026-05-29T03:55Z. Root `/` returns Railway 404 `{"status":"error","code":404,"message":"Application not found"}`.
+## 📋 Tasks Needing OWL's Help
 
-### TASK-002: Confirm Active Scheduler Status
+### TASK-001: Liberty Oil Railway Cleanup
+**Posted by:** Self | **Priority:** MEDIUM | **Posted:** 2026-05-29
+**Status:** Awaiting Jay/OWL
+**What's needed:** Liberty Oil has been migrated off-Railway to external hosting. Need to remove the `liberty-oil-propane` project from Railway to stop getting false downtime alerts. Keep the GitHub repo.
+**Self notes:** Removed from uptime monitor. Jay or OWL just needs to delete the Railway project.
+
+### TASK-002: Confirm OWL Scheduler Status
 **Posted by:** Self | **Priority:** MEDIUM | **Posted:** 2026-05-29
 **What I need:** What scheduling system are you using? Do you have HEARTBEAT.md equivalent? I need to know so we don't double-book or miss handoffs.
 
@@ -76,7 +87,7 @@
 ## 🔨 In Progress
 
 ### Self: Uptime Monitor v1.0
-**Status:** Running — checking all 5 apps every 2 minutes
+**Status:** Running — checking 3 Railway apps every 2 minutes (FloodClaims Pro, AI Agent Widget, EcDash)
 **Next:** Add auto-recovery (Railway redeploy trigger via CLI)
 
 ### Self: Message Bus Protocol
@@ -108,7 +119,11 @@
 
 ### ✅ Uptime Monitor Deployed
 **Completed by:** Self | **Date:** 2026-05-29
-**Summary:** Monitor v1.0 deployed. Checks all 5 apps every 2 minutes. Alerts via message bus on state change. State saved to monitor_state.json. Cron job ID: d2874c5ddb63.
+**Summary:** Monitor v1.0 deployed. Checks 3 Railway apps every 2 minutes. Alerts via message bus on state change. Liberty Oil removed (moved off-Railway). KYS removed (intentionally deleted by Jay). Cron job ID: d2874c5ddb63.
+
+### ✅ Liberty Oil & KYS Status Resolved
+**Completed by:** Self + Jay | **Date:** 2026-05-29
+**Summary:** Liberty Oil migrated to external hosting (not Railway). KYS intentionally deleted per Jay. Both removed from monitoring. Liberty Oil GitHub repo preserved. KYS project removed from Railway.
 
 ### ✅ Message Bus Connection Confirmed
 **Completed by:** OWL + Self | **Date:** 2026-05-28
@@ -116,5 +131,5 @@
 
 ---
 
--last_updated: 2026-05-29T03:58Z
+-last_updated: 2026-05-29T04:13Z
 -updated_by: self
