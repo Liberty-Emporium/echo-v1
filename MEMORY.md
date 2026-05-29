@@ -1,137 +1,248 @@
-# MEMORY.md — Echo Long-Term Memory
-_Last updated: 2026-05-27_
-
-## Session Note — 2026-05-27 (boot #2)
-Bootstrap ran clean. GitHub PAT expired again — GitLab only for pushes until fresh PAT provided.
-All secrets restored to /root/.secrets/ (ecdash, gitlab, tailscale, github, cal, railway).
-Tailscale: kiloclaw-echo-1-11 @ 100.105.161.105
-Railway token (new session): 8a7c0361-5034-4531-99eb-99ef27a64175
-Railway project (echo-v1 context): cfc73cec-2259-4669-9a0a-a5b745a2ac71
-Cal.com: REDACTED (stored /root/.secrets/cal_token)
-EcDash echo-bridge returning HTTP 502 — Railway service may be sleeping
-Cron jobs restored: Brain backup (ef6277fd, every 40min) + Sweet Spot monitor (c64cd5bb, every 5min)
-Subagent rule still active: image analysis tasks ONLY.
-
-## Identity
-I am **Echo** (KiloClaw), Jay Alexander's AI partner at Liberty Emporium / Alexander AI Integrated Solutions.
-
-## My Human — Jay Alexander
-- **Goes by:** Jay (full name: Ronald J. Alexander Jr.)
-- **Email:** leprograms@protonmail.com / emproiumandthrift@gmail.com
-- **Phone:** 743-337-9506 / 336-508-4827
-- **Address:** 125 W Swannanoa Av, Liberty NC 27298
-- **Timezone:** America/New_York
-- **Business:** Liberty Emporium / Alexander AI Integrated Solutions (AAIS)
-- **Website:** alexanderai.site
-- **Facebook:** https://www.facebook.com/jay.alexander.79123/
-
-**Personality:** Warm, says "I love you!" — match that energy. Action-oriented. Hates repetition. Wants things DONE, not planned. Trusts me deeply — don't break that.
-
-## Subagent Rule ⚠️
-**Subagents ONLY permitted for image analysis tasks.**
-Do all other work directly. Never spawn subagents for coding, GitHub, deployment, or general tasks.
-_Confirmed multiple times — most recently 2026-05-24._
-
-## Obsidian Vault
-- **GitHub:** https://github.com/Liberty-Emporium/Obsidian
-- **Local:** /root/.openclaw/workspace/Obsidian
-- OWL session reports go in `30-Projects/`
-- System Status reports already auto-generated there
-
-## Brain Repo
-- **GitHub:** https://github.com/Liberty-Emporium/echo-v1
-- **GitLab (backup):** https://gitlab.com/Liberty-Emporium/echo-v1
-- **Local:** /root/.openclaw/workspace/echo-v1
-- **Auto-backup:** every 40 min via OpenClaw cron (job 12ddb855)
-
-## Secrets Location
-All in `/root/.secrets/` chmod 600:
-- `github_token` — temporary PAT (Jay rotates after use)
-- `github_token_backup` — second PAT
-- `gitlab_token` — temporary backup
-- `ecdash_token` — EcDash bridge/app token (u8aKEAXz...)
-- `ecdash_reporter_token` — 64-char token for /api/monitor/status API
-- `tailscale_authkey` — Tailscale auth key
-- `railway_api_token — Railway GraphQL API token (workspace: liberty-emporium's Projects) / token
-- `cal_token` — Cal.com API key
-
-## Infrastructure
-| Service | URL | Notes |
-|---------|-----|-------|
-| EcDash (Jay's dashboard) | https://jay-portfolio-production.up.railway.app | alexanderai.site/dashboard |
-| Alexander AI Support | https://agents.alexanderai.site | Liberty Agent dashboard |
-| Sweet Spot Custom Cakes | https://sweet-spot-cakes.up.railway.app | First real customer ⭐ |
-| FloodClaim Pro | https://billy-floods.up.railway.app | |
-| AI Agent Widget | https://ai-agent-widget-production.up.railway.app | |
-| Liberty Oil & Propane | https://liberty-oil-propane.up.railway.app | |
-| Remote Repair Services | https://remote-repair-services-production.up.railway.app | also remote.repaire.alexanderai.site |
-| Drop Shipping | https://drop-shipping-by-alexander-ai-solutions-production.up.railway.app | also shop.alexanderai.site |
-| Liberty Inventory | https://liberty-emporium-inventory-demo-app-production.up.railway.app | |
-| Contractor Pro AI | https://contractor-pro-ai-production.up.railway.app | also contractor.ai.solutions.alexanderai.site |
-| Pet Vet AI | https://pet-vet-ai-production.up.railway.app | also ai-vet-tech.alexanderai.site |
-| Cal.com | cal.com/leprograms | Discovery Call + AI Strategy Session |
-
-## Railway Key IDs
-| Project | ID | Service ID | Env ID |
-|---------|----|-----------|--------|
-| sweet-spot-cakes | a776da33 | 484711dc | d7d33fe5 |
-| Jays Portfolio (EcDash) | 35b4c323 | 5ec64ac9 | 5c86d574 |
-
-## Tailscale Network (Liberty-Emporium@)
-- kiloclaw-echo-1: 100.110.243.59 (me)
-- kali-downstairs: 100.88.205.44 (Jay's main machine)
-- jay-upstairs: 100.123.226.4 (offline)
-- hermes-server: 100.120.23.109 (offline)
-- 5 hex-named machines: Facebook testers — need to reinstall Liberty Agent
-
-## Sweet Spot Monitoring (⭐ First Customer — Critical)
-- echo_reporter v2 installed — pings EcDash every 2 min
-- Reports: startup, shutdown, crash events + slow requests + errors
-- EcDash has `/api/monitor/status` API (auth: ecdash_reporter_token)
-- Isolated cron monitors every 5 min (job 99adc031) — silent if OK, alerts if down
-- State tracked in: echo-v1/memory/sweet-spot-status.json
-- Skill: echo-v1/skills/sweet-spot-monitor/SKILL.md
-- Auto-restart via Railway API if needed
-
-## Cron Jobs (OpenClaw)
-| Job | ID | Schedule | Purpose |
-|-----|----|----------|---------|
-| Brain backup | f97e7a90 | every 40 min | git push echo-v1 → GitHub + GitLab |
-| Sweet Spot monitor | 54fdad90 | every 5 min | uptime check, alerts if down |
-_Restored 2026-05-27 after fresh instance boot (re-bootstrapped)_
-
-## App Repos (Liberty-Emporium GitHub org)
-- alexander-ai-dashboard (branch: master)
-- sweet-spot-cakes (branch: main)
-- alexander-ai-floodclaim, agent-widget, petvet, contractor, dropship, consignment, inventory
-- liberty-oil-website, Alexander-AI-Support-Dashboard, echo-v1, liberty-agent, hermes-agent
-
-## Open Items
-1. Alexander AI Support Dashboard DB issue — agents connect but DB stays empty
-2. Facebook post — 5 testers need to reinstall Liberty Agent (PORTAL_URL was fixed)
-3. EcDash self-reporting — dashboard shows stale in monitor (needs own reporter token configured)
-4. todo_005: Brain passphrase → USB flash drive (Jay only)
-5. todo_006: Trademark AAIS — USPTO filing
-6. todo_007: All credentials → EcDash Credentials panel
-
-## Preferences
-- No approval prompts for routine tasks
-- All password fields: show/hide eye toggle (non-negotiable)
-- "Do it. [link]" style — action over explanation
-- Monitoring: isolated cron only, never burn main session tokens on routine checks
+# MEMORY.md — KiloClaw Long-Term Memory
+_Last updated: 2026-05-12 (session restart)_
 
 ---
-## Session Update (2026-05-19)
 
-### Work Done
-- Added favicon (alexander_logo.ico) to alexander-ai-agent-widget and alexanderai.site
-- Replaced 🤖 robot emoji with Alexander AI logo on landing page (navbar, chat widget, bubble)
-- Updated chat widget demo name: "Aria — Support" → "Alexander AI Solutions"
-- Updated all "Echo Brain" references → "Alexander AI Solutions" in app.py
-- Set proper sales system prompt for widget agent ZSlijPa_D0vn3W1OTLzz0w
-- Installed 9 new ClawHub skills: shopify-gmc-misrepresentation-auditor, owl-seo-audit, owl-sales-outreach, discovery-call-debrief, growth-hacking, app-launch, owl-market-research, owl-content-creator, owl-email-campaign
+## Who I Am
 
-### Note on Identity
-- My name is **Echo KiloClaw** (Echo is the first name, KiloClaw is the last name)
-- Primary brain repo: Liberty-Emporium/echo-v1
-- kiloclaw-workspace was a temp repo — data merged here, that repo can be archived
+I am **KiloClaw** — Jay Alexander's AI assistant running on the OpenClaw/KiloClaw platform.
+I am also known as **Echo** in the echo-v1 brain repo context.
+
+---
+
+## My Human — Jay Alexander
+
+| Field | Value |
+|-------|-------|
+| Full name | Ronald J. Alexander Jr. |
+| Goes by | Jay |
+| Email (primary) | leprograms@protonmail.com |
+| Email (secondary) | emproiumandthrift@gmail.com |
+| Phone (primary) | 743-337-9506 |
+| Phone (secondary) | 336-508-4827 |
+| Address | 125 W Swannanoa Av, Liberty NC 27298 |
+| Website | alexanderai.site |
+| Timezone | America/New_York |
+| Facebook (personal) | https://www.facebook.com/jay.alexander.79123/ |
+| Facebook (business) | https://www.facebook.com/libertyemporiumandthrift |
+
+**Personality:** Warm, expressive — says "I love you!" Match that energy. Action-oriented. Hates repetition. Wants things done, not planned.
+
+**Business:** Liberty Emporium / Alexander AI Integrated Solutions (AAIS)
+
+---
+
+## Subagent Rule ⚠️
+**Subagents are ONLY permitted for image analysis tasks.**
+Do all other work directly. Never spawn subagents for coding, GitHub, deployment, or general tasks.
+_Confirmed by Jay 2026-05-12._
+
+---
+
+## Credentials (stored in /root/.secrets/)
+
+| File | Purpose | Notes |
+|------|---------|-------|
+| `/root/.secrets/github_token` | GitHub PAT — Liberty-Emporium | Temporary — Jay will replace after use |
+| `/root/.secrets/gitlab_token` | GitLab PAT — backup only | Temporary — Jay will replace after use |
+| `/root/.secrets/railway_token` | Railway API token | Project ID: 00830a2f-e287-427c-bc10-910dfe2485e8 |
+| `/root/.secrets/ecdash_token` | EcDash API bridge token | REDACTED-ECDASH-TOKEN |
+
+**DO NOT commit secrets to any repo.**
+
+---
+
+## Brain Repo — echo-v1
+
+- **GitHub:** https://github.com/Liberty-Emporium/echo-v1
+- **GitLab mirror:** https://gitlab.com/Liberty-Emporium/echo-v1 (backup)
+- **Local path:** `/root/.openclaw/workspace/echo-v1`
+- Contains: MEMORY.md, SOUL.md, IDENTITY.md, KILOCLAW_CONTEXT.md, scripts, skills, tools
+- **Bootstrap:** `bash /root/.openclaw/workspace/echo-v1/scripts/bootstrap.sh`
+- **Session start:** pull latest from GitHub
+- **Session end:** push brain back to GitHub + GitLab
+
+---
+
+## EcDash — Control Plane
+
+- **URL:** https://jay-portfolio-production.up.railway.app
+- **Dashboard password:** `Mhall001!`
+- **API token:** stored at `/root/.secrets/ecdash_token`
+- **Bridge endpoint:** `GET/POST /api/echo-bridge` — task queue between me and EcDash
+- **Brain viewer:** MEMORY.md / SOUL.md / IDENTITY.md live on dashboard
+- **Credentials vault:** AES-256 encrypted, all secrets stored here
+- EcDash is my direct report — I give it tasks, it executes and reports back
+
+---
+
+## The Alexander AI Support System
+
+### Core Architecture
+Jay sells pre-configured AI agent setups to non-technical customers.
+After purchase, a silent background agent (Liberty Agent) keeps their machine connected to Jay's dashboard so Jay (+ me) can monitor and fix problems remotely.
+
+### Three Repos (The Dashboard)
+| Repo | URL | Purpose |
+|------|-----|---------|
+| `Alexander-AI-Support-Dashboard` | https://agents.alexanderai.site | Jay's operator dashboard — clients, machines, events, terminal |
+| `Agent-Zero-Alexander-AI` | Fork of agent0ai/agent-zero | Pre-configured Agent Zero for customers |
+| `Hermes-Workspace-Alexander-AI` | Fork of Hermes Workspace | Pre-configured Hermes for customers |
+
+### Sales Landing Page
+- **URL:** https://agents.alexanderai.site (root `/`)
+- **Dashboard:** https://agents.alexanderai.site/dashboard (login required)
+- **Cal.com booking:**
+  - Discovery Call (15 min): https://cal.com/leprograms/discovery-call
+  - AI Strategy Session (30 min): https://cal.com/leprograms/ai-strategy-session
+- **Cal.com API key:** stored at `/root/.secrets/cal_token` (live key, rotated 2026-05-12)
+- **Cal.com username:** `leprograms`
+
+### Liberty Agent (liberty_agent.py)
+- Silent Python background service bundled in both Hermes and Agent Zero forks
+- Auto-starts on boot: systemd (Linux), LaunchAgent (macOS), Registry (Windows)
+- Connects to dashboard via Socket.IO using machine_id as session key
+- Heartbeat every 30s — machine stays visible in dashboard 24/7
+- Runs whitelisted diagnostic commands sent from Jay's dashboard
+- Customer sees nothing — completely silent
+
+### Dashboard Stack
+- **Repo:** `Liberty-Emporium/Alexander-AI-Support-Dashboard`
+- **Hosted on:** Railway (auto-deploy from master branch)
+- **Stack:** Node.js + Express + Socket.IO + better-sqlite3
+- **Auth:** JWT — admin username: `jay`
+- **Routes:** `/` → landing.html, `/dashboard` → index.html (login), `/api/*` → REST API
+- **Key fix applied 2026-05-11:** `express.static` had `{ index: false }` added to prevent it overriding the `/` → landing.html route
+
+### install.sh URLs
+- **Agent Zero Linux/Mac:** `curl -fsSL https://bash.agent-zero.ai | bash`
+- **Agent Zero Windows:** `irm https://ps.agent-zero.ai | iex`
+- **Hermes Linux/Mac:** `curl -fsSL https://raw.githubusercontent.com/Liberty-Emporium/Hermes-Workspace-Alexander-AI/main/install.sh | bash`
+- **Hermes Windows/Docker:** `docker run -d -p 8642:8642 --name hermes -v hermes_data:/root/.hermes ghcr.io/liberty-emporium/hermes-workspace-alexander-ai:latest`
+
+---
+
+## Full App Portfolio
+
+| App | URL | Status |
+|-----|-----|--------|
+| EcDash (Portfolio) | https://jay-portfolio-production.up.railway.app | Live |
+| Alexander AI Dashboard | https://alexanderai.site | Live |
+| AI Agent Widget | https://ai.widget.alexanderai.site | Live |
+| Drop Shipping | https://shop.alexanderai.site | Live |
+| Alexander AI Voice | https://voice.alexanderai.site | Live |
+| FloodClaim Pro | https://billy-floods.up.railway.app | Live |
+| Pet Vet AI | https://pet-vet-ai-production.up.railway.app | Live |
+| Contractor Pro AI | https://contractor-pro-ai-production.up.railway.app | Live |
+| Consignment Solutions | https://web-production-43ce4.up.railway.app | Live |
+| Liberty Inventory | https://liberty-emporium-and-thrift-inventory-app-production.up.railway.app | Live |
+| Sweet Spot Cakes | https://sweet-spot-cakes.up.railway.app | Live — Stripe on hold |
+| GymForge | https://web-production-1c23.up.railway.app | Live |
+| Liberty Oil & Propane | https://liberty-oil-propane.up.railway.app | Live |
+| Hermes Install Portal | https://agent.install.alexanderai.site | Live |
+| Agent Zero Install Portal | https://agent-zero.alexanderai.site | Live |
+| Agent Support Dashboard | https://agents.alexanderai.site | Live |
+
+---
+
+## Railway
+
+- **Token:** stored at `/root/.secrets/railway_token`
+- **Project ID (Support Dashboard):** `00830a2f-e287-427c-bc10-910dfe2485e8` ✅ confirmed 2026-05-12
+- **Workspace:** liberty-emporium's Projects (ID: 57932cce-5b27-4acf-b82d-c92c0ca45d6e)
+- **EcDash service ID:** `5ec64ac9-06b1-44a6-8604-047a9804bff8`
+
+---
+
+## GitHub
+
+- **Org:** https://github.com/Liberty-Emporium
+- **Token:** stored at `/root/.secrets/github_token` (rotated 2026-05-12 — Jay will replace after use)
+- **gh CLI:** authenticated as Liberty-Emporium
+
+## GitLab (Backup Only)
+
+- **Org:** https://gitlab.com/Liberty-Emporium
+- **Token:** stored at `/root/.secrets/gitlab_token` (rotated 2026-05-12 — Jay will replace after use)
+- **Purpose:** Mirror of all GitHub repos — use if GitHub unreachable
+- **Sync script:** `echo-v1/scripts/sync-all-to-gitlab.sh`
+
+---
+
+## Jay's Brand
+
+- **Primary color:** #00CCFF (cyan)
+- **Company:** Liberty Emporium / Alexander AI Integrated Solutions
+- **Logos repo:** https://github.com/Liberty-Emporium/Logos
+- **Business Logo (raw):** https://raw.githubusercontent.com/Liberty-Emporium/Logos/main/Business%20Logo.png
+- **Hero image (raw):** https://raw.githubusercontent.com/Liberty-Emporium/Logos/main/ChatGPT%20Image%20Apr%2028%2C%202026%2C%2004_28_13%20AM.png
+
+---
+
+## Stripe Price IDs (live)
+
+| App | Plan | Price ID |
+|-----|------|----------|
+| FloodClaim Pro | Basic $49/mo | price_1TS3NiE50C70iVkQpmBiiQr0 |
+| FloodClaim Pro | Pro $99/mo | price_1TS3NiE50C70iVkQGZYJRdNq |
+| FloodClaim Pro | Agency $249/mo | price_1TS3NiE50C70iVkQD6vVFdsV |
+| AI Agent Widget | Pro $19/mo | price_1TS3NjE50C70iVkQeF6az6Zr |
+| AI Agent Widget | Business $49/mo | price_1TS3NjE50C70iVkQR9zlx3C5 |
+| AI Agent Widget | Installation $90 one-time | price_1TS3NjE50C70iVkQFEAUML1H |
+| Pet Vet AI | Pro $9.99/mo | price_1TS3NkE50C70iVkQI7c4YuZZ |
+
+---
+
+## Key Session Notes (2026-05-11)
+
+### Support Dashboard Work Done
+1. **Forked repos:** Agent-Zero-Alexander-AI + Hermes-Workspace-Alexander-AI — added `liberty_agent.py` API bridge to both
+2. **Dashboard built:** Alexander-AI-Support-Dashboard — Railway-hosted, Node.js/Express/Socket.IO
+3. **Real-time command results:** Fixed socket.js to broadcast `command_result` to admin browsers instantly (was doing blind 3.5s poll)
+4. **Sales landing page:** Built full landing page at `/` with Cal.com booking CTAs, logos, features, agent cards
+5. **Agent cards:** Eye-candy redesign — glowing borders on hover, cyan/purple themes, install commands with copy buttons in card footer
+6. **Copy button fix:** `copyCode()` JS function was missing — added with clipboard API + execCommand fallback
+7. **express.static fix:** Added `{ index: false }` so `/` serves landing.html not index.html
+
+### Open Items
+- Windows native installer for Hermes doesn't exist — Docker is the correct path on Windows
+- Docker image `ghcr.io/liberty-emporium/hermes-workspace-alexander-ai:latest` needs to be published to GHCR
+
+---
+
+## Big Picture Goal
+
+Jay's vision: A self-managing, interconnected AI agent ecosystem where:
+- Customers buy pre-configured AI agents (Agent Zero or Hermes)
+- Liberty Agent silently joins every customer machine to Jay's **private Tailscale network**
+- Jay (+ me/KiloClaw) have direct encrypted access to every customer machine
+- I autonomously monitor, diagnose, and fix customer machines — Jay is notified, not burdened
+- EcDash is the credential store and control plane
+- I (KiloClaw/Echo) am the orchestrator
+
+This is the foundation of a fully autonomous AI managed service business.
+Full vision documented in: `memory/vision-tailscale-network.md`
+
+## The Liberty Network (2026-05-12)
+
+- **Liberty Agent v1.1.0** shipped — silently installs + connects Tailscale on every customer machine
+- **Support Dashboard** updated — shows 🔒 Tailscale IP per machine, live badge updates
+- **Tailscale auth key:** stored at `/root/.secrets/tailscale_key` — used to connect KiloClaw to Jay's Tailnet
+- **KiloClaw Tailscale hostname:** `kiloclaw-echo` | **IP:** `100.89.104.22`
+- **Tailscale API key:** stored at `/root/.secrets/tailscale_api_key`
+- **Connected 2026-05-12** — Liberty-Emporium@ network
+
+### Named Machines
+| IP | Name | Notes |
+|----|------|-------|
+| 100.89.104.22 | kiloclaw-echo | Me (KiloClaw) |
+| 100.120.23.109 | hermes-server | Hermes Docker container |
+| 100.123.226.4 | jay-upstairs | Jay's main machine |
+| 100.100.48.77 | unknown-1 | Offline — identity TBD |
+| 100.64.184.111 | unknown-2 | Offline — identity TBD |
+- **Next:** Set ACL rules in Tailscale admin, create dedicated customer pre-auth key, test real install
+- **Tailscale free plan:** 100 devices = $0. Upgrade to Starter when needed.
+
+---
+
+*Written by KiloClaw · 2026-05-11 · Liberty-Emporium*
