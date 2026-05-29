@@ -3,8 +3,8 @@
     "FloodClaims Pro": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 453.0,
-      "last_check": "2026-05-29T06-43-56Z"
+      "response_ms": 407.9,
+      "last_check": "2026-05-29T07-27-21Z"
     },
     "AI Agent Widget": {
       "status": "up",
@@ -15,98 +15,98 @@
     "EcDash": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 267.6,
-      "last_check": "2026-05-29T06-43-58Z"
+      "response_ms": 267.3,
+      "last_check": "2026-05-29T07-27-23Z"
     },
     "Liberty Oil": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 352.7,
-      "last_check": "2026-05-29T06-44-14Z"
+      "response_ms": 365.5,
+      "last_check": "2026-05-29T07-27-40Z"
     },
     "Sweet Spot Cakes": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 270.8,
-      "last_check": "2026-05-29T06-43-56Z"
+      "response_ms": 250.3,
+      "last_check": "2026-05-29T07-27-22Z"
     },
     "Remote Repair": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 223.5,
-      "last_check": "2026-05-29T06-43-56Z"
+      "response_ms": 283.2,
+      "last_check": "2026-05-29T07-27-22Z"
     },
     "Agents": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 271.5,
-      "last_check": "2026-05-29T06-43-57Z"
+      "response_ms": 274.1,
+      "last_check": "2026-05-29T07-27-22Z"
     },
     "Shop": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 287.8,
-      "last_check": "2026-05-29T06-43-57Z"
+      "response_ms": 269.5,
+      "last_check": "2026-05-29T07-27-22Z"
     },
     "Voice Makeover": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 282.6,
-      "last_check": "2026-05-29T06-43-57Z"
+      "response_ms": 222.7,
+      "last_check": "2026-05-29T07-27-23Z"
     },
     "AI Widget": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 292.0,
-      "last_check": "2026-05-29T06-43-58Z"
+      "response_ms": 213.6,
+      "last_check": "2026-05-29T07-27-23Z"
     },
     "Consignment": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 251.4,
-      "last_check": "2026-05-29T06-43-58Z"
+      "response_ms": 208.2,
+      "last_check": "2026-05-29T07-27-23Z"
     },
     "Contractor Pro": {
       "status": "down",
       "http_code": 0,
-      "response_ms": 242.2,
-      "last_check": "2026-05-29T06-43-58Z"
+      "response_ms": 226.1,
+      "last_check": "2026-05-29T07-27-23Z"
     },
     "Pet Vet AI": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 268.9,
-      "last_check": "2026-05-29T06-43-59Z"
+      "response_ms": 274.3,
+      "last_check": "2026-05-29T07-27-24Z"
     },
     "LE Thrift": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 215.3,
-      "last_check": "2026-05-29T06-43-59Z"
+      "response_ms": 245.3,
+      "last_check": "2026-05-29T07-27-24Z"
     },
     "Gym Forge": {
       "status": "down",
       "http_code": 0,
-      "response_ms": 15240.3,
-      "last_check": "2026-05-29T06-44-14Z"
+      "response_ms": 15223.1,
+      "last_check": "2026-05-29T07-27-39Z"
     },
     "Luxury Rentals Demo": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 255.4,
-      "last_check": "2026-05-29T06-44-15Z"
+      "response_ms": 265.4,
+      "last_check": "2026-05-29T07-27-40Z"
     },
     "Inventory Demo": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 270.9,
-      "last_check": "2026-05-29T06-44-15Z"
+      "response_ms": 369.6,
+      "last_check": "2026-05-29T07-27-40Z"
     },
     "IT Courses": {
       "status": "up",
       "http_code": 200,
-      "response_ms": 249.3,
-      "last_check": "2026-05-29T06-44-15Z"
+      "response_ms": 259.3,
+      "last_check": "2026-05-29T07-27-41Z"
     }
   },
   "alert_cooldown": {
