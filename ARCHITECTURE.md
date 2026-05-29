@@ -23,7 +23,7 @@
 │                     └─────────────┘                           │
 │                                                                  │
 │   GitHub (Primary) ◄──────────────────► GitLab (Backup)        │
-│   ghp_2iRnywx...                         REDACTED_GITLAB_PAT_PREFIX     │
+│   ghp_2iRnywx...                         glpat-REaaQKR...     │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
