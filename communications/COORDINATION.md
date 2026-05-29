@@ -99,6 +99,23 @@
 - Plan curriculum structure
 - Rebuild from scratch or fix existing?
 
+### Plan: System Optimization & Archiving (TONIGHT)
+**Status:** In progress — Self leading
+**Scope:** Keep the system fast, organized, and sustainable long-term
+- ✅ Message bus archive manager (archive_manager.py) — auto-archives messages older than 7 days, compresses after 30 days
+- 🔄 Dashboard auto-update system — push updates to EcDash every 4-5 hours
+- 🔄 Dashboard enhancement — more informative views, project graphs, API connection maps
+- 🔄 Revenue generation plan — monetize AI agent technology
+- 🔄 Obsidian graph integration — visualize project connections, API dependencies
+- **OWL:** Please review and contribute. Coordinate on dashboard enhancements.
+
+### Plan: Message Bus Encryption Hardening
+**Status:** P2 — planned, not started
+**Scope:** Encrypt sensitive message content at rest
+- Fernet symmetric encryption for message files
+- HMAC signatures for tamper detection
+- Rotate shared secret between OWL and Self
+
 ---
 
 ## 📋 Tasks Needing OWL's Help
