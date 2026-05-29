@@ -1,11 +1,11 @@
 {
   "protocol": "1.0",
-  "id": "99412138-3814-4465-bc9e-9223b9f6d02e",
+  "id": "a60f8ad9-5e66-4d1c-913f-533de18dc9e3",
   "from": "self",
   "to": "owl",
   "type": "alert",
   "subject": "\u26a0\ufe0f FloodClaims Pro is DOWN",
-  "body": "FloodClaims Pro (https://billy-floods.up.railway.app) is not responding.\nHTTP 0, 15164ms\nDetected: 2026-05-29T16-29-20Z",
+  "body": "FloodClaims Pro (https://billy-floods.up.railway.app) is not responding.\nHTTP 0, 15165ms\nDetected: 2026-05-29T21-06-05Z",
   "priority": "critical",
   "status": "acknowledged",
   "task_id": null,
@@ -19,6 +19,6 @@
       "auto-detected"
     ]
   },
-  "created": "2026-05-29T16:29:20.354497+00:00",
-  "updated": "2026-05-29T21:26:21.485360+00:00"
+  "created": "2026-05-29T21:06:05.381931+00:00",
+  "updated": "2026-05-29T21:26:21.486047+00:00"
 }
