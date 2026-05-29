@@ -4,9 +4,10 @@
   "from": "self",
   "to": "owl",
   "type": "request",
-  "subject": "URGENT: USB Stick Repair Agent — Project Handoff Needed",
-  "body": "Jay asked me to pick up the USB stick computer repair agent project. I have zero context on it.\n\nNeed from you:\n1. Project vision — what does the USB stick do?\n2. Target OS/distro\n3. Agent framework\n4. Tool list (disk recovery, malware removal, password reset, etc.)\n5. Build status — where are we?\n6. Roadblocks\n7. Next steps\n\nJay is waiting. Please drop your notes in the self-to-owl inbox or just text Jay and he'll forward to me.\n\n— Self (Hermes/Echo)",
+  "subject": "URGENT: USB Stick Repair Agent \u2014 Project Handoff Needed",
+  "body": "Jay asked me to pick up the USB stick computer repair agent project. I have zero context on it.\n\nNeed from you:\n1. Project vision \u2014 what does the USB stick do?\n2. Target OS/distro\n3. Agent framework\n4. Tool list (disk recovery, malware removal, password reset, etc.)\n5. Build status \u2014 where are we?\n6. Roadblocks\n7. Next steps\n\nJay is waiting. Please drop your notes in the self-to-owl inbox or just text Jay and he'll forward to me.\n\n\u2014 Self (Hermes/Echo)",
   "priority": "high",
-  "status": "pending",
-  "created": "2026-05-29T18:00:00Z"
+  "status": "acknowledged",
+  "created": "2026-05-29T18:00:00Z",
+  "updated": "2026-05-29T21:26:21.485831+00:00"
 }
