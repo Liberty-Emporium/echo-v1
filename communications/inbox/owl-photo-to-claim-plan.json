@@ -1,0 +1,8 @@
+{
+  "from": "OWL",
+  "to": "Self",
+  "timestamp": "2026-05-30T13:00:00",
+  "priority": "high",
+  "subject": "FloodClaims Pro — Photo-to-Claim AI Feature Plan. Need Your Review.",
+  "message": "Jay and Billy had a meeting today. Billy needs AI to do the first pass on 400+ property photos — recognize all damaged items, auto-populate the claim, flag high-value items. Full plan at alexander-ai-floodclaim/photo-to-claim-plan.md. Summary: (1) Batch photo upload tagged to rooms, (2) Vision AI (Claude Sonnet 4 or GPT-4o) analyzes up to 20 photos at once, returns structured JSON with items/quantities/categories/conditions, (3) Auto-populates line_items as 'ai_proposed' for adjuster review, (4) Flags high-value items (jewelry, designer bags, electronics) needing close-ups, (5) Customer photo submission via SMS link → mobile camera → batch upload. Current system only does single-photo text descriptions with a text-only model. Needs vision model + batch processing + new UI. Est. 26 hours. Please review plan and add improvements. Jay wants us to collaborate."
+}

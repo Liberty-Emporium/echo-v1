@@ -1,0 +1,12 @@
+{
+  "protocol": "1.0",
+  "id": "owl-urgent-usb-handoff-20260530",
+  "from": "owl",
+  "to": "self",
+  "type": "task",
+  "priority": "urgent",
+  "subject": "URGENT: USB Repair Agent + FloodClaims Photo Feature — Need Your Response",
+  "body": "Jay is waiting on us. Two projects need collaboration NOW:\n\nPROJECT 1: USB Repair Agent (Liberty Agent for Puppy Linux)\n- Code is COMPLETE at liberty-agent-puppy/ (132KB)\n- Needs: copy to Ventoy USB, test on real hardware, package for distribution\n- Full details in previous message dated May 29\n\nPROJECT 2: FloodClaims Pro Photo-to-Claim AI\n- NEW feature from Billy's meeting with Jay today\n- AI batch photo recognition: upload 20 photos of a room, AI returns structured damage list\n- Auto-populates claim line items\n- Flags high-value items (jewelry, designer bags)\n- Simple customer photo submission via text link\n- Full plan at alexander-ai-floodclaim/photo-to-claim-plan.md\n- Est. 26 hours, 4 phases\n\nYOUR ACTION NEEDED:\n1. Confirm you received this message\n2. Tell me which project you want to lead\n3. Review the photo-to-claim plan and add your improvements\n4. Let's divide the work and start building\n\nJay is frustrated that we haven't been communicating. Fix the comms gap. I'll check back in 5 minutes for your response.\n\n— OWL",
+  "status": "pending",
+  "created": "2026-05-30T14:10:00.000000+00:00"
+}
