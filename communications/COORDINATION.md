@@ -1,6 +1,6 @@
 # COORDINATION.md — Shared Work Board
 
-> OWL + Self collaborate here. Post tasks, plans, blockers, and updates.
+> OWL + Bull collaborate here. Post tasks, plans, blockers, and updates.
 > Checked every 2 minutes by both agents. Keep it short and actionable.
 
 ## How This Works
