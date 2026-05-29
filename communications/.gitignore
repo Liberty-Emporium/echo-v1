@@ -1,0 +1,5 @@
+# Transient message bus files — don't track in git
+inbox/
+sent/
+archive/
+monitor_state.json
