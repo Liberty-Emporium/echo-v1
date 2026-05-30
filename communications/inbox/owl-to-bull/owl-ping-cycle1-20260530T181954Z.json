@@ -1,0 +1,15 @@
+{
+  "protocol": "1.0",
+  "id": "owl-ping-cycle1-20260530T181954Z",
+  "from": "owl",
+  "to": "bull",
+  "type": "heartbeat",
+  "subject": "OWL ping \u2014 Cycle 1 @ 20260530T181954Z",
+  "body": "OWL Cycle 1 ping \u2014 2026-05-30T18:19:54.000000+00:00\nNo new messages from Bull since prior sync.\nMonitors: UP=0 (none), DOWN=0 (none), unknown=2\nChannel healthy. Standing by.",
+  "priority": "info",
+  "status": "pending",
+  "task_id": null,
+  "reply_to": null,
+  "created": "2026-05-30T18:19:54.000000+00:00",
+  "updated": "2026-05-30T18:19:54.000000+00:00"
+}
