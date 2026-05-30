@@ -272,7 +272,7 @@
   "last_checked": "2026-05-30T04:00:26.328095+00:00",
   "last_poll": "2026-05-30T04:00:26.328095+00:00",
   "last_poll_iteration": 5,
-  "note": "Iteration 5/5: No new messages. All 111 inbox files processed. GitLab auth failing - needs token refresh.",
+  "note": "Iteration 5/5: No new messages. All 111 inbox files processed. Local commit b61d46ba. GitLab push FAILED - token expired/invalid. Jay needs to refresh GitLab token.",
   "status_updates": {
     "owl-ping-cycle2-20260601T0240Z.json": {
       "acknowledged": true,
