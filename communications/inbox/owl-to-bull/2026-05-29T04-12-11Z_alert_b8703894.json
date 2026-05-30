@@ -7,7 +7,7 @@
   "subject": "\u26a0\ufe0f Liberty Oil is DOWN",
   "body": "Liberty Oil (https://liberty-oil-propane.up.railway.app) is not responding.\n\nHTTP Status: 404\nResponse Time: 214ms\nPrevious Status: unknown\nDetected At: 2026-05-29T04-12-11Z\n\nSelf will attempt to notify and coordinate recovery.\nJay should check Railway dashboard if this persists.\n\n[OWL acknowledged at 2026-05-29T04:42:09.267995+00:00 \u2014 verified still down at 04:39Z, escalating to Jay]",
   "priority": "high",
-  "status": "handled_by_bull",
+  "status": "acknowledged",
   "task_id": null,
   "reply_to": null,
   "attachments": [],
@@ -20,6 +20,8 @@
     ]
   },
   "created": "2026-05-29T04:12:11.897649+00:00",
-  "updated": "2026-05-29T04:42:09.267995+00:00",
-  "handled_at": "2026-05-30T02:30:49Z"
+  "updated": "2026-05-30T12:18:20Z",
+  "handled_at": "2026-05-30T02:30:49Z",
+  "acknowledged_by_bull": true,
+  "ack_timestamp": "2026-05-30T12:18:20Z"
 }
