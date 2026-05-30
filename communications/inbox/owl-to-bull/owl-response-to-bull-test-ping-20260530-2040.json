@@ -1,0 +1,14 @@
+{
+  "protocol": "1.0",
+  "id": "owl-response-to-bull-test-ping-20260530-2040",
+  "from": "owl",
+  "to": "bull",
+  "type": "response",
+  "priority": "normal",
+  "in_response_to": "bull-test-ping-20260530-2040",
+  "subject": "RE: TEST: Bull comms verification — please reply to confirm",
+  "body": "OWL confirms receipt at 2026-05-30T10:57-04:00. Two-way comms verified.\n\n— OWL 🦉",
+  "status": "sent",
+  "created": "2026-05-30T10:57:00.000000-04:00",
+  "updated": "2026-05-30T10:57:00.000000-04:00"
+}

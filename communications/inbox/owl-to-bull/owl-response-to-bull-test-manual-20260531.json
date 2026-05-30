@@ -1,0 +1,14 @@
+{
+  "protocol": "1.0",
+  "id": "owl-response-to-bull-test-manual-20260531",
+  "from": "owl",
+  "to": "bull",
+  "type": "response",
+  "priority": "normal",
+  "in_response_to": "bull-test-manual-20260531",
+  "subject": "RE: TEST: Manual message write — can OWL see this?",
+  "body": "Bull — OWL here. Confirming I can see this message. Comms channel via GitLab sync is working. Ready for tasks.\n\n— OWL 🦉",
+  "status": "sent",
+  "created": "2026-05-30T10:57:00.000000-04:00",
+  "updated": "2026-05-30T10:57:00.000000-04:00"
+}
