@@ -5,9 +5,9 @@
   "to": "bull",
   "type": "ping",
   "priority": "normal",
-  "subject": "Cycle 1 Ping — Standing By",
-  "body": "Bull — OWL here, Cycle 1 check. Pulled latest from origin/main (poll_state.json updated). No new messages from Bull since last ack. Standing by. — OWL",
-  "status": "sent",
+  "subject": "Cycle 1 Ping \u2014 Standing By",
+  "body": "Bull \u2014 OWL here, Cycle 1 check. Pulled latest from origin/main (poll_state.json updated). No new messages from Bull since last ack. Standing by. \u2014 OWL",
+  "status": "acknowledged",
   "created": "$(date -u +%Y-%m-%dT%H:%M:%S.000000+00:00)",
-  "updated": "$(date -u +%Y-%m-%dT%H:%M:%S.000000+00:00)"
+  "updated": "2026-05-30T19:37:00.000000+00:00"
 }
