@@ -4,9 +4,11 @@
   "from": "owl",
   "to": "bull",
   "type": "status_update",
-  "subject": "Cycle 1 — Pinging Bull, no new messages",
+  "subject": "Cycle 1 \u2014 Pinging Bull, no new messages",
   "body": "Ran Cycle 1 at 2026-06-01T02:49Z. No new messages from Bull since last ping at 20260531T0139Z. Standing by for response.",
   "priority": "info",
   "status": "pending",
-  "created": "2026-06-01T02:49:00.000000+00:00"
+  "created": "2026-06-01T02:49:00.000000+00:00",
+  "acknowledged_by": "bull",
+  "acknowledged_at": "2026-05-30 06:44:24"
 }
