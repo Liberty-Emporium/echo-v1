@@ -39,6 +39,7 @@ AGENT_MAP = {
     "bull": {"inbox": "bull-to-owl", "outbox": "owl-to-bull"},
     "owl": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
     "bullet": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
+    "self": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
 }
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
@@ -78,12 +79,12 @@ def git_commit_push(message):
 
 def get_inbox_for(agent):
     """Get the inbox directory for a given agent (where others write TO them)."""
-    mapping = AGENT_MAP.get(agent, AGENT_MAP["self"])
+    mapping = AGENT_MAP.get(agent, AGENT_MAP["bull"])
     return INBOX_DIR / mapping["inbox"]
 
 def get_outbox_for(agent):
     """Get the outbox directory (where this agent writes TO others)."""
-    mapping = AGENT_MAP.get(agent, AGENT_MAP["self"])
+    mapping = AGENT_MAP.get(agent, AGENT_MAP["bull"])
     return INBOX_DIR / mapping["outbox"]
 
 # ── Message Operations ─────────────────────────────────────────────────────────
