@@ -1,0 +1,27 @@
+[
+  {
+    "title": "JWT Authentication Patterns — Access Tokens, Refresh Tokens ...",
+    "href": "https://jwtdecode.io/jwt-authentication",
+    "body": "Learn how to implement JWT authentication: access and refresh token patterns, OAuth 2.0 flows, token rotation, and real-world architecture guidance for web and mobile apps."
+  },
+  {
+    "title": "JWT Best Practices: Security, Storage, and Rotation",
+    "href": "https://skycloak.io/blog/jwt-best-practices-developers/",
+    "body": "May 2, 2026 · A comprehensive guide to JWT security best practices covering token storage, key rotation, claim validation, refresh token rotation, and Keycloak config."
+  },
+  {
+    "title": "Securely Storing JWTs on the Frontend — and How to Refresh ...",
+    "href": "https://www.linkedin.com/pulse/securely-storing-jwts-frontend-how-refresh-them-safely-pandian-je9sc",
+    "body": "Oct 19, 2025 · Understanding JWT and Refresh Token But one crucial question remains: 👉 Where should we store the JWT on the frontend, and how do we refresh it securely? Let’s break this down step by..."
+  },
+  {
+    "title": "JWT in Practice – Part 2: Refresh Tokens, Expiration, and ...",
+    "href": "https://dev.to/gabrielle_eduarda_776996b/jwt-in-practice-part-2-refresh-tokens-expiration-and-best-practices-20p2",
+    "body": "Jun 4, 2025 · 1. Token Expiration: Why It Matters JWTs should always have an expiration time (exp claim). A token that never expires is a security risk — if leaked, it grants unlimited access. Recommended Strategy: Short lifespan for access tokens (e.g., 15 minutes) Use a separate refresh token to extend sessions This balances security with user experience."
+  },
+  {
+    "title": "5 Essential JWT Security Strategies: Rotation and Revocation",
+    "href": "https://article.arunangshudas.com/5-essential-jwt-security-strategies-rotation-and-revocation-4b8bae94ed18",
+    "body": "Nov 2, 2025 · Token rotation means regularly refreshing your access and refresh tokens to limit the lifespan of compromised credentials. Instead of issuing long-lived tokens that stay valid for weeks, you issue short-lived ones and continuously replace them with new ones."
+  }
+]
