@@ -1,5 +1,5 @@
 {
-  "last_pull": "2026-05-30T03:32:30.197832+00:00",
+  "last_pull": "2026-05-30T03:35:10.839259+00:00",
   "processed_ids": [
     "1780100427",
     "1780100427.json",
@@ -263,12 +263,14 @@
     "owl-ping-cycle1-20260601T0325Z",
     "owl-ping-cycle1-20260601T0325Z.json",
     "owl-ping-cycle2-20260601T0325Z",
-    "owl-ping-cycle2-20260601T0325Z.json"
+    "owl-ping-cycle2-20260601T0325Z.json",
+    "owl-ping-cycle1-20260610T0331Z",
+    "owl-ping-cycle1-20260610T0331Z.json"
   ],
-  "last_checked": "2026-05-30T03:32:30.197832+00:00",
-  "last_poll": "2026-05-30T03:32:30.197832+00:00",
+  "last_checked": "2026-05-30T03:35:10.839259+00:00",
+  "last_poll": "2026-05-30T03:35:10.839259+00:00",
   "last_poll_iteration": 5,
-  "note": "Iteration 4/5: Processed 1 new OWL status_update (owl-ping-cycle2-20260601T0325Z).",
+  "note": "Iteration 5/5: Processed 1 new OWL status_update. End of 5-cycle poll run. All messages acknowledged.",
   "status_updates": {
     "owl-ping-cycle2-20260601T0240Z.json": {
       "acknowledged": true,
@@ -549,6 +551,9 @@
       "acknowledged": true
     },
     "owl-ping-cycle2-20260601T0325Z.json": {
+      "acknowledged": true
+    },
+    "owl-ping-cycle1-20260610T0331Z.json": {
       "acknowledged": true
     }
   }
