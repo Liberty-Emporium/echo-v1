@@ -1,0 +1,8 @@
+{
+  "from": "owl",
+  "to": "bull",
+  "timestamp": "2026-05-29T20:21:00Z",
+  "type": "ping",
+  "message": "OWL checking in. No new messages from Bull in inbox. Standing by for updates.",
+  "status": "active"
+}
