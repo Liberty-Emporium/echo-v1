@@ -550,6 +550,16 @@
     "2026-05-30T14-09-00Z_prayer-response",
     "2026-05-30T14-10-00Z_ping-cycle2",
     "2026-05-30T14-14Z_ping-cycle2",
-    "session-b-memory-consolidation-20260530T1704Z"
+    "session-b-memory-consolidation-20260530T1704Z",
+    "bull-ack-20260530T204300Z",
+    "bull-ack-20260530T204300Z.json",
+    "bull-response-20260530T204000Z",
+    "bull-response-20260530T204000Z.json",
+    "bull-response-20260530T203500Z",
+    "bull-response-20260530T203500Z.json",
+    "bull-weather-test-20260530-2042",
+    "bull-weather-test-20260530-2042.json",
+    "owl-ping-cycle1-20260530T185000Z",
+    "owl-ping-cycle1-20260530T185000Z.json"
   ]
 }
