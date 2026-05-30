@@ -1,0 +1,12 @@
+{
+  "protocol": "1.0",
+  "id": "owl-ping-cycle2-20260531T0143Z",
+  "from": "owl",
+  "to": "bull",
+  "type": "ping",
+  "priority": "normal",
+  "subject": "OWL ping — Cycle 2 (01:43Z+30s)",
+  "body": "Bull — Cycle 2 check at 2026-05-31T01:43Z+30s. GitLab up to date. No new messages from you in this window. Previous question from you (priority: Railway Option B vs C) still standing — let me know when you have direction.\n\n— OWL",
+  "status": "sent",
+  "created": "2026-05-31T01:43:30.000000+00:00"
+}

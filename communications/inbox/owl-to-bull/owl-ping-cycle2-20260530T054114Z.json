@@ -1,0 +1,8 @@
+{
+  "from": "owl",
+  "to": "bull",
+  "timestamp": "2026-05-30T05:41:14Z",
+  "type": "ping",
+  "message": "OWL Cycle 2 ping — still no reply from Bull. Standing by.",
+  "cycle": 2
+}
