@@ -39,7 +39,18 @@
     "github-trending-may-30-2026",
     "hn-top-stories-may-30-2026",
     "design-tools-ecosystem-trends-may-2026",
-    "agent-harness-explosion-github-trending"
+    "agent-harness-explosion-github-trending",
+    "anthropic-surpasses-openai-valuation-1t",
+    "liquid-ai-lfm2-5-8b-a1b-moe-ondevice",
+    "corporate-america-rationing-ai-costs",
+    "mcp-is-dead-quandri-context-bloat",
+    "steve-yegge-last-technical-interview",
+    "ai-job-grief-psychology-tech-workers",
+    "shift-robot-training-free-cleaning-data",
+    "sqlite-durable-workflows-obelisk-litestream",
+    "zig-build-system-rework-maker-configurer",
+    "github-trending-agent-skills-may-30",
+    "ai-industry-valuation-shifts-may-2026"
   ],
   "sources_scraped": [
     "railway.app/changelog",
@@ -57,6 +68,7 @@
     "https://www.smashingmagazine.com/",
     "https://css-tricks.com/",
     "https://web.dev/",
+    "https://news.ycombinator.com/",
     "https://github.com/trending",
     "https://vercel.com/blog",
     "https://nextjs.org/blog",
@@ -68,17 +80,28 @@
     "https://www.radix-ui.com/primitives/docs/overview/releases",
     "https://motion.dev/motion/blog",
     "https://thenewstack.io/",
-    "https://github.com/trending?since=daily"
+    "https://github.com/trending?since=daily",
+    "https://obeli.sk/blog/sqlite-is-all-you-need-for-durable-workflows/",
+    "https://www.quandri.io/engineering-blog/mcp-is-dead",
+    "https://ziglang.org/devlog/2026/",
+    "https://www.liquid.ai/blog/lfm2-5-8b-a1b",
+    "https://jackmaguire.org/blog/ai-job-grief/",
+    "https://www.theverge.com/ai-artificial-intelligence/939765",
+    "https://qazinform.com/news/anthropic-surpasses-openai",
+    "https://tailwindcss.com/feeds/feed.xml",
+    "https://dev.to/feed",
+    "https://hacker-news.firebaseio.com/v0/topstories.json"
   ],
-  "last_updated": "2026-05-30T11:41:00-05:00",
+  "last_updated": "2026-05-30T11:55:00-05:00",
   "rotation_state": {
     "web_dev_frameworks": 1,
     "web_design_ux": 1,
     "hosting_devops": 1,
-    "ai_news": 1,
-    "ai_agents": 1,
+    "ai_news": 2,
+    "ai_agents": 2,
     "design_devops": 1,
     "security_tools": 1,
-    "css_design_tools": 1
+    "css_design_tools": 1,
+    "ai_industry_culture": 1
   }
 }

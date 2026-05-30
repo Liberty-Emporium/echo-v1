@@ -75,8 +75,6 @@ Source: TechCrunch, May 29
 
 ---
 
----
-
 ## Run 2 — 2026-05-30 — AI Industry Shifts, MCP Under Fire, and Dev Culture
 
 ### AI Industry News
