@@ -1,0 +1,27 @@
+[
+  {
+    "title": "FastAPI in 2025: Are Async & Type Hints Now Mandatory? - Reddit",
+    "href": "https://www.reddit.com/r/FastAPI/comments/1pum4pw/fastapi_in_2025_are_async_type_hints_now_mandatory/",
+    "body": "Dec 24, 2025 · Just moved a Flask/Celery setup to FastAPI. The result? One service. No Celery. 3x more WebSocket connections. Prototypes done in an afternoon.Should I use FastAPI only for AI features or build full backends with it?FastAPI for enterprise-grade backend - RedditMore results from www.reddit.com"
+  },
+  {
+    "title": "FastAPI + Pydantic 2025: The Ultimate Stack for Modern Developers",
+    "href": "https://medium.com/@hadiyolworld007/fastapi-pydantic-2025-the-ultimate-stack-for-modern-developers-83f1f94a524a",
+    "body": "Jun 18, 2025 · Clean, consistent decorators make it simple. Need dependency injection? You can define reusable, async-safe DI layers with a few lines:"
+  },
+  {
+    "title": "Python Complete Guide — FastAPI, AsyncIO, Pydantic, uv, Polars, AI ...",
+    "href": "https://www.youngju.dev/blog/culture/2026-04-15-python-complete-guide-fastapi-asyncio-pydantic-uv-polars-ai-engineering-deep-dive-guide-2025.en",
+    "body": "Apr 15, 2026 · Pydantic v2 (2023): validation engine rewritten in Rust. 5-50x faster; FastAPI: the de facto standard for type-hint-based API frameworks; Polars ..."
+  },
+  {
+    "title": "FastAPI AI Development Tools: Developer Guide for 2025",
+    "href": "https://www.augmentcode.com/tools/fastapi-ai-development-tools-developer-guide-for-2025",
+    "body": "Oct 10, 2025 · The framework's dependency injection system uses type annotations as clear signals for generating complex dependency hierarchies. Async-Native ...Missing: v2 | Show results with:v2"
+  },
+  {
+    "title": "FastAPI Best Practices and Conventions we used at our startup",
+    "href": "https://github.com/zhanymkanov/fastapi-best-practices",
+    "body": "Beyond Dependency Injection. Pydantic is a great schema validator, but ... FastAPI supports both sync and async dependencies. It's tempting to use sync ..."
+  }
+]

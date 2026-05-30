@@ -1,0 +1,27 @@
+[
+  {
+    "title": "RESTful APIs in 100 Seconds // Build an API from Scratch... - YouTube",
+    "href": "https://www.youtube.com/watch?v=-MTSQjw5DrM",
+    "body": "What is REST? Learn how an Application Programming Interface (API) can adhere to Representational State Transfer (REST) to enable reliable co..."
+  },
+  {
+    "title": "Backend Battle 2025: FastAPI vs Express Explained",
+    "href": "https://www.slincom.com/blog/programming/fastapi-vs-express-backend-comparison-2025",
+    "body": "Python FastAPI vs Node.js Express: Who Wins the 2025 Backend Face-Off?FastAPI vs Express: Which Performs Better in 2025? Performance is often a deciding factor when selecting a backend. FastAPI delivers exceptional API response times thanks to its async-first approach."
+  },
+  {
+    "title": "REST API Design Best Practices for Engineers | LinkedIn",
+    "href": "https://www.linkedin.com/posts/umashanker-pandey-a2552b60_restapi-apidesign-backendengineering-activity-7430986218223366145-JkMU",
+    "body": "Best Practices for API Design with FastAPI FastAPI makes backend development fast and efficient - but good API design still requires discipline. Here are some proven best practices when building production-grade APIs with FastAPI..."
+  },
+  {
+    "title": "FastAPI Custom Middleware: How to Get... — pythontutorials.net",
+    "href": "https://www.pythontutorials.net/blog/fastapi-custom-middleware-getting-body-of-request-inside/",
+    "body": "A key component of any production-grade API is **middleware**—software that sits between the client and your application, handling cross-cutting concerns like logging, authentication, rate limiting, and more."
+  },
+  {
+    "title": "CORS (Cross-Origin Resource Sharing) - FastAPI",
+    "href": "https://fastapi.tiangolo.com/tutorial/cors/",
+    "body": "FastAPI framework, high performance, easy to learn, fast to code, ready for production.Specific HTTP headers or all of them with the wildcard \"*\". Python 3.10+. from fastapi import FastAPI from fastapi.middleware.cors import CORSMiddleware."
+  }
+]
