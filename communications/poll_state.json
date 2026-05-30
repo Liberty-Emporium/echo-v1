@@ -336,8 +336,6 @@
     "owl-to-bull-network-research-20260530T0627Z.json",
     "owl-to-bull-ping-2-20260610",
     "owl-to-bull-ping-2-20260610.json",
-    "owl-to-bull-ping-20260610",
-    "owl-to-bull-ping-20260610.json",
     "owl-to-bull-ping-3-20260610",
     "owl-to-bull-ping-3-20260610.json",
     "owl-to-bull-ping-cycle1-20260530T0122Z",
@@ -399,7 +397,7 @@
     "self-response-to-owl-20260530",
     "self-response-to-owl-20260530.json"
   ],
-  "last_poll": "2026-05-30T14:46:37.904870+00:00",
+  "last_poll": "2026-05-30T14:56:00.000000+00:00",
   "last_processed_count": 0,
-  "poll_cycle": "iteration-5-of-5-no-new-messages"
+  "poll_cycle": "iteration-1-of-5-no-new-messages"
 }
