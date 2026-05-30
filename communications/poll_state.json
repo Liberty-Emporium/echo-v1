@@ -167,6 +167,8 @@
     "owl-ping-bull-20260530T0122Z",
     "owl-ping-cycle1-$(date -u +%Y%m%dT%H%M%S)Z",
     "owl-ping-cycle1-$(date -u +%Y%m%dT%H%M%SZ)",
+    "owl-ping-cycle1-2026-05-30T22:47:31Z.json",
+    "owl-ping-cycle1-2026-05-30T22:47:46Z.json",
     "owl-ping-cycle1-20260530T0213Z",
     "owl-ping-cycle1-20260530T0213Z.json",
     "owl-ping-cycle1-20260530T0239Z",
@@ -674,6 +676,6 @@
   ],
   "last_bull_check": "2026-05-30T20:50:26.465381Z",
   "bull_reply_received": true,
-  "last_poll": "2026-05-30T22:47:09Z",
+  "last_poll": "2026-05-30T22:48:21Z",
   "last_owl_ping": "owl-ping-cycle2-20260530T164400Z"
 }
