@@ -445,5 +445,6 @@
     "owl-ping-20260530T201000Z.json"
   ],
   "last_bull_check": "2026-05-30T20:10:00.000000Z",
-  "bull_reply_received": true
+  "bull_reply_received": true,
+  "last_poll": "2026-05-30T20:31:56Z"
 }
