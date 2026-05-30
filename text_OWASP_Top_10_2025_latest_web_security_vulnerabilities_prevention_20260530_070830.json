@@ -1,0 +1,27 @@
+[
+  {
+    "title": "OWASP Top Ten Web Application Security Risks | OWASP Foundation",
+    "href": "https://owasp.org/www-project-top-ten/",
+    "body": "The most current released version is the OWASP Top Ten 2025. Previous versions are available at OWASP Top Ten 2021 and OWASP Top 10 2017 (PDF)."
+  },
+  {
+    "title": "The OWASP Top Ten 2025",
+    "href": "https://www.owasptopten.org/",
+    "body": "It was started in 2003 to help organizations and developer with a starting point for secure development. Over the years it's grown into a pseudo standard that is used as a baseline for compliance, education, and vendor tools. ... We are planning to announce the release of the OWASP Top 10:2025 at ..."
+  },
+  {
+    "title": "OWASP Top 10:2025",
+    "href": "https://owasp.org/Top10/2025/",
+    "body": "It represents a broad consensus about the most critical security risks to web applications. This is the 2025 version of the OWASP Top 10."
+  },
+  {
+    "title": "OWASP Top 10: Vulnerabilities, Risks and How to Fix Them",
+    "href": "https://www.sentinelone.com/cybersecurity-101/cybersecurity/owasp-top-10/",
+    "body": "3 days ago - The OWASP Top 10 is the industry's standard awareness framework for web application security risks, updated in 2025 with expanded supply chain coverage and a new emphasis on alerting alongside logging."
+  },
+  {
+    "title": "OWASP Top 10 2025: What Changed & New Vulnerabilities - Parasoft",
+    "href": "https://www.parasoft.com/blog/owasp-top-10/",
+    "body": "2 weeks ago - OWASP Top 10:2025 introduced two new categories and major re-rankings. See what changed from 2021, what each vulnerability means, and how to update your AppSec program."
+  }
+]

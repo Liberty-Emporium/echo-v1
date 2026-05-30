@@ -1,0 +1,27 @@
+[
+  {
+    "title": "A Practical Guide to FastAPI Security - davidmuraya.com",
+    "href": "https://davidmuraya.com/blog/fastapi-security-guide/",
+    "body": "Oct 24, 2025 · This guide is a practical checklist covering critical security topics for any FastAPI application, including: Handling common web vulnerabilities like CSRF, XSS, and SQL Injection. Implementing rate limiting to prevent abuse. Enforcing secure HTTP headers and authorization."
+  },
+  {
+    "title": "Web Application Security with CORS, CSRF, and XSS Prevention 2025",
+    "href": "https://www.johal.in/web-application-security-with-cors-csrf-and-xss-prevention-2025/",
+    "body": "Did you know that in 2024, over 70% of web application attacks were attributed to CORS misconfigurations, CSRF token bypasses, and XSS injection vulnerabilities? As we move into 2025, these three attack vectors remain critical security challenges for developers building modern web applications."
+  },
+  {
+    "title": "How to secure APIs built with FastAPI: A complete guide - Escape",
+    "href": "https://escape.tech/blog/how-to-secure-fastapi-api/",
+    "body": "Feb 13, 2024 · Learn how to secure your APIs built with FastAPI with our expert hands-on tutorial. Enhance API security for your projects in just a few steps!"
+  },
+  {
+    "title": "CORS, CSRF, and Security Headers in FastAPI - Python in Plain ...",
+    "href": "https://python.plainenglish.io/cors-csrf-and-security-headers-in-fastapi-0ff6517a8a88",
+    "body": "When building APIs with FastAPI, three critical security concepts take precedence in protecting against threats: Cross-Origin Resource Sharing (CORS), Cross-Site Request Forgery (CSRF), and Security Headers."
+  },
+  {
+    "title": "Guarding the Web: Understanding and Mitigating Modern ...",
+    "href": "https://jonathan-lalou.sayasoft.fr/2025/08/16/guarding-the-web-understanding-and-mitigating-modern-application-security-risks-xss-csrf-clickjacking-cors-ssrf/",
+    "body": "Aug 16, 2025 · Attackers exploit input handling, browser trust, and server connectivity to inject code (XSS), trigger unauthorized actions (CSRF), trick users into clicking hidden UI (clickjacking), abuse permissive cross-origin policy (CORS), or make the server itself fetch sensitive resources (SSRF)."
+  }
+]

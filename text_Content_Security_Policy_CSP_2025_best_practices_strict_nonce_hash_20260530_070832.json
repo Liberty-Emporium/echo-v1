@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Content Security Policy (CSP): Implementation Guide for 2025",
+    "href": "https://inventivehq.com/blog/content-security-policy-implementation-guide",
+    "body": "Master Content Security Policy implementation with nonce-based and hash-based approaches, learn to prevent XSS attacks, and discover modern CSP best practices for maximum security."
+  },
+  {
+    "title": "Hashes and Nonce | All you need to know | CentralCSP",
+    "href": "https://centralcsp.com/docs/csp-hashes-nonce",
+    "body": "CSP Hashes and Nonces Content Security Policy provides two powerful mechanisms to allow specific inline scripts and styles while maintaining security: hashes and nonces. These mechanisms are more secure alternatives to using 'unsafe-inline'. Hashes (SHA-256, SHA-384, SHA-512) A hash is a cryptographic fingerprint of a piece of data (in this case, the content of an inline script or style). You ..."
+  },
+  {
+    "title": "Securing Your Website with Content Security Policy (CSP): Nonce vs Hash",
+    "href": "https://sahayagodson.medium.com/securing-your-website-with-content-security-policy-csp-nonce-vs-hash-36fa6ea913a0",
+    "body": "Enter Content Security Policy (CSP), your website's trusty shield against these dangers. CSP lets you control what resources can load and run on your site, locking out malicious scripts with precision. In this article, we'll dive into how CSP works, compare the nonce-based and hash-based methods."
+  },
+  {
+    "title": "Content Security Policy (CSP) implementation - MDN Web Docs",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/Security/Practical_implementation_guides/CSP",
+    "body": "Implementing a strict CSP is the best way to mitigate XSS vulnerabilities with CSP. This uses nonce- or hash- based fetch directives to ensure that only scripts and/or styles that include the correct nonce or hash will be executed."
+  },
+  {
+    "title": "Mitigate cross-site scripting (XSS) with a strict Content Security ...",
+    "href": "https://web.dev/articles/strict-csp",
+    "body": "This is because strict CSP only allows hashed scripts or scripts with the correct nonce value generated on the server, so attackers can't execute the script without knowing the correct nonce for a given response. Note: To protect your site from XSS, make sure to sanitize user input and use CSP as an extra security layer."
+  }
+]
