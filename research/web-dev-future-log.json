@@ -86,5 +86,50 @@
       "Claw Patrol",
       "Multi-cloud resilience"
     ]
+  },
+  {
+    "run": 3,
+    "date": "2026-06-01",
+    "topic": "AI-Powered Dev Tools",
+    "sources": [
+      "vercel.com/blog",
+      "thenewstack.io",
+      "news.ycombinator.com",
+      "dev.to"
+    ],
+    "keyFindings": {
+      "agenticDeployments": "30% of Vercel deployments now from AI agents (up 1000%), Claude Code 75%, Lovable+v0 6%, Cursor 1.5%. Agent-deployed projects 20x more likely to use AI inference.",
+      "agenticInfrastructure": "Three-layer model: (1) deployment surfaces for agents, (2) AI primitives (AI SDK 6, AI Gateway, Fluid Compute, Workflows, Sandbox), (3) self-healing infrastructure",
+      "inferenceTheft": "New attack vector — stolen AI inference resold via OpenAI-compatible adapters. Chipotlai Max targets Chipotle, Home Depot, etc. Per-request bot verification (BotID) required.",
+      "vercelWorkflows": "GA April 2026, 100M+ runs in beta, 200K npm downloads/week, Python SDK in beta, Workflows 5 coming with concurrency controls and global deployment",
+      "claudeCode": "Dominant agentic tool (75% share). Andrej Karpathy hired by Anthropic. Opus 4.8 with effort controls, dynamic workflows, better honesty. 'ADHD' experiment shows 2x improvement.",
+      "replitIdentity": "Visa-backed identity layer for AI agents — agents can now have financial identity",
+      "mcp": "WebMCP turns any Chrome page into MCP server. DocuSign building agentic agreement MCP. MCP + synthetic data for compliance.",
+      "governance": "AC/DC framework for governing AI agents. 'CI wasn't built for coding agents.' Agent code explosion requires pipeline rethink.",
+      "metaTrends": [
+        "Agentic infrastructure replacing traditional CI/CD",
+        "Claude Code dominant in agentic deployments (75%)",
+        "Inference theft as new security threat requiring per-request verification",
+        "MCP becoming standard for agent-tool integration",
+        "Agent identity and financial rails emerging",
+        "Governance and auditability as top constraints",
+        "Self-healing infrastructure trending toward autonomous operation"
+      ],
+      "recommendations": "Use Claude Code for agentic development, Vercel Workflows for long-running processes, AI Gateway for multi-model AI, per-request bot verification on all AI endpoints, agent-friendly deployment surfaces"
+    },
+    "coveredTopics": [
+      "Agentic deployments (30% of Vercel)",
+      "Vercel three-layer agentic infrastructure",
+      "Inference theft security",
+      "Vercel Workflows GA",
+      "Claude Code dominance",
+      "Claude Opus 4.8",
+      "Andrej Karpathy at Anthropic",
+      "Replit agent identity",
+      "MCP and WebMCP",
+      "Agent governance frameworks",
+      "AI endpoint security",
+      "WorkflowAgent (AI SDK v7)"
+    ]
   }
 ]
