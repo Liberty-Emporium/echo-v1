@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+    "href": "https://www.w3.org/TR/WCAG22/",
+    "body": "Web Content Accessibility Guidelines (WCAG) 2.2 defines how to make web content more accessible to people with disabilities. Accessibility involves a wide range of disabilities, including visual, auditory, physical, speech, cognitive, language, learning, and neurological disabilities.······"
+  },
+  {
+    "title": "WCAG 2.2: Complete Compliance Guide 2025 - All 9 New Success Criteria",
+    "href": "https://www.allaccessible.org/blog/wcag-22-complete-guide-2025",
+    "body": "Complete WCAG 2.2 compliance resource hub. Understand all 9 new success criteria, implementation guides, testing protocols, and legal requirements. Your comprehensive guide to WCAG 2.2 AA compliance in 2025."
+  },
+  {
+    "title": "WCAG 2.2 | What’s new & how it improves web accessibilityThe Complete Guide to WCAG 2.2 Compliance: What Every ...WCAG 2.2 vs 2.1: 9 New Requirements Your Site Probably FailsWCAG 2.2 Compliance: Accessibility Best PracticesWCAG 2.2 AA Highlights | Accessibility",
+    "href": "https://www.wcag.com/blog/wcag-2-2-aa-summary-and-checklist-for-website-owners/",
+    "body": "The transition from WCAG 2.1 to WCAG 2.2equips organizations to address a broader range of accessibility challenges faced by users. WCAG 2.1 focused on enhancing accessibility for mobile users and individuals with low vision. WCAG 2.2 builds on this foundation, adding guidelines that cater more to users with cognitive disabilities, motor disabiliti... See full list on wcag.com WCAG 2.2 introduces nine new success criteria designed to address gaps in accessibility. Each new criterion falls under one of the four WCAG principles—Perceivable, Operable, Understandable, and Robust (POUR). Together, these criteria enhance existing standards by making digital content more accessible to a wider range of users. Below is a WCAG 2.2... See full list on wcag.com Implementing the WCAG 2.2 AA success criteria brings numerous benefits to organizations. By making content more accessible to individuals with a range of abilities, businesses can strengthen customer loyalty and uphold an inclusive reputation. Meeting the latest accessibility standards also helps to reduce the risk of legal complications, as more o... See full list on wcag.com The latest version of WCAG represents a significant advancement in the effort to make digital content more accessible. Although WCAG 2.2 AA conformance is not yet required by law, aiming for this standard positions your organization as a leader in accessibility. By implementing features like enhanced focus appearance, alternative gestures, and acce... See full list on wcag.com Jul 11, 2025 · This comprehensive guide breaks down the new success criteria, implementation strategies, and real-world challenges that developers face when building truly accessible applications. Feb 4, 2026 · For government entities, businesses, and organizations planning their accessibility strategy, understanding WCAG 2.2 is essential. The new standard adds 9 success criteria that address cognitive accessibility, mobile usability, and authentication challenges that WCAG 2.1 did not fully cover. Jun 17, 2025 · In this guide, we’ll break down what’s new in WCAG 2.2, outline website accessibility best practices, and show you how to achieve ADA website compliance while making your digital experiences more inclusive. Apr 24, 2026 · WCAG is organized around four foundational principles. Content must be: Information must be presentable in ways users can perceive. Interface components must be navigable and usable. Information and operation must be comprehensible. Content must work across technologies and assistive tools."
+  },
+  {
+    "title": "The Complete Guide to WCAG 2.2 Compliance: What Every Developer Needs ...",
+    "href": "https://www.accessibility.build/blog/complete-guide-wcag-2-2-compliance-developers-2024",
+    "body": "The Complete Guide to WCAG 2.2 Compliance: What Every Developer Needs to Know in 2024 WCAG 2.2 introduces critical updates that reshape how we approach web accessibility. This comprehensive guide breaks down the new success criteria, implementation strategies, and real-world challenges that developers face when building truly accessible applications."
+  },
+  {
+    "title": "WCAG 2.2 vs 2.1: 9 New Requirements Your Site Probably Fails",
+    "href": "https://adaquickscan.com/blog/wcag-2-2-iso-standard-2025",
+    "body": "The new standard adds 9 success criteria that address cognitive accessibility, mobile usability, and authentication challenges that WCAG 2.1 did not fully cover. This guide explains what changed between WCAG 2.1 and 2.2, the practical implications of the new criteria, and how to plan your upgrade path while meeting current compliance requirements."
+  },
+  {
+    "title": "WCAG 2.2 Compliance: Accessibility Best Practices",
+    "href": "https://fivejars.com/insights/wcag-2-2-compliance-best-practices-to-make-your-website-accessible/",
+    "body": "With WCAG 2.2 compliance now the standard, those risks – and the opportunities to do better – are greater than ever. In this guide, we’ll break down what’s new in WCAG 2.2, outline website accessibility best practices, and show you how to achieve ADA website compliance while making your digital experiences more inclusive."
+  },
+  {
+    "title": "WCAG 2.2 AA Highlights | Accessibility",
+    "href": "https://accessibility.arizona.edu/policies-governance/wcag-22-highlights",
+    "body": "What's new in WCAG 2.2 WCAG 2.2 was published in October 2023 and adds 9 new success criteria. While Title II currently references WCAG 2.1, UA is aligning to 2.2 for best practice. Here are the new AA-level requirements: 2.4.11 Focus Not Obscured (Minimum) — Level AA Requirement: When a component receives keyboard focus, it is not entirely hidden by other content (like sticky headers or ..."
+  },
+  {
+    "title": "Guide to WCAG Compliance for Version 2.2 and Accessibility",
+    "href": "https://usercentrics.com/knowledge-hub/mastering-web-app-accessibility-wcag2-2-and-inclusive-design/",
+    "body": "WCAG 2.2 new success criteria New success criteria in WCAG 2.2 aim to improve accessibility for people with cognitive impairments and motor disabilities. Consistent help: To ensure consistent help, guidance, and documentation across a website or app, meant to make assistance and instructions easier to locate and follow to reduce cognitive load."
+  }
+]
