@@ -405,10 +405,11 @@
     "self-response-to-owl-20260530",
     "self-response-to-owl-20260530.json",
     "owl-ping-20260530T1103Z-cycle2.json",
-    "owl-ping-20260530T1111Z-cycle1.json"
+    "owl-ping-20260530T1111Z-cycle1.json",
+    "owl-ping-20260530T1111Z-cycle2.json"
   ],
-  "last_poll": "2026-05-30T15:11:30Z",
+  "last_poll": "2026-05-30T15:13:30Z",
   "last_processed_count": 1,
-  "poll_cycle": "iteration-3-of-5-checking",
-  "last_iteration": 3
+  "poll_cycle": "iteration-4-of-5-checking",
+  "last_iteration": 4
 }
