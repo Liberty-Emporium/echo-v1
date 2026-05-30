@@ -40,5 +40,51 @@
       "Vercel AI Gateway",
       "Platform adapters"
     ]
+  },
+  {
+    "run": 2,
+    "date": "2026-05-30",
+    "topic": "Backend Trends",
+    "sources": [
+      "news.ycombinator.com",
+      "thenewstack.io",
+      "blog.cloudflare.com",
+      "nodejs.org/blog",
+      "bun.sh/blog",
+      "deno.com/blog",
+      "vercel.com/blog",
+      "infoq.com/development"
+    ],
+    "keyFindings": {
+      "bun": "v1.3.14 — Bun.Image built-in API, 7x faster warm installs, experimental HTTP/2+HTTP/3 in fetch() and Bun.serve(), FreeBSD/Android builds, Windows ARM64, production-ready runtime",
+      "deno": "v2.8 — import defer, 6 new subcommands, 3.66x faster npm installs, Deno Deploy GA, Claw Patrol agent firewall open-sourced, Deno Sandbox for untrusted code, better Node.js compat",
+      "nodejs": "v24.16 LTS / v26.2 Current, stable enterprise choice, native Fetch replacing Axios, OpenJS Foundation governance",
+      "edgeComputing": "Vercel: 30% of deployments are AI-agent-driven (up 1000%), Cloudflare Workers + D1 + Durable Objects maturing as most complete edge platform, Deno Deploy generally available",
+      "vercelAgentic": "Three-layer agentic infrastructure model, AI SDK 6 with agent abstraction, Fluid compute for AI workloads, Sandbox for untrusted code, Workflows/Queues for state management",
+      "apiPatterns": "REST resurging for simplicity, tRPC growing for full-stack TS, SSE > WebSockets when possible, React Server Actions replacing API routes in Next.js",
+      "notableEvents": "Google Cloud suspended Railway's production account (8hr outage), Azure Linux 4.0 announced, GitHub cuts agent token spend 62% with MCP pruning, Arm open-sources Metis AI security framework",
+      "metaTrends": [
+        "Bun replacing Node.js as default dev/runtime for new projects",
+        "Edge computing becoming default deployment target",
+        "Agentic infrastructure (30% of deployments are from AI agents)",
+        "Security-first runtimes (Deno sandbox, Claw Patrol)",
+        "Platform resilience awareness (single-cloud outage risk)",
+        "Runtimes converging (Bun/Deno/Node all improve compat)"
+      ],
+      "recommendations": "Bun for new projects, Node.js LTS for enterprise, Workers/Deno for edge, multi-cloud strategy for resilience"
+    },
+    "coveredTopics": [
+      "Bun 1.3.x",
+      "Deno 2.x",
+      "Node.js 24/26",
+      "Cloudflare Workers",
+      "Deno Deploy",
+      "Edge computing",
+      "Agentic infrastructure",
+      "API patterns",
+      "Vercel Fluid Compute",
+      "Claw Patrol",
+      "Multi-cloud resilience"
+    ]
   }
 ]
