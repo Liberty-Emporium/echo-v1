@@ -74,7 +74,7 @@ def now_ts():
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H-%M-%SZ")
 
 def get_outbox(agent):
-    mapping = AGENT_MAP.get(agent, AGENT_MAP["self"])
+    mapping = AGENT_MAP.get(agent, AGENT_MAP["bull"])
     return INBOX_DIR / mapping["outbox"]
 
 def git_commit_push(message):
