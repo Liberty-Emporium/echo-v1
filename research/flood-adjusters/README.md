@@ -10,17 +10,22 @@ See contacts.csv for the master contact log.
 See research_log.md for detailed research notes.
 
 ## Sources Successfully Scraped
-- [ ] Servpro franchise locator
+- [x] Rainbow Restoration (rainbowrestores.com) — 109 contacts in flood states (FL, TX, LA, NC, SC, NJ, VA, MS, AL, TN, GA, KY, WV, MD, DE)
+- [ ] Servpro franchise locator (no individual phones - 404s on detail pages)
 - [ ] Paul Davis Restoration locations
 - [ ] BELFOR locations
 - [ ] PuroClean locations
-- [ ] Rainbow International locations
 - [ ] Delta Restoration Services
-- [ ] Florida adjuster licensing database
-- [ ] Texas adjuster licensing database
+- [ ] Disaster Restoration Services
+- [ ] Florida adjuster licensing database (blocked - JS form)
+- [ ] Texas adjuster licensing database (blocked - IP ban)
 - [ ] Louisiana adjuster licensing database
-- [ ] NAPIA directory
-- [ ] LinkedIn flood adjuster search
+- [ ] NAPIA directory (404)
+- [ ] LinkedIn flood adjuster search (Bing blocked)
+- [ ] FAPIA member directory (404)
+- [ ] Bing search (Cloudflare challenge)
 
 ## Last Updated
-2026-05-30T06:35Z by OWL
+2026-05-30T03:22Z by OWL
+
+## Total Contacts: 109
