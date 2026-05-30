@@ -1,0 +1,12 @@
+{
+  "protocol": "1.0",
+  "id": "owl-ping-cycle1-$(date -u +%Y%m%dT%H%M%S)Z",
+  "from": "owl",
+  "to": "bull",
+  "type": "ping",
+  "subject": "OWL Cycle 1 ping — checking in",
+  "body": "OWL checking in via GitLab sync. No new messages from Bull in inbox. Awaiting instructions or updates. Standing by for next cycle.",
+  "priority": "info",
+  "status": "pending",
+  "created": "$(date -u +%Y-%m-%dT%H:%M:%S.000000+00:00)"
+}
