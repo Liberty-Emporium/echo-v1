@@ -31,16 +31,15 @@
     "hn-top-stories-may-2026",
     "react-server-components-performance",
     "turbopack-updates-16-2",
-    "anthropic-surpasses-openai-valuation",
-    "liquid-ai-lfm2-5-moe-ondevice",
-    "corporate-ai-cost-rationing",
-    "mcp-protocol-critique-context-bloat",
-    "steve-yegge-last-technical-interview",
-    "ai-job-grief-psychology",
-    "shift-robot-training-free-cleaning",
-    "sqlite-durable-workflows",
-    "zig-build-system-rework",
-    "github-trending-agent-skills"
+    "shadcn-rhea-style-may-2026",
+    "shadcn-registry-include-validate",
+    "shadcn-package-imports-target-aliases-4.7.0",
+    "shadcn-preset-commands",
+    "radix-ui-primitives-releases",
+    "github-trending-may-30-2026",
+    "hn-top-stories-may-30-2026",
+    "design-tools-ecosystem-trends-may-2026",
+    "agent-harness-explosion-github-trending"
   ],
   "sources_scraped": [
     "railway.app/changelog",
@@ -58,7 +57,6 @@
     "https://www.smashingmagazine.com/",
     "https://css-tricks.com/",
     "https://web.dev/",
-    "https://news.ycombinator.com/",
     "https://github.com/trending",
     "https://vercel.com/blog",
     "https://nextjs.org/blog",
@@ -66,21 +64,21 @@
     "https://tailwindcss.com/blog",
     "https://blog.vuejs.org/",
     "https://dev.to/t/programming",
-    "https://obeli.sk/blog/",
-    "https://www.quandri.io/engineering-blog/",
-    "https://ziglang.org/devlog/2026/",
-    "https://www.liquid.ai/blog/",
-    "https://jackmaguire.org/blog/",
-    "https://www.theverge.com/ai-artificial-intelligence/"
+    "https://ui.shadcn.com/docs/changelog",
+    "https://www.radix-ui.com/primitives/docs/overview/releases",
+    "https://motion.dev/motion/blog",
+    "https://thenewstack.io/",
+    "https://github.com/trending?since=daily"
   ],
   "last_updated": "2026-05-30T11:41:00-05:00",
   "rotation_state": {
     "web_dev_frameworks": 1,
     "web_design_ux": 1,
     "hosting_devops": 1,
-    "ai_news": 2,
-    "ai_agents": 2,
+    "ai_news": 1,
+    "ai_agents": 1,
     "design_devops": 1,
-    "security_tools": 1
+    "security_tools": 1,
+    "css_design_tools": 1
   }
 }
