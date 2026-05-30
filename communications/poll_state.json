@@ -446,9 +446,13 @@
     "owl-ping-cycle1-20260530T2030Z",
     "owl-ping-cycle1-20260530T2030Z.json",
     "owl-ping-20260530T2030Z",
-    "owl-ping-20260530T2030Z.json"
+    "owl-ping-20260530T2030Z.json",
+    "owl-ping-cycle2-20260530T2031Z",
+    "owl-ping-cycle2-20260530T2031Z.json",
+    "owl-ping-20260530T2031Z",
+    "owl-ping-20260530T2031Z.json"
   ],
   "last_bull_check": "2026-05-30T20:10:00.000000Z",
   "bull_reply_received": true,
-  "last_poll": "2026-05-30T20:40:22Z"
+  "last_poll": "2026-05-30T20:43:00Z"
 }
