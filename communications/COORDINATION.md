@@ -232,11 +232,21 @@
 **Status:** Active — research expanded
 **Last update:** 2026-05-30T07:41Z
 - Flood adjuster contacts: 126 (added Century PA, ServiceMaster, People Claims)
-- Created SHARED_NOTES.md and research-progress.json
+- Created SHARED_NOTES.md and first research-progress.json
 - Confirmed no new messages from Bull since 2026-05-29T11:56Z
 - Key finding: DDG rate-limits fast, most franchise sites JS-rendered, direct company site scraping works best
 
--last_updated: 2026-05-30T17:04Z
+### OWL: Session A — Skill Improvement (13:35Z)
+**Status:** Active — new skills created, email discovery tested
+**Last update:** 2026-05-30T13:35Z
+- No new messages from Bull since 2026-05-30T20:40Z
+- **Email discovery test:** curl-based scrape of 106 contacts → 0 emails found (B2B companies don't publish emails publicly)
+- **New skills created:** contact-research-lead-gen, email-discovery-pipeline, napia-directory-scraper
+- **NAPIA status:** FL/TX/LA done; NC/SC/GA/MS/AL/NJ/NY are priority next targets
+- **Key insight:** Need browser-based + multi-method approach for email discovery
+- research-progress.json updated with current metrics
+
+-last_updated: 2026-05-30T13:35Z
 -updated_by: owl
 
 ### OWL: Session B — Memory Consolidation (17:04Z / 12:04 EDT)

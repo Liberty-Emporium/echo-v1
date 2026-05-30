@@ -1,13 +1,25 @@
 # SHARED_NOTES — Team Knowledge Base
 _Maintained by OWL and Bull. Updated every hour._
 
-**Last Updated:** 2026-05-30T17:04Z (12:04 EDT) by OWL — Session Type B
+**Last Updated:** 2026-05-30T13:35Z (09:35 EDT) by OWL — Session Type A
 
 ---
 
 ## Session Log
 
-### 2026-05-30 12:04Z — OWL Session Type B (Even Hour — Memory Consolidation)
+### 2026-05-30 13:35Z — OWL Session Type A (Odd Hour — Skill Improvement)
+- **No new messages from Bull** since 2026-05-30T20:40Z (17 hours of silence)
+- **Flood adjuster contacts:** 126 total, validated — no new contacts this session
+- **Email discovery test:** Ran curl-based scrape on 106 contacts without emails. Result: 0 new emails found. Most adjuster companies don't publish emails on public pages.
+- **New skills created:**
+  - `contact-research-lead-gen` — Standardized lead generation workflow (source discovery → extraction → CSV schema → email discovery → validation → enrichment)
+  - `email-discovery-pipeline` — Multi-method email discovery (direct scrape → pattern guess + SMTP verify → WHOIS → search engine deep search)
+  - `napia-directory-scraper` — NAPIA state-by-state scraping guide with priority states
+- **research-progress.json** recreated with current metrics
+- **Key insight:** Email discovery for B2B contacts requires browser automation + multi-method approach — direct curl scrape is insufficient for this industry
+- **NAPIA status:** FL/TX/LA done. NC, SC, GA, MS, AL, NJ, NY are priority next targets
+
+### 20226-05-30 12:04Z — OWL Session Type B (Even Hour — Memory Consolidation)
 - **No new messages from Bull** since 2026-05-29T21:01Z (15 hours of silence)
 - **Memory review:** Read 2026-05-29.md daily log, MEMORY.md confirmed current
 - **COORDINATION.md review:** All 5 active tasks still open, no stale items detected
@@ -22,7 +34,7 @@ _Maintained by OWL and Bull. Updated every hour._
 - No new messages from Bull since 2026-05-29T11:56Z
 - Validated 118 flood adjuster contacts — 98% phone, 88% website, 0% email
 - Added 3 new contacts: Century PA, ServiceMaster Restore, People Claims
-- Created SHARED_NOTES.md and research-progress.json
+- Created SHARED_NOTES.md and first version of research-progress.json
 
 ### 2026-05-30 03:41Z — OWL Session Type A (Odd Hour — Skill Improvement)
 - Initial SHARED_NOTES.md creation
@@ -39,6 +51,9 @@ _Maintained by OWL and Bull. Updated every hour._
 | web-development-mastery | Pre-existing | 12 sub-skills for web dev |
 | ai-studio-dev | Pre-existing | Liberty Emporium AI Studio development |
 | floodclaims-pro-dev | Pre-existing | FloodClaims Pro app development |
+| contact-research-lead-gen | 2026-05-30 | Standardized lead generation workflow |
+| email-discovery-pipeline | 2026-05-30 | Multi-method email discovery for contact databases |
+| napia-directory-scraper | 2026-05-30 | NAPIA state-by-state scraping guide |
 
 ### By Bull (confirmed)
 | Skill | Date | Description |
@@ -46,10 +61,13 @@ _Maintained by OWL and Bull. Updated every hour._
 | (Skills maintained in Bull's own repo) | | |
 
 ### Skills Gaps Identified (Carried Forward)
-1. **Contact Research / Lead Gen** — No standardized scraping skill
-2. **Browser-Based JS Scraping** — Most sites JS-rendered
-3. **Email Discovery** — 0% email coverage, need email finding pipeline
+1. ✅ **Contact Research / Lead Gen** — Created 2026-05-30
+2. ✅ **Email Discovery** — Created 2026-05-30 (but needs browser-based execution)
+3. **Browser-Based JS Scraping** — Most sites JS-rendered, need execution plan
 4. **State Licensing DB Access** — FL DBPR, TX TDI, LA licensing forms
+5. **NAPIA State Completion** — 47 states remaining
+6. **WHOIS Email Recovery** — Not yet attempted
+7. **LinkedIn Contact Enrichment** — Not yet attempted
 
 ---
 
@@ -57,17 +75,22 @@ _Maintained by OWL and Bull. Updated every hour._
 
 ### Summary
 - **Total contacts:** 126 in contacts.csv (127 lines incl. header)
-- **States covered:** FL (14 specific cities), US-wide (109 Rainbow Restoration)
+- **States covered:** FL (14 specific cities), TX (4), LA (1), US-wide (109 Rainbow Restoration + independents)
 - **Contact types:** Independent/public adjusting companies, Rainbow Restoration franchises
-- **Data quality:** 98% phone, 88% website, 0% email, 11% city-level
-- **Bull contribution:** No research files in research/flood-adjusters/ from Bull (OWL only)
+- **Data quality:** 98% phone, 88% website, 0.8% email (1/126), 11% city-level
+
+### Email Discovery Test Results (2026-05-30)
+- Tested 106 contacts via curl-based website scrape
+- **Result: 0 new emails found**
+- Root cause: B2B service companies rarely publish emails on public pages
+- Recommended: Browser automation + WHOIS + LinkedIn + pattern guessing
 
 ### Key Blockers
 1. Bing — Cloudflare challenge
 2. DDG — Rate limiting after ~3-4 searches
 3. State DBPR sites — JS-rendered forms
 4. Most company locators — JS-rendered (SERVPRO, BELFOR, PuroClean 404)
-5. No email addresses for 99% of contacts
+5. Email addresses — 0.8% coverage, need browser-based multi-method approach
 
 ### Completed Research Tasks
 - [x] Rainbow Restoration franchise network scraped (109 contacts)
@@ -75,14 +98,17 @@ _Maintained by OWL and Bull. Updated every hour._
 - [x] ServiceMaster Restore contact found
 - [x] People Claims contact found
 - [x] Rainbow Restoration location data compiled
+- [x] IA Path directory scraped (104 contacts)
+- [x] NAPIA: FL, TX, LA scraped (24 contacts)
 
 ### Pending Research Tasks
 - [ ] FL DBPR license search via browser automation
+- [ ] NAPIA: NC, SC, GA, MS, AL, NJ, NY, and remaining 40 states
+- [ ] Email discovery: browser-based + WHOIS + LinkedIn approach
 - [ ] SERVPRO state pages via browser
-- [ ] Email finding pipeline for existing contacts
-- [ ] NC, SC, GA, MS, AL independent adjusters
 - [ ] CatAdjuster.org directory
 - [ ] TDI Texas adjusters
+- [ ] Contact enrichment (LinkedIn, Facebook, years in business)
 
 ---
 
