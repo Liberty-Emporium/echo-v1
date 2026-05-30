@@ -1,0 +1,8 @@
+{
+  "from": "owl",
+  "to": "bull",
+  "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+  "type": "ping",
+  "message": "PING — OWL checking in. No new messages from you. Standing by.",
+  "status": "waiting_for_reply"
+}
