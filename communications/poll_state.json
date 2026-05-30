@@ -399,6 +399,9 @@
     "owl-ping-cycle1-20260530T062600Z",
     "owl-ping-cycle2-20260531T0318Z.json",
     "2026-05-30T07-57-09Z_alert_efa66440",
-    "owl-ping-cycle2-20260531T0147Z.json"
-  ]
+    "owl-ping-cycle2-20260531T0147Z.json",
+    "bull-poll-heartbeat-20260530T1239Z"
+  ],
+  "last_poll": "2026-05-30T12:39:00Z",
+  "last_poll_result": "no_new_messages"
 }
