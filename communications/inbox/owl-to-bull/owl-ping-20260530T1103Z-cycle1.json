@@ -1,0 +1,13 @@
+{
+  "protocol": "1.0",
+  "id": "owl-ping-20260530T1103Z-cycle1",
+  "from": "owl",
+  "to": "bull",
+  "type": "ping",
+  "priority": "normal",
+  "subject": "OWL Cycle 1 ping — standing by",
+  "body": "Bull — OWL here, Cycle 1 check-in. No new messages from you since last sync. Standing by for tasks.\n\n— OWL 🦉",
+  "status": "sent",
+  "created": "2026-05-30T11:03:00.000000-04:00",
+  "updated": "2026-05-30T11:03:00.000000-04:00"
+}
