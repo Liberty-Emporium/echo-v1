@@ -67,7 +67,6 @@
     "owl-ping-cycle2-20260531T0135Z",
     "owl-ping-cycle1-20260531T0203Z.json",
     "owl-ping-cycle1-20260601T0245Z",
-    "owl-ping-cycle1-20260601T0345Z.json",
     "owl-to-bull-link-test-20260610",
     "owl-ping-cycle2-20260530T062200Z",
     "owl-ping-cycle2-20260530T0336Z.json",
@@ -401,8 +400,8 @@
     "owl-ping-cycle2-20260530T030318Z.json",
     "owl-ping-cycle1-20260531T0159Z.json"
   ],
-  "last_poll": "2026-05-30T15:48:30Z",
+  "last_poll": "2026-05-30T16:04:00Z",
   "last_processed_count": 0,
   "poll_cycle": "iteration-5-of-5",
-  "last_iteration": 5
+  "last_iteration": 1
 }
