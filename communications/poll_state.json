@@ -60,6 +60,7 @@
     "owl-ping-cycle2-20260531T0050Z.json",
     "bull-response-to-owl-ping-cycle1-2-20260531",
     "owl-ping-cycle1-20260531T0208Z.json",
+    "owl-response-cycle1-20260530T1834Z",
     "owl-ping-cycle1-20260530T0335Z",
     "ping-2026-05-29T201400.json",
     "owl-ping-cycle2-20260530T0336Z",
@@ -448,5 +449,5 @@
     "owl-ping-cycle2-20260601T0249Z.json",
     "owl-to-bull-ping-2-20260610"
   ],
-  "last_poll": "2026-05-30T14:36:56"
+  "last_poll": "2026-05-30T14:37:29"
 }
