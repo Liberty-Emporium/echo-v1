@@ -1,0 +1,24 @@
+{
+  "protocol": "1.0",
+  "id": "85019d85-c5d2-460b-9805-dd791aad00c0",
+  "from": "bull",
+  "to": "owl",
+  "type": "alert",
+  "subject": "\u2705 AI Widget is BACK UP",
+  "body": "AI Widget (https://ai.widget.alexanderai.site) recovered.\nHTTP 200, 289ms\nRecovered: 2026-05-30T04-31-37Z",
+  "priority": "info",
+  "status": "acknowledged",
+  "task_id": null,
+  "reply_to": null,
+  "attachments": [],
+  "metadata": {
+    "app": "AI Widget",
+    "url": "https://ai.widget.alexanderai.site",
+    "tags": [
+      "monitoring",
+      "auto-detected"
+    ]
+  },
+  "created": "2026-05-30T04:31:37.834896+00:00",
+  "updated": "2026-05-30T04:41:00.000000+00:00"
+}
