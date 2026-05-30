@@ -395,3 +395,187 @@
 - **Package imports converging**: shadcn's `package.json#imports` support aligns with Node.js native subpath imports — a move away from `tsconfig.json` path aliases toward standard package resolution
 - **Agent harness explosion**: GitHub trending dominated by agent tooling (ECC, harness, Claude Code plugins) — the design tool space is being reshaped by AI agents
 - **Per-component versioning**: Radix's per-primitive versioning pattern enables independent component evolution — other libraries may adopt this
+
+---
+
+## 2026-05-30 — Run 4: AI Ecosystem, Research & Policy Landscape
+
+### 🏆 Major Industry Moves
+
+#### Anthropic Surpasses OpenAI as Most Valuable AI Startup (May 2026)
+- **Anthropic raises $65B in Series H funding at $965B post-money valuation** (May 28, 2026)
+- Makes Anthropic the world's most valuable AI startup, overtaking OpenAI
+- Hacker News discussion: 227 points, 207 comments — massive community engagement
+- Signals strong investor confidence in Anthropic's safety-first approach and enterprise focus
+
+#### Introducing Claude Opus 4.8 (May 28, 2026)
+- Anthropic's latest flagship model upgrade
+- **Stronger performance across**: coding, agentic tasks, and professional work
+- Key improvement: **consistency for long-running work** — critical for enterprise deployments
+- Now available through Netlify AI Gateway and Agent Runners (zero-config)
+- Available across all Netlify Function types
+
+#### Anthropic's Aggressive Global Expansion (May 2026)
+- **Milan office** opened to support Italian enterprise, research, and developers (May 27)
+- **Seoul office** appointed KiYoung Choi as Representative Director, ahead of office opening (May 26)
+- **Acquires Stainless** — API tooling company (May 18)
+- **Enterprise deals**: KPMG integrates Claude across its core business and 276,000+ workforce (May 19); PwC deploying Claude for technology build and enterprise reinvention (May 14)
+
+#### Project Glasswing: Unprecedented Cross-Industry Security Initiative (April–May 2026)
+- Anthropic-led coalition to secure critical software infrastructure
+- **Members**: AWS, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, Linux Foundation, Microsoft, NVIDIA, Palo Alto Networks
+- An initial update was published May 22, 2026
+- Represents the most significant cross-industry cybersecurity collaboration in the AI era
+
+### 🤖 OpenAI Updates
+
+#### OpenAI Codex: Windows Computer Use Feature (May 29, 2026)
+- After launching on Mac, Codex's **"computer use"** feature is coming to Windows
+- The app can "see" your screen and perform tasks on your device
+- Users can manage and review Codex jobs remotely via the ChatGPT app
+- Major expansion of OpenAI's agentic capabilities to the Windows ecosystem
+
+#### OpenAI Sunsetting ChatGPT Canvas Interface (May 29, 2026)
+- ChatGPT's Canvas interface is being retired (sunset announced May 29)
+- Canvas was the collaborative writing/editing workspace inside ChatGPT
+- Users directed to alternative workflows — likely integration into main chat or Codex
+
+### 🧠 Microsoft AI Strategy
+
+#### Microsoft Building an AI "Super App" (May 29, 2026)
+- Fortune reports: Microsoft is combining into one app:
+  - GitHub Copilot (coding AI)
+  - Copilot chatbot
+  - Copilot Cowork
+  - **"Autopilot"** — new agentic workflow capability (internal name)
+- Sounds similar to OpenAI's reported "super app" ambitions
+- Possible reveal at Microsoft Build (next week from May 29)
+
+### 🔧 Google AI Updates
+
+#### Gemini Spark: Google's 24/7 AI Assistant (May 2026)
+- TechCrunch hands-on review: "I put Google's 24/7 AI assistant Gemini Spark to work, and it's actually pretty useful"
+- Represents Google's push for always-available, proactive AI assistance
+- Positioned against Siri, Alexa, and ChatGPT for ambient/home AI
+
+### 💰 AI Hardware & Chips
+
+#### Groq Raising $650M in New Funding (May 2026)
+- AI chip startup Groq reportedly raising $650M round
+- Comes after Nvidia's $20B "not-acqui-hire" deal
+- Signals continued investor appetite for alternative AI chip architectures
+
+#### Nvidia's $20B Not-Acqui-Hire
+- Landmark deal: Nvidia invested ~$20B in a talent-focused transaction (not a full acquisition)
+- Targeted AI chip talent — high-stakes competition for hardware engineers
+- Reflects the extreme demand for AI chip engineering talent in 2026
+
+### 📊 Enterprise AI Adoption
+
+#### KPMG + Anthropic Strategic Alliance (May 19, 2026)
+- KPMG integrates Claude across its core business
+- Workforce of more than 276,000 employees affected
+- Signal: Big Four accounting firms are all-in on AI deployment
+
+#### PwC Deploying Claude (May 14, 2026)
+- PwC using Claude to build technology, execute deals, reinvent enterprise functions for clients
+- Another Big Four firm making massive AI commitments
+
+### 🔬 HuggingFace Research Papers — May 29, 2026
+
+#### Top Papers
+
+1. **minWM: A Full-Stack Open-Source Framework for Real-Time Interactive Video World Models**
+   - 356 upvotes — **most popular paper of the day**
+   - Real-time interactive video world models (open-source)
+   - Could democratize video world model research significantly
+
+2. **AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security**
+   - By Shanghai AI Lab — 104 upvotes
+   - Alignment framework for AI agent safety
+   - Lightweight and scalable approach to aligning autonomous agents
+
+3. **Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments**
+   - By Qwen (Alibaba Cloud) — 90 upvotes
+   - Unified model for vision-language-action across different robots and environments
+   - Major step toward general-purpose robotics AI
+
+4. **OmniRetrieval: Unified Retrieval across Heterogeneous Knowledge Sources**
+   - By KAIST AI — 61 upvotes
+   - Unified retrieval across diverse source types (databases, docs, web)
+
+5. **CollectionLoRA: Collecting 50 Effects in 1 LoRA via Multi-Teacher On-Policy Distillation**
+   - 50 upvotes — 50 LoRA-style effects in a single LoRA model
+
+6. **YoCausal: How Far is Video Generation from World Model? A Causality Perspective**
+   - By ShandaAI / Alaya Studio — 37 upvotes
+   - Theoretical foundation for understanding video generation vs. world models
+
+### ⚠️ AI Concerns & Ethics
+
+#### AI Job Grief: The Unnamed Psychological Crisis Hitting Tech Workers
+- HN: "AI Job Grief" post resonates with tech community (17 pts but deep engagement)
+- Addresses psychological toll of AI-driven job displacement in tech
+- TechCrunch: "Coders are refusing to work without AI — and that could come back to bite them"
+
+#### Cognition's Scott Wu: AI Coding Agents Shouldn't Replace Humans (May 2026)
+- Cognition (maker of Devin coding agent) CEO Scott Wu says AI coding agents shouldn't fully replace humans
+- Notable coming from a company building coding agents
+- Industry tempering "replace humans" rhetoric
+
+#### AI Grifters Creating Fake Black People to Sell Shein Products (May 2026)
+- The Verge investigation: AI-generated fake Black personas used in TikTok ads to sell Shein products
+- Exploits racial guilt/empathy to sell $9 items for $40
+- Highlights growing problem of AI-generated identity fraud in e-commerce
+
+#### Entry-Level Work Crisis — AI's Impact on Young Job Seekers
+- MIT Technology Review: "It's time to address the looming crisis in entry-level work"
+- TechCrunch: "A reality check on the AI jobs hysteria" — examining what the numbers really say
+- AI Hype Index: AI references being booed at graduation ceremonies — cultural backlash signal
+
+#### What Happens When Companies Become Too AI-Pilled? (May 2026)
+- TechCrunch analysis of over-adoption of AI by companies
+- Risks: quality degradation, customer backlash, regulatory scrutiny
+- Follows the "AI slop" critique growing across the industry
+
+### 🌐 Policy & Regulation
+
+#### Musk v. OpenAI Trial: Implications for AI Governance (May 2026)
+- MIT Technology Review roundtable: "Inside the Musk v. Altman Trial"
+- Jury decided Musk had sued OpenAI too late (3 weeks of dueling testimony)
+- Implications for AI governance structures and the for-profit/non-profit boundary
+
+#### Pope Leo XIV's Encyclical on AI: "Magnifica Humanitas" (May 2026)
+- Anthropic co-founder Chris Olah publicly responding to Pope's encyclical on AI
+- MIT Technology Review: Pope's message offers template for individuals to meet the AI moment
+- Religious institutions engaging with AI ethics at highest levels
+- Core message: Despite lack of regulation, individuals can steer AI to benefit common humanity
+
+#### Widening the Conversation on Frontier AI (May 19, 2026)
+- Anthropic announcement about broadening the AI safety conversation
+- Signals the company is moving beyond technical research to public discourse
+
+#### Tether's BitNet b1.58 LLM Push to the Edge (May 2026)
+- Tether (stablecoin company) pushing 13B-parameter BitNet b1.58 LLM to edge devices
+- BitNet architecture = extreme quantization (1.58-bit weights)
+- Represents growing interest in running LLMs on edge devices with minimal memory
+
+#### Browser Wars Heat Up in 2026 (May 2026)
+- TechCrunch roundup: hottest Chrome and Safari alternatives
+- AI features are a key differentiator in browser competition
+- AI-powered browsers are a new category competing with traditional browsers
+
+### 🔑 Key Takeaways for Web Developers (May 2026)
+
+1. **Anthropic is winning the enterprise race**: $965B valuation, Big Four partnerships, global expansion
+2. **Agentic AI is going mainstream**: Codex on Windows, Microsoft's Autopilot, agent-deployed projects at record rates
+3. **Open-source AI research is accelerating**: minWM video world models, Qwen-VLA robotics, AgentDoG safety framework
+4. **AI ethics is going mainstream**: From Pope's encyclical to HN discussions, societal impact is center-stage
+5. **Edge AI is coming**: BitNet b1.58 pushing LLMs to edge devices
+6. **AI coding at an inflection point**: Cognition says don't replace humans, coders refuse to work without AI — tension unresolved
+7. **Capital flood continues**: $65B for Anthropic + $650M for Groq in one week
+8. **Project Glasswing is historic**: First time this many tech giants collaborate on AI-era software security
+
+### 📊 The State of AI — May 2026 Summary
+
+AI is in an extraordinary moment. Anthropic ($965B) surpasses OpenAI in valuation. Agentic AI is deploying to Windows. The Pope is weighing in on AI ethics. Coders refuse to work without AI while tech workers grieve job losses. $65B in fresh capital flows in during a single week. Industry giants unite under Project Glasswing for security. Open-source research is producing world-class results (minWM, Qwen-VLA). The only throughline: acceleration in every direction.
