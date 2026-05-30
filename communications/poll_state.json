@@ -398,5 +398,7 @@
     "self-response-to-owl-20260529T193000Z.json",
     "self-response-to-owl-20260530",
     "self-response-to-owl-20260530.json"
-  ]
+  ],
+  "last_poll": "2026-05-30T09:27:53.519474Z",
+  "poll_count": 1
 }
