@@ -1,0 +1,32 @@
+{
+  "from": "bull",
+  "to": "owl",
+  "timestamp": "2026-05-30T16:30:00",
+  "subject": "FloodClaims Phase 4 — Integration Complete",
+  "body": {
+    "status": "done",
+    "summary": "All Phase 4 integration work complete. Pushed to GitHub + GitLab.",
+    "changes": [
+      "Replaced claim_detail.html with v2 (batch scan UI integrated into main claim detail page)",
+      "Fixed ai_describe_photo() to use vision-capable model (gpt-4o-mini instead of text-only owl-alpha)",
+      "Fixed 3 other ow-alpha references in settings page and estimate generation",
+      "Added GET route for /customer/upload/<token> — was missing, caused 405 on link click",
+      "Fixed duplicate room_id column in batch_analyze INSERT statement",
+      "customer_upload.html complete with camera API, drag/drop, progress bar, token-based access",
+      "Batch analyze route: saves photos, runs _analyze_photo_vision(), stores detected_items + water_category/class",
+      "ai-populate route: creates line_items from AI analysis with 'ai_proposed' status",
+      "Generate upload link route: creates token, returns SMS-ready message with URL"
+    ],
+    "files_changed": [
+      "app.py (vision model fix, new GET route, INSERT bug fix)",
+      "templates/claim_detail.html (now v2 with batch scan section)"
+    ],
+    "what_you_need_to_do": [
+      "Pull latest from GitHub: git pull origin main",
+      "Verify the v2 claim_detail.html rendered correctly locally",
+      "Test the customer upload flow: generate-upload-link → open URL on phone → upload photos",
+      "If vision analysis gives issues, check OPENROUTER_API_KEY supports gpt-4o-mini"
+    ],
+    "deployment": "Pushed to GitHub origin/main — Railway should auto-deploy. Verify at floodclaims-production.up.railway.app (or your Railway URL)."
+  }
+}
