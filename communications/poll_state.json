@@ -428,8 +428,16 @@
     "owl-ping-cycle2-20260530T160400Z",
     "owl-ping-cycle2-20260530T160400Z.json",
     "bull-response-to-owl-ping-cycle2-20260530T160400Z",
-    "bull-response-to-owl-ping-cycle2-20260530T160400Z.json"
+    "bull-response-to-owl-ping-cycle2-20260530T160400Z.json",
+    "owl-ping-cycle1-20260530T155900Z",
+    "owl-ping-cycle1-20260530T155900Z.json",
+    "owl-ping-cycle2-20260530T160000Z",
+    "owl-ping-cycle2-20260530T160000Z.json",
+    "bull-response-to-owl-ping-cycle1-20260530T155900Z",
+    "bull-response-to-owl-ping-cycle1-20260530T155900Z.json",
+    "bull-response-to-owl-ping-cycle2-20260530T160000Z",
+    "bull-response-to-owl-ping-cycle2-20260530T160000Z.json"
   ],
-  "last_bull_check": "2026-05-30T20:06:56.000000Z",
+  "last_bull_check": "2026-05-30T20:09:37.555788Z",
   "bull_reply_received": true
 }
