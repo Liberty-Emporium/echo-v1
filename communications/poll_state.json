@@ -584,9 +584,13 @@
     "owl-ping-cycle2-20260530T192057Z",
     "owl-ping-cycle2-20260530T192057Z.json",
     "owl-ping-cycle1-20260530T192851Z",
-    "owl-ping-cycle1-20260530T192851Z.json"
+    "owl-ping-cycle1-20260530T192851Z.json",
+    "owl-ping-cycle1-20260530T192200Z",
+    "owl-ping-cycle1-20260530T192200Z.json",
+    "owl-ping-cycle2-20260530T192230Z",
+    "owl-ping-cycle2-20260530T192230Z.json"
   ],
-  "last_check": "2026-05-30T19:28:51Z",
+  "last_check": "2026-05-30T19:27:00Z",
   "agent": "bull",
-  "last_poll_result": "cycle1_ping_sent"
+  "last_poll_result": "processed_3_pings_total"
 }
