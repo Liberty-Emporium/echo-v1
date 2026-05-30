@@ -1,5 +1,5 @@
 {
-  "run_count": 5,
+  "run_count": 6,
   "topics_covered": [
     "hosting_devops_run1",
     "railway_updates",
@@ -61,7 +61,23 @@
     "jfrog-devsecops-ai-era-supply-chain",
     "ibm-redhat-project-lightwell-5b-opensource-security",
     "owasp-cve-lite-cli-shift-left-scanning",
-    "perplexity-bumblebee-dev-desktop-threat-scanner"
+    "perplexity-bumblebee-dev-desktop-threat-scanner",
+    "pandoc-templates-standardized-document-tooling",
+    "openrsync-openbsd-clean-room-rsync",
+    "voxel-space-retro-rendering-technique",
+    "navier-stokes-godot-fluid-simulation",
+    "two-neurons-ride-bicycle-minimal-neural-control",
+    "helios-solar-calculator-uk-addresses",
+    "affaan-m-ecc-agent-harness-optimization-199k",
+    "microsoft-markitdown-file-to-markdown-rag",
+    "moneyprinterturbo-ai-video-generation",
+    "compound-engineering-plugin-everyinc",
+    "openbmb-voxcpm-tokenizer-free-tts",
+    "revfactory-harness-meta-skill-agent-designer",
+    "cursor-plugins-ide-agent-platform-spec",
+    "devto-google-io-2026-agent-first-paradigm",
+    "devto-veltrix-engine-rust-vs-gc-bottlenecks",
+    "devto-scaling-hytale-treasure-hunt-engine"
   ],
   "sources_scraped": [
     "railway.app/changelog",
@@ -107,18 +123,42 @@
     "https://devops.com/ibm-red-hat-launch-project-lightwell-to-secure-open-source-software-from-frontier-models/",
     "https://devops.com/owasp-adopts-cve-lite-cli-to-boost-dependency-scanning/",
     "https://devops.com/perplexity-bumblebee-shakes-loose-hidden-threats-on-dev-desktops/",
-    "https://css-tricks.com/whats-important-12/"
+    "https://css-tricks.com/whats-important-12/",
+    "https://news.ycombinator.com/",
+    "https://github.com/trending",
+    "https://dev.to/trending",
+    "https://vercel.com/blog",
+    "https://tailwindcss.com/blog",
+    "https://pandoc-templates.org",
+    "https://github.com/kristapsdz",
+    "https://s-macke.github.io",
+    "https://myzopotamia.dev",
+    "https://fermatslibrary.com",
+    "https://southlondonscientific.com",
+    "https://github.com/affaan-m/ECC",
+    "https://github.com/microsoft/markitdown",
+    "https://github.com/harry0703/MoneyPrinterTurbo",
+    "https://github.com/EveryInc/compound-engineering-plugin",
+    "https://github.com/OpenBMB/VoxCPM",
+    "https://github.com/revfactory/harness",
+    "https://github.com/cursor/plugins",
+    "https://dev.to/t/programming/trending",
+    "https://dev.to/t/rust",
+    "https://dev.to/trending"
   ],
-  "last_updated": "2026-05-30T12:15:00-05:00",
+  "last_updated": "2026-05-30T12:45:00-05:00",
   "rotation_state": {
     "web_dev_frameworks": 1,
     "web_design_ux": 1,
     "hosting_devops": 1,
     "ai_news": 2,
-    "ai_agents": 2,
+    "ai_agents": 3,
     "design_devops": 2,
     "security_tools": 1,
     "css_design_tools": 1,
-    "ai_industry_culture": 1
+    "ai_industry_culture": 1,
+    "open_source_tooling": 1,
+    "game_dev_rendering": 1,
+    "devtool_standardization": 1
   }
 }

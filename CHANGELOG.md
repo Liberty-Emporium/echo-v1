@@ -163,3 +163,83 @@ Notable new repos (mostly agent-skills focused):
 
 ---
 
+## Run 3 — 2026-05-30 — Open Source Tooling, DevEx Trends & Agent Infrastructure
+
+### Hacker News Highlights
+
+**Pandoc Templates (256 pts, 39 comments)** — pandoc-templates.org
+A community effort to standardize and curate Pandoc document templates. Solves the long-standing pain of finding/producing quality templates for academic papers, reports, and books. Strong community engagement signals demand for standardized document tooling.
+Source: Hacker News, May 30
+
+**Openrsync — OpenBSD's clean-room rsync implementation (163 pts, 70 comments)**
+The OpenBSD team released openrsync, a from-scratch implementation of the rsync protocol. Clean-room design means no GPL licensing concerns, making it suitable for proprietary and embedded systems. Could become the default sync tool on BSD and embedded platforms.
+Source: Hacker News / github.com/kristapsdz, May 30
+
+**Voxel Space rendering technique (87 pts, 14 comments)**
+Deep dive into the voxel space terrain rendering used in classic games (Comanche, Outcast). The algorithm uses ray-voxel intersection rather than polygon meshing — a retro computing gem with modern relevance for GPU-based volumetric rendering.
+Source: Hacker News / s-macke.github.io, May 30
+
+**Navier-Stokes fluid simulation explained with Godot (71 pts, 16 comments)**
+Step-by-step tutorial explaining computational fluid dynamics using Godot's built-in physics engine. Makes advanced simulation concepts accessible to game developers. Good resource for anyone adding realistic fluid effects to web-based game demos.
+Source: Hacker News / myzopotamia.dev, May 30
+
+**"It Takes Two Neurons to Ride a Bicycle" (20 pts)**
+Fermat's Library highlights a classic paper showing that a 2-neuron controller can balance a bicycle — minimal neural networks for control theory. Resonates with current LLM efficiency research (small models, big capabilities).
+Source: Hacker News / fermatslibrary.com, May 30
+
+**Show HN: Helios — Plug-in solar calculator for UK addresses (76 pts, 19 comments)**
+Tool that estimates solar energy generation potential for any address in Britain using geographic and building data. Open-source approach to residential solar planning.
+Source: Hacker News / southlondonscientific.com, May 30
+
+---
+
+### GitHub Trending (May 30)
+
+**affaan-m/ECC — Agent Harness Performance Optimization (199k ⭐, 918 today)**
+Massively popular repo providing skills, instincts, memory patterns, and security practices for Claude Code, Codex, Opencode, and Cursor. Covers the full lifecycle of agent development. The "agent harness" pattern — giving agents structured skills rather than raw prompts — is clearly winning.
+Source: GitHub Trending, May 30
+
+**microsoft/markitdown — File to Markdown converter (131k ⭐, 2,473 today)**
+Microsoft's tool for converting PDFs, Office documents, images (with OCR), audio (with transcription), archives, and more to Markdown. Critical preprocessing step for RAG pipelines and knowledge base construction. First-class Azure AI Inference integration.
+Source: GitHub Trending, May 30
+
+**harry0703/MoneyPrinterTurbo — AI short video generation (71k ⭐, 2,775 today)**
+One-click AI video generation from text/scripts using LLMs. Trending heavily — reflects the explosion of AI-generated video content. Combines LLM planning with text-to-speech and video composition.
+Source: GitHub Trending, May 30
+
+**EveryInc/compound-engineering-plugin (18k ⭐, 348 today)**
+Compound Engineering plugin for Claude Code, Codex, Cursor. Automates the pattern of having agents iterate on small changes, measure improvements, and compound gains. Based on the "compound engineering" methodology — small wins that accumulate.
+Source: GitHub Trending, May 30
+
+**OpenBMB/VoxCPM — Tokenizer-free TTS (22k ⭐, 658 today)**
+VoxCPM2: A tokenizer-free text-to-speech system supporting multilingual generation, creative voice design, and voice cloning. Eliminating the tokenizer step simplifies the pipeline and improves quality — an important architectural shift in TTS.
+Source: GitHub Trending, May 30
+
+**revfactory/harness — Meta-skill agent team designer (4k ⭐, 80 today)**
+A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates their skills. "Agents that build agents" — the recursive agent design pattern.
+Source: GitHub Trending, May 30
+
+**cursor/plugins — Cursor plugin specification (1.4k ⭐, 206 today)**
+Official plugin spec and plugins for Cursor IDE. Cursor is opening its ecosystem — a sign that IDE-based agents are becoming platforms, not just tools.
+Source: GitHub Trending, May 30
+
+---
+
+### DEV.to Emerging Trends (May 30)
+
+- **Google I/O 2026: Agent-First Paradigm Shift** (52 posts) — The community is buzzing about Google's agent-first announcements. Expect a wave of Android/agent integrations.
+- **The Veltrix Engine: Rust vs. GC Bottlenecks** (41 posts in #rust) — Deep performance comparison between Rust's ownership model and GC'd languages for game engine architecture. Part of a broader Rust adoption wave in gamedev and web infrastructure.
+- **Scaling the Hytale Treasure Hunt Engine** (89 posts in #programming) — Engineering deep dive on scaling a game engine's economy/loot system. Practical distributed systems lessons from game dev.
+
+---
+
+### Key Takeaways
+
+1. **Agent infrastructure is eating the stack** — From Cursor plugins to agent harnesses to meta-agent-designers, the industry is building layers of tooling around coding agents at breakneck speed. The "agent-as-platform" era is here.
+2. **File-to-Markdown is critical infrastructure** — Microsoft's markitdown hitting 131K stars shows that data ingestion (converting docs for RAG) is as important as the models themselves.
+3. **Compound engineering gaining traction** — The idea of many small AI-assisted improvements that compound into big gains is resonating. This is the practical workflow most developers are adopting.
+4. **Tokenizer-free TTS is a real architecture shift** — VoxCPM eliminating the tokenizer simplifies multilingual speech generation and voice cloning. Expect similar "remove the middle layer" approaches elsewhere.
+5. **Developer tooling consolidation** — Pandoc templates, openrsync, and standardized tools show the community wants open, interoperable utilities over proprietary lock-in.
+
+*Next run focus: Database/search tech, browser APIs, CSS/UI framework updates*
+
