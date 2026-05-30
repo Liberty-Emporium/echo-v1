@@ -122,7 +122,7 @@
     "df8b6528-5ea9-4007-bb73-32fae4753185",
     "e47ff58e-6010-42b4-b336-48fb02433986",
     "e706b6e1-1c51-44f2-99bc-df04eb98f331",
-    "efa66440-8855-4010-b7b7-923932f1b09c",
+    "efa66440-8855-4010-b7b7-923932f1b0c0",
     "f4262013-1ff6-4c64-86f6-52fe63205520",
     "inbox-check-2026-05-29_status_update",
     "inbox-check-2026-05-29_status_update.json",
@@ -429,6 +429,7 @@
     "owl-ping-cycle2-20260530T160400Z.json",
     "bull-response-to-owl-ping-cycle2-20260530T160400Z",
     "bull-response-to-owl-ping-cycle2-20260530T160400Z.json",
+<<<<<<< HEAD
     "owl-ping-cycle1-20260530T155900Z",
     "owl-ping-cycle1-20260530T155900Z.json",
     "owl-ping-cycle2-20260530T160000Z",
@@ -438,6 +439,14 @@
     "bull-response-to-owl-ping-cycle2-20260530T160000Z",
     "bull-response-to-owl-ping-cycle2-20260530T160000Z.json"
   ],
-  "last_bull_check": "2026-05-30T20:21:27.686573+00:00",
+  "last_bull_check": "2026-05-30T20:17:29.727880+00:00",
+=======
+    "bull-weather-test-20260530-2042",
+    "bull-weather-test-20260530-2042.json",
+    "owl-ping-20260530T200700Z",
+    "owl-ping-20260530T200700Z.json"
+  ],
+  "last_bull_check": "2026-05-30T20:07:00.000000Z",
+>>>>>>> d23b2300 (OWL: Cycle 1 ping + poll state update)
   "bull_reply_received": true
 }
