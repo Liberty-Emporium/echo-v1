@@ -36,6 +36,7 @@ AGENT_MAP = {
     "bull": {"inbox": "bull-to-owl", "outbox": "owl-to-bull"},
     "owl": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
     "bullet": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
+    "self": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
 }
 
 APPS = [
