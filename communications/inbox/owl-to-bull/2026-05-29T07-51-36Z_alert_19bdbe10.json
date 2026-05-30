@@ -7,7 +7,7 @@
   "subject": "\u26a0\ufe0f FloodClaims Pro is DOWN",
   "body": "FloodClaims Pro (https://billy-floods.up.railway.app) is not responding.\nHTTP 0, 15152ms\nDetected: 2026-05-29T07-51-36Z",
   "priority": "critical",
-  "status": "handled_by_bull",
+  "status": "acknowledged",
   "task_id": null,
   "reply_to": null,
   "attachments": [],
@@ -20,6 +20,8 @@
     ]
   },
   "created": "2026-05-29T07:51:36.858370+00:00",
-  "updated": "2026-05-29T08:25:45.000000+00:00",
-  "handled_at": "2026-05-30T02:30:49Z"
+  "updated": "2026-05-30T12:18:20Z",
+  "handled_at": "2026-05-30T02:30:49Z",
+  "acknowledged_by_bull": true,
+  "ack_timestamp": "2026-05-30T12:18:20Z"
 }
