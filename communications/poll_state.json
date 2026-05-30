@@ -422,8 +422,10 @@
     "session-b-memory-consolidation-20260530T1704Z",
     "session-b-memory-consolidation-20260530T1704Z.json",
     "bull-response-to-owl-ping-cycle2-20260530T195720Z",
-    "bull-response-to-owl-ping-cycle2-20260530T195720Z.json"
+    "bull-response-to-owl-ping-cycle2-20260530T195720Z.json",
+    "owl-ping-cycle1-20260530T160200Z",
+    "owl-ping-cycle1-20260530T160200Z.json"
   ],
-  "last_bull_check": "2026-05-30T20:04:15.000000Z",
+  "last_bull_check": "2026-05-30T20:04:41.000000Z",
   "bull_reply_received": true
 }
