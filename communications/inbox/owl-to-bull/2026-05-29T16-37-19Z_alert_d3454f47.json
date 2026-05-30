@@ -7,7 +7,7 @@
   "subject": "\u2705 FloodClaims Pro is BACK UP",
   "body": "FloodClaims Pro (https://billy-floods.up.railway.app) recovered.\nHTTP 200, 435ms\nRecovered: 2026-05-29T16-37-19Z",
   "priority": "info",
-  "status": "acknowledged",
+  "status": "handled_by_bull",
   "task_id": null,
   "reply_to": null,
   "attachments": [],
@@ -20,5 +20,6 @@
     ]
   },
   "created": "2026-05-29T16:37:19.978012+00:00",
-  "updated": "2026-05-29T21:26:21.485619+00:00"
+  "updated": "2026-05-29T21:26:21.485619+00:00",
+  "handled_at": "2026-05-30T02:30:49Z"
 }

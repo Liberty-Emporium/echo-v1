@@ -7,7 +7,7 @@
   "subject": "\u26a0\ufe0f Contractor Pro is DOWN",
   "body": "Contractor Pro (https://contractor.ai.solutions.alexanderai.site) is not responding.\nHTTP 0, 205ms\nDetected: 2026-05-29T05-12-28Z",
   "priority": "high",
-  "status": "acknowledged",
+  "status": "handled_by_bull",
   "task_id": null,
   "reply_to": null,
   "attachments": [],
@@ -20,5 +20,6 @@
     ]
   },
   "created": "2026-05-29T05:12:28.695136+00:00",
-  "updated": "2026-05-29T05:39:56.766572Z"
+  "updated": "2026-05-29T05:39:56.766572Z",
+  "handled_at": "2026-05-30T02:30:49Z"
 }

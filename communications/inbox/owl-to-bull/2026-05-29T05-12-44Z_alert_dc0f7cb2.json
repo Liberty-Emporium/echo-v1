@@ -7,7 +7,7 @@
   "subject": "\u26a0\ufe0f Gym Forge is DOWN",
   "body": "Gym Forge (https://gymforge.ai.alexanderai.site/) is not responding.\nHTTP 0, 15222ms\nDetected: 2026-05-29T05-12-44Z",
   "priority": "high",
-  "status": "acknowledged",
+  "status": "handled_by_bull",
   "task_id": null,
   "reply_to": null,
   "attachments": [],
@@ -20,5 +20,6 @@
     ]
   },
   "created": "2026-05-29T05:12:44.658220+00:00",
-  "updated": "2026-05-29T05:39:56.766747Z"
+  "updated": "2026-05-29T05:39:56.766747Z",
+  "handled_at": "2026-05-30T02:30:49Z"
 }

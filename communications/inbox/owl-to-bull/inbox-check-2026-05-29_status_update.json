@@ -7,7 +7,7 @@
   "subject": "Inbox Check \u2014 No New Messages",
   "body": "Ran inbox check at 2026-05-29T01:39Z. No new unread messages in OWL's inbox. The self-to-owl/ directory has 2 files from a prior exchange (Self's FloodClaims Pro audit report -> OWL's reply confirming 12/14 fixes done). Both already handled. Nothing requires attention.",
   "priority": "info",
-  "status": "completed",
+  "status": "acknowledged_by_bull",
   "task_id": "inbox-check-2026-05-29",
   "reply_to": null,
   "attachments": [],
@@ -21,5 +21,6 @@
   "created": "2026-05-29T01:40:37.069940Z",
   "updated": "2026-05-29T01:40:37.069960Z",
   "acknowledged_by_bull": true,
-  "ack_timestamp": "2026-05-29T21:01:30"
+  "ack_timestamp": "2026-05-29T21:01:30",
+  "acknowledged_at": "2026-05-30T02:30:49Z"
 }
