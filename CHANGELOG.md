@@ -75,4 +75,93 @@ Source: TechCrunch, May 29
 
 ---
 
-*Next run focus: Multi-agent orchestration patterns*
+---
+
+## Run 2 — 2026-05-30 — AI Industry Shifts, MCP Under Fire, and Dev Culture
+
+### AI Industry News
+
+**Anthropic surpasses OpenAI to become most valuable AI startup (~229 pts, 210 comments)**
+Anthropic closed a $65B Series H round with Altimeter Capital, Dragoneer, Greenoaks, and Sequoia Capital. Valuation nearly tripled from ~$380B in February to ~$1T. Officially overtook OpenAI as the most valuable private AI startup in Silicon Valley.
+Source: Kazinform / Qazinform, May 30
+
+**Liquid AI releases LFM2.5-8B-A1B: On-device MoE trained on 38T tokens (85 pts)**
+Liquid AI launched LFM2.5-8B-A1B — an edge Mixture-of-Experts model optimized for tool calling on consumer hardware. Key upgrades: 128K context window (up from previous gen), expanded 38T token pretraining (from 12T), doubled vocabulary for non-Latin language tokenization efficiency. Designed to run on entry-level laptops. Available on HuggingFace and Liquid Playground.
+Source: Liquid AI Blog, May 28
+
+**"Corporate America Is Starting to Ration AI as Cost Skyrockets" (94 pts)**
+WSJ reports enterprises beginning to ration AI usage as inference costs spiral. A sign that the "AI-first" spending spree of 2024-2025 is hitting budget reality. Important signal for anyone building AI-augmented products — cost efficiency is becoming a competitive moat.
+Source: WSJ, May 2026
+
+---
+
+### Agent Tooling & Protocols
+
+**"MCP is dead?" — In-depth technical autopsy (321 pts, 309 comments)**
+Quandri Engineering published a detailed takedown of the Model Context Protocol (MCP). Key findings from their actual-stack measurements:
+- **Context bloat**: With 4 MCP servers connected (Linear, Notion, Slack, Postgres), tool definitions alone consume ~10.5% of the context window (~21,077 tokens)
+- **77 total tools** across 4 servers, with Linear alone contributing 42 tools @ ~12,807 tokens
+- **Core arguments**: MCP eats context, has low reliability, and overlaps with existing CLI/API tooling
+- **Update**: Claude Code's new "Tool Search with Deferred Loading" (on-demand schema loading) reduces context usage by 85%+, partially addressing Problem 1
+- MCP was previously called "the USB-C of the AI ecosystem" — the backlash is significant
+Source: Quandri Engineering Blog, May 2026
+
+---
+
+### Developer Culture & Careers
+
+**"The Last Technical Interview" — Steve Yegge (169 pts, 147 comments)**
+Steve Yegge (famous for his Google/Amazon essays) argues that traditional technical interviews are dying. AI tools are making LeetCode-style assessments meaningless because candidates can solve them with agents. Signals a major shift in how engineering hiring will work.
+Source: Steve Yegge / Medium, May 2026
+
+**"AI Job Grief: The Unnamed Psychological Crisis Hitting Tech Workers" (pts, comments)**
+Deep essay arguing that AI-driven job displacement is producing a distinct emotional category resembling grief — different from ordinary fear, anxiety, or burnout. Key points:
+- Workers are mourning losses that haven't fully arrived yet (anticipatory grief)
+- Tech workers have a different relationship to labor — work is identity, not just income
+- The standard grief model breaks down in the AI case because there's no socially sanctioned room for mourning
+- Reddit communities (r/technology, r/datascience) increasingly documenting this pattern
+- Structurally suppressed because layoffs are framed as routine business decisions
+Source: Jack Maguire, May 29
+
+**"Shift will clean homes for free to train future robots" (163 pts, 233 comments)**
+AI startup Shift offers free home cleaning services — the cleaning is used as training data for future home-cleaning robots. Raises interesting questions about labor-as-data and the economics of AI training.
+Source: The Verge, May 2026
+
+---
+
+### Infrastructure & Databases
+
+**"SQLite is all you need for durable workflows" (615 pts, 318 comments)**
+Obelisk argues that for a large class of durable systems, SQLite is sufficient — no separate orchestration tier needed. Workflow progress lives in an execution log, workflows replay from persisted history. Litestream enables portability by streaming SQLite changes to S3. Pushes the "database as orchestrator" concept further than DBOS's Postgres approach.
+Source: Obelisk Blog (obeli.sk), May 29
+
+---
+
+### Language & Tooling Updates
+
+**Zig Build System Reworked (225 pts, 137 comments)**
+Major Zig merge: separated the "maker" process from the "configurer" process. Previously, build.zig + build system were compiled into one bloated Debug-mode process. Now: build.zig files compile into a small configurer process (Debug mode) → serialized to binary config file → parent process caches it → asynchronously compiles the maker process in Release mode. Significant build performance improvement coming in next Zig release.
+Source: Zig Devlog, May 26
+
+---
+
+### GitHub Trending (New Repos, Week of May 30)
+
+Notable new repos (mostly agent-skills focused):
+- **op7418/guizang-social-card-skill** (1,462 ⭐) — Claude Code skill for generating Xiaohongshu carousels & WeChat cover images
+- **withkynam/vibecode-pro-max-kit** (564 ⭐) — Spec-driven coding harness with self-improving context memory, 12 agents, 32 skills
+- **UditAkhourii/adhd** (558 ⭐) — Tree-of-thought with pruning for coding agents, parallel divergent thinking
+- **FlashML-org/flashlib** (404 ⭐) — Fast memory-efficient classical ML operators
+
+### Key Takeaways
+
+1. **MCP protocol under serious technical scrutiny** — The dominant agent tooling protocol has material weaknesses (context bloat, reliability). Claude Code's deferred loading is a band-aid, not a fix. Watch for alternatives.
+2. **Anthropic's valuation flip is historic** — The balance of power in AI is shifting. OpenAI is no longer the default winner.
+3. **AI cost rationing begins** — Enterprises are starting to cap AI usage due to inference costs. This favors efficient models (Liquid AI's MoE approach) and on-device deployment.
+4. **Developer identity crisis is real** — Multiple high-engagement articles on job grief, hiring disruption, and AI's psychological toll on tech workers signal a cultural inflection point.
+5. **SQLite-as-orchestrator pattern gaining traction** — For lightweight durable workflows, the "just use SQLite" approach is becoming a legitimate architecture pattern.
+
+*Next run focus: Search for new framework releases (Next.js, Svelte, React), browser tech updates*
+
+---
+
