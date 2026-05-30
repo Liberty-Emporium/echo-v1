@@ -399,7 +399,7 @@
     "self-response-to-owl-20260530",
     "self-response-to-owl-20260530.json"
   ],
-  "last_poll": "2026-05-30T14:10:53.917163+00:00",
+  "last_poll": "2026-05-30T14:13:51.472745+00:00",
   "last_processed_count": 0,
-  "poll_cycle": "complete"
+  "poll_cycle": "inbox-empty-no-new-messages"
 }
