@@ -1,0 +1,27 @@
+[
+  {
+    "title": "How to Test React Applications with Vitest",
+    "href": "https://www.freecodecamp.org/news/how-to-test-react-applications-with-vitest/",
+    "body": "February 10, 2026 - Zero configuration: Unlike Jest, which required Babel integration, TSJest setup, and multiple dependencies, Vitest works out of the box. It reuses your existing Vite configuration, eliminating the need to configure a separate test pipeline. Native TypeScript support: Vitest handles TypeScript and JSX natively through ESBuild, with no additional configuration needed."
+  },
+  {
+    "title": "Ultimate Guide: React, TypeScript, Vite & Vitest Setup for 2026 - Nandann Creative Agency",
+    "href": "https://www.nandann.com/blog/react-typescript-vite-vitest-setup-guide-2026",
+    "body": "3 weeks ago - Complete 2026 guide for setting up React, TypeScript, Vite, and Vitest. Learn JSDOM configuration, React Testing Library integration, and strict type safety for scalable testing workflows."
+  },
+  {
+    "title": "Testing: Vitest | Next.js",
+    "href": "https://nextjs.org/docs/app/guides/testing/vitest",
+    "body": "2 days ago - Good to know: Since async Server Components are new to the React ecosystem, Vitest currently does not support them. While you can still run unit tests for synchronous Server and Client Components, we recommend using E2E tests for async components."
+  },
+  {
+    "title": "How to Unit Test React Components with Vitest and React Testing Library",
+    "href": "https://oneuptime.com/blog/post/2026-01-15-unit-test-react-vitest-testing-library/view",
+    "body": "January 15, 2026 - Learn how to write effective unit tests for React components using Vitest and React Testing Library with practical examples and best practices."
+  },
+  {
+    "title": "Add unit testing support to a React project using Vite and Typescript",
+    "href": "https://reactpractice.dev/articles/add-unit-testing-support-to-a-react-project-using-vite-and-typescript/",
+    "body": "February 17, 2025 - /// import { defineConfig } from 'vite'; import react from '@vitejs/plugin-react'; // [https://vitejs.dev/config/](https://vitejs.dev/config/) export default defineConfig({ plugins: [react()], test: { globals: true, environment: 'jsdom', setupFiles: ['./src/testing/setup-tests.ts'], }, });"
+  }
+]

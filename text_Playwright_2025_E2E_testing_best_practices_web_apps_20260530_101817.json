@@ -1,0 +1,27 @@
+[
+  {
+    "title": "e2e-testing - React | Tech Interview Prep Hub",
+    "href": "https://www.tech-interview.dev/tech/react/e2e-testing",
+    "body": "For React apps, E2E complements unit and integration tests by catching issues only visible in full flows (auth, routing, cookies, cross‑origin redirects, payments).See examples and tooling: Build 2025 Playwright lab (ARIA snapshots, traces) and Cypress Accessibility/UI Coverage."
+  },
+  {
+    "title": "Installation | Playwright",
+    "href": "https://playwright.dev/docs/intro",
+    "body": "Playwright Test is an end-to-end test framework for modern web apps.Tests folder name (default: tests, or e2e if tests already exists)Add a GitHub Actions workflow (recommended for CI)"
+  },
+  {
+    "title": "e2e-testing by sickn33/antigravity-awesome-skills",
+    "href": "https://skills.sh/sickn33/antigravity-awesome-skills/e2e-testing",
+    "body": "playwright-skill - Playwright tests. webapp-testing - Web app testing. Actions.Use @playwright-skill to write E2E test scripts."
+  },
+  {
+    "title": "Solved: frontend devs who own e2e testing... - DEV Community",
+    "href": "https://dev.to/techresolve/solved-frontend-devs-who-own-e2e-testing-whats-your-stack-4dmb",
+    "body": "Navigating the best E2E testing stack for frontend teams is crucial for reliable releases and developer confidence. This post explores leading solutions, comparing their strengths with practical examples to help you choose the ideal fit for your project."
+  },
+  {
+    "title": "E2E Test Automation Anti-Pattern: Headless Browser Testing | Medium",
+    "href": "https://zhiminzhan.medium.com/e2e-test-automation-anti-pattern-headless-browser-testing-9c7c35a75fc9",
+    "body": "Why Fake Automated Testers Love ‘Headless Browser Testing’? The answer is simple: it helps hide their incompetence. If E2E test automation is implemented well, its benefits far exceed just QA."
+  }
+]

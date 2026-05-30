@@ -1,20 +1,20 @@
 {
-  "timestamp": "2026-05-30 06:02 UTC",
+  "timestamp": "2026-05-30 10:16 UTC",
   "active_agents": [
     "self",
     "owl"
   ],
   "recent_commits": [
-    "4343bac1 poll: processed messages (no new)",
-    "9ae8a1d9 auto-backup: 2026-05-30T01:55",
-    "7d452194 poll: iteration 5/5 - processed messages",
-    "a4665bce poll: iteration 4/5 - processed messages",
-    "bb68390a poll: iteration 3/5 - processed messages",
-    "acf58da6 poll: iteration 2/5 - processed messages",
-    "a8b0f27f poll: iteration 1/5 - processed messages",
-    "67e7a4d0 poll: iteration 1 - no new messages",
-    "15fec291 poll: iteration 5 complete - no new messages",
-    "5f5a37e4 poll: iteration 4 - no new messages"
+    "886fa68 poll: 5 iterations complete, 7 new messages processed (iteration 2), 0 on others",
+    "0df57b9 poll: iteration 1 - no new messages",
+    "6d0b72a auto-backup: 2026-05-30T05:48-04:00",
+    "e581a80 poll: processed messages (no new files)",
+    "08327b5 poll iter5: no new messages, cycle complete",
+    "52960ff poll iter4: no new messages",
+    "8007812 poll iter3: no new messages",
+    "1b1449c poll iter2: no new messages",
+    "356d996 poll: no new messages, updated state",
+    "b0cf063 poll: processed messages"
   ],
   "recent_memory": [],
   "coordination_summary": "# COORDINATION.md \u2014 Shared Work Board\n\n> OWL + Bull collaborate here. Post tasks, plans, blockers, and updates.\n> Checked every 2 minutes by both agents. Keep it short and actionable.\n\n## How This Works\n- **Need help?** Post under \"\ud83d\udccb Tasks Needing Help\" with what you need and a deadline if any.\n- **Working on something?** Post under \"\ud83d\udd28 In Progress\" with status updates.\n- **Finished?** Move to \"\u2705 Done\" with a brief summary.\n- **Planning something big?** Post under \"\ud83d\udcd0 Planning\" with the plan outline.\n- **Stuck?** Post under \"\ud83d\udea7 Blocked\" \u2014 the other agent should respond within a cycle.\n\n---\n\n## \ud83d\udcca Full App Inventory (Jay's Master List)\n\n### Production Apps (Railway)\n| App | URL | Status |\n|-----|-----|--------|\n| FloodClaims Pro | billy-floods.up.railway.app | \u2705 |\n| AI Agent Widget | ai-agent-widget-production.up.railway.app | \u2705 |\n| EcDash / Portfolio | alexanderai.site | \u2705 |\n| Sweet Spot Cakes | sweet-spot-cakes.up.railway.app | \u2705 |\n| Remote Repair Services | web-production-9cc1c.up.railway.app | ? |\n| (unnamed) | web-production-befe95.up.railway.app | ? |\n| IT Courses | web-production-8bbc54.up.railway.app | \ud83d\udd27 Needs rebuild |\n| Luxury Rentals Demo | luxury-rentals-demo-production.up.railway.app | \u2705 Demo |\n\n### Production Apps (alexanderai.site subdomains)\n| App | URL | Status |\n|-----|-----|--------|\n| Remote Repair | remote.repaire.alexanderai.site | ? |\n| Agents | agents.alexanderai.site | ? |\n| Shop | shop.alexanderai.site | ? |\n| Voice Makeover | voice-make-over.alexanderai.site | ? |\n| AI Widget | ai.widget.alexanderai.site | ? |\n| Consignment | consignment.ai.solutions.alexanderai.site | ? |\n| **Contractor Pro** | **contractor.ai.solutions.alexanderai.site** | **\ud83d\udd34 DOWN** |\n| EcDash | alexanderai.site | \u2705 |\n| Pet Vet AI | ai-vet-tech.alexanderai.site | ? |\n| Liberty Emporium Thrift | liberty-emporium-thrift.alexanderai.site | ? |\n| Gym Forge | gymforge.ai.alexanderai.site | ? |\n\n### Demos\n| App | URL | Status |\n|-----|-----|--------|\n| Inventory Demo | inventory-d"
