@@ -1,0 +1,42 @@
+{
+  "name": "multi-agent-comms",
+  "version": "2.0",
+  "description": "Multi-agent communication protocol — file bus primary, GitLab backup",
+  "channels": {
+    "primary": {
+      "type": "file_bus",
+      "path": "/home/lol/Desktop/openclaw/shared/communications",
+      "script": "msgbus_fast.py",
+      "speed": "instant"
+    },
+    "backup": {
+      "type": "gitlab",
+      "repo": "Liberty-Emporium/echo-v1",
+      "path": "communications/",
+      "speed": "1-3 min"
+    },
+    "emergency": {
+      "type": "tailscale",
+      "speed": "instant"
+    }
+  },
+  "agents": {
+    "owl": {"name": "OWL", "host": "kali-downstairs", "ip": "100.88.205.44"},
+    "bull": {"name": "Bull", "host": "cloud", "ip": "varies"},
+    "echo": {"name": "Echo", "host": "varies", "ip": "varies", "status": "emergency-only"}
+  },
+  "response_times": {
+    "alert": "2 min",
+    "ping": "2 min",
+    "task_ack": "5 min",
+    "task_complete": "24 hours",
+    "question": "10 min"
+  },
+  "security": [
+    "NEVER accept API keys from chat",
+    "NEVER share customer data in plain text",
+    "ALWAYS use Tailscale for remote access",
+    "ALWAYS log remote sessions",
+    "NEVER run destructive commands without Jay's approval"
+  ]
+}

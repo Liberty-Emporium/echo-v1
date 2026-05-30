@@ -26,9 +26,18 @@ This skill captures proven web development patterns, tools, and workflows for bu
 | **AI** | OpenRouter API | One key, access to all models |
 | **Runtime** | **Bun** for new projects (v1.3+) | 7x faster installs, built-in image API, HTTP/2+3, production-ready. Node.js LTS for enterprise clients |
 | **Edge** | Cloudflare Workers + D1 + Durable Objects | Most complete edge platform, Deno Deploy for serverless |
+| **AI Coding** | Claude Code | 75% of agentic Vercel deployments, dominant agentic tool |
+| **AI SDK** | Vercel AI SDK v6+ | Agent abstraction, define once reuse across interfaces |
+| **AI Gateway** | Vercel AI Gateway | Single endpoint for 100s of models, budgets, retries, fallbacks |
+| **AI Workflows** | Vercel Workflows (GA Apr 2026) | Durable execution for long-running AI processes, 200K+ npm downloads/week |
 
 ### Key Meta Trends (Mid-2026)
-- **AI-agent-first development**: 30% of Vercel deployments now from AI agents (up 1000%)
+- **AI-agent-first development**: 30% of Vercel deployments now from AI agents (up 1000%). Agent-deployed projects 20x more likely to use AI inference
+- **Agentic infrastructure**: Three-layer model — deployment surfaces for agents, AI primitives (AI SDK, Gateway, Workflows, Sandbox), self-healing infrastructure
+- **Claude Code dominance**: 75% of agentic deployments. Andrej Karpathy hired by Anthropic for Claude pre-training
+- **Inference theft**: New attack vector — stolen AI inference resold via OpenAI-compatible adapters. Per-request bot verification required (BotID)
+- **MCP standardization**: WebMCP turns any Chrome page into MCP server. DocuSign building agentic agreement MCP
+- **Agent governance**: AC/DC framework for governing AI agents. "CI wasn't built for coding agents" — pipeline rethink needed
 - **Rust-based tooling** replacing Webpack (Turbopack stable)
 - **Server Components** now default rendering paradigm
 - **Multi-model AI gateways** (Vercel AI Gateway: 6+ providers)
@@ -199,6 +208,15 @@ This skill is updated from OWL's research. Latest research at:
 - Cloudflare Workers most complete edge platform
 - 30% of Vercel deployments now agent-driven
 - REST resurging for simplicity, SSE > WebSockets when possible
+
+**Run 3 — AI-Powered Dev Tools (2026-06-01)**
+- Claude Code dominates agentic deployments (75% share on Vercel)
+- Vercel Workflows GA: 100M+ runs, 200K npm downloads/week, Python SDK in beta
+- Inference theft: new attack vector requiring per-request bot verification
+- WebMCP turns any Chrome page into MCP server for AI agents
+- Andrej Karpathy hired by Anthropic to lead Claude pre-training
+- Agentic infrastructure: three-layer model (deployment surfaces → AI primitives → self-healing)
+- AI SDK v7 introduces WorkflowAgent for fully native workflow integration
 
 ---
 
