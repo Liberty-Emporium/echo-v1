@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Fluid Typographic Scales: Revolutionize... | Design Systems Collective",
+    "href": "https://www.designsystemscollective.com/fluid-typographic-scales-revolutionize-your-responsive-design-0d10ed7f740e",
+    "body": "Flexible Units: The Foundation of Fluid Typography. To build a truly fluid typographic scale, we must first abandon the fixed-pixel mindset. Modern CSS offers numerous relative and dynamic units to help create adaptable typography: em: Relative to the parent element’s font size."
+  },
+  {
+    "title": "Fluid Typography Tricks: Scaling Text Seamlessly Across Devices...",
+    "href": "https://tryhoverify.com/blog/fluid-typography-tricks-scaling-text-seamlessly-across-devices-with-tailwind-and-css-clamp/",
+    "body": "Learn how to implement fluid typography with CSS clamp() and Tailwind CSS for scalable, readable text across devices. Web Development.Accessibility is key in fluid typography. To meet WCAG 1.4.4 guidelines, follow these best practices: Use relative units like rem for font sizes."
+  },
+  {
+    "title": "One Simple Trick for Better Web Typography (Fluid Scale) - YouTube",
+    "href": "https://www.youtube.com/watch?v=lgxroZ02t8I",
+    "body": "Web typography got you down? Managing type sizes across different screen sizes and devices can be a real challenge, even in the modern age."
+  },
+  {
+    "title": "Fluid vs. responsive typography with CSS clamp - LogRocket Blog",
+    "href": "https://blog.logrocket.com/fluid-vs-responsive-typography-css-clamp/",
+    "body": "Using CSS to create a fluid typography function. Fluid typography and container queries.Learn about TypeScript v6’s breaking changes, new ES2025 features, and deprecated options."
+  },
+  {
+    "title": "Accessible Typography Best Practices | by CodeByUmar | JavaScript...",
+    "href": "https://javascript.plainenglish.io/accessible-typography-best-practices-e454a9d2ddf5",
+    "body": "Accessible Typography Best Practices Designing Legible, Inclusive Text for Every Reader In this guide, you’ll learn the core principles of accessible typography — from choosing the right units …Nov 7, 2025. A response icon."
+  }
+]

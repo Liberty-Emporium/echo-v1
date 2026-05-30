@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Web Design References: Color and Contrast",
+    "href": "https://www.d.umn.edu/itss/training/online/webdesign/color.html",
+    "body": "Testing Web Design Color Contrast - Adam Argyle and Charlie Gleason.Okay, Color Spaces (2024) - Eric Portis. OKLCH (2025) - Jakub Krehel New! Oddities in Color Perception - Alastair Campbell. Open Color - heeyeun."
+  },
+  {
+    "title": "OKLCH in CSS: why we moved from RGB and HSL—Martian...",
+    "href": "https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl",
+    "body": "The new CSS Color 4 specification has added the new oklch() notation for declaring colors. In this post, we explain why this is important for design systems and color palettes. The extremely short version."
+  },
+  {
+    "title": "Algorithmic Theming Engines: Building Self-Correcting Color Systems...",
+    "href": "https://www.smashingmagazine.com/2026/05/building-self-correcting-color-systems-contrast-color/",
+    "body": "The HTTP Archive Web Almanac has been tracking color contrast failures for years. The numbers have barely moved. After half a decade of design system tooling, accessibility linters, and entire JavaScript libraries dedicated to computing readable text colors..."
+  },
+  {
+    "title": "OKLCH Color Space: Why It Is the Future of CSS... | DevPane Tools",
+    "href": "https://devpane.tools/color/oklch-guide",
+    "body": "Creating Design Tokens with OKLCH. OKLCH is particularly well-suited for design token systems because its three channels map directly to meaningful design decisions: Lightness maps to light/dark theme variations and accessibility (ensuring sufficient contrast)."
+  },
+  {
+    "title": "OKLCH vs Hex: Choosing the Right CSS Color Format | Tailkits",
+    "href": "https://tailkits.com/blog/oklch-vs-hex/",
+    "body": "Explore the differences between OKLCH and hex color formats in CSS. Learn which offers better readability, accessibility, and design flexibility."
+  }
+]

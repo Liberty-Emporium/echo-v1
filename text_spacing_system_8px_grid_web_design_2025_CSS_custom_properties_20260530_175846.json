@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Spacing System Cheat Sheet: 4px vs 8px vs Custom — Mantlr",
+    "href": "https://mantlr.com/blog/spacing-system-cheat-sheet",
+    "body": "The Spacing System Cheat Sheet: 4px vs 8px vs Custom A no-nonsense reference for spacing systems. The decision framework for 4px vs 8px vs custom, implementation recipes for Figma and Tailwind, and when breaking the grid is actually correct."
+  },
+  {
+    "title": "Spacing System with the 8pt Grid: A Complete Guide for Consistent ...",
+    "href": "https://educalvolopez.com/en/blog/sistema-de-espaciado-con-grid-8pt-guia-completa",
+    "body": "Line-height is calculated for readability, not to fit into a grid. What should follow the grid is the spacing around the text. If you use Tailwind, you already have this covered — the spacing scale uses multiples of 4, so just use the even values (p-2 = 8px, p-4 = 16px, p-6 = 24px). If you prefer CSS custom properties: ... Try the interactive ..."
+  },
+  {
+    "title": "8px Grid Spacing System Explained for Web Designers",
+    "href": "https://www.thehangline.com/8px-grid-spacing-system-explained-for-web-designers/",
+    "body": "The 8px grid is a spatial system that controls the spacing between and within elements. In practice, most designers use both: a column grid for overall layout structure and the 8px grid for all spacing values."
+  },
+  {
+    "title": "Web Design Spacing and Sizing Best Practices",
+    "href": "https://www.conceptfusion.co.uk/post/web-design-spacing-and-sizing-best-practices",
+    "body": "Learn web design spacing and sizing best practices, from 4px and 8px grids to readable content widths, padding vs margin, and responsive CSS units."
+  },
+  {
+    "title": "8pt Spacing Scale Generator | CSS rem for WordPress themes",
+    "href": "https://tools.davidemancuso.studio/en/spacing-scale-generator/",
+    "body": "Generate 4pt/8pt grid spacing scales with px, rem and CSS custom properties output. Build a consistent spacing system for your WordPress theme or design system."
+  }
+]

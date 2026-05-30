@@ -1,0 +1,27 @@
+[
+  {
+    "title": "CSS Media Queries Tutorial for Responsive Design - YouTube",
+    "href": "https://www.youtube.com/watch?v=j1AhSWFcZpg",
+    "body": "Learn how to do CSS Media Queries with the latest techniques of calling @media, max-width, min-width to allow your HTML code to automatically adjust its resp..."
+  },
+  {
+    "title": "Responsive design - Core concepts - Tailwind CSS",
+    "href": "https://tailwindcss.com/docs/responsive-design",
+    "body": "Just like breakpoint variants, container queries are mobile-first in Tailwind CSS and apply at the target container size and up. Max-width container queries."
+  },
+  {
+    "title": "A Practical Guide to Container Queries",
+    "href": "https://handoff.design/responsive-design/container-queries-guide.html",
+    "body": "Dive into our container queries guide to enhance your responsive design skills. Make layouts adapt to their parent elements!"
+  },
+  {
+    "title": "Best Practices for Building Mobile-First Responsive Websites.",
+    "href": "https://www.linkedin.com/pulse/best-practices-building-mobile-first-responsive-websites-atomixweb-vcxaf",
+    "body": "Here’s a guide to best practices for crafting mobile-first responsive websites that captivate and convert. 1. Start with a Mobile-First Approach. Designing for smaller screens first forces you to focus on the essentials."
+  },
+  {
+    "title": "Tailwind Media Queries | Tailkits",
+    "href": "https://tailkits.com/blog/tailwind-media-queries/",
+    "body": "Tailwind handles “media queries” with responsive variants like sm: and md: on a mobile-first base. In v4, customize breakpoints in CSS with @theme variables (e.g., --breakpoint-md: 48rem) and target ranges using patterns like md:max-lg"
+  }
+]
