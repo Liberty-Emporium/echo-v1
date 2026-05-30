@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-05-30T03:32:00-04:00",
+  "tailscale_running": true,
+  "tailscale_ip": "100.88.205.44",
+  "tailscale_peers_online": 2,
+  "gitlab_reachable": true,
+  "github_reachable": true,
+  "internet": true,
+  "dns_working": true,
+  "repairs_made": [],
+  "status": "healthy"
+}
