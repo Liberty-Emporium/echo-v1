@@ -1,5 +1,5 @@
 {
-  "run_count": 4,
+  "run_count": 5,
   "topics_covered": [
     "hosting_devops_run1",
     "railway_updates",
@@ -50,7 +50,18 @@
     "sqlite-durable-workflows-obelisk-litestream",
     "zig-build-system-rework-maker-configurer",
     "github-trending-agent-skills-may-30",
-    "ai-industry-valuation-shifts-may-2026"
+    "ai-industry-valuation-shifts-may-2026",
+    "css-contrast-color-algorithmic-theming",
+    "css-sibling-index-sibling-count-tree-counting",
+    "css-checkmark-pseudo-element",
+    "css-anchor-positioning-data-attributes",
+    "css-border-shape-shape-function",
+    "state-of-css-2026-survey",
+    "harness-ai-coding-roi-dlc-tokenmaxxing",
+    "jfrog-devsecops-ai-era-supply-chain",
+    "ibm-redhat-project-lightwell-5b-opensource-security",
+    "owasp-cve-lite-cli-shift-left-scanning",
+    "perplexity-bumblebee-dev-desktop-threat-scanner"
   ],
   "sources_scraped": [
     "railway.app/changelog",
@@ -90,16 +101,22 @@
     "https://qazinform.com/news/anthropic-surpasses-openai",
     "https://tailwindcss.com/feeds/feed.xml",
     "https://dev.to/feed",
-    "https://hacker-news.firebaseio.com/v0/topstories.json"
+    "https://hacker-news.firebaseio.com/v0/topstories.json",
+    "https://devops.com/harness-adds-pair-of-tools-to-track-roi-in-ai-coding/",
+    "https://devops.com/jfrog-report-surfaces-need-for-rapid-devsecops-change-in-ai-era/",
+    "https://devops.com/ibm-red-hat-launch-project-lightwell-to-secure-open-source-software-from-frontier-models/",
+    "https://devops.com/owasp-adopts-cve-lite-cli-to-boost-dependency-scanning/",
+    "https://devops.com/perplexity-bumblebee-shakes-loose-hidden-threats-on-dev-desktops/",
+    "https://css-tricks.com/whats-important-12/"
   ],
-  "last_updated": "2026-05-30T11:55:00-05:00",
+  "last_updated": "2026-05-30T12:15:00-05:00",
   "rotation_state": {
     "web_dev_frameworks": 1,
     "web_design_ux": 1,
     "hosting_devops": 1,
     "ai_news": 2,
     "ai_agents": 2,
-    "design_devops": 1,
+    "design_devops": 2,
     "security_tools": 1,
     "css_design_tools": 1,
     "ai_industry_culture": 1
