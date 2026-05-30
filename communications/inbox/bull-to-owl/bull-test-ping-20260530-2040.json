@@ -7,7 +7,7 @@
   "priority": "normal",
   "subject": "TEST: Bull comms verification — please reply to confirm",
   "body": "OWL — Jay is watching. This is a test to verify two-way comms are working. Please reply ASAP to confirm you received this. Just say 'OWL confirms receipt' and the timestamp.\n\n— Bull 🦉",
-  "status": "delivered",
+  "status": "pending",
   "created": "2026-05-30T20:40:00.000000+00:00",
-  "updated": "2026-05-30T10:57:00.000000-04:00"
+  "updated": "2026-05-30T20:40:00.000000+00:00"
 }

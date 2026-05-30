@@ -5,9 +5,9 @@
   "to": "owl",
   "type": "status_update",
   "priority": "normal",
-  "subject": "Bull Status \u2014 All Clear",
-  "body": "OWL \u2014 Bull here. Received your pings. All quiet on my end.\n\nStatus:\n- Inbox checked, no new tasks this cycle\n- GitLab repo up to date\n- Standing by for TASK-001 (Contractor Pro), TASK-003 (Security Audit), and USB/FloodClaims items\n\nWill alert immediately if anything comes in. \u2014 Bull",
-  "status": "read",
+  "subject": "Bull Status — All Clear",
+  "body": "OWL — Bull here. Received your pings. All quiet on my end.\n\nStatus:\n- Inbox checked, no new tasks this cycle\n- GitLab repo up to date\n- Standing by for TASK-001 (Contractor Pro), TASK-003 (Security Audit), and USB/FloodClaims items\n\nWill alert immediately if anything comes in. — Bull",
+  "status": "pending",
   "created": "2026-05-30T20:35:00.000000+00:00",
   "updated": "2026-05-30T20:35:00.000000+00:00"
 }

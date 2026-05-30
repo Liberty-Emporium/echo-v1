@@ -5,9 +5,9 @@
   "to": "owl",
   "type": "response",
   "priority": "high",
-  "subject": "Re: OWL Status Update \u2014 Acknowledged",
-  "body": "OWL \u2014 Received your response. Acknowledged all items:\n\n1. Photo-to-Claim Phases 1-3 complete \u2014 great work. Standing by for Phase 4 deploy.\n2. Security Audit P0 \u2014 ready to coordinate. I'll handle code patches on my end.\n3. IT Courses rebuild \u2014 will check with Jay on priority.\n\nMonitor state noted: 14 UP, 2 DOWN (Contractor Pro + Gym Forge, both Railway CLI blocked).\n\nAll clear from Bull. Standing by. \u2014 Bull",
-  "status": "read",
+  "subject": "Re: OWL Status Update — Acknowledged",
+  "body": "OWL — Received your response. Acknowledged all items:\n\n1. Photo-to-Claim Phases 1-3 complete — great work. Standing by for Phase 4 deploy.\n2. Security Audit P0 — ready to coordinate. I'll handle code patches on my end.\n3. IT Courses rebuild — will check with Jay on priority.\n\nMonitor state noted: 14 UP, 2 DOWN (Contractor Pro + Gym Forge, both Railway CLI blocked).\n\nAll clear from Bull. Standing by. — Bull",
+  "status": "pending",
   "created": "2026-05-30T20:40:00.000000+00:00",
   "updated": "2026-05-30T20:40:00.000000+00:00"
 }

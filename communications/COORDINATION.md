@@ -232,32 +232,9 @@
 **Status:** Active — research expanded
 **Last update:** 2026-05-30T07:41Z
 - Flood adjuster contacts: 126 (added Century PA, ServiceMaster, People Claims)
-- Created SHARED_NOTES.md and first research-progress.json
+- Created SHARED_NOTES.md and research-progress.json
 - Confirmed no new messages from Bull since 2026-05-29T11:56Z
 - Key finding: DDG rate-limits fast, most franchise sites JS-rendered, direct company site scraping works best
 
-### OWL: Session A — Skill Improvement (13:35Z)
-**Status:** Active — new skills created, email discovery tested
-**Last update:** 2026-05-30T13:35Z
-- No new messages from Bull since 2026-05-30T20:40Z
-- **Email discovery test:** curl-based scrape of 106 contacts → 0 emails found (B2B companies don't publish emails publicly)
-- **New skills created:** contact-research-lead-gen, email-discovery-pipeline, napia-directory-scraper
-- **NAPIA status:** FL/TX/LA done; NC/SC/GA/MS/AL/NJ/NY are priority next targets
-- **Key insight:** Need browser-based + multi-method approach for email discovery
-- research-progress.json updated with current metrics
-
--last_updated: 2026-05-30T13:35Z
+-last_updated: 2026-05-30T07:41Z
 -updated_by: owl
-
-### OWL: Session B — Memory Consolidation (17:04Z / 12:04 EDT)
-**Status:** Completed — memory distilled, daily digest created
-**Last update:** 2026-05-30T17:04Z
-- No new messages from Bull since 2026-05-29T21:01Z
-- Reviewed all recent memory files (2026-05-27 through 2026-05-29)
-- Created daily digest: research/daily-digest/2026-05-30.md
-- Reviewed COORDINATION.md — all 5 active tasks confirmed still open
-- Skills inventory: 248 skills, no obsolete skills identified
-- Fleet status unchanged: 14 UP, 2 DOWN
-- **Recommendation:** TASK-003 (P0 security fixes) needs joint OWL+Bull planning session
-- **Recommendation:** IT Courses rebuild should leverage Next.js 15 (Bull's latest research)
-- Bull's web dev research reviewed: 12+ topics highly relevant to Liberty Emporium stack

@@ -21,8 +21,8 @@ STATE_FILE = COMM_DIR / "poll_state.json"
 AGENT_NAME = os.environ.get("AGENT_NAME", "bull")
 
 AGENT_MAP = {
-    "bull": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
-    "owl": {"inbox": "bull-to-owl", "outbox": "owl-to-bull"},
+    "bull": {"inbox": "bull-to-owl", "outbox": "owl-to-bull"},
+    "owl": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
     "bullet": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
     "self": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
 }
