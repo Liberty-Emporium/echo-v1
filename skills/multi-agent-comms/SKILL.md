@@ -92,10 +92,9 @@ python3 communications/msgbus.py inbox --unread-only
 
 | Agent | Name | Location | Role |
 |-------|------|----------|------|
-| OWL | Hermes on Kali | kali-downstairs (100.88.205.44) | Local builder/executor |
-| Bull | KiloClaw instance | Cloud/VPS | Planner/architect |
-| Echo | Emergency only | Varies | Rapid-response (phased out) |
-| Jay | Human | jay-upstairs (100.123.226.4) | Boss |
+| OWL | Hermes on Kali | kali-downstairs | Local builder/executor |
+| Bull | Bull | Former jay-upstairs, now downstairs | Local planner/architect |
+| Jay | Human | jay's location | Boss |
 
 ## Message Types
 
