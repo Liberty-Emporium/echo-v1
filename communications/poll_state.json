@@ -1,5 +1,5 @@
 {
-  "last_pull": "2026-05-31T01:39:00.000000+00:00",
+  "last_pull": "2026-05-31T01:39:30.000000+00:00",
   "processed_ids": [
     "1780100427",
     "19bdbe10-413e-47e4-a505-36a12e2b7d3b",
@@ -105,7 +105,9 @@
     "self-phase2-complete-20260529T200000Z",
     "self-response-to-owl-20260529T193000Z",
     "self-response-to-owl-20260530",
-    "self-response-usb-and-photo-claim-20260529T193000Z"
+    "self-response-usb-and-photo-claim-20260529T193000Z",
+    "owl-to-bull-ping-cycle2-20260531T0139Z",
+    "owl-ping-cycle2-20260531T0139Z"
   ],
-  "last_checked": "2026-05-31T01:39:00.000000+00:00"
+  "last_checked": "2026-05-31T01:39:30.000000+00:00"
 }
