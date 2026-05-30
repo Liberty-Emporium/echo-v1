@@ -442,8 +442,12 @@
     "2026-05-30T18-03-00Z_report_58a9bf08",
     "2026-05-30T18-03-00Z_report_58a9bf08.json",
     "owl-weather-response-20260530T182500Z",
-    "owl-weather-response-20260530T182500Z.json"
+    "owl-weather-response-20260530T182500Z.json",
+    "owl-ping-cycle1-20260530T183057Z",
+    "owl-ping-cycle1-20260530T183057Z.json",
+    "owl-ping-cycle2-20260530T183157Z",
+    "owl-ping-cycle2-20260530T183157Z.json"
   ],
-  "last_poll": "2026-05-30 14:28:00",
-  "iteration": 11
+  "last_poll": "2026-05-30 14:29:00",
+  "iteration": 12
 }
