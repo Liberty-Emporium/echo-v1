@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Getting started with basics of routes and middleware in Express.JS",
+    "href": "https://medium.com/@patilchetan2110/getting-started-with-basics-of-routes-and-middleware-in-express-js-90db1b8c2252",
+    "body": "Express.js further empowers developers by enabling the chaining of middleware functions before reaching the final route handler. This middleware chain facilitates additional processing such as authentication, data validation, or logging before or after executing the main route logic."
+  },
+  {
+    "title": "Session Authentication With Node.js, Express, Passport, and...",
+    "href": "https://javascript.plainenglish.io/session-authentication-with-node-js-express-passport-and-mongodb-ffd1eea4521c",
+    "body": "Middleware is handy for authentication and authorization, which is why Passport is widely adopted across Express-based applications. The app.js file below will demonstrate how we can implement Passport into a Node.js application."
+  },
+  {
+    "title": "Express.js Tutorial - GeeksforGeeks",
+    "href": "https://www.geeksforgeeks.org/node-js/express-js/",
+    "body": "Express.js is a minimal and flexible Node.js web application framework that provides a list of features for building web and mobile applications easily. It simplifies the development of server-side applications by offering an easy-to-use API for routing, middleware, and HTTP utilities."
+  },
+  {
+    "title": "Integrating Flex and Node.js Libraries Best Practices | MoldStud",
+    "href": "https://moldstud.com/articles/p-integrating-flex-with-nodejs-top-libraries-and-best-practices",
+    "body": "Explore how to integrate Flex with Node.js using top libraries and best practices. Enhance your applications with practical tips and techniques for seamless development."
+  },
+  {
+    "title": "Express.js · Node.js web application framework",
+    "href": "https://expressjs.com/",
+    "body": "Performance best practices.Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. APIs. With a myriad of HTTP utility methods and middleware at your disposal, creating a robust API is quick and easy."
+  }
+]
