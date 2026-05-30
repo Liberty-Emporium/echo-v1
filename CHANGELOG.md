@@ -243,3 +243,100 @@ Source: GitHub Trending, May 30
 
 *Next run focus: Database/search tech, browser APIs, CSS/UI framework updates*
 
+---
+
+## Run 4 — 2026-05-30 — Vercel Platform Updates, New Repos & DEV.to Trends
+
+### Vercel Changelog (May 27-29)
+
+**Function invocations now billed per unit (May 29)**
+Vercel moved function invocations from package-based to per-unit pricing for Pro and new Enterprise customers. New rate: $0.0000006 per invocation (previously $0.60 per 1M). Per-unit billing scales more smoothly and prevents Pro teams from burning through included credits on high invocation counts.
+Source: Vercel Changelog, May 29
+
+**Run Docker containers inside Vercel Sandbox (May 29)**
+Major upgrade: Vercel Sandbox now supports installing and running Docker inside a sandbox. Agents can build containers, install system packages, and modify files without touching the host. Use cases include running Redis/Postgres as test dependencies, validating container images before deploy, and previewing containerized apps. Combined with persistent sandboxes, Docker installations and pulled images carry over between sessions. Also added: FUSE filesystem drivers and VPN client support in sandboxes.
+Source: Vercel Changelog, May 29
+
+**Port 8080 now available in Vercel Sandboxes (May 29)**
+Port 8080 is now accessible in sandboxes, enabling standard HTTP-based preview URLs and testing of services that bind to this common port.
+Source: Vercel Changelog, May 29
+
+**Opus 4.8 on AI Gateway (May 28)**
+Claude Opus 4.8 is available via Vercel's AI Gateway — providing a single endpoint with budgets, monitoring, routing, retries, and fallbacks across hundreds of models.
+Source: Vercel Changelog, May 28
+
+**Team-wide provider allowlist on AI Gateway (May 28)**
+Enterprise teams can now enforce provider allowlists across their entire organization via AI Gateway. Useful for security/compliance teams that need to control which AI models their organization can access.
+Source: Vercel Changelog, May 28
+
+**Amazon OpenSearch Serverless in Vercel Marketplace (May 28)**
+Teams can now provision and connect Amazon OpenSearch Serverless directly from the Vercel Marketplace — simplifying fullstack app development that needs search/vector capabilities.
+Source: Vercel Changelog, May 28
+
+**Experimental native binaries for Vercel CLI (May 27)**
+Vercel is testing native (compiled) binaries for the CLI, which should dramatically improve cold start times and remove the Node.js runtime dependency for CLI usage.
+Source: Vercel Changelog, May 27
+
+**Redesigned Deployments List (May 27)**
+The Vercel dashboard's deployments list has been redesigned for better scanability and operational clarity.
+Source: Vercel Changelog, May 27
+
+---
+
+### GitHub Trending (New Repos, May 30)
+
+**run-llama/liteparse — Fast, open-source PDF parser (7.8k ⭐)**
+LiteParse is a standalone OSS PDF parsing tool focused on fast, light local parsing. Provides high-quality spatial text parsing with bounding boxes using PDFium, with no proprietary LLM features or cloud dependencies. Supports Tesseract OCR (bundled), screenshot generation for LLM agents, JSON/text output, and bounding boxes. When local parsing hits limits (dense tables, multi-column, scanned PDFs), users can upgrade to the cloud-based LlamaParse. A clean local-first alternative to heavy document processing pipelines.
+Source: GitHub, May 30
+
+**galilai-group/stable-worldmodel — Reproducible world model research platform (1.4k ⭐)**
+Unified interface for the three stages of world model research — data collection, training, and evaluation with model-predictive control — across standardized environments. Ships with reference implementations of common baselines and planning solvers. Supports LeRobot datasets, PyPI install, and includes TD-MPC2 implementation. Active development, 623 commits.
+Source: GitHub, May 30
+
+**ruvnet/RuView — WiFi-based spatial intelligence (trending)**
+RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a camera or video. Works by analyzing WiFi signal perturbations to detect movement, breathing, and presence. Applications in smart home, healthcare monitoring, and security — completely privacy-preserving since no pixels are captured.
+Source: GitHub, May 30
+
+**anthropics/skills — Public repository for Agent Skills (144k ⭐)**
+Anthropic's official Agent Skills repo, now at 144K stars and 17K forks. Contains the skills marketplace, specification, and templates. Recent commit adds Opus 4.8 migration guide and model updates to the claude-api skill. Growing ecosystem with 639 open PRs and 250 issues. This is becoming the canonical source for Claude Code agent skills.
+Source: GitHub, May 30
+
+---
+
+### DEV.to Emerging Trends (May 30)
+
+- **On-Device Health & Care Solutions with Gemma 4** (113 posts, active 20min ago) — The biggest trend on DEV.to right now. Developers are building HIPAA-conscious, offline health monitoring apps using Google's on-device Gemma 4 model. Strong intersection of AI + healthcare + privacy.
+- **Building Specialized Skills with Hermes Agent** (63 posts, active 6min ago) — Community actively writing skills and workflow patterns for Hermes Agent, reflecting growing adoption.
+- **Autonomous Workflows with Hermes Agent** (48 posts, 6hrs ago) — Pattern library for autonomous agent workflows gaining traction.
+- **Google Antigravity 2.0 and the Agentic Era** (57 posts, 1 day ago) — Discussions about Google's agent-first platform strategy and what it means for web developers.
+- **Hermes Agent Persistent Memory Evolution** (38 posts, 20min ago) — Deep dives into memory architecture for long-running agent sessions.
+- **Zero-Dep JSONL Logging for Hermes Agents** (27 posts, 20hrs ago) — Lightweight logging patterns gaining popularity.
+- **Safety Guardrails for Autonomous Hermes Agents** (35 posts, 20hrs ago) — Security best practices for agent deployments.
+
+---
+
+### Hacker News (New Stories, May 30)
+
+- **IXI's autofocusing lenses almost ready to replace multifocal glasses** (94 pts, 41 comments) — IXI has developed electronically autofocusing lenses that dynamically adjust focus, potentially replacing bifocals/progressives. Clever optics + electronics in a standard eyeglass form factor.
+Source: Engadget / HN, May 30
+
+- **Werner Herzog in conversation with Paul Cronin (2014)** (7 pts, 3 comments) — A 2014 interview transcript floating back up. Herzog on filmmaking, technique, and the relationship between cinema and truth.
+Source: FSG Work-in-Progress / HN, May 30
+
+- **What Happened to the Locusts?** (132 pts, 31 comments) — Explosion-Scratch investigates why periodic cicada/locust swarms have been disappearing. Ecological deep dive with data analysis.
+Source: explosion-scratch.github.io / HN, May 30
+
+---
+
+### Key Takeaways
+
+1. **Vercel Sandbox is becoming a full dev environment** — Docker support, FUSE, VPN, port 8080, persistent state. It's evolving from an agent toy into a serious development sandbox. This matters for anyone building agentic workflows.
+2. **Per-unit serverless billing is the future** — Vercel's shift from package to per-unit function billing aligns costs with actual usage. As serverless becomes agent-driven (millions of small invocations), fair billing models matter.
+3. **Local-first document parsing** — LiteParse joining the ecosystem (alongside markitdown) shows demand for fast, local document processing before sending to cloud LLMs. The "parse locally, reason in the cloud" pattern is solidifying.
+4. **WiFi sensing is having a moment** — RuView (WiFi spatial intelligence) trending shows interest in non-camera sensing for smart environments. Privacy-preserving alternative to camera-based monitoring.
+5. **Anthropic's Agent Skills going mainstream** — 144K stars on anthropics/skills in a short time. The skills-as-config approach for agent behavior is winning over prompt engineering.
+6. **DEV.to agent ecosystem growing fast** — Multiple Hermes Agent skill/workflow trends on DEV.to signals the platform is reaching social proof in the agent community.
+7. **Vercel AI Gateway becoming an enterprise control plane** — Team-wide provider allowlists, Opus 4.8 support, and Marketplace integrations (OpenSearch) show Vercel positioning as the enterprise AI infrastructure layer.
+
+*Next run focus: Next.js/React updates, CSS spec progress, database/search tech*
+

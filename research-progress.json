@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-05-30T13:35:00-04:00",
+  "total_contacts_found": 126,
+  "contacts_with_email": 1,
+  "contacts_with_phone": 123,
+  "contacts_with_website": 111,
+  "states_covered": ["FL", "TX", "LA", "NC", "SC", "NJ", "VA", "MS", "AL", "TN", "GA", "KY", "WV", "MD", "DE"],
+  "sources_scraped": [
+    "rainbowrestores.com/locations",
+    "iapath.com/independent-adjusting-firms",
+    "centurypublicadjusters.com",
+    "servicemasterrestore.com",
+    "peopleclaims.com",
+    "NAPIA directory (FL, TX, LA only)"
+  ],
+  "skills_built": [
+    "contact-research-lead-gen",
+    "email-discovery-pipeline",
+    "napia-directory-scraper"
+  ],
+  "research_topics_covered": [
+    "flood-adjuster-directory",
+    "rainbow-restoration-franchise-network",
+    "public-adjuster-associations",
+    "email-discovery-methods",
+    "lead-generation-workflows"
+  ],
+  "email_discovery_results": {
+    "tests_run": 106,
+    "emails_found_via_curl": 0,
+    "emails_found_total": 1,
+    "method_success_rate": "0% via direct scrape — need browser-based approach"
+  },
+  "next_priorities": [
+    "Browser-based email discovery for 106 contacts without emails",
+    "NAPIA directory: NC, SC, GA, MS, AL, NJ, NY states",
+    "FL DBPR license search via browser automation",
+    "TX TDI adjuster search",
+    "CatAdjuster.org directory scrape",
+    "WHOIS-based email recovery",
+    "LinkedIn-based contact enrichment"
+  ]
+}
