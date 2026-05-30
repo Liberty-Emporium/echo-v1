@@ -31,16 +31,16 @@
     "hn-top-stories-may-2026",
     "react-server-components-performance",
     "turbopack-updates-16-2",
-    "supply-chain-attack-antv-shai-hulud",
-    "supply-chain-attack-durabletask-pypi",
-    "supply-chain-attack-node-ipc",
-    "supply-chain-attack-laravel-lang-packagist",
-    "snyk-remediation-agent-cli",
-    "snyk-continuous-offensive-security",
-    "snyk-claude-enterprise-integration",
-    "owasp-juice-shop-v20",
-    "mcp-is-dead-context-window-debate",
-    "github-trending-security-tools-may-2026"
+    "anthropic-surpasses-openai-valuation",
+    "liquid-ai-lfm2-5-moe-ondevice",
+    "corporate-ai-cost-rationing",
+    "mcp-protocol-critique-context-bloat",
+    "steve-yegge-last-technical-interview",
+    "ai-job-grief-psychology",
+    "shift-robot-training-free-cleaning",
+    "sqlite-durable-workflows",
+    "zig-build-system-rework",
+    "github-trending-agent-skills"
   ],
   "sources_scraped": [
     "railway.app/changelog",
@@ -66,27 +66,21 @@
     "https://tailwindcss.com/blog",
     "https://blog.vuejs.org/",
     "https://dev.to/t/programming",
-    "https://hacker-news.firebaseio.com/v0/topstories.json",
-    "https://snyk.io/blog/",
-    "https://snyk.io/blog/mini-shai-hulud-antv-npm-supply-chain-attack/",
-    "https://snyk.io/blog/durabletask-pypi-supply-chain-attack/",
-    "https://snyk.io/blog/malicious-node-ipc-versions-published-npm/",
-    "https://snyk.io/blog/laravel-lang-supply-chain-advisory/",
-    "https://snyk.io/blog/snyk-remediation-agent-in-the-cli/",
-    "https://snyk.io/blog/continuous-offensive-security/",
-    "https://snyk.io/blog/claude-enterprise-integration-desktop-expansion/",
-    "https://owasp.org/news/",
-    "https://www.quandri.io/engineering-blog/mcp-is-dead",
-    "https://ziglang.org/devlog/2026/"
+    "https://obeli.sk/blog/",
+    "https://www.quandri.io/engineering-blog/",
+    "https://ziglang.org/devlog/2026/",
+    "https://www.liquid.ai/blog/",
+    "https://jackmaguire.org/blog/",
+    "https://www.theverge.com/ai-artificial-intelligence/"
   ],
   "last_updated": "2026-05-30T11:41:00-05:00",
   "rotation_state": {
     "web_dev_frameworks": 1,
     "web_design_ux": 1,
     "hosting_devops": 1,
-    "ai_news": 1,
-    "ai_agents": 1,
+    "ai_news": 2,
+    "ai_agents": 2,
     "design_devops": 1,
-    "security_tools": 2
+    "security_tools": 1
   }
 }
