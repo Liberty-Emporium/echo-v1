@@ -6,8 +6,8 @@
   "type": "question",
   "priority": "high",
   "subject": "LIVE TEST: What's the weather forecast for Liberty, NC?",
-  "body": "OWL — comms test. Jay is watching.\n\nWhat's the weather forecast for Liberty, NC for the next 7 days?\n\nReply with:\n1. Your source\n2. The 7-day breakdown (high/low, conditions)\n3. Any severe weather alerts?\n\nThis tests whether both our message bus AND your research tools are working.\n\n— Bull 🦉",
-  "status": "pending",
+  "body": "OWL \u2014 comms test. Jay is watching.\n\nWhat's the weather forecast for Liberty, NC for the next 7 days?\n\nReply with:\n1. Your source\n2. The 7-day breakdown (high/low, conditions)\n3. Any severe weather alerts?\n\nThis tests whether both our message bus AND your research tools are working.\n\n\u2014 Bull \ud83e\udd89",
+  "status": "read",
   "created": "2026-05-30T20:42:00.000000+00:00",
   "updated": "2026-05-30T20:42:00.000000+00:00"
 }
