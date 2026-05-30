@@ -1,0 +1,27 @@
+[
+  {
+    "title": "No tailwind.config.js in Tailwind CSS v4? Here's What Changed!",
+    "href": "https://javascript.plainenglish.io/no-tailwind-config-js-in-tailwind-css-v4-heres-what-changed-97bb277eeacd",
+    "body": "What Happened to tailwind.config.js? Tailwind CSS v4 brought about a fundamental change in configurations. Rather than needing a separate JavaScript configuration file, Tailwind now enables developers to specify customizations directly in their CSS files."
+  },
+  {
+    "title": "Tailwind CSS v4, Resend, SendGrid, Prisma Multi-File schema, and...",
+    "href": "https://saasrock.fly.dev/blog/saasrock-v1-6-tailwindcss-v4-resend-sendgrid-prisma-multi-file-and-dark-mode",
+    "body": "This release includes updates to Tailwind CSS v4, Resend and SendGrid support, Prisma multi-file schema architecture, and introduces Dark Mode support inside /app routes."
+  },
+  {
+    "title": "Tailwind CSS - Rapidly build modern websites without ever leaving...",
+    "href": "https://tailwindcss.com/",
+    "body": "Tailwind CSS is a utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup."
+  },
+  {
+    "title": "Tailwind CSS v4.3: Scrollbar Styling, Container Sizes, and Stacked...",
+    "href": "https://talkingtech.io/tailwind-css-v4-3-scrollbar-styling-container-sizes-and-stacked-variants/",
+    "body": "Tailwind CSS v4.3 just landed with first-class scrollbar styling, container size read-back via @variant, and stacked compound variants — three features that eliminate custom CSS for modern UI developers. Here's what changed and why you should upgrade."
+  },
+  {
+    "title": "Tailwind CSS v4.3: Native Scrollbars, Webpack 2x Faster, New Palettes",
+    "href": "https://byteiota.com/tailwind-css-v4-3-scrollbars-webpack-faster/",
+    "body": "Tailwind CSS v4.3 shipped May 8 and the scrollbar utilities alone make it worth upgrading. The release also brings a 2x faster webpack build path and four new neutral-adjacent color palettes. No migration pain — it’s a minor release."
+  }
+]
