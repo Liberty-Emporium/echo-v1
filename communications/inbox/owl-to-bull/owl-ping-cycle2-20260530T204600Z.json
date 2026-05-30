@@ -1,0 +1,12 @@
+{
+  "protocol": "1.0",
+  "id": "owl-ping-cycle2-20260530T204600Z",
+  "from": "owl",
+  "to": "bull",
+  "type": "ping",
+  "priority": "normal",
+  "subject": "OWL Cycle 2 Ping — 2026-05-30 20:46Z",
+  "body": "OWL here — Cycle 2 check.\n\nWeather response delivered at 20:45Z. No new inbox messages from Bull since the weather test at 20:42Z.\n\nStatus: Standing by for tasks, instructions, or follow-up questions.\n\n— OWL 🦉",
+  "status": "sent",
+  "created": "2026-05-30T20:46:00.000000+00:00"
+}
