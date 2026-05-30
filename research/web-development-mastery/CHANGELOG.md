@@ -4,6 +4,205 @@
 
 ---
 
+## 2026-05-30 — Hosting & DevOps Platform Updates (Run 1)
+
+### Railway
+
+- **[Railway] V3 Platform — Faster and Cheaper (announced early 2026)**
+  - Major infrastructure rewrite: simultaneously decreased cost and increased performance
+  - New Architecture View for visualizing service topology
+  - Focused PR environments for cleaner code review workflows
+
+- **[Railway] $100M Series B raised (January 2026)**
+  - Significant funding round signaling strong growth trajectory
+
+- **[Railway] Railway Agent & AI Features (April–May 2026)**
+  - Railway Agent: AI-powered deployment assistance and infrastructure management
+  - Agent sandbox with HA static egress (May 22)
+  - GitHub org guardrails for team safety (May 22)
+  - Remote MCP support for agent integrations (April 17)
+  - One-command skills install (April 17)
+  - Agent Skill 2.0 with smart diagnosis (February 27)
+  - Volume browser in CLI, in-browser shell, file browser for buckets (May 29)
+  - Railway Agent in the CLI (April 17)
+
+- **[Railway] Storage & Databases (March–May 2026)**
+  - Postgres Point-in-Time Recovery (PITR) support (May 15)
+  - One-click HA Postgres with read replicas (March 13, improved March 27)
+  - Undoable volume deletes (May 1)
+  - Zero-downtime volume resizing (January 30)
+  - Buckets in CLI (March 13)
+  - Queries for all databases (March 20)
+
+- **[Railway] CLI & Developer Tools (April–May 2026)**
+  - CLI metrics dashboard (May 15)
+  - Railway scale TUI for resource management (May 8)
+  - Skip rebuilds optimization (April 3)
+  - Better CLI experience (April 3, April 17)
+  - Unified template search (May 8)
+  - Auto-deploy toggle (May 1)
+  - Easy agent setup (May 8)
+  - railway dev TUI (December 2025)
+
+- **[Railway] Networking & Security (February–May 2026)**
+  - Standard SSH support (May 1)
+  - IPv6 support (April 24)
+  - DDoS protection (February 20)
+  - One-click CDN setup (March 27)
+  - Magic domains with automatic TLS (February 6)
+  - Deploy-less horizontal scaling (February 6)
+  - Enforce 2FA option (January 16)
+  - Network flows visibility (February 13)
+  - Singapore Buckets (January 16)
+
+- **[Railway] Dashboard & UX (January–May 2026)**
+  - New dashboard layout with improved navigation (March 20)
+  - DNS management built into dashboard (March 20)
+  - Buy domains directly on Railway (March 6)
+  - AI Agent Panel (March 6)
+  - Chat with your Canvas — conversational infrastructure (February 13)
+  - Login with Railway OAuth (January 30)
+  - DB Metrics dashboard (February 13)
+  - Smart diagnosis for troubleshooting (March 20)
+
+### Vercel
+
+- **[Vercel] Function Invocation Billing Change (May 29, 2026)**
+  - Moving from package-based to per-unit pricing for Pro and new Enterprise customers
+  - New rate: $0.0000006 per invocation (same effective rate as $0.60/1M but smoother scaling)
+  - Pro teams benefit: function invocations no longer rapidly consume monthly usage credits
+  - Existing customers keep current rate until end of billing cycle
+
+- **[Vercel] Docker in Sandbox (May 29, 2026)**
+  - Vercel Sandbox now supports installing and running Docker containers inside sandbox environments
+  - Agents can build containers, install system packages, modify files without touching host system
+  - Use cases: running Redis/Postgres as test dependencies, validating container images, previewing containerized apps
+  - Persistent sandboxes carry Docker installations between sessions
+  - Also added: FUSE filesystem drivers and VPN client support in sandboxes
+
+- **[Vercel] Agentic Infrastructure (April 2026)**
+  - 30% of deployments now agent-initiated (up 1000% from 6 months ago)
+  - Claude Code = 75% of agent deployments, Lovable/v0 = 6%, Cursor = 1.5%
+  - AI SDK 6 adds agent abstraction layer
+  - Agent-deployed projects are 20x more likely to call AI inference provider than human-deployed
+  - Vision: "Infrastructure that is itself agentic" — platform auto-investigates anomalies, performs root-cause analysis
+
+- **[Vercel] Next.js Across Platforms: Adapter API (March 2026)**
+  - Stable Adapter API: typed, versioned build output description that any platform can target
+  - Shared test suite for every adapter, including Vercel's
+  - Multi-platform collaboration with OpenNext, Netlify, Cloudflare, AWS Amplify, Google Cloud
+  - Verified adapters as open-source, community-owned under the Next.js org
+  - Ecosystem Working Group for coordinating changes across providers
+
+### Netlify
+
+- **[Netlify] Claude Opus 4.8 in AI Gateway & Agent Runners (May 28, 2026)**
+  - Anthropic's Claude Opus 4.8 now available through Netlify AI Gateway and Agent Runners
+  - Zero configuration required — use Anthropic SDK directly in Netlify Functions
+  - Automatic caching, rate limiting, and auth infrastructure provided
+  - Available for all Function types and Agent Runners
+
+- **[Netlify] Gemini 3.5 Flash in Agent Runners (May 20, 2026)**
+  - Google's Gemini 3.5 Flash model now available via Agent Runners
+  - Zero configuration required
+
+- **[Netlify] Build Plugin Node.js Support (May 21, 2026)**
+  - End of support for Node.js 18 and Node.js 20 in build plugins
+  - Both versions have reached official end of life
+  - Teams should upgrade to Node.js 22+ for build plugins
+
+- **[Netlify] Nuxt Security Update (May 19, 2026)**
+  - Four security vulnerabilities disclosed in Nuxt framework
+  - Netlify customers advised to update Nuxt dependencies
+
+### Render
+
+- **[Render] Dedicated Outbound IPs (May 19, 2026)**
+  - Pro workspaces and higher can create dedicated IP sets for outbound traffic
+  - Each set includes 3 IPv4 addresses in a single region
+  - Scope to entire workspace or specific environments
+  - Cost: $100/month per IP set
+  - Use case: simplify allowlisting with external providers
+
+- **[Render] Service Repo/Image Change in Dashboard (May 11, 2026)**
+  - Can now change an existing service's backing Git repo or Docker image via dashboard (previously required API)
+  - Automatically triggers deploy with new source
+  - Note: cannot change service type (web service ↔ static site)
+
+- **[Render] Python Build Optimization (April 30, 2026)**
+  - Median build time for Python services reduced by 27%
+  - Optimizations: tuned chunk size/parallelism for image uploads, on-disk Python version caching, universal layer sharing
+  - Before: 76 seconds median → After: 55 seconds median
+
+- **[Render] Workspace Plan Updates (April 23, 2026)**
+  - New workspace plans rolled out: Hobby (free), Pro, Team, Enterprise
+  - Legacy plans mapped to new equivalents for scalability
+  - More scalable pricing for growing teams
+
+- **[Render] CLI & SDK Updates**
+  - Render CLI v2.19.0 (May 28, 2026)
+  - Python SDK BETA v0.6.1 (April 7, 2026)
+  - TypeScript SDK BETA v0.5.1 (April 7, 2026)
+
+- **[Render] Render Conference 2026**
+  - Render hosting a conference in San Francisco on June 18, 2026
+
+### Fly.io
+
+- **[Fly.io] "Our Best Customers Are Now Robots" trend (early 2026)**
+  - Significant growth in AI/automated agents deploying on Fly.io
+  - Reflects shift toward autonomous infrastructure management
+
+- **[Fly.io] Litestream v0.5.0 (early 2026)**
+  - Major Litestream release: SQLite replication to S3-compatible storage
+  - Litestream Writable VFS for direct SQLite sync to object storage
+  - Enables durable, serverless-friendly SQLite
+
+- **[Fly.io] Sprites platform updates (early 2026)**
+  - New lightweight VM abstraction layer for faster container-to-VM conversion
+  - Performance optimization for Fly's core container-to-VM pipeline
+  - Design & implementation deep dive published
+
+- **[Fly.io] MCP Server Ecosystem (early 2026)**
+  - "Unfortunately, Sprites Now Speak MCP" — MCP protocol support added to Sprites
+  - "Launching MCP Servers on Fly.io" — guide for deploying MCP servers
+  - "Provisioning Machines using MCPs" — MCP-driven infrastructure provisioning
+  - Kurt Mackey's "30 Minutes with MCP and flyctl" practical guide
+
+- **[Fly.io] AI/ML on Fly.io (early 2026)**
+  - Phoenix.new: Remote AI Runtime for Phoenix by Chris McCord
+  - MorphLLM guide for building better AI agents on Fly.io
+  - Trust calibration frameworks for AI software builders
+  - AI Town 1-click deploy for model evaluation via simulation
+  - "The Future Isn't Model Agnostic" — Daniel Botha on AI strategy
+
+- **[Fly.io] Engineering Deep Dives (early 2026)**
+  - "Corrosion" — Thomas Ptacek & Pavel Borzenkov's deep dive on Fly's Rust-based proxy internals
+  - "Taming A Voracious Rust Proxy" by Peter Cai — production proxy tuning
+  - "parking_lot" — technical writeup of Fly's core container scheduling
+  - "Code And Let Live" by Kurt Mackey on system design philosophy
+
+- **[Fly.io] Kamal 2.0 in Production (early 2026)**
+  - Sam Ruby's guide to using Kamal 2.0 (DHH's deploy tool) on Fly.io
+  - Alternative to Heroku-style deploys for Rails apps
+
+### Industry Trends (Hacker News & Dev News, May 2026)
+
+- **[Trend] MCP Protocol under scrutiny**: "MCP is dead?" post garners 201 points, 176 comments — active debate about Model Context Protocol's viability as standard
+- **[Trend] SQLite resurgence**: "SQLite is all you need for durable workflows" hits #1 on HN (499 pts, 253 comments) — signals return to simplicity in infrastructure
+- **[Trend] AI infrastructure in C++**: "Tiny vLLM — high performance LLM inference in C++ and CUDA" (137 pts) — demand for low-level inference optimization
+- **[Trend] TypeScript native compilation**: "Perry compiles TypeScript directly to executables using SWC and LLVM" (79 pts)
+- **[Trend] AI home robotics data**: "Shift cleans homes for free to train future robots" (131 pts) — real-world training data collection business models
+- **[Trend] AI frontend concerns**: "Is AI causing a repeat of frontend's lost decade?" (334 pts, 288 comments) — deep community concern about AI-generated code quality
+- **[Trend] Liquid AI MoE**: Liquid AI reveals 8B-A1B Mixture-of-Experts model trained on 38T tokens (182 pts)
+- **[Trend] OpenRouter Hy3**: Mysterious Hy3 LLM topping OpenRouter rankings by large margin (127 pts)
+- **[Trend] GTA 6 devs unionize**: Labor movement in game dev (668 pts — highest on HN that day)
+- **[Trend] Ember.js 7.0**: Major version release of the veteran JS framework
+- **[Trend] Open-source security cameras**: Show HN for end-to-end encrypted home security (55 pts) — privacy-focused self-hosting
+- **[Trend] AI job market shifts**: "The Last Technical Interview" by Steve Yegge (104 pts) — changing hiring landscape
+
+---
+
 ## 2026-05-30 — Design Systems Update (Run 1: Material 3, Apple HIG, Fluent UI)
 
 ### Material Design 3 — M3 Expressive
@@ -136,4 +335,3 @@
 - **Platform portability**: Next.js Adapter API formalizes multi-cloud deployment
 - **Ghostty** (terminal emulator) leaving GitHub — signals growing discontent with Microsoft's GitHub platform
 - **AI slop critique growing**: Community pushing back on low-quality AI-generated frontend code
-

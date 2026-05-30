@@ -1,29 +1,36 @@
 {
   "run_count": 1,
   "topics_covered": [
-    "design-systems-material3-expressive",
-    "design-systems-apple-hig-liquid-glass",
-    "design-systems-fluent-ui-2",
-    "design-trends-cross-industry-2026"
+    "agent_frameworks_tooling",
+    "openai_codex_windows_computer_use",
+    "microsoft_ai_super_app_autopilot",
+    "mcp_protocol_debate_security",
+    "mistral_vibe_unified_agent",
+    "mistral_search_toolkit",
+    "mistral_mcp_studio_connectors",
+    "mistral_physics_ai_industrial",
+    "arxiv_agent_safety_retrieval",
+    "arxiv_genesisfunc_function_calling",
+    "arxiv_agent_evaluation_benchmarks",
+    "arxiv_agentguard_access_control"
   ],
   "sources_scraped": [
-    "https://m3.material.io/",
-    "https://developer.apple.com/design/human-interface-guidelines/",
-    "https://fluent2.microsoft.design/",
-    "https://www.figma.com/blog/",
-    "https://www.nngroup.com/articles/",
-    "https://www.smashingmagazine.com/",
-    "https://css-tricks.com/",
-    "https://web.dev/"
+    "arxiv_cs_ai",
+    "hacker_news",
+    "techcrunch_ai",
+    "the_verge_ai",
+    "mistral_blog"
   ],
-  "last_updated": "2026-05-30",
+  "last_updated": "2026-05-30T08:17:00Z",
   "rotation_state": {
     "web_dev_frameworks": 0,
-    "web_design_ux": 1,
+    "web_design_ux": 0,
     "hosting_devops": 0,
     "ai_news": 0,
-    "ai_agents": 0,
+    "ai_agents": 1,
     "design_devops": 0,
     "security_tools": 0
-  }
+  },
+  "current_focus": "agent_frameworks_tooling",
+  "next_focus": "multi_agent_orchestration_patterns"
 }

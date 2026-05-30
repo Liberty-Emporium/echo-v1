@@ -1,70 +1,78 @@
-# Echo V1 — Web Dev & AI Research Changelog
+# AI Agents Research Changelog
+
+## Run 1 — 2026-05-30 — Agent Frameworks & Tooling Updates
+
+### Industry News
+
+**OpenAI Codex expands to Windows with computer use**
+OpenAI's Codex agent now supports Windows, bringing screen-seeing/task-completing "computer use" to Windows users. Manage Codex jobs remotely via the ChatGPT app.
+Source: The Verge, May 29
+
+**Microsoft building AI "super app" with agentic Autopilot**
+Microsoft reportedly combining GitHub Copilot, Copilot chatbot, Copilot Cowork, and a new agentic workflow "Autopilot" into one unified platform. Expected reveal at Microsoft Build next week.
+Source: The Verge / Fortune, May 29
+
+**MCP is dead? — Hot debate on HN (201 pts, 176 comments)**
+The Model Context Protocol faces existential questioning on Hacker News. Key tension: MCP servers let AI agents interact with databases/APIs but security scanners keep finding hardcoded keys, SQL injection, wildcard permissions. Meanwhile new MCP tools (pdfnative-MCP, mcp-security-auditor) show the ecosystem is still growing.
+Source: Hacker News, May 2026
+
+**OpenAI sunsetting ChatGPT Canvas for GPT-5.5**
+OpenAI drops the side-by-side editing Canvas interface for its latest models, signaling a shift toward more agent-native interaction patterns rather than human-in-the-loop editing tools.
+Source: The Verge, May 29
 
 ---
 
-## 2026-05-30 — Quick Web Dev Check (HN + GitHub Trending + Vercel Blog)
+### Mistral AI Now Summit 2026 (Major Event)
 
-### Hacker News Top Stories
+**Vibe: Unified Agent for Long-Horizon Productivity**
+Mistral launched Vibe — a single agent for multi-step work spanning inbox/calendar management, deep research, drafting, and coding. Powered by Mistral Medium 3.5. Includes a VS Code extension and runs across web, editor, and terminal.
+Source: Mistral Blog, May 28
 
-1. **SQLite is all you need for durable workflows** (obeli.sk) — 499 pts, 252 comments
-   - Argues SQLite can replace complex workflow engines for durable execution. Lightweight, file-based, battle-tested. Strong community discussion.
+**Search Toolkit for Agents**
+Mistral released production-ready search pipelines for agent applications, enabling robust RAG and web search capabilities.
+Source: Mistral Blog, May 28
 
-2. **MCP is dead?** (quandri.io) — 200 pts, 176 comments
-   - Hot take questioning whether Model Context Protocol has staying power. Sparked massive debate — MCP tooling is still early but rapidly evolving.
+**MCP Connectors in Studio**
+Mistral Studio now supports built-in and custom MCP connectors for enterprise data with direct tool calling and human-in-the-loop approval controls.
+Source: Mistral Blog, May 22
 
-3. **Perry: Compiles TypeScript directly to executables using SWC + LLVM** (perryts.com) — 79 pts, 62 comments
-   - New tool that bypasses Node.js entirely — compiles TS → native binaries via SWC (Rust-based TypeScript parser) + LLVM backend. Could change TS deployment story.
+**Physics AI + Industrial Engineering Stack**
+Mistral acquired Emmi for scientific AI capabilities. Partnerships with Airbus (flight safety + aircraft design), BMW Group ("Large Industry Model" for crash simulation), and ASML (semiconductor design optimization) for physics-grounded AI agents.
+Source: Mistral Blog, May 27
 
-4. **Notes from the Mistral AI Now Summit** (koenvangilst.nl) — 357 pts, 142 comments
-   - Detailed recap of Mistral's latest announcements. Covers new model releases, API changes, and Mistral's positioning vs OpenAI/Anthropic.
+---
 
-5. **The dead economy theory** (owenmcgrann.com) — 948 pts, 1096 comments
-   - Viral HN top post about economic "zombification" — businesses that can't die or grow. Massive engagement.
+### Responsible AI / Culture
 
-6. **Algebraic Effects for the Rest of Us** (overreacted.io) — 24 pts, 10 comments
-   - Dan Abramov-style deep dive on algebraic effects in programming languages. Relevant to error handling patterns in JS/TS.
+**Coders refusing to work without AI (TechCrunch)**
+Cultural shift in software development: AI coding tools becoming mandatory in workflows. Raises questions about skill atrophy.
+Source: TechCrunch, May 29
 
-7. **Snowboard Kids 2 is 100% Decompiled** (blog.chrislewis.au) — 174 pts, 64 comments
-   - Retro gaming / reverse engineering win. Full N64 decompilation. Impressive preservation work.
+**Cognition (Devin) CEO: AI coding agents shouldn't replace humans**
+Scott Wu advocates human-AI collaboration model rather than full automation of coding work.
+Source: TechCrunch, May 29
 
-8. **Shift will clean homes for free to train future robots** (theverge.com) — 129 pts, 183 comments
-   - Robot training data via real-world home cleaning. Controversial — free labor for data collection.
+---
 
-9. **A new register allocator for ZJIT** (railsatscale.com) — 27 pts
-   - Ruby JIT internals. Performance improvements for Rails apps.
+### Academic Research (arXiv cs.AI, May 2026)
 
-### GitHub Trending (Today)
+- **Relevance as a Vulnerability** (arXiv:2605.29224) — Web retrieval tools can degrade LLM agent safety alignment. Critical finding for tool-use framework security.
+- **GenesisFunc** (arXiv:2605.28835, ACL 2026) — Multi-agent system for generating training data for function-calling. Improves accuracy and generalization.
+- **Memory-Controlled Benchmark for Trading Agents** (arXiv:2605.28359) — New evaluation benchmark for LLM trading agents with explicit memory control.
+- **When Does Memory Help Tool-Use Agents?** (arXiv:2605.28224) — Studies conditions under which memory mechanisms improve multi-trajectory inference for tool-use agents.
+- **AgentGuard** (arXiv:2605.28071) — Attribute-based access control framework for tool-use LLM agents. Security-first approach to agent permissions.
+- **Unified Evaluation Framework** (arXiv:2605.27898) — Comprehensive framework for evaluating LLM agentic capabilities across tasks.
+- **Bounding Compositional Incoherence** (arXiv:2605.30335, ICML 2026) — Studies how multi-component LLM agents produce globally incoherent outputs despite local coherence.
 
-| Repo | Stars | Description |
-|------|-------|-------------|
-| harry0703/MoneyPrinterTurbo | 70.6k ⭐ (+3,567 today) | AI-powered short video generation — one-click viral videos |
-| microsoft/markitdown | 130.6k ⭐ (+1,873 today) | Convert files/office docs to Markdown (Python) |
-| Leonxlnx/taste-skill | 28.5k ⭐ (+2,062 today) | "Taste" skill for AI — stops generic/boring AI output |
-| EveryInc/compound-engineering-plugin | 18.2k ⭐ (+353 today) | Plugin for Claude Code/Codex/Cursor — compound engineering workflow |
-| twentyhq/twenty | 48.5k ⭐ (+578 today) | Open-source CRM, AI-native — Salesforce alternative |
-| anthropics/claude-code | 128k ⭐ (+395 today) | Agentic coding tool in terminal — trending hard |
-| cursor/plugins | 1.3k ⭐ (+134 today) | Official Cursor plugin spec + plugins |
-| run-llama/liteparse | 7.5k ⭐ (+701 today) | Fast open-source document parser |
-| galilai-group/stable-worldmodel | 1.3k ⭐ | Platform for world model research |
-
-### Vercel Blog — Featured: "Agentic Infrastructure"
-
-**Author:** Tom Occhino | **Date:** Apr 9
-
-Key points from Vercel's vision for agentic infrastructure:
-- **30% of Vercel deployments** are now initiated by coding agents (up 1000% in 6 months)
-- Claude Code = 75% of agent deployments, Lovable/v0 = 6%, Cursor = 1.5%
-- Three pillars: (1) Infrastructure for coding agents to deploy, (2) Infrastructure for building/running agents, (3) Infrastructure that is itself agentic
-- AI SDK 6 adds agent abstraction
-- AI Gateway: single endpoint for hundreds of models with routing/failover
-- Fluid compute designed for AI workload shapes
-- Sandbox for isolated untrusted code execution
-- Observability with agent tracing + proposed auto-remediation
+---
 
 ### Key Takeaways
-- AI coding agents are no longer niche — they're 30% of deployments on Vercel
-- MCP debate is heating up — protocol fatigue vs genuine utility?
-- TypeScript→native compilation (Perry) could reshape TS deployment
-- "Taste" skill repo trending — quality control for AI output is a growing concern
-- SQLite for workflows — simplicity win over heavy orchestration
-- Open-source CRM (Twenty) going AI-native — enterprise SaaS disruption
+
+1. **Agent tooling is consolidating** — Microsoft's "super app," Mistral's Vibe, and OpenAI's Codex all point toward unified multi-tool agent platforms
+2. **MCP under scrutiny** — The dominant agent tool protocol faces both growth (new servers) and criticism (security concerns, "MCP is dead?")
+3. **Safety is catching up** — Multiple papers address agent safety vulnerabilities from tool access, showing the field is maturing beyond pure capability
+4. **Enterprise agent adoption accelerating** — Airbus, BMW, ASML partnerships signal industrial-grade agent deployment is happening now
+
+---
+
+*Next run focus: Multi-agent orchestration patterns*
