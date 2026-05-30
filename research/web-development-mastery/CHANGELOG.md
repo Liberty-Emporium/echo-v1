@@ -335,3 +335,102 @@
 - **Platform portability**: Next.js Adapter API formalizes multi-cloud deployment
 - **Ghostty** (terminal emulator) leaving GitHub — signals growing discontent with Microsoft's GitHub platform
 - **AI slop critique growing**: Community pushing back on low-quality AI-generated frontend code
+
+---
+
+## 2026-05-30 — Run 2: Color, Typography & Visual Design Trends (2025–2026)
+
+### 🎨 Color Trends
+
+#### `contrast-color()` — The End of Manual Accessibility (Smashing, May 28, 2026)
+- **70% of websites still fail basic WCAG contrast checks in 2025** — despite years of tooling
+- CSS `contrast-color()` is the breakthrough: automatic, algorithmic theming that self-corrects contrast
+- Eliminates the need for JS contrast libraries and manual color token definitions
+- Enables **algorithmic theming engines**: define a base color, CSS handles accessible foreground/background pairs automatically
+- Part of a larger CSS-native approach: `color-mix()`, `light-dark()`, and `contrast-color()` together form a complete theming toolkit
+
+#### Pastel Colors Dominate Dribbble Curated Collections (May 2026)
+- Pastel colors featured as a **top curated collection** on Dribbble with 152+ saves
+- Signals a shift away from the ultra-vibrant/saturation toward softer, more refined palettes
+- Trend visible in luxury branding: "Velora | Luxury Brand Identity" uses soft, pastel-forward palettes
+- Reconcilable with M3 Expressive's "vibrant colors" — the trend is toward **intentionality**: either boldly expressive OR softly refined, anything in-between is fading
+
+#### Apple's Liquid Glass Color Philosophy (2026 iOS 26 era)
+- Liquid Glass propagates **Adaptive Color** through tinted glass layers
+- Color is now computed dynamically from underlying content, not hard-coded
+- Designers define "tint hue" and the system handles hierarchy, depth, and contrast
+- Sets expectation: users will increasingly expect interfaces to **derive color from context**, not display fixed palettes
+
+#### Fluent 2 Color Tokens (Microsoft, 2026)
+- Cross-platform design token system for **adaptive color**
+- AI-assisted color generation: Fluent 2 documentation shows patterns for programmatically generating accessible palettes
+- Emphasis on: one token → multiple modes (light/dark/high-contrast) computed automatically
+
+### ✒️ Typography Trends
+
+#### Geometric Sans Serifs Dominate Behance Trending (May 2026)
+- "Method — Geometric Sans Serif Font" (237 appreciations, 4,495 views) — top typography project
+- "Circle NG — Geometric Sans Serif Font" (44 appreciations, 608 views)
+- Geometric sans (circles-based letterforms, clean geometry) is the dominant **new type trend** for branding and UI
+- Driven by: AI/tech branding needs → geometric signals "modern, intelligent, precise"
+
+#### Warm Soft Serifs Counter-Trend
+- "Softcore — Warm Soft Serif Font" (63 appreciations, 1,054 views) on Behance
+- Represents a growing **serif revival** for brands wanting warmth, humanity, and premium feel
+- Particularly strong in: editorial, luxury, wellness, food/beverage verticals
+- The trend is: **serifs for emotion, sans-serifs for clarity** → purposeful type pairing
+
+#### Apple HIG 2026: Emphasized Dynamic Type
+- Added **emphasized weights** to Dynamic Type specifications per platform
+- Designers can now semantically emphasize text without changing font size → better accessibility
+- Variable fonts (especially Google Sans Flex in M3) enable **fluid typography scales** that adapt to screen size
+
+#### Typography-Driven CSS
+- CSS `letter-spacing` creative text effects (Revealing Text, May 2026 CSS-Tricks) shows renewed interest in **micro-typography control**
+- The missing `::nth-letter()` pseudo-element remains highly requested — signals the community wants per-character CSS control
+- `::first-letter` and `letter-spacing` workarounds are the current state-of-the-art
+- **Variable fonts** becoming the default: Flex axes allow one font file to serve multiple weights, widths, and optical sizes
+
+### 🖥️ 2025–2026 Visual Design Trends Summary
+
+#### From the Awwwards Sites of the Day (May 2026)
+- **ZettaJoule** (Site of the Day, May 30): WebGL-heavy, immersive, dark theme, electric/high-contrast
+- **Cartier Watches & Wonders 2026**: Spatial 3D, cinematic scroll-triggered animations, ultra-premium
+- **Razorpay Sprint 26**: Clean SaaS aesthetic, subtle gradients, modern dashboard patterns
+- **Travel Guide iOS App**: Mobile-first, clean card layouts, generous whitespace
+- Key pattern: **extremes** — sites are going either **very immersive/luxury** or **very clean/functional**
+
+#### The Immersive vs. Functional Split
+- Top web design is polarizing into two camps:
+  1. **Immersive/Cinematic**: WebGL, 3D, scroll-driven narratives, spatial interactions
+  2. **Clean/Functional**: Bento grids, card layouts, whitespace, fast-loading
+- Middle-ground "corporate bland" is being replaced by strong personality in either direction
+- Framer (advertising on Dribbble) positions itself as the tool for the immersive camp
+
+#### Bento Grids Evolving
+- Apple-style bento grids remain dominant but are **maturing**: from novelty → standard
+- New pattern: **bento + asymmetry** — mixing grid sizes unpredictably for visual interest
+- Combined with **internal carousels** inside bento cells for dense information display
+
+#### Glass & Depth Evolution
+- Glassmorphism (2021–2023) evolved into **Liquid Glass** (Apple) and **Expressive Depth** (Material)
+- 2026 approach: depth layers are **physically simulated** (refraction, light bending) not just blur
+- Performance cost is managed via `backdrop-filter: blur()` with carefully bounded rendering areas
+
+#### Scroll-Linked Narratives
+- Figma Make expansion (May 28, 2026): designing with code locally → signals **generated/parametric layouts** are coming to mainstream
+- CSS scroll-timeline and view-timeline are reaching production readiness
+- Cross-document View Transitions (CSS-Tricks, May 2026): **scaling page transitions across hundreds of elements**
+- Config 2026 speakers interrogating "craft, quality, and intention" in AI-powered world
+
+#### Color in AI-Generated Design
+- NNG: "Practical Interface Patterns for AI Transparency (Part 2)" (May 2026) — interface patterns for AI systems
+- **AI-augmented design is now embedded in all major tools** (Figma Design Agent, Fluent AI patterns, AI SDK 6)
+- Color trend impact: AI systems need **systematic color** (tokens, not magic numbers) to produce coherent generate output
+- The more AI generates UIs, the more important design-system color tokens become
+
+#### Minimalism ≠ Boring (2026 Evolution)
+- NN/G's "Small by Design: The Strength of Lean Design-System Teams" (May 15, 2026) → lean, focused design systems
+- CSS `sibling-index()` and `sibling-count()` (May 2026 Smashing) → complex layouts from minimal CSS, no JS
+- Trend: **less tooling, more CSS-native power** → simpler codebases, more expressive results
+- 70% WCAG failure rate suggests teams are still **under-investing in basic accessibility** while chasing visual trends

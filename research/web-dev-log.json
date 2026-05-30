@@ -1,5 +1,5 @@
 {
-  "run_count": 3,
+  "run_count": 4,
   "topics_covered": [
     "hosting_devops_run1",
     "railway_updates",
@@ -30,7 +30,21 @@
     "github-trending-may-2026",
     "hn-top-stories-may-2026",
     "react-server-components-performance",
-    "turbopack-updates-16-2"
+    "turbopack-updates-16-2",
+    "color-trends-contrast-color-css",
+    "color-trends-pastel-dominance-2026",
+    "color-trends-liquid-glass-adaptive",
+    "color-trends-fluent2-tokens",
+    "typography-trends-geometric-sans-2026",
+    "typography-trends-warm-soft-serif-revival",
+    "typography-trends-dynamic-type-emphasis",
+    "typography-trends-css-micro-typography",
+    "visual-trends-immersive-vs-functional-split",
+    "visual-trends-bento-grids-maturing",
+    "visual-trends-glass-depth-evolution",
+    "visual-trends-scroll-linked-narratives",
+    "visual-trends-ai-generated-design-color",
+    "visual-trends-minimalism-evolution-2026"
   ],
   "sources_scraped": [
     "railway.app/changelog",
@@ -55,12 +69,15 @@
     "https://svelte.dev/blog",
     "https://tailwindcss.com/blog",
     "https://blog.vuejs.org/",
-    "https://dev.to/t/programming"
+    "https://dev.to/t/programming",
+    "https://www.awwwards.com/",
+    "https://dribbble.com/",
+    "https://www.behance.net/"
   ],
-  "last_updated": "2026-05-30T04:22:00-05:00",
+  "last_updated": "2026-05-30T11:41:00-05:00",
   "rotation_state": {
     "web_dev_frameworks": 1,
-    "web_design_ux": 1,
+    "web_design_ux": 2,
     "hosting_devops": 1,
     "ai_news": 1,
     "ai_agents": 1,
