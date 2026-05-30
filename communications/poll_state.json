@@ -434,8 +434,10 @@
     "owl-ping-cycle2-20260530T062700Z.json",
     "owl-ping-cycle1-20260610T0321Z.json",
     "owl-ping-cycle1-20260530T181954Z",
-    "owl-ping-cycle1-20260530T181954Z.json"
+    "owl-ping-cycle1-20260530T181954Z.json",
+    "owl-ping-cycle2-20260530T182219Z",
+    "owl-ping-cycle2-20260530T182219Z.json"
   ],
-  "last_poll": "2026-05-30 14:21:49",
-  "iteration": 7
+  "last_poll": "2026-05-30 14:23:57",
+  "iteration": 8
 }
