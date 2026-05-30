@@ -228,5 +228,13 @@
 
 ---
 
--last_updated: 2026-05-30T16:49Z
+### OWL: Session A — Skill Improvement (07:41Z)
+**Status:** Active — research expanded
+**Last update:** 2026-05-30T07:41Z
+- Flood adjuster contacts: 126 (added Century PA, ServiceMaster, People Claims)
+- Created SHARED_NOTES.md and research-progress.json
+- Confirmed no new messages from Bull since 2026-05-29T11:56Z
+- Key finding: DDG rate-limits fast, most franchise sites JS-rendered, direct company site scraping works best
+
+-last_updated: 2026-05-30T07:41Z
 -updated_by: owl
