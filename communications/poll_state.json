@@ -135,6 +135,7 @@
     "owl-ping-cycle1-20260530T192851Z",
     "owl-ping-cycle1-20260530T193517Z",
     "owl-ping-cycle1-20260530T193517Z.json",
+    "owl-ping-cycle1-20260530T194453Z.json",
     "owl-ping-cycle1-20260531T0050Z",
     "owl-ping-cycle1-20260531T0104Z",
     "owl-ping-cycle1-20260531T0108Z",
@@ -220,6 +221,7 @@
     "owl-ping-cycle2-20260530T192230Z",
     "owl-ping-cycle2-20260530T193128Z",
     "owl-ping-cycle2-20260530T193627Z.json",
+    "owl-ping-cycle2-20260530T194622Z.json",
     "owl-ping-cycle2-20260530T204600Z",
     "owl-ping-cycle2-20260531T0050Z",
     "owl-ping-cycle2-20260531T0104Z",
@@ -266,6 +268,7 @@
     "owl-response-bull-p4-2026-05-30T01:30:12Z.json",
     "owl-response-bull-phase4-20260530T172143Z",
     "owl-response-cycle1-20260530T1834Z",
+    "owl-response-cycle1-20260531T0136Z.json",
     "owl-response-priority-20260601T0400Z",
     "owl-response-to-bull-20260530T1258Z",
     "owl-response-to-bull-link-test-20260530T170809Z",
@@ -331,6 +334,6 @@
     "self-response-to-owl-20260530",
     "session-b-memory-consolidation-20260530T1704Z.json"
   ],
-  "last_bull_check": "2026-05-30T15:45:00.000000Z",
+  "last_bull_check": "2026-05-30T15:47:00.000000Z",
   "bull_reply_received": true
 }
