@@ -56,8 +56,8 @@
       "infoq.com/development"
     ],
     "keyFindings": {
-      "bun": "v1.3.14 — Bun.Image built-in API, 7x faster warm installs, experimental HTTP/2+HTTP/3 in fetch() and Bun.serve(), FreeBSD/Android builds, Windows ARM64, production-ready runtime",
-      "deno": "v2.8 — import defer, 6 new subcommands, 3.66x faster npm installs, Deno Deploy GA, Claw Patrol agent firewall open-sourced, Deno Sandbox for untrusted code, better Node.js compat",
+      "bun": "v1.3.14 \u2014 Bun.Image built-in API, 7x faster warm installs, experimental HTTP/2+HTTP/3 in fetch() and Bun.serve(), FreeBSD/Android builds, Windows ARM64, production-ready runtime",
+      "deno": "v2.8 \u2014 import defer, 6 new subcommands, 3.66x faster npm installs, Deno Deploy GA, Claw Patrol agent firewall open-sourced, Deno Sandbox for untrusted code, better Node.js compat",
       "nodejs": "v24.16 LTS / v26.2 Current, stable enterprise choice, native Fetch replacing Axios, OpenJS Foundation governance",
       "edgeComputing": "Vercel: 30% of deployments are AI-agent-driven (up 1000%), Cloudflare Workers + D1 + Durable Objects maturing as most complete edge platform, Deno Deploy generally available",
       "vercelAgentic": "Three-layer agentic infrastructure model, AI SDK 6 with agent abstraction, Fluid compute for AI workloads, Sandbox for untrusted code, Workflows/Queues for state management",
@@ -100,10 +100,10 @@
     "keyFindings": {
       "agenticDeployments": "30% of Vercel deployments now from AI agents (up 1000%), Claude Code 75%, Lovable+v0 6%, Cursor 1.5%. Agent-deployed projects 20x more likely to use AI inference.",
       "agenticInfrastructure": "Three-layer model: (1) deployment surfaces for agents, (2) AI primitives (AI SDK 6, AI Gateway, Fluid Compute, Workflows, Sandbox), (3) self-healing infrastructure",
-      "inferenceTheft": "New attack vector — stolen AI inference resold via OpenAI-compatible adapters. Chipotlai Max targets Chipotle, Home Depot, etc. Per-request bot verification (BotID) required.",
+      "inferenceTheft": "New attack vector \u2014 stolen AI inference resold via OpenAI-compatible adapters. Chipotlai Max targets Chipotle, Home Depot, etc. Per-request bot verification (BotID) required.",
       "vercelWorkflows": "GA April 2026, 100M+ runs in beta, 200K npm downloads/week, Python SDK in beta, Workflows 5 coming with concurrency controls and global deployment",
       "claudeCode": "Dominant agentic tool (75% share). Andrej Karpathy hired by Anthropic. Opus 4.8 with effort controls, dynamic workflows, better honesty. 'ADHD' experiment shows 2x improvement.",
-      "replitIdentity": "Visa-backed identity layer for AI agents — agents can now have financial identity",
+      "replitIdentity": "Visa-backed identity layer for AI agents \u2014 agents can now have financial identity",
       "mcp": "WebMCP turns any Chrome page into MCP server. DocuSign building agentic agreement MCP. MCP + synthetic data for compliance.",
       "governance": "AC/DC framework for governing AI agents. 'CI wasn't built for coding agents.' Agent code explosion requires pipeline rethink.",
       "metaTrends": [
@@ -130,6 +130,62 @@
       "Agent governance frameworks",
       "AI endpoint security",
       "WorkflowAgent (AI SDK v7)"
+    ]
+  },
+  {
+    "run": 4,
+    "date": "2026-06-02",
+    "topic": "Deployment & Hosting",
+    "sources": [
+      "vercel.com/changelog",
+      "vercel.com/blog",
+      "netlify.com/blog",
+      "blog.cloudflare.com",
+      "news.ycombinator.com",
+      "infoq.com/development"
+    ],
+    "keyFindings": {
+      "vercelChangelog": "Two major May 29, 2026 updates: (1) Function invocations now per-unit billing ($0.0000006/inv) for smoother scaling; (2) Docker containers now runnable inside Vercel Sandbox with sudo, FUSE, and VPN support \u2014 AI agents can build, test, and verify containerized workloads in isolation",
+      "vercelSandbox": "Evolved into full system sandbox with Docker, FUSE filesystem drivers, VPN clients, persistent sessions, and system package installation \u2014 designed for agentic workloads",
+      "netlifyAi": "netlify.ai launched April 2026 \u2014 first product entry point built exclusively for AI agents, not humans. AX (Agent Experience) is Netlify's framework for agent-first platform design",
+      "netlifyAgentRunners": "New product: hosted AI agent workloads. Tutorial for building real-time AI chatbots with Agent Runners (no backend code). Competing directly with Vercel Sandbox + Workchains",
+      "netlifyDatabase": "GA April 28, 2026 \u2014 integrated Postgres. Built for AI-native development workflows. Closes gap with Supabase/Neon",
+      "cloudflareClaudeAgents": "May 19, 2026: Anthropic Claude Managed Agents integrated on Cloudflare \u2014 isolated execution for autonomous code delivery, global scaling, customizable tools/runtimes",
+      "cloudflareCompliance": "Claude Compliance API + Cloudflare CASB integration May 21 \u2014 enterprise governance of AI agent activity",
+      "railwayOutage": "Google Cloud suspended Railway's production account causing 8-hour platform-wide outage (InfoQ, May 30) \u2014 single-cloud dependency is a critical risk",
+      "openrouterFunding": "$113M Series B raised \u2014 validates multi-model AI gateway pattern (single endpoint, hundreds of models)",
+      "githubCostControl": "Agent workflow token spend cut 62% with daily audits + MCP pruning \u2014 governance and cost control critical at scale",
+      "metaTrends": [
+        "Agent-first platforms: Vercel, Netlify, Cloudflare all building for AI agents as primary users",
+        "Docker/containerization becoming native platform capability (Vercel Docker-in-Sandbox, Cloudflare Containers)",
+        "Single-cloud dependency risk proven by Railway outage \u2014 multi-cloud resilience now essential",
+        "Unified AI primitives: deployment + inference + database + agent hosting in single platforms",
+        "Agent governance at scale: token auditing, compliance APIs, per-request verification as mandatory",
+        "AX (Agent Experience) emerging as new product design paradigm \u2014 platforms must serve machine consumers",
+        "Edge + AI merge: Claude agents on Cloudflare edge, Vercel Edge compute, Netlify Functions",
+        "Pricing model shift: per-unit billing (Vercel), per-build over per-seat (Netlify) to match agent-scale usage"
+      ],
+      "recommendations": "Vercel for full-stack Next.js with Docker-in-Sandbox testing; Netlify Agent Runners for hosted AI agents; Cloudflare Workers for edge API + Claude agent hosting; multi-cloud design from day one; per-unit function pricing; agent governance and token auditing from the start"
+    },
+    "coveredTopics": [
+      "Vercel per-unit function billing",
+      "Vercel Docker-in-Sandbox",
+      "Vercel Sandbox full system environment",
+      "Netlify AX (Agent Experience)",
+      "Netlify Agent Runners",
+      "Netlify Database GA",
+      "Netlify + Stripe integration",
+      "Netlify per-build pricing",
+      "Cloudflare Claude Managed Agents",
+      "Cloudflare Claude Compliance CASB",
+      "Cloudflare Town Lake + Skipper",
+      "Cloudflare Browser Run on Containers",
+      "Railway single-cloud outage",
+      "OpenRouter $113M Series B",
+      "GitHub agent token cost control (62% reduction)",
+      "Azure Linux 4.0",
+      "Azure Logic Apps sandboxed agents",
+      "Arm Metis AI security framework"
     ]
   }
 ]
