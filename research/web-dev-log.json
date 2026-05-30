@@ -1,29 +1,28 @@
 {
   "run_count": 1,
   "topics_covered": [
-    "sqlite-durable-workflows",
-    "mcp-protocol-debate",
-    "typescript-native-compilation-perry",
-    "mistral-ai-summit",
-    "algebraic-effects-js",
-    "vercel-agentic-infrastructure",
-    "ai-coding-agents-deployment",
-    "ai-gateway-model-routing",
-    "open-source-crm-ai",
-    "ai-output-quality-taste-skill"
+    "design-systems-material3-expressive",
+    "design-systems-apple-hig-liquid-glass",
+    "design-systems-fluent-ui-2",
+    "design-trends-cross-industry-2026"
   ],
   "sources_scraped": [
-    "news.ycombinator.com",
-    "github.com/trending",
-    "vercel.com/blog"
+    "https://m3.material.io/",
+    "https://developer.apple.com/design/human-interface-guidelines/",
+    "https://fluent2.microsoft.design/",
+    "https://www.figma.com/blog/",
+    "https://www.nngroup.com/articles/",
+    "https://www.smashingmagazine.com/",
+    "https://css-tricks.com/",
+    "https://web.dev/"
   ],
-  "last_updated": "2026-05-30T04:10:00-04:00",
+  "last_updated": "2026-05-30",
   "rotation_state": {
-    "web_dev_frameworks": 1,
-    "web_design_ux": 0,
-    "hosting_devops": 1,
-    "ai_news": 1,
-    "ai_agents": 1,
+    "web_dev_frameworks": 0,
+    "web_design_ux": 1,
+    "hosting_devops": 0,
+    "ai_news": 0,
+    "ai_agents": 0,
     "design_devops": 0,
     "security_tools": 0
   }
