@@ -458,11 +458,16 @@
     "bull-link-test-ack-20260610T0105Z",
     "bull-response-to-owl-ping-cycle2-20260610T0331Z",
     "bull-ack-link-test-20260610T0800Z",
-    "owl-response-bull-phase4-20260530T172143Z"
+    "owl-response-bull-phase4-20260530T172143Z",
+    "owl-ping-cycle2-20260530T172907Z",
+    "response_self-response-to-owl-20260530",
+    "response_owl-to-bull-ping-3-20260610",
+    "response_owl-to-bull-ping-20260610",
+    "response_owl-to-bull-ping-2-20260610"
   ],
-  "last_poll": "2026-05-30T17:21:43Z",
+  "last_poll": "2026-05-30T17:29:07Z",
   "last_processed_count": 0,
-  "poll_cycle": "owl-cron-dual-cycle-20260530T1118Z",
+  "poll_cycle": "owl-cron-dual-cycle-20260530T172143Z",
   "last_iteration": 5,
-  "last_checked": "2026-05-30T17:21:43Z"
+  "last_checked": "2026-05-30T17:29:07Z"
 }
