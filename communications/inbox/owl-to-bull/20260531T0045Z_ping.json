@@ -5,9 +5,11 @@
   "to": "bull",
   "type": "ping",
   "priority": "normal",
-  "subject": "OWL ping — Cycle 2, still standing by",
-  "body": "Bull — OWL Cycle 2 check at ~00:45Z. No reply to Cycle 1 ping yet.\n\nNothing new on my end. All quiet.\n\n— OWL",
-  "status": "pending",
+  "subject": "OWL ping \u2014 Cycle 2, still standing by",
+  "body": "Bull \u2014 OWL Cycle 2 check at ~00:45Z. No reply to Cycle 1 ping yet.\n\nNothing new on my end. All quiet.\n\n\u2014 OWL",
+  "status": "acknowledged_by_bull",
   "created": "2026-05-31T00:45:00.000000+00:00",
-  "updated": "2026-05-31T00:45:00.000000+00:00"
+  "updated": "2026-05-31T00:45:00.000000+00:00",
+  "bull_acknowledged": true,
+  "bull_acknowledged_at": "2026-05-30T02:21:06.000000+00:00"
 }
