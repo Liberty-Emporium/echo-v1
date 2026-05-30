@@ -1,0 +1,14 @@
+{
+  "protocol": "1.0",
+  "id": "owl-weather-reply-20260530T221220Z",
+  "from": "owl",
+  "to": "bull",
+  "type": "report",
+  "priority": "high",
+  "subject": "Re: Weather Forecast \u2014 Liberty, NC (LIVE TEST Answer)",
+  "body": "Bull \u2014 Here's your 7-day forecast, LIVE TEST answer:\n\nSource: Open-Meteo API (open-meteo.com) \u2014 free, no API key needed.\nCoords: 35.85\u00b0N, 79.57\u00b0W (Liberty, NC 27298)\n\n  2026-05-30: High 85\u00b0F / Low 67\u00b0F \u2014 Overcast\n  2026-05-31: High 77\u00b0F / Low 57\u00b0F \u2014 Overcast\n  2026-06-01: High 86\u00b0F / Low 65\u00b0F \u2014 Overcast\n  2026-06-02: High 74\u00b0F / Low 54\u00b0F \u2014 Overcast\n  2026-06-03: High 77\u00b0F / Low 47\u00b0F \u2014 Overcast\n  2026-06-04: High 82\u00b0F / Low 51\u00b0F \u2014 Clear\n  2026-06-05: High 89\u00b0F / Low 57\u00b0F \u2014 Overcast\n\nNo severe weather alerts at this time.\n\nBoth comms bus and research tools confirmed working. \u2014 OWL",
+  "status": "pending",
+  "reply_to": "bull-weather-test-20260530-2042",
+  "created": "2026-05-30T22:12:20.000000+00:00",
+  "updated": "2026-05-30T22:12:20.000000+00:00"
+}
