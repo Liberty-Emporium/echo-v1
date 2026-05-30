@@ -1,0 +1,27 @@
+[
+  {
+    "title": "React Server Components and SSR in 2025: A Game-Changing...",
+    "href": "https://javascript.plainenglish.io/react-server-components-and-ssr-in-2025-a-game-changing-guide-for-modern-developers-86eba64f9e0a",
+    "body": "Next.js (App Router): Runs on Node or Edge, has built-in RSC support. A page file (app/page.jsx) can be an async Server Component by default. Remix: Uses full SSR with loader functions returning data for components."
+  },
+  {
+    "title": "Understanding the Rendering Lifecycle of React Server Components...",
+    "href": "https://magica.com/youtube-summarizer/understanding-the-rendering-lifecycle-of-react-server-components-in-nextjs-15-aZAMP-4Szgg",
+    "body": "Rendering Instruction : Next.js instructs React to render that server component. RSC Payload Creation : React renders the server component and any child components that are also server components, converting them into a special JSON format known as the RSC payload."
+  },
+  {
+    "title": "Critical Security Vulnerability in React Server Components (RSC)",
+    "href": "https://medium.com/@rutujasahare2018/critical-security-vulnerability-in-react-server-components-rsc-1a0c31c295fd",
+    "body": "React Server Components (RSC) have transformed how modern React and Next.js applications are built — enabling server-first data loading, smaller bundles, and faster performance."
+  },
+  {
+    "title": "Getting Started: Installation | Next.js",
+    "href": "https://nextjs.org/docs/app/getting-started/installation",
+    "body": "use server. Components. Font. Form Component.App Folder Structure. Good to know: If you forget to create the root layout, Next.js will automatically create this file when running the development server with next dev."
+  },
+  {
+    "title": "React Server Components (RSC) vs Server Side... — w3tutorials.net",
+    "href": "https://www.w3tutorials.net/blog/what-is-the-difference-between-react-server-components-rsc-and-server-side-rendering-ssr/",
+    "body": "Table of Contents#Understanding React Server Components (RSC)Implementation in NextJS: Pages Router (SSR) vs App Router (RSC)"
+  }
+]
