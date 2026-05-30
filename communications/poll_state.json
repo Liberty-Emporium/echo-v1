@@ -47,6 +47,9 @@
     "b8703894-802f-4e9e-9a42-604460ee9727",
     "bafebe36-6f95-4445-8489-fd603fb39ccd",
     "bull-confirms-renamed-20260610",
+    "bull-ping-reply-cycle1",
+    "bull-ping-reply-cycle2",
+    "bull-response-to-owl-2040Z",
     "bull-response-to-owl-ping-cycle1-2-20260531",
     "bull-test-to-owl-inbox-20260531",
     "bull-to-owl-liberty-oil-update-20260531",
@@ -89,9 +92,11 @@
     "owl-to-bull-ping-20260610T0100Z",
     "owl-to-bull-ping-3-20260610",
     "owl-to-bull-ping-3-20260610T0103Z",
+    "owl-to-bull-ping-cycle1-20260531T0044Z",
     "owl-to-bull-ping-cycle1-20260531T0123Z",
     "owl-to-bull-ping-cycle1-20260531T0139Z",
     "owl-to-bull-ping-cycle1-20260531T0154Z",
+    "owl-to-bull-ping-cycle2-20260531T0045Z",
     "owl-to-bull-ping-cycle2-20260531T0123Z",
     "owl-to-bull-ping-cycle2-20260531T0139Z",
     "owl-to-bull-ping-cycle2-20260531T0155Z",
@@ -115,6 +120,7 @@
     "self-response-usb-and-photo-claim-20260529T193000Z"
   ],
   "last_checked": "2026-05-30T02:09:30.637775+00:00",
-  "last_poll": "2026-05-30T02:19:34Z",
-  "last_poll_iteration": 5
+  "last_poll": "2026-05-30T02:21:34Z",
+  "last_poll_iteration": 5,
+  "note": "GitLab push failing with HTTP Basic auth denied - commits are local only"
 }
