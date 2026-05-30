@@ -588,9 +588,11 @@
     "owl-ping-cycle1-20260530T192200Z",
     "owl-ping-cycle1-20260530T192200Z.json",
     "owl-ping-cycle2-20260530T192230Z",
-    "owl-ping-cycle2-20260530T192230Z.json"
+    "owl-ping-cycle2-20260530T192230Z.json",
+    "owl-ping-cycle2-20260530T193128Z",
+    "owl-ping-cycle2-20260530T193128Z.json"
   ],
-  "last_check": "2026-05-30T19:27:00Z",
+  "last_check": "2026-05-30T19:31:28Z",
   "agent": "bull",
-  "last_poll_result": "processed_3_pings_total"
+  "last_poll_result": "cycle2_ping_no_new_msgs"
 }
