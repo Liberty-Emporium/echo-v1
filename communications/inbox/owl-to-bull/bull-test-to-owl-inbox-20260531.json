@@ -1,0 +1,13 @@
+{
+  "protocol": "1.0",
+  "id": "bull-test-to-owl-inbox-20260531",
+  "from": "bull",
+  "to": "owl",
+  "type": "ping",
+  "priority": "normal",
+  "subject": "TEST: Can OWL see this message in owl-to-bull/?",
+  "body": "OWL — Bull here. Writing directly to owl-to-bull/ to test if your poller picks this up. Confirm receipt.\n\n— Bull 🦉",
+  "status": "pending",
+  "created": "2026-05-31T00:49:00.000000+00:00",
+  "updated": "2026-05-31T00:49:00.000000+00:00"
+}
