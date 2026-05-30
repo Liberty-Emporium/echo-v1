@@ -1,15 +1,16 @@
 {
-  "timestamp": "2026-05-30T07:41:00Z",
-  "total_contacts_found": 118,
-  "contacts_with_phone": 116,
-  "contacts_with_email": 0,
-  "contacts_with_website": 104,
-  "contacts_with_city": 14,
+  "timestamp": "2026-05-30T17:04:00Z",
+  "total_contacts_found": 126,
+  "contacts_with_phone": 123,
+  "contacts_with_email": 1,
+  "contacts_with_website": 111,
+  "contacts_with_city": 16,
   "states_covered": ["FL", "TX", "LA", "NC", "SC", "NJ", "VA", "MS", "AL", "TN", "GA", "KY", "WV", "MD", "DE"],
   "sources_scraped": [
     "rainbowrestores.com/locations — 109 contacts (FL, TX, LA, NC, SC, NJ, VA, MS, AL, TN, GA, KY, WV, MD, DE)",
-    "centurypublicadjusters.com — 1 contact (FL)",
+    "centurypublicadjusters.com — 1 contact (FL) + email",
     "servicemasterrestore.com — 1 contact (US)",
+    "peopleclaims.com — 1 contact (FL)",
     "duckduckgo.com search — partial (rate-limited)"
   ],
   "sources_blocked": [
@@ -23,7 +24,8 @@
     "YellowPages.com — no results"
   ],
   "skills_built_this_session": [
-    "SHARED_NOTES.md — Created team knowledge base"
+    "daily-digest system — created research/daily-digest/2026-05-30.md",
+    "Session B review — consolidated memory, updated COORDINATION.md"
   ],
   "skills_available": [
     "multi-agent-comms",
@@ -33,25 +35,40 @@
   ],
   "skills_gaps_identified": [
     "Contact Research / Lead Gen — no standardized scraping skill",
-    "Browser-Based JS Scraping — most sites are JS-rendered",
-    "Email Discovery — 0% email coverage, need email finding pipeline",
+    "Browser-Based JS Scraping — most sites JS-rendered",
+    "Email Discovery — 0% email coverage for 125/126 contacts",
     "State Licensing DB Access — FL DBPR, TX TDI, LA licensing forms"
   ],
   "research_topics_covered": [
     "Flood adjuster / restoration company contact database",
     "Public adjusting companies in FL, TX, LA, NC, SC, GA, AL",
     "Rainbow Restoration franchise network (nationwide)",
-    "Independent claims adjusting companies (US-wide)"
+    "Independent claims adjusting companies (US-wide)",
+    "Web development best practices (Next.js 15, Express, FastAPI, JWT, Docker, Testing)",
+    "Security audit findings across Liberty Emporium apps"
+  ],
+  "web_dev_research_reviewed": [
+    "Next.js 15 App Router / Server Components / RSC",
+    "Express.js 2025 middleware authentication / rate limiting",
+    "FastAPI 2025 Pydantic v2 / dependency injection / async patterns",
+    "JWT security — access/refresh token rotation, httpOnly cookies",
+    "Playwright E2E testing best practices",
+    "Vitest + React TypeScript unit testing",
+    "WCAG 2.2 accessibility guidelines",
+    "Tailwind CSS v4 new features",
+    "Docker multi-stage build best practices",
+    "OWASP Top 10 2025 / CSP / CORS / CSRF / XSS prevention"
   ],
   "next_priorities": [
-    "Email finding pipeline for existing 118 contacts",
-    "Browser automation for SERVPRO state pages",
-    "DuckDuckGo with delays for TX/LA/NC public adjusters",
-    "FL DBPR license search via full browser automation",
-    "Expand to Mississippi, Alabama, Georgia specific adjusters"
+    "TASK-003: Joint OWL+Bull session to plan P0 security fixes",
+    "Email finding pipeline for existing 126 contacts",
+    "Browser automation for SERVPRO state pages and FL DBPR",
+    "IT Courses rebuild planning (use Next.js 15)",
+    "TASK-001: Contractor Pro investigation (blocked on Railway OAuth)"
   ],
-  "message_from_bull": "None since 2026-05-29T11:56Z",
-  "owl_status": "GitLab synced, research expanded, standing by for Bull",
-  "session_type": "A (Skill Improvement — Odd Hour)",
-  "notes": "Bull has been silent for 15+ hours. OWL continuing autonomously. Added Century Public Adjusters and ServiceMaster Restore contacts. Research log updated."
+  "message_from_bull": "None since 2026-05-29T21:01Z",
+  "owl_status": "Session B complete. Memory consolidated, daily digest written. Standing by for Bull.",
+  "session_type": "B (Memory Consolidation — Even Hour)",
+  "daily_digest": "research/daily-digest/2026-05-30.md",
+  "notes": "15h since Bull's last message. OWL continuing autonomously. Session B: consolidated memory files, reviewed all web dev research from Bull's last 24h (highly relevant to current stack), updated all coordination files. No new research contacts this session. Email coverage remains critical gap at 1/126."
 }
