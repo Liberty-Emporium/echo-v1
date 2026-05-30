@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Cypress vs Vitest 2025: Complete Framework Comparison ... - Alken",
+    "href": "https://alken.dev/en/blog/e2e-testing-2025",
+    "body": "Nov 11, 2025 · Cypress vs Vitest vs Playwright in 2025. Real benchmarks, performance tests, and which E2E framework wins for your use case."
+  },
+  {
+    "title": "Best JavaScript Testing Framework: Complete 2025 Developer Guide",
+    "href": "https://www.baserock.ai/blog/best-javascript-testing-framework",
+    "body": "Jul 8, 2025 · Vitest is fastest for unit tests; Playwright is efficient for E2E in parallel. Is Jest still the best JavaScript testing framework in 2025? Yes, ..."
+  },
+  {
+    "title": "Best test framework for E2E / Interface testing? : r/reactjs - Reddit",
+    "href": "https://www.reddit.com/r/reactjs/comments/1klkaho/best_test_framework_for_e2e_interface_testing/",
+    "body": "May 13, 2025 · Cypress is not worth it anymore and Playwright rocks. React testing library + vitest is blazing fast and you can use it for most cases. Make ...E2E Testing (Cypress VS Playwright) : r/reactjs - RedditNew to Testing - what would you recommend in 2025? : r/nextjsMore results from www.reddit.comMissing: comparison | Show results with:comparison"
+  },
+  {
+    "title": "Playwright vs Selenium vs Cypress: Detailed Comparison - TestGrid",
+    "href": "https://testgrid.io/blog/playwright-vs-selenium-vs-cypress/",
+    "body": "Apr 27, 2026 · Cypress executes tests slower than Playwright and takes an average of 5-10 seconds. Selenium is the slowest in terms of test execution and takes ..."
+  },
+  {
+    "title": "Cypress vs Playwright: Key Differences and When to Use Each",
+    "href": "https://www.testmuai.com/blog/cypress-vs-playwright/",
+    "body": "May 10, 2026 · When comparing Playwright vs Cypress, both frameworks aim to simplify end-to-end testing but differ in approach and flexibility. Playwright ..."
+  }
+]

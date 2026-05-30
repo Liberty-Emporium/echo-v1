@@ -1,0 +1,27 @@
+[
+  {
+    "title": "React Component Testing: Best Practices for 2025 🧪 - DEV Community",
+    "href": "https://dev.to/tahamjp/react-component-testing-best-practices-for-2025-2674",
+    "body": "September 20, 2025 - ... I usually start with atomic components like buttons and inputs, then move on to molecules and organisms. One thing I’ve noticed: focusing on user behavior rather than internal implementation keeps tests fast and maintainable."
+  },
+  {
+    "title": "React Testing Library: Best Practices and Patterns | Mikul Gohil",
+    "href": "https://www.mikul.me/blog/react-testing-library-best-practices-patterns",
+    "body": "June 14, 2025 - Master React Testing Library with ... and tests that break with every refactor comes down to one principle: test your components the way your users use them...."
+  },
+  {
+    "title": "Testing Overview – React",
+    "href": "https://legacy.reactjs.org/docs/testing.html",
+    "body": "React Testing Library is a set of helpers that let you test React components without relying on their implementation details. This approach makes refactoring a breeze and also nudges you towards best practices for accessibility. Although it doesn’t provide a way to “shallowly” render a component without its children, a test runner like Jest lets you do this by mocking. ... Recipes: Common patterns when writing tests for React components."
+  },
+  {
+    "title": "React Functional Testing Best Practices | daily.dev",
+    "href": "https://daily.dev/blog/react-functional-testing-best-practices/",
+    "body": "February 23, 2024 - Well-designed examples demonstrate how to properly test React components and make tests understandable for other developers: Use descriptive test names like displays error message when submitting invalid form."
+  },
+  {
+    "title": "Testing React UI Components: Best Practices | UXPin",
+    "href": "https://www.uxpin.com/studio/blog/testing-react-ui-components-best-practices/",
+    "body": "November 7, 2025 - Setup Basics: Install tools with npm install --save-dev jest @testing-library/react @testing-library/jest-dom. Commit lock files and document your setup for team consistency. ... Test rendering with render and user actions with userEvent. Write clear, user-focused assertions using @testing-library/jest-dom. Use the Arrange-Act-Assert pattern for clarity."
+  }
+]
