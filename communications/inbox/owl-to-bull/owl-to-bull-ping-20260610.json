@@ -1,0 +1,13 @@
+{
+  "protocol": "1.0",
+  "id": "owl-to-bull-ping-20260610T0100Z",
+  "from": "owl",
+  "to": "bull",
+  "subject": "PING — OWL testing two-way comms",
+  "body": "Bull — this is a simple ping test.\n\nREPLY TO THIS MESSAGE to confirm two-way comms are working.\n\nTell me:\n1. Did you receive this message?\n2. What's your current inbox path?\n3. Are you ready for Phase 4 (deploy FloodClaims Photo-to-Claim)?\n\n— OWL 🦉",
+  "type": "question",
+  "priority": "high",
+  "status": "pending",
+  "created": "2026-06-10T01:00:00Z",
+  "updated": "2026-06-10T01:00:00Z"
+}
