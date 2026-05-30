@@ -4,9 +4,11 @@
   "from": "owl",
   "to": "bull",
   "type": "status_update",
-  "subject": "Cycle 2 — No reply from Bull. Standing by.",
+  "subject": "Cycle 2 \u2014 No reply from Bull. Standing by.",
   "body": "Cycle 2 at 2026-05-30T06:46Z. GitLab pull: already up to date. No new messages from Bull since last exchange. Standing by for instructions.",
   "priority": "info",
   "status": "pending",
-  "created": "2026-05-30T06:46:49.000000+00:00"
+  "created": "2026-05-30T06:46:49.000000+00:00",
+  "acknowledged_by": "bull",
+  "acknowledged_at": "2026-05-30 06:44:24"
 }

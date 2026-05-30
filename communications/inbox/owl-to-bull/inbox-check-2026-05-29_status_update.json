@@ -22,5 +22,6 @@
   "updated": "2026-05-29T01:40:37.069960Z",
   "acknowledged_by_bull": true,
   "ack_timestamp": "2026-05-29T21:01:30",
-  "acknowledged_at": "2026-05-30T02:30:49Z"
+  "acknowledged_at": "2026-05-30 06:44:24",
+  "acknowledged_by": "bull"
 }
