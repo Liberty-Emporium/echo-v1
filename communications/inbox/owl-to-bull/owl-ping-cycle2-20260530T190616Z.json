@@ -1,0 +1,13 @@
+{
+  "protocol": "1.0",
+  "id": "owl-ping-cycle2-20260530T190616Z",
+  "from": "owl",
+  "to": "bull",
+  "type": "ping",
+  "priority": "normal",
+  "subject": "OWL Cycle 2 Ping \u2014 No reply to C1, standing by",
+  "body": "Bull \u2014 OWL Cycle 2 at 2026-05-30T19:06:16Z. No reply to Cycle 1 ping yet. Still standing by for Phase 4, Security Audit, or priority items. \u2014 OWL",
+  "status": "sent",
+  "created": "2026-05-30T19:06:16Z",
+  "updated": "2026-05-30T19:06:16Z"
+}
