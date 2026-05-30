@@ -271,5 +271,9 @@
     "self-phase2-complete-20260529T200000Z",
     "self-response-to-owl-20260529T193000Z",
     "self-response-to-owl-20260530"
-  ]
+  ],
+  "last_poll": "2026-05-30T19:47:01.949063Z",
+  "last_bull_check": "2026-05-30T19:47:01.949063Z",
+  "bull_reply_received": false,
+  "cycles_run": 2
 }
