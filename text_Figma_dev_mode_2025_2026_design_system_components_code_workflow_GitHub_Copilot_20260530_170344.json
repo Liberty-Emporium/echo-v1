@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Dev Mode: Design-to-Development | Figma",
+    "href": "https://www.figma.com/dev-mode/",
+    "body": "Built for developers, Dev Mode gives you the power to easily inspect designs and translate them into code—without changing the design file. Dev Mode is included in the Full and Dev seats on all paid plans. Turn Figma designs into accurate code with the Figma MCP server."
+  },
+  {
+    "title": "Figma to Code: Design Tokens & Dev Mode 2026 - inhaq.com",
+    "href": "https://inhaq.com/blog/figma-to-code-design-engineer-workflow",
+    "body": "Jan 15, 2026 · In this guide, I’ll show you how to use Figma’s Dev Mode, export tokens as JSON with Tokens Studio, transform them via Style Dictionary (or direct to Tailwind CSS), and map Figma components to React components 1:1 using Code Connect."
+  },
+  {
+    "title": "Figma Dev Mode: Everything Developers Need to Know",
+    "href": "https://designilo.com/2025/07/08/figma-dev-mode-everything-developers-need-to-know/",
+    "body": "Jul 8, 2025 · It gives developers a dedicated view tailored for inspection, code generation, and seamless collaboration— without disrupting the design. In this guide, we’ll cover how Figma Dev Mode works, what developers can do with it, and why it improves the workflow between design and engineering."
+  },
+  {
+    "title": "Figma to Code with MCP & Github Copilot | Setup & Workflow",
+    "href": "https://medium.com/@vishal.kapadia/ai-powered-ux-to-code-with-figma-mcp-github-copilot-bd2fe4606e22",
+    "body": "Sep 4, 2025 · Figma MCP + GitHub Copilot can revolutionize the UX to Code, eliminating inefficiencies and enabling faster, more consistent design-to-development handoffs."
+  },
+  {
+    "title": "GitHub - figma/code-connect: A tool for connecting your ...",
+    "href": "https://github.com/figma/code-connect",
+    "body": "Jan 3, 2011 · Use Figma’s Code Connect to make your design system easily accessible to your developers and create a shared source of truth for both the design and code elements."
+  },
+  {
+    "title": "Figma Design to Code, Code to Design: Clearly Explained",
+    "href": "https://blog.bytebytego.com/p/figma-design-to-code-code-to-design",
+    "body": "Apr 14, 2026 · This article covers how Figma’s design-to-code and code-to-design workflows actually work, starting with why the obvious approaches fail, how MCP solves them, and the engineering challenges that remain."
+  }
+]

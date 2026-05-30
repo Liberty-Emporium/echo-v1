@@ -1,0 +1,32 @@
+[
+  {
+    "title": "CSS Custom Properties as Design Tokens | onHover",
+    "href": "https://www.onhover.in/blog/css-custom-properties-design-tokens",
+    "body": "Build a scalable design token system with CSS custom properties. Sync Figma variables to code, structure token layers, and keep your design system consistent."
+  },
+  {
+    "title": "How to Style Your Website with Design Tokens and Token CSS with...",
+    "href": "https://www.youtube.com/watch?v=3M1oHN2ydwA",
+    "body": "Let’s learn how to style websites with design tokens and Token CSSNate Moore is the co-creator of http://astro.build."
+  },
+  {
+    "title": "Design tokens – Material Design 3",
+    "href": "https://m3.material.io/foundations/design-tokens",
+    "body": "Design tokens are the building blocks of all UI elements. The same tokens are used in designs, tools, and code."
+  },
+  {
+    "title": "Design Tokens and how a W3C specification will help going forward",
+    "href": "https://backlight.dev/blog/design-tokens",
+    "body": "maintaining and storing design tokens. consuming the tokens, for example, in a design tool like Figma. exporting tokens to different platforms, so coded components can use them."
+  },
+  {
+    "title": "Design Tokens Format Module 2025.10",
+    "href": "https://www.designtokens.org/tr/2025.10/format/",
+    "body": "GitHub design-tokens/community-group (pull requests, new issue, open issues).A visual design tool might reference type to present tokens in the appropriate part of their UI - as in, color tokens are listed in the color picker, font tokens in the text styling UI's fonts list, and so on."
+  },
+  {
+    "title": "seinx-design-tokens - npm",
+    "href": "https://www.npmjs.com/package/seinx-design-tokens",
+    "body": "SeinX design tokens — colors, typography, spacing, fonts (Plus Jakarta Sans), and brand marks (logo, icon, favicon). Dark-first, WCAG AAA.. Latest version: 1.3.0, last published: 16 minutes ago. Start using seinx-design-tokens in your project by running `npm i seinx-design-tokens`."
+  }
+]
