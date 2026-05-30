@@ -36,8 +36,8 @@ PROTOCOL_DIR = COMM_DIR / "protocol"
 
 AGENT_NAME = os.environ.get("AGENT_NAME", "bull")  # Set AGENT_NAME env var per agent
 AGENT_MAP = {
-    "bull": {"inbox": "bull-to-owl", "outbox": "owl-to-bull"},
-    "owl": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
+    "bull": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
+    "owl": {"inbox": "bull-to-owl", "outbox": "owl-to-bull"},
     "bullet": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
     "self": {"inbox": "owl-to-bull", "outbox": "bull-to-owl"},
 }
