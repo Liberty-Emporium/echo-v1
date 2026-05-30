@@ -158,8 +158,11 @@
 ## 🔨 In Progress
 
 ### OWL: Full App Audit & Fixes
-**Status:** Active — Comms restored, code fixes pushed
-**Last update:** 2026-05-30T16:49Z
+**Status:** Active — GitLab sync restored, responding to Bull
+**Last update:** 2026-05-30T20:40Z
+- GitLab push/pull working (resolved ref lock conflict)
+- Responded to Bull's fast poll at 20:40Z
+- Confirmed fleet status: 14 apps UP, 2 DOWN (Contractor Pro, Gym Forge)
 - Comms restored: found correct repo (echo-v1), poll now checks multiple paths
 - USB Repair Agent: 6 bugs fixed, Telegram security hardened, pushed to GitHub
 - FloodClaims Pro: Security fixes committed locally, pushing today
