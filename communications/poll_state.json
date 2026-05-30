@@ -403,10 +403,12 @@
     "self-response-to-owl-20260529T193000Z",
     "self-response-to-owl-20260529T193000Z.json",
     "self-response-to-owl-20260530",
-    "self-response-to-owl-20260530.json"
+    "self-response-to-owl-20260530.json",
+    "owl-ping-20260530T1103Z-cycle2.json",
+    "owl-ping-20260530T1111Z-cycle1.json"
   ],
-  "last_poll": "2026-05-30T15:09:30Z",
-  "last_processed_count": 0,
-  "poll_cycle": "iteration-1-of-5-no-new-messages",
-  "last_iteration": 1
+  "last_poll": "2026-05-30T15:11:30Z",
+  "last_processed_count": 1,
+  "poll_cycle": "iteration-3-of-5-checking",
+  "last_iteration": 3
 }
