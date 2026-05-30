@@ -400,8 +400,8 @@
     "owl-ping-cycle2-20260530T030318Z.json",
     "owl-ping-cycle1-20260531T0159Z.json"
   ],
-  "last_poll": "2026-05-30T16:13:00Z",
+  "last_poll": "2026-05-30T16:16:00Z",
   "last_processed_count": 0,
   "poll_cycle": "iteration-5-of-5",
-  "last_iteration": 4
+  "last_iteration": 5
 }
