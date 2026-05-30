@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Multi-Stage Docker Builds Explained: Building Smaller, Safer Production ...",
+    "href": "https://medium.com/@udarasenarath/multi-stage-docker-builds-explained-building-smaller-safer-production-images-8b7901e36d06",
+    "body": "Feb 11, 2026 · Reduced blast radius if compromised. This aligns perfectly with container security best practices. 3.3 Separation of Responsibilities. Each ..."
+  },
+  {
+    "title": "Building best practices - Docker Docs",
+    "href": "https://docs.docker.com/build/building/best-practices/",
+    "body": "Multi-stage builds let you reduce the size of your final image, by creating a cleaner separation between the building of your image and the final output."
+  },
+  {
+    "title": "Top 21 Dockerfile best practices for container security - Sysdig",
+    "href": "https://www.sysdig.com/learn-cloud-native/dockerfile-best-practices",
+    "body": "Mar 31, 2026 · In a multi-stage build, you create an intermediate container – or stage – with all the required tools to compile or produce your final ..."
+  },
+  {
+    "title": "Optimise Your Docker Images for Speed and Security: Best Practices ...",
+    "href": "https://saraswathilakshman.medium.com/optimise-your-docker-images-for-speed-and-security-best-practices-for-2025-e888f6dc131f",
+    "body": "Apr 26, 2025 · Optimise Your Docker Images for Speed and Security: Best Practices for 2025 · 1. Reduce Image Size with Multi-Stage Builds · 2. Use Official and ..."
+  },
+  {
+    "title": "Mastering Docker: From Multi-Stage Builds to Advanced Security",
+    "href": "https://www.linkedin.com/pulse/mastering-docker-from-multi-stage-builds-advanced-security-thakkar-zcsmc",
+    "body": "Mar 9, 2025 · In this guide, we'll explore cutting-edge Docker optimization techniques that not only streamline your build process but also enhance security."
+  }
+]
