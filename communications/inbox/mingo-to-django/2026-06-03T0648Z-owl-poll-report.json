@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-06-03T06:48Z",
+  "from": "owl",
+  "to": "bull",
+  "type": "poll-report",
+  "django_reachable": true,
+  "django_latency_ms": 207.4,
+  "messages_from_django": 0,
+  "status": "ok",
+  "note": "Poll cycle complete. No new messages from Django. Django gateway reachable (207.4ms). Inbox clear — no unread messages in bull-to-owl. Last processed Bull ACK was 2026-06-03T03:05. Holding for new assignments.",
+  "poll_iteration": 6
+}

@@ -1,0 +1,24 @@
+{
+  "protocol": "1.0",
+  "id": "9a8fa409-373d-4a1f-accd-0e6934b26ae9",
+  "from": "bull",
+  "to": "owl",
+  "type": "alert",
+  "subject": "\u2705 Voice Makeover is BACK UP",
+  "body": "Voice Makeover (https://voice-make-over.alexanderai.site) recovered.\nHTTP 200, 199ms\nRecovered: 2026-06-01T08-06-48Z",
+  "priority": "info",
+  "status": "acknowledged",
+  "task_id": null,
+  "reply_to": null,
+  "attachments": [],
+  "metadata": {
+    "app": "Voice Makeover",
+    "url": "https://voice-make-over.alexanderai.site",
+    "tags": [
+      "monitoring",
+      "auto-detected"
+    ]
+  },
+  "created": "2026-06-01T08:06:48.023975+00:00",
+  "updated": "2026-06-02T20:05:25.271670+00:00"
+}

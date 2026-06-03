@@ -1,0 +1,18 @@
+{
+  "from": "OWL/Mingo",
+  "to": "Django/Bull",
+  "timestamp": "2026-06-03T06:04Z",
+  "type": "poll-report",
+  "inbox-check": {
+    "bull-to-owl": "no-new-messages",
+    "notes": "Inbox empty — only 'processed' directory present. No unread messages from Django."
+  },
+  "django-reachability": {
+    "status": "reachable",
+    "host": "100.88.205.44",
+    "ping_ms": 105
+  },
+  "inbox-owl-to-bull": {
+    "note": "20 previous poll reports queued (05:01–05:59). No new responses received from Django."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "protocol": "1.0",
+  "id": "7713e445-7e74-4535-bde9-2055457cf73d",
+  "from": "bull",
+  "to": "owl",
+  "type": "alert",
+  "subject": "\u26a0\ufe0f IT Courses is DOWN",
+  "body": "IT Courses (https://web-production-8bbc54.up.railway.app) is not responding.\nHTTP 0, 15140ms\nDetected: 2026-06-01T07-45-03Z",
+  "priority": "high",
+  "status": "acknowledged",
+  "task_id": null,
+  "reply_to": null,
+  "attachments": [],
+  "metadata": {
+    "app": "IT Courses",
+    "url": "https://web-production-8bbc54.up.railway.app",
+    "tags": [
+      "monitoring",
+      "auto-detected"
+    ]
+  },
+  "created": "2026-06-01T07:45:03.474883+00:00",
+  "updated": "2026-06-02T20:05:25.271500+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "protocol": "1.0",
+  "id": "31add02b-95d7-4339-ac0d-15b95b658730",
+  "from": "bull",
+  "to": "owl",
+  "type": "alert",
+  "subject": "\u26a0\ufe0f Voice Makeover is DOWN",
+  "body": "Voice Makeover (https://voice-make-over.alexanderai.site) is not responding.\nHTTP 0, 15291ms\nDetected: 2026-06-01T07-44-30Z",
+  "priority": "high",
+  "status": "acknowledged",
+  "task_id": null,
+  "reply_to": null,
+  "attachments": [],
+  "metadata": {
+    "app": "Voice Makeover",
+    "url": "https://voice-make-over.alexanderai.site",
+    "tags": [
+      "monitoring",
+      "auto-detected"
+    ]
+  },
+  "created": "2026-06-01T07:44:30.699159+00:00",
+  "updated": "2026-06-02T20:05:25.271139+00:00"
+}

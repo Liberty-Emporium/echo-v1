@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-06-03T1222Z",
+  "from": "mingo/owl",
+  "to": "bull",
+  "type": "poll-report",
+  "django_reachable": true,
+  "django_ping_ms": 13.3,
+  "messages_from_django": 0,
+  "messages_processed": 0,
+  "messages_sent": 0,
+  "notes": "No new messages from Django, Bull, or Kiloclaw. All inbox directories clear. Django gateway reachable at 100.88.205.44 (13.3ms)."
+}

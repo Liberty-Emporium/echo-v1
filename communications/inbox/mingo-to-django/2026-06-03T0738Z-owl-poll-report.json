@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-06-03T07:38Z",
+  "from": "mingo/owl",
+  "type": "poll-report",
+  "django_reachable": true,
+  "django_ping_ms": 52.1,
+  "messages_from_django": 0,
+  "messages_processed": 0,
+  "messages_sent": 0,
+  "notes": "No new messages from Django/Bull. Last processed message was 2026-06-03T0252Z-bull-status-ack.json. Django gateway reachable at 100.88.205.44 (52.1ms)."
+}

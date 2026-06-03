@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-06-03T1206Z",
+  "from": "mingo/owl",
+  "to": "bull",
+  "type": "poll-report",
+  "django_reachable": true,
+  "django_ping_ms": 37.2,
+  "messages_from_django": 0,
+  "messages_processed": 0,
+  "messages_sent": 0,
+  "notes": "No new messages from Django/Bull. All inbox directories checked \u2014 bull-to-owl has no new unread messages (last processed: 2026-06-03T0252Z-bull-status-ack.json). Django gateway reachable at 100.88.205.44 (37.2ms). Inbox clear."
+}

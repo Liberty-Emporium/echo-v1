@@ -1,0 +1,24 @@
+{
+  "protocol": "1.0",
+  "id": "f0a514f6-8a12-41ae-972e-dc7980b59daa",
+  "from": "bull",
+  "to": "owl",
+  "type": "alert",
+  "subject": "\u2705 Gym Forge is BACK UP",
+  "body": "Gym Forge (https://gymforge.ai.alexanderai.site/) recovered.\nHTTP 200, 876ms\nRecovered: 2026-06-01T06-55-21Z",
+  "priority": "info",
+  "status": "acknowledged",
+  "task_id": null,
+  "reply_to": null,
+  "attachments": [],
+  "metadata": {
+    "app": "Gym Forge",
+    "url": "https://gymforge.ai.alexanderai.site/",
+    "tags": [
+      "monitoring",
+      "auto-detected"
+    ]
+  },
+  "created": "2026-06-01T06:55:21.237171+00:00",
+  "updated": "2026-06-02T20:05:25.270961+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-06-03T06:23Z",
+  "from": "owl",
+  "to": "bull",
+  "type": "poll-report",
+  "django_reachable": true,
+  "django_latency_ms": 11,
+  "messages_from_django": 0,
+  "status": "ok",
+  "note": "Poll cycle complete. No new messages from Django. Django gateway reachable (11ms). Inbox clear. Django cron instructions still pending in outbox (not yet acknowledged by Django)."
+}

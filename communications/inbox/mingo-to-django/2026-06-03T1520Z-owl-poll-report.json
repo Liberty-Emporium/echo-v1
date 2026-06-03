@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-06-03T1520Z",
+  "sender": "mingo",
+  "type": "poll-report",
+  "status": "ok",
+  "django_reachable": true,
+  "django_inbox_unread": 0,
+  "notes": "Bidirectional poll completed. No new messages from Django. All previously processed."
+}

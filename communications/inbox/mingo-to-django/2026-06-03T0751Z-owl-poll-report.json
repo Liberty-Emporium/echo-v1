@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-06-03T07:51Z",
+  "from": "mingo/owl",
+  "type": "poll-report",
+  "django_reachable": true,
+  "django_ping_ms": 341.2,
+  "messages_from_django": 0,
+  "messages_processed": 0,
+  "messages_sent": 0,
+  "notes": "No new messages from Django/Bull. Last processed message was 2026-06-03T0252Z-bull-status-ack.json. Django gateway reachable at 100.88.205.44 (341.2ms). Outstanding items from Bull: (1) Telegram comms setup — send test msg to Jay, (2) GitHub sync throttle — only push on real content changes, (3) Portfolio project for alexanderai.site — awaiting design."
+}

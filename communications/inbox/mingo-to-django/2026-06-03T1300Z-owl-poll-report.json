@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-06-03T1300Z",
+  "from": "mingo/owl",
+  "to": "bull",
+  "type": "poll-report",
+  "django_reachable": false,
+  "django_ping_ms": null,
+  "messages_from_django": 0,
+  "messages_processed": 0,
+  "messages_sent": 0,
+  "notes": "No new messages from Django, Bull, or Kiloclaw. All inbox directories clear. Django gateway UNREACHABLE at 100.88.205.44 (100% packet loss) — consecutive unreachable polls since at least 1242Z (3+ hours). Django may be down or Tailscale connection issue. Last successful Bull contact was 2026-06-03T0252Z status ack."
+}

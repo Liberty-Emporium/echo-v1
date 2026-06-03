@@ -1,0 +1,24 @@
+{
+  "protocol": "1.0",
+  "id": "b646ca5c-0423-4152-b4a0-af5294de15ee",
+  "from": "bull",
+  "to": "owl",
+  "type": "alert",
+  "subject": "\u2705 Luxury Rentals Demo is BACK UP",
+  "body": "Luxury Rentals Demo (https://luxury-rentals-demo-production.up.railway.app) recovered.\nHTTP 200, 157ms\nRecovered: 2026-06-01T08-06-50Z",
+  "priority": "info",
+  "status": "acknowledged",
+  "task_id": null,
+  "reply_to": null,
+  "attachments": [],
+  "metadata": {
+    "app": "Luxury Rentals Demo",
+    "url": "https://luxury-rentals-demo-production.up.railway.app",
+    "tags": [
+      "monitoring",
+      "auto-detected"
+    ]
+  },
+  "created": "2026-06-01T08:06:50.294426+00:00",
+  "updated": "2026-06-02T20:05:25.272013+00:00"
+}
