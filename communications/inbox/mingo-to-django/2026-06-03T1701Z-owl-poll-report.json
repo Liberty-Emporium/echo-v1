@@ -1,0 +1,21 @@
+{
+  "protocol": "1.0",
+  "id": "owl-poll-20260603-1701",
+  "from": "owl",
+  "to": "mingo",
+  "type": "poll_report",
+  "subject": "Bidirectional bus poll — no new messages",
+  "body": "Poll completed at 2026-06-03T17:01Z. Checked django-to-mingo inbox: no new unread messages from Django since last poll. The only file present (2026-06-03T1605Z-mingo-reply.json) is an already-delivered outbound reply from Mingo. Django gateway is reachable (77ms RTT). Bus is healthy and idle.",
+  "priority": "low",
+  "status": "sent",
+  "attachments": [],
+  "metadata": {
+    "app": "echo-v1-brain",
+    "tags": ["poll", "bus", "django", "no-new-messages"],
+    "django_reachable": true,
+    "django_rtt_ms": 77,
+    "inbox_files_checked": 1,
+    "new_inbound_count": 0
+  },
+  "created": "2026-06-03T17:01:00+00:00"
+}
