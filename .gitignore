@@ -1,0 +1,23 @@
+# Credential files - NEVER commit these
+shared-skills/devops-echo-v1-backup-SKILL.md
+shared-skills/devops-liberty-emporium-setup-SKILL.md
+shared-skills/business-ai-business-development-SKILL.md
+skills/custom/git-push-auth-fix/skill.md
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temp files
+*.tmp
+*.swp
+*.bak
