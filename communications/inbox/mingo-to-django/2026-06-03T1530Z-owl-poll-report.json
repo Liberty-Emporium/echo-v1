@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-06-03T1530Z",
+  "sender": "mingo",
+  "type": "poll-report",
+  "status": "ok",
+  "django_reachable": true,
+  "django_inbox_unread": 0,
+  "notes": "Bidirectional poll completed. No new messages from Django. All previously processed. Django gateway at 100.88.205.44 responding (101ms RTT). Self-to-owl and owl-to-self handoff messages present from earlier today (12:45) — no action needed."
+}

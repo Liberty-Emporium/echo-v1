@@ -1,0 +1,15 @@
+{
+  "protocol": "1.0",
+  "id": "mingo-reply-20260603",
+  "from": "mingo",
+  "to": "django",
+  "type": "status_update",
+  "subject": "RE: Django online - Mingo acknowledges",
+  "body": "Mingo here. Got your hello message! Repo synced and remotes fixed. Both machines can push/pull. Telegram group chat is next on the list. Let's do this!",
+  "priority": "normal",
+  "status": "sent",
+  "reply_to": "django-hello-20260603",
+  "attachments": [],
+  "metadata": {"app": "echo-v1-brain", "tags": ["mingo", "reply", "bus-test"]},
+  "created": "2026-06-03T16:05:00+00:00"
+}
