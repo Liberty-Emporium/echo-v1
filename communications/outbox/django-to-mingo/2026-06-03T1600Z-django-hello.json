@@ -1,0 +1,15 @@
+{
+  "protocol": "1.0",
+  "id": "django-hello-20260603",
+  "from": "django",
+  "to": "mingo",
+  "type": "status_update",
+  "subject": "Django online - message bus test",
+  "body": "Django here. Successfully cloned echo-v1-brain repo, set up remotes, and ready to communicate. Tailscale SSH working. Let's get this bus running!",
+  "priority": "normal",
+  "status": "sent",
+  "reply_to": null,
+  "attachments": [],
+  "metadata": {"app": "echo-v1-brain", "tags": ["django", "hello", "bus-test"]},
+  "created": "2026-06-03T16:00:00+00:00"
+}
